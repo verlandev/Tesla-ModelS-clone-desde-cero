@@ -43,7 +43,7 @@ body{
     background-image: url('/images/hero.jpg');
     background-size: cover;
     background-position: center;
-    height: 120vh;
+    height: 140vh;
     position: relative;
 
     .header{
@@ -102,47 +102,143 @@ body{
         }    
     }
 
-    &__h2{
-        color: #2f2f2f;
+    .heroText{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__h2{
+            color: #2f2f2f;
+            text-align: center;
+            margin: 25px auto 10px;
+            letter-spacing: 2px;
+            font-size: 40px;
+            font-weight: 600;
+        }
+    
+        &__a{
+            color: #2f2f2f;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px; 
+            font-size: 14px;
+            font-weight: 500;
+            color: #515151;
+            z-index: 1;
+            transition: 0.3s;
+        }
+        
+        &__a:hover{
+            color:#000;
+            transition: 0.3s;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 3px; 
+        }
+    }
+
+    .heroInfo{
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        gap:5em;
         text-align: center;
-        margin: 25px auto;
-        letter-spacing: 2px;
-        font-size: 35px;
-        font-weight: 600;
+        bottom: 90px;
+        padding-bottom: 20px;
+        margin: auto;
+        left: 24%;
+        color: whitesmoke;
+
+        .infoContainer{
+            display: flex;
+            flex-direction: column;
+            gap:1em;
+
+            &__h3{
+                font-size: 25px;
+                font-weight: 600;
+                letter-spacing: 1px;
+            }
+
+            &__p{
+                font-size: 13px;
+                font-weight: 600;
+            }
+        }
+
     }
 
     .buttonsHero{
         display: flex;
         flex-direction: row;
         justify-content: center;
-        gap: 3em;
+        gap: 1.5em;
         position: absolute;
-        bottom: 70px;
-        left: 25%;
+        bottom: 40px;
+        left: 30%;
+        padding-bottom: 10px;
 
         &__a{
+            padding: 10px;
+            text-decoration: none;
+            width: 250px;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 550;
+
             &--left{
-                padding: 10px;
-                text-decoration: none;
-                width: 250px;
-                background-color: #2e313a;
-                color: whitesmoke;
-                text-align: center;
-                border-radius: 5px;
-                font-size: 14px;
-                font-weight: 500;
-            }
-            &--right{
-                padding: 10px;
-                text-decoration: none;
-                width: 250px;
-                background-color: #d2d2d6;
                 color: #2e313a;
-                text-align: center;
-                border-radius: 5px;
-                font-size: 14px;
-                font-weight: 500;
+                background-color: whitesmoke;
+                border:solid 3px whitesmoke;
+            }
+
+            &--right{
+                background-color: transparent;
+                border:solid 3px whitesmoke;
+                color:whitesmoke;
+                transition: 0.3s;
+            }
+
+            &--right:hover{
+                background-color: whitesmoke;
+                color: #2e313a;
+                transition: 0.3s;
             }
         }
+    }
+}
+
+.heroSpecification{
+    color: whitesmoke;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 31%;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+header::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-shadow: inset 0px -150px 100px 10px #000;
+}
+
+.separator{
+    background-color: #000;
+    height: 50vh;
+
+    &__h2{
+        color: whitesmoke;
+        text-align: center;
+        padding-top: 100px;
+        font-size: 30px;
+        font-weight: 550;
+
     }
 }
