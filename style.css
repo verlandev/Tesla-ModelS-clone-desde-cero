@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mynerve&display=swap");
 * {
   margin: 0;
@@ -137,6 +138,11 @@ body {
   font-size: 13px;
   font-weight: 600;
 }
+.hero .heroInfo .infoContainer .active {
+  opacity: 1; /* Opacidad final es 1, completamente visible */
+  transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
+  animation: none; /* Desactiva la animación cuando se agrega la clase active */
+}
 .hero .buttonsHero {
   display: flex;
   flex-direction: row;
@@ -203,6 +209,25 @@ header::before {
   padding-top: 100px;
   font-size: 30px;
   font-weight: 550;
+  opacity: 0; /* Comienza con opacidad cero (invisibles) */
+  transform: translateY(20px); /* Comienza desplazado hacia abajo 20px */
+  transition: opacity 0.6s ease, transform 0.6s ease; /* Transiciones suaves para opacity y transform */
+}
+.separator .active {
+  opacity: 1; /* Opacidad final es 1, completamente visible */
+  transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
+  animation: none; /* Desactiva la animación cuando se agrega la clase active */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Inicia con opacidad cero */
+    transform: translateY(20px); /* Comienza desplazado hacia abajo 20px */
+  }
+  to {
+    opacity: 1; /* Opacidad final es 1, completamente visible */
+    transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
