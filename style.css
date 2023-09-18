@@ -132,8 +132,8 @@ body {
   flex-direction: column;
   gap: 1em;
   opacity: 0; /* Comienza con opacidad cero (invisibles) */
-  transform: translateY(20px); /* Comienza desplazado hacia abajo 20px */
-  transition: opacity 0.8s ease, transform 0.8s ease; /* Transiciones suaves para opacity y transform */
+  transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
+  transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
 }
 .hero .heroInfo .infoContainer__h3 {
   font-size: 25px;
@@ -147,6 +147,7 @@ body {
 .hero .heroInfo .active {
   opacity: 1; /* Opacidad final es 1, completamente visible */
   transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
+  animation: none; /* Desactiva la animación cuando se agrega la clase active */
 }
 .hero .buttonsHero {
   display: flex;
@@ -159,6 +160,9 @@ body {
   right: 0;
   margin: auto;
   padding-bottom: 40px;
+  opacity: 0; /* Comienza con opacidad cero (invisibles) */
+  transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
+  transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
 }
 .hero .buttonsHero__a {
   padding: 10px;
@@ -184,6 +188,11 @@ body {
   background-color: whitesmoke;
   color: #2e313a;
   transition: 0.3s;
+}
+.hero .active {
+  opacity: 1; /* Opacidad final es 1, completamente visible */
+  transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
+  animation: none; /* Desactiva la animación cuando se agrega la clase active */
 }
 
 .heroSpecification {
