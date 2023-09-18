@@ -157,8 +157,8 @@ body{
             flex-direction: column;
             gap:1em;
             opacity: 0; /* Comienza con opacidad cero (invisibles) */
-            transform: translateY(20px); /* Comienza desplazado hacia abajo 20px */
-            transition: opacity 0.8s ease, transform 0.8s ease; /* Transiciones suaves para opacity y transform */
+            transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
+            transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
 
             &__h3{
                 font-size: 25px;
@@ -176,7 +176,7 @@ body{
         .active{
             opacity: 1; /* Opacidad final es 1, completamente visible */
             transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
-            //animation: none; /* Desactiva la animación cuando se agrega la clase active */
+            animation: none; /* Desactiva la animación cuando se agrega la clase active */
         }
 
     }
@@ -192,6 +192,9 @@ body{
         right: 0;
         margin: auto;
         padding-bottom: 40px;
+        opacity: 0; /* Comienza con opacidad cero (invisibles) */
+        transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
+        transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
 
         &__a{
             padding: 10px;
@@ -221,6 +224,12 @@ body{
                 transition: 0.3s;
             }
         }
+        
+    }
+    .active{
+        opacity: 1; /* Opacidad final es 1, completamente visible */
+        transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
+        animation: none; /* Desactiva la animación cuando se agrega la clase active */
     }
 }
 
