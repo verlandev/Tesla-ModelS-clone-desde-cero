@@ -140,19 +140,25 @@ body{
     .heroInfo{
         display: flex;
         flex-direction: row;
+        justify-content: center;
         position: absolute;
         gap:5em;
         text-align: center;
-        bottom: 90px;
         padding-bottom: 20px;
+        left: 0;
+        right: 0;
+        bottom: 90px;
         margin: auto;
-        left: 24%;
         color: whitesmoke;
+        width: 60%;
 
         .infoContainer{
             display: flex;
             flex-direction: column;
             gap:1em;
+            opacity: 0; /* Comienza con opacidad cero (invisibles) */
+            transform: translateY(20px); /* Comienza desplazado hacia abajo 20px */
+            transition: opacity 0.8s ease, transform 0.8s ease; /* Transiciones suaves para opacity y transform */
 
             &__h3{
                 font-size: 25px;
@@ -165,11 +171,12 @@ body{
                 font-weight: 600;
             }
             
-            .active{
-                opacity: 1; /* Opacidad final es 1, completamente visible */
-                transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
-                animation: none; /* Desactiva la animación cuando se agrega la clase active */
-            }
+            
+        }
+        .active{
+            opacity: 1; /* Opacidad final es 1, completamente visible */
+            transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
+            //animation: none; /* Desactiva la animación cuando se agrega la clase active */
         }
 
     }
@@ -180,9 +187,11 @@ body{
         justify-content: center;
         gap: 1.5em;
         position: absolute;
-        bottom: 40px;
-        left: 30%;
-        padding-bottom: 10px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        padding-bottom: 40px;
 
         &__a{
             padding: 10px;
@@ -219,10 +228,13 @@ body{
     color: whitesmoke;
     z-index: 1;
     position: absolute;
+    left: 0;
+    right: 0;
     bottom: 0;
-    left: 31%;
+    margin: 0 auto;
     font-size: 13px;
     font-weight: 500;
+    text-align: center;
 }
 
 header::before{
@@ -245,11 +257,9 @@ header::before{
         padding-top: 100px;
         font-size: 30px;
         font-weight: 550; 
-        // animation-name: fadeIn;
-        // animation: fadeIn 1.6s ease forwards; /* Inicia la animación al cargar la página */
         opacity: 0; /* Comienza con opacidad cero (invisibles) */
         transform: translateY(20px); /* Comienza desplazado hacia abajo 20px */
-        transition: opacity 0.6s ease, transform 0.6s ease; /* Transiciones suaves para opacity y transform */
+        transition: opacity 0.8s ease, transform 0.8s ease; /* Transiciones suaves para opacity y transform */
     }
     
     .active{
@@ -259,13 +269,3 @@ header::before{
     }
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0; /* Inicia con opacidad cero */
-        transform: translateY(20px); /* Comienza desplazado hacia abajo 20px */
-    }
-    to {
-        opacity: 1; /* Opacidad final es 1, completamente visible */
-        transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
-    }
-}
