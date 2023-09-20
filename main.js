@@ -20,18 +20,18 @@ function detectingScroll(elements, scrollOffset) {
 // y agregamos un setTimeOut para replicar el efecto de la página y que los elementos
 // aparezcan en distinto orden
 
-window.addEventListener('scroll', function(){
-    setTimeout(function(){
+window.addEventListener('scroll', () => {
+    setTimeout(() => {
         detectingScroll([separatorH2$$],450)
     },1000)
 
-    setTimeout(function(){
+    setTimeout(() => {
         infoContainers$$.forEach(function(container){
             detectingScroll([container], 450)
         })
     }, 500)
 
-    setTimeout(function(){
+    setTimeout(() => {
         detectingScroll([buttonsHero$$], 450)
     }, 1500)
 })

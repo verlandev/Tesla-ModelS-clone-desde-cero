@@ -9,30 +9,6 @@ body {
   font-family: "Montserrat";
 }
 
-.banner {
-  background: radial-gradient(54.97% 272.54% at 27.36% -134.72%, rgba(108, 148, 255, 0.92) 0, rgba(0, 0, 0, 0.92) 100%);
-  padding: 17px;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 1em;
-}
-.banner__span--h5 {
-  color: whitesmoke;
-  font-weight: bolder;
-  font-size: 17px;
-}
-.banner__span--p {
-  color: whitesmoke;
-  font-size: 14px;
-  font-weight: 500;
-}
-.banner__a {
-  color: whitesmoke;
-}
-
 .hero {
   background-image: url("/images/hero.jpg");
   background-size: cover;
