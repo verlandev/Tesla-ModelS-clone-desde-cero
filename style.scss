@@ -16,6 +16,50 @@ body{
     height: 140vh;
     position: relative;
 
+    .banner{
+        //background: radial-gradient(54.97% 272.54% at 27.36% -134.72%,rgba(108,148,255,.92) 0,rgba(0,0,0,.92) 100%);
+        padding: 17px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #0000003f;
+        backdrop-filter: blur(10px);
+        padding: 2px 40px 2px 40px;
+    
+        &__h4{
+            color: whitesmoke;
+            font-size: large;
+            font-weight: 550;
+        }
+    
+        .bannerLinks{
+            display: flex;
+            gap: 1.5em;
+            padding: 5px;
+    
+            &__a{
+                text-decoration: none;
+                color: whitesmoke;
+                font-weight: 600;
+                font-size: 12px;
+                padding: 7px;
+                width: 160px;
+                text-align: center;
+    
+                &--left{
+    
+                }
+    
+                &--right{
+                    background-color: #2f2f2f;
+                    border-radius: 3px;
+    
+                }
+            }
+        }
+    }
+
     .header{
         display: flex;
         flex-direction: row;

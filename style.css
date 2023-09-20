@@ -16,6 +16,39 @@ body {
   height: 140vh;
   position: relative;
 }
+.hero .banner {
+  padding: 17px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.2470588235);
+  backdrop-filter: blur(10px);
+  padding: 2px 40px 2px 40px;
+}
+.hero .banner__h4 {
+  color: whitesmoke;
+  font-size: large;
+  font-weight: 550;
+}
+.hero .banner .bannerLinks {
+  display: flex;
+  gap: 1.5em;
+  padding: 5px;
+}
+.hero .banner .bannerLinks__a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 7px;
+  width: 160px;
+  text-align: center;
+}
+.hero .banner .bannerLinks__a--right {
+  background-color: #2f2f2f;
+  border-radius: 3px;
+}
 .hero .header {
   display: flex;
   flex-direction: row;
