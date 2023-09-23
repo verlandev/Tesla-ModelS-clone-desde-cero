@@ -14,27 +14,33 @@ body{
 }
 
 .banner{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #0000003f;
-    backdrop-filter: blur(10px);
-    padding: 2px 0px 2px 0px;
-    position: fixed;
-    z-index: 2;
-    width: 100%;
+    position: relative;
+
+    .bannerContainer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #0000003f;
+        backdrop-filter: blur(10px);
+        position:fixed;
+        z-index: 3;
+        width: 100%;
+        padding: 2px 0;
+    }
 
     &__h4{
         color: whitesmoke;
         font-size: large;
         font-weight: 550;
+        margin-left: 45px;
     }
 
     .bannerLinks{
         display: flex;
         gap: 1.5em;
         padding: 5px;
+        margin-right: 45px;
 
         &__a{
             text-decoration: none;
