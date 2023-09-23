@@ -6,7 +6,8 @@
 }
 
 body{
-    font-family: 'Montserrat'
+    font-family: 'Montserrat';
+    background-color: #000;
 }
 
 #root{
@@ -283,7 +284,7 @@ body{
 
 .separator{
     background-color: #000;
-    height: 50vh;
+    height: 40vh;
     position: relative;
 
     &__h2{
@@ -303,6 +304,16 @@ body{
         animation: none; /* Desactiva la animación cuando se agrega la clase active */
     }
 
+}
+
+.separator::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-shadow: inset 0px 100px 100px 10px #000;
 }
 
 
