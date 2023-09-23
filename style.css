@@ -7,7 +7,6 @@
 
 body {
   font-family: "Montserrat";
-  background-color: #000;
 }
 
 #root {
@@ -246,7 +245,7 @@ body {
 
 .separator {
   background-color: #000;
-  height: 40vh;
+  height: 30vh;
   position: relative;
 }
 .separator__h2 {
@@ -292,6 +291,60 @@ body {
   top: 0;
   right: 0;
   box-shadow: inset 0px 100px 100px 10px #000;
+}
+
+.video {
+  width: 100%;
+  background-color: #000;
+  margin: auto;
+}
+
+.descriptions {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  padding-top: 40vh;
+}
+.descriptions .caption {
+  display: flex;
+  flex-direction: row;
+  width: 75%;
+  margin: auto;
+}
+.descriptions .caption__img {
+  flex: 1;
+  width: 100px;
+}
+.descriptions .caption .captionText {
+  color: whitesmoke;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 1em;
+}
+.descriptions .caption .captionText__h5 {
+  width: 320px;
+}
+.descriptions .caption .captionText__p {
+  width: 350px;
+  font-size: 14px;
+}
+.descriptions .caption:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.descriptions .caption:nth-child(odd) .captionText {
+  display: flex;
+  align-items: end;
+}
+.descriptions .caption:nth-child(odd) .captionText__h5 {
+  width: 350px;
+  border: solid 1px black;
+}
+.descriptions .caption:nth-child(odd) .captionText__p {
+  width: 350px;
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=style.css.map */
