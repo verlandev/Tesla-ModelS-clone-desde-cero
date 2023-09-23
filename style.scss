@@ -271,7 +271,7 @@ body{
     text-align: center;
 }
 
-header::before{
+.header::before{
     content: '';
     width: 100%;
     height: 100%;
@@ -284,6 +284,7 @@ header::before{
 .separator{
     background-color: #000;
     height: 50vh;
+    position: relative;
 
     &__h2{
         color: whitesmoke;
@@ -301,5 +302,27 @@ header::before{
         transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
         animation: none; /* Desactiva la animación cuando se agrega la clase active */
     }
+
+}
+
+
+.insider{
+    height: 90vh;
+    background-image: url('/images/insiderSection.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding-top: 40vh;
+}
+
+.insider::after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        box-shadow: inset 0px 100px 100px 10px #000;
+        
 }
 
