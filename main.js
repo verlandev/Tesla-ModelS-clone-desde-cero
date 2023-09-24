@@ -4,6 +4,8 @@ const separatorH2$$ = document.querySelector('.separator__h2')
 const infoContainers$$ = document.querySelectorAll('.infoContainer')
 const buttonsHero$$ = document.querySelector('.buttonsHero')
 
+const captionTexts$$ = document.querySelectorAll('.captionText')
+
 // Creamos una función que gestione el banner
 
 const detectingBanner = () => {
@@ -38,11 +40,11 @@ window.addEventListener('scroll', () => {
     detectingBanner()
 
     setTimeout(() => {
-        detectingScroll([separatorH2$$],450)
+        detectingScroll([separatorH2$$], 450)
     },500)
 
     setTimeout(() => {
-        infoContainers$$.forEach(function(container){
+        infoContainers$$.forEach((container) => {
             detectingScroll([container], 450)
         })
     }, 200)
@@ -50,4 +52,15 @@ window.addEventListener('scroll', () => {
     setTimeout(() => {
         detectingScroll([buttonsHero$$], 450)
     }, 700)
+
+    setTimeout(() => {
+        captionTexts$$.forEach((caption) => {
+            detectingScroll([caption], 500)
+        })
+    }, 500)
 })
+
+window.addEventListener('scroll', function() {
+    var scrollYValue = window.scrollY;
+    console.log(scrollYValue); // Esto imprimirá el valor actual de scrollY en la consola.
+});

@@ -137,7 +137,8 @@ body {
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
 }
-.hero .heroInfo {
+.hero .heroInfo,
+.hero .sectionInfo {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -152,7 +153,8 @@ body {
   color: whitesmoke;
   width: 60%;
 }
-.hero .heroInfo .infoContainer {
+.hero .heroInfo .infoContainer,
+.hero .sectionInfo .infoContainer {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -160,16 +162,19 @@ body {
   transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
   transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
 }
-.hero .heroInfo .infoContainer__h3 {
+.hero .heroInfo .infoContainer__h3,
+.hero .sectionInfo .infoContainer__h3 {
   font-size: 25px;
   font-weight: 600;
   letter-spacing: 1px;
 }
-.hero .heroInfo .infoContainer__p {
+.hero .heroInfo .infoContainer__p,
+.hero .sectionInfo .infoContainer__p {
   font-size: 13px;
   font-weight: 600;
 }
-.hero .heroInfo .active {
+.hero .heroInfo .active,
+.hero .sectionInfo .active {
   opacity: 1; /* Opacidad final es 1, completamente visible */
   transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
   animation: none; /* Desactiva la animación cuando se agrega la clase active */
@@ -233,7 +238,7 @@ body {
   text-align: center;
 }
 
-header::before {
+.header::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -245,7 +250,9 @@ header::before {
 
 .separator {
   background-color: #000;
-  height: 50vh;
+  height: 30vh;
+  position: relative;
+  padding-bottom: 20vh;
 }
 .separator__h2 {
   color: whitesmoke;
@@ -258,6 +265,113 @@ header::before {
   transition: opacity 0.8s ease, transform 0.8s ease; /* Transiciones suaves para opacity y transform */
 }
 .separator .active {
+  opacity: 1; /* Opacidad final es 1, completamente visible */
+  transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
+  animation: none; /* Desactiva la animación cuando se agrega la clase active */
+}
+
+.separator::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-shadow: inset 0px 100px 100px 10px #000;
+}
+
+.insider {
+  height: 90vh;
+  background-image: url("/images/insiderSection.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding-top: 40vh;
+}
+
+.insider::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-shadow: inset 0px 100px 100px 10px #000;
+}
+
+.video {
+  width: 100%;
+  background-color: #000;
+  padding-top: 30vh;
+  display: flex;
+  justify-content: center;
+}
+.video .videoclip {
+  width: 92%;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.descriptions {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  padding-top: 40vh;
+  padding-bottom: 20vh;
+}
+.descriptions .caption {
+  display: flex;
+  flex-direction: row;
+  width: 75%;
+  margin: auto;
+}
+.descriptions .caption__img {
+  flex: 1;
+  width: 100px;
+}
+.descriptions .caption .captionText {
+  color: whitesmoke;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 1em;
+  opacity: 0; /* Comienza con opacidad cero (invisibles) */
+  transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
+  transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
+}
+.descriptions .caption .captionText__h5 {
+  width: 320px;
+}
+.descriptions .caption .captionText__p {
+  width: 350px;
+  font-size: 14px;
+}
+.descriptions .caption .active {
+  opacity: 1; /* Opacidad final es 1, completamente visible */
+  transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
+  animation: none; /* Desactiva la animación cuando se agrega la clase active */
+}
+.descriptions .caption:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.descriptions .caption:nth-child(odd) .captionText {
+  display: flex;
+  align-items: end;
+  opacity: 0; /* Comienza con opacidad cero (invisibles) */
+  transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
+  transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
+}
+.descriptions .caption:nth-child(odd) .captionText__h5 {
+  width: 350px;
+  border: solid 1px black;
+}
+.descriptions .caption:nth-child(odd) .captionText__p {
+  width: 350px;
+  font-size: 14px;
+}
+.descriptions .caption:nth-child(odd) .active {
   opacity: 1; /* Opacidad final es 1, completamente visible */
   transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
   animation: none; /* Desactiva la animación cuando se agrega la clase active */

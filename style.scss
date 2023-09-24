@@ -6,7 +6,7 @@
 }
 
 body{
-    font-family: 'Montserrat'
+    font-family: 'Montserrat';
 }
 
 #root{
@@ -162,7 +162,8 @@ body{
         }
     }
 
-    .heroInfo{
+    .heroInfo, 
+    .sectionInfo{
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -271,7 +272,7 @@ body{
     text-align: center;
 }
 
-header::before{
+.header::before{
     content: '';
     width: 100%;
     height: 100%;
@@ -283,7 +284,10 @@ header::before{
 
 .separator{
     background-color: #000;
-    height: 50vh;
+    height: 30vh;
+    position: relative;
+    padding-bottom: 20vh;
+
 
     &__h2{
         color: whitesmoke;
@@ -301,5 +305,132 @@ header::before{
         transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
         animation: none; /* Desactiva la animación cuando se agrega la clase active */
     }
+
 }
 
+.separator::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-shadow: inset 0px 100px 100px 10px #000;
+}
+
+
+.insider{
+    height: 90vh;
+    background-image: url('/images/insiderSection.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding-top: 40vh;
+}
+
+.insider::after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        box-shadow: inset 0px 100px 100px 10px #000;
+        
+}
+
+.video{
+    width: 100%;
+    background-color: #000;
+    padding-top: 30vh;
+    display: flex;
+    justify-content: center;
+
+    .videoclip{
+        width: 92%;
+        margin: auto;
+        border-radius: 5px;
+    }
+}
+
+.descriptions{
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40vh;
+    padding-bottom: 20vh;
+
+    .caption{
+        display: flex;
+        flex-direction: row;
+        width: 75%;
+        margin: auto;
+
+        &__img{
+            flex: 1;
+            width: 100px;
+        }
+
+        .captionText{
+            color: whitesmoke;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            gap:1em;
+            opacity: 0; /* Comienza con opacidad cero (invisibles) */
+            transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
+            transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
+
+
+            &__h5{
+                width: 320px;
+            }
+            &__p{
+                width: 350px;
+                font-size: 14px;
+            }
+
+            
+        }
+
+    .active{
+        opacity: 1; /* Opacidad final es 1, completamente visible */
+        transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
+        animation: none; /* Desactiva la animación cuando se agrega la clase active */
+    }
+        
+        
+    }
+
+    .caption:nth-child(even){
+        flex-direction: row-reverse;
+    }
+
+    .caption:nth-child(odd){
+        
+        .captionText{
+            display: flex;
+            align-items: end;
+            opacity: 0; /* Comienza con opacidad cero (invisibles) */
+            transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
+            transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
+
+            &__h5{
+                width: 350px;
+                border:solid 1px black;
+            }
+            &__p{
+                width: 350px;
+                font-size: 14px;
+            }
+        }
+
+        .active{
+            opacity: 1; /* Opacidad final es 1, completamente visible */
+            transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
+            animation: none; /* Desactiva la animación cuando se agrega la clase active */
+        }
+    }
+}
