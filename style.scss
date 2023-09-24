@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mynerve&display=swap');
 
+// Custom ScrollBar
+
+::-webkit-scrollbar {width: 6px; background:#252525;}
+/* Track */
+::-webkit-scrollbar-track {background: #f1f1f100;}
+/* Handle */
+::-webkit-scrollbar-thumb {background: #fc9a15; border-radius: 5px;}
+
+
+
+
 *{
     margin:0;
     padding: 0;
