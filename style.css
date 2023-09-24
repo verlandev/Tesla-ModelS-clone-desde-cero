@@ -247,6 +247,7 @@ body {
   background-color: #000;
   height: 30vh;
   position: relative;
+  padding-bottom: 20vh;
 }
 .separator__h2 {
   color: whitesmoke;
@@ -296,7 +297,14 @@ body {
 .video {
   width: 100%;
   background-color: #000;
+  padding-top: 30vh;
+  display: flex;
+  justify-content: center;
+}
+.video .videoclip {
+  width: 92%;
   margin: auto;
+  border-radius: 5px;
 }
 
 .descriptions {
@@ -304,6 +312,7 @@ body {
   display: flex;
   flex-direction: column;
   padding-top: 40vh;
+  padding-bottom: 20vh;
 }
 .descriptions .caption {
   display: flex;
