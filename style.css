@@ -137,7 +137,8 @@ body {
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
 }
-.hero .heroInfo {
+.hero .heroInfo,
+.hero .sectionInfo {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -152,7 +153,8 @@ body {
   color: whitesmoke;
   width: 60%;
 }
-.hero .heroInfo .infoContainer {
+.hero .heroInfo .infoContainer,
+.hero .sectionInfo .infoContainer {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -160,16 +162,19 @@ body {
   transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
   transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
 }
-.hero .heroInfo .infoContainer__h3 {
+.hero .heroInfo .infoContainer__h3,
+.hero .sectionInfo .infoContainer__h3 {
   font-size: 25px;
   font-weight: 600;
   letter-spacing: 1px;
 }
-.hero .heroInfo .infoContainer__p {
+.hero .heroInfo .infoContainer__p,
+.hero .sectionInfo .infoContainer__p {
   font-size: 13px;
   font-weight: 600;
 }
-.hero .heroInfo .active {
+.hero .heroInfo .active,
+.hero .sectionInfo .active {
   opacity: 1; /* Opacidad final es 1, completamente visible */
   transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
   animation: none; /* Desactiva la animación cuando se agrega la clase active */
@@ -332,6 +337,9 @@ body {
   align-items: start;
   justify-content: center;
   gap: 1em;
+  opacity: 0; /* Comienza con opacidad cero (invisibles) */
+  transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
+  transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
 }
 .descriptions .caption .captionText__h5 {
   width: 320px;
@@ -340,12 +348,20 @@ body {
   width: 350px;
   font-size: 14px;
 }
+.descriptions .caption .active {
+  opacity: 1; /* Opacidad final es 1, completamente visible */
+  transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
+  animation: none; /* Desactiva la animación cuando se agrega la clase active */
+}
 .descriptions .caption:nth-child(even) {
   flex-direction: row-reverse;
 }
 .descriptions .caption:nth-child(odd) .captionText {
   display: flex;
   align-items: end;
+  opacity: 0; /* Comienza con opacidad cero (invisibles) */
+  transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
+  transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
 }
 .descriptions .caption:nth-child(odd) .captionText__h5 {
   width: 350px;
@@ -354,6 +370,11 @@ body {
 .descriptions .caption:nth-child(odd) .captionText__p {
   width: 350px;
   font-size: 14px;
+}
+.descriptions .caption:nth-child(odd) .active {
+  opacity: 1; /* Opacidad final es 1, completamente visible */
+  transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
+  animation: none; /* Desactiva la animación cuando se agrega la clase active */
 }
 
 /*# sourceMappingURL=style.css.map */
