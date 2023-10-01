@@ -74,61 +74,68 @@ body {
   display: none;
 }
 
-.hero {
+.topHero {
   background-image: url("/images/hero.jpg");
+}
+
+.secondHero {
+  background-image: url("/images/");
+}
+
+.heroSection {
   background-size: cover;
   background-position: center;
   height: 140vh;
   position: relative;
 }
-.hero .header {
+.heroSection .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 1em;
   padding: 20px 40px 20px 40px;
 }
-.hero .header__logo {
+.heroSection .header__logo {
   width: 130px;
   cursor: pointer;
 }
-.hero .header .headerMenu__ul {
+.heroSection .header .headerMenu__ul {
   display: flex;
   flex-direction: row;
   gap: 2em;
 }
-.hero .header .headerMenu__li {
+.heroSection .header .headerMenu__li {
   list-style: none;
 }
-.hero .header .headerMenu__a {
+.heroSection .header .headerMenu__a {
   text-decoration: none;
   color: #2f2f2f;
   font-weight: 550;
   font-size: 14px;
 }
-.hero .header .headerLinks__ul {
+.heroSection .header .headerLinks__ul {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 1em;
 }
-.hero .header .headerLinks__li {
+.heroSection .header .headerLinks__li {
   list-style: none;
 }
-.hero .header .headerLinks__a {
+.heroSection .header .headerLinks__a {
   text-decoration: none;
 }
-.hero .header .headerLinks__img {
+.heroSection .header .headerLinks__img {
   width: 20px;
 }
-.hero .heroText {
+.heroSection .heroText {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.hero .heroText__h2 {
+.heroSection .heroText__h2 {
   color: #2f2f2f;
   text-align: center;
   margin: 25px auto 10px;
@@ -136,7 +143,7 @@ body {
   font-size: 40px;
   font-weight: 600;
 }
-.hero .heroText__a {
+.heroSection .heroText__a {
   color: #2f2f2f;
   text-decoration: underline;
   text-decoration-thickness: 1px;
@@ -147,14 +154,13 @@ body {
   z-index: 1;
   transition: 0.3s;
 }
-.hero .heroText__a:hover {
+.heroSection .heroText__a:hover {
   color: #000;
   transition: 0.3s;
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
 }
-.hero .heroInfo,
-.hero .sectionInfo {
+.heroSection .heroInfo {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -169,8 +175,7 @@ body {
   color: whitesmoke;
   width: 60%;
 }
-.hero .heroInfo .infoContainer,
-.hero .sectionInfo .infoContainer {
+.heroSection .heroInfo .infoContainer {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -178,24 +183,21 @@ body {
   transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
   transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
 }
-.hero .heroInfo .infoContainer__h3,
-.hero .sectionInfo .infoContainer__h3 {
+.heroSection .heroInfo .infoContainer__h3 {
   font-size: 25px;
   font-weight: 600;
   letter-spacing: 1px;
 }
-.hero .heroInfo .infoContainer__p,
-.hero .sectionInfo .infoContainer__p {
+.heroSection .heroInfo .infoContainer__p {
   font-size: 13px;
   font-weight: 600;
 }
-.hero .heroInfo .active,
-.hero .sectionInfo .active {
+.heroSection .heroInfo .active {
   opacity: 1; /* Opacidad final es 1, completamente visible */
   transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
   animation: none; /* Desactiva la animación cuando se agrega la clase active */
 }
-.hero .buttonsHero {
+.heroSection .buttonsHero {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -210,7 +212,7 @@ body {
   transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
   transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
 }
-.hero .buttonsHero__a {
+.heroSection .buttonsHero__a {
   padding: 10px;
   text-decoration: none;
   width: 250px;
@@ -219,23 +221,23 @@ body {
   font-size: 14px;
   font-weight: 550;
 }
-.hero .buttonsHero__a--left {
+.heroSection .buttonsHero__a--left {
   color: #2e313a;
   background-color: whitesmoke;
   border: solid 3px whitesmoke;
 }
-.hero .buttonsHero__a--right {
+.heroSection .buttonsHero__a--right {
   background-color: transparent;
   border: solid 3px whitesmoke;
   color: whitesmoke;
   transition: 0.3s;
 }
-.hero .buttonsHero__a--right:hover {
+.heroSection .buttonsHero__a--right:hover {
   background-color: whitesmoke;
   color: #2e313a;
   transition: 0.3s;
 }
-.hero .active {
+.heroSection .active {
   opacity: 1; /* Opacidad final es 1, completamente visible */
   transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
   animation: none; /* Desactiva la animación cuando se agrega la clase active */
@@ -328,24 +330,24 @@ body {
   border-radius: 5px;
 }
 
-.descriptions {
+.descriptionsSection {
   background-color: #000;
   display: flex;
   flex-direction: column;
   padding-top: 40vh;
   padding-bottom: 20vh;
 }
-.descriptions .caption {
+.descriptionsSection .caption {
   display: flex;
   flex-direction: row;
   width: 75%;
   margin: auto;
 }
-.descriptions .caption__img {
+.descriptionsSection .caption__img {
   flex: 1;
   width: 100px;
 }
-.descriptions .caption .captionText {
+.descriptionsSection .caption .captionText {
   color: whitesmoke;
   flex: 1;
   display: flex;
@@ -357,37 +359,37 @@ body {
   transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
   transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
 }
-.descriptions .caption .captionText__h5 {
+.descriptionsSection .caption .captionText__h5 {
   width: 320px;
 }
-.descriptions .caption .captionText__p {
+.descriptionsSection .caption .captionText__p {
   width: 350px;
   font-size: 14px;
 }
-.descriptions .caption .active {
+.descriptionsSection .caption .active {
   opacity: 1; /* Opacidad final es 1, completamente visible */
   transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
   animation: none; /* Desactiva la animación cuando se agrega la clase active */
 }
-.descriptions .caption:nth-child(even) {
+.descriptionsSection .caption:nth-child(even) {
   flex-direction: row-reverse;
 }
-.descriptions .caption:nth-child(odd) .captionText {
+.descriptionsSection .caption:nth-child(odd) .captionText {
   display: flex;
   align-items: end;
   opacity: 0; /* Comienza con opacidad cero (invisibles) */
   transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
   transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
 }
-.descriptions .caption:nth-child(odd) .captionText__h5 {
+.descriptionsSection .caption:nth-child(odd) .captionText__h5 {
   width: 350px;
   border: solid 1px black;
 }
-.descriptions .caption:nth-child(odd) .captionText__p {
+.descriptionsSection .caption:nth-child(odd) .captionText__p {
   width: 350px;
   font-size: 14px;
 }
-.descriptions .caption:nth-child(odd) .active {
+.descriptionsSection .caption:nth-child(odd) .active {
   opacity: 1; /* Opacidad final es 1, completamente visible */
   transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
   animation: none; /* Desactiva la animación cuando se agrega la clase active */
