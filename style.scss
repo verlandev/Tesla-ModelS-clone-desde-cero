@@ -451,3 +451,160 @@ body{
         }
     }
 }
+
+.ctaSectionsBlack{
+    background-color: #000;
+    color: white
+}
+
+.ctaSectionsWhite{
+    background-color: white;
+    color:#000;
+}
+
+.ctaSections{
+    
+    .ctaSectionsContainer{
+        width: 77%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: auto;
+        align-items: flex-start;
+        padding: 50px 0px;
+        gap: 3em;
+    }
+
+    .ctaSectionsLeft{
+        flex:2.5;
+        display: flex;
+        flex-direction: column;
+        gap:0.2em;
+        opacity: 0; /* Comienza con opacidad cero (invisibles) */
+        transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
+        transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
+
+        &__h3{
+            font-weight: 400;
+        }
+
+        &__h2{
+            font-weight: 600;
+            font-size: 27px;
+            padding-bottom: 10px;
+        }
+
+        &__p{
+            font-size: 14px;
+            font-weight: 500;
+            color:#56595c;
+            line-height: 20px;
+        }
+
+        .ctaSectionsWhiteLeftButtons,
+        .ctaSectionsBlackLeftButtons {
+            display: flex;
+            flex-direction: column;
+            gap:1em;
+            margin-top: 10px;
+
+            &__a{
+                text-align: center;
+                font-size: 14px;
+                font-weight: 500;
+                text-decoration: none;
+                color: black;
+                padding: 10px;
+                width: 180px;
+                border-radius: 5px;
+
+                &--white{
+                    border:solid 3px black;
+                    transition: 0.3s;
+
+                    &:hover{
+                        background-color: #000;
+                        color: white;
+                        transition: 0.3s;
+                    }
+                }
+
+                &--grey{
+                    background-color:#f4f4f4;
+                    border:solid 3px #f4f4f4;
+                    transition: 0.3s;
+
+                    &:hover{
+                        background-color: #e8e8e8;
+                        border:solid 3px #e8e8e8;
+                        color: black;
+                        transition: 0.3s;
+
+                    }
+                }
+
+                &--black{
+                    border: solid 3px white;
+                    transition: 0.3s;
+                    color: white;
+
+                    &:hover{
+                        background-color: white;
+                        color: black;
+                        transform: 0.3s;
+
+                    }
+                }
+
+                &--dark{
+                    border:solid 3px #222222;
+                    background-color: #222222;
+                    color: white;
+                    transition: 0.3s;
+
+                    &:hover{
+                        background-color: #3e3e3e;
+                        border: solid 3px #3e3e3e;
+                        transition: 0.3s;
+                    }
+                }
+
+                
+            }
+
+        }
+    }
+
+    
+    .ctaSectionsRight{
+        flex: 3.5;
+        font-size: 14px;
+        font-weight: 450;
+        line-height: 20px;
+        opacity: 0; /* Comienza con opacidad cero (invisibles) */
+        transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
+        transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
+    }
+
+    .ctaSectionsRightImage{
+        flex: 1;
+
+        &__img{
+            width: 500px;
+        }
+    }
+
+    .active{
+        opacity: 1; /* Opacidad final es 1, completamente visible */
+        transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
+        animation: none; /* Desactiva la animación cuando se agrega la clase active */
+    }
+
+    .ctaSectionsWhiteRight{
+        color:#56595c;
+    }
+
+    .ctaSectionsBlackRight{
+        color:white;
+    }
+}
