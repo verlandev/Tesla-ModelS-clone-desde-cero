@@ -451,3 +451,125 @@ body{
         }
     }
 }
+
+.ctaSectionsBlack{
+    background-color: #000;
+    color: white
+}
+
+.ctaSectionsWhite{
+    background-color: white;
+    color:#000
+}
+
+.ctaSections{
+    
+    .ctaSectionsContainer{
+        width: 77%;
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        align-items: flex-start;
+        padding: 50px 0px;
+        gap: 5em;
+    }
+
+    .ctaSectionsLeft{
+        flex:2;
+        display: flex;
+        flex-direction: column;
+        gap:0.2em;
+
+        &__h5{
+            font-weight: 400;
+        }
+
+        &__h3{
+            font-weight: 600;
+            font-size: 27px;
+            padding-bottom: 10px;
+        }
+
+        .ctaSectionsWhiteLeftButtons,
+        .ctaSectionsBlackLeftButtons {
+            display: flex;
+            flex-direction: column;
+            gap:1em;
+            margin-top: 10px;
+
+            &__a{
+                text-align: center;
+                font-size: 14px;
+                font-weight: 500;
+                text-decoration: none;
+                color: black;
+                padding: 10px;
+                width: 180px;
+                border-radius: 5px;
+
+                &--white{
+                    border:solid 3px black;
+                    transition: 0.3s;
+
+                    &:hover{
+                        background-color: #000;
+                        color: white;
+                        transition: 0.3s;
+                    }
+                }
+
+                &--grey{
+                    background-color:#f4f4f4;
+                    border:solid 3px #f4f4f4;
+                    transition: 0.3s;
+
+                    &:hover{
+                        background-color: #e8e8e8;
+                        border:solid 3px #e8e8e8;
+                        color: black;
+                        transition: 0.3s;
+
+                    }
+                }
+
+                &--black{
+                    border: solid 3px white;
+                    transition: 0.3s;
+                    color: white;
+
+                    &:hover{
+                        background-color: white;
+                        color: black;
+                        transform: 0.3s;
+
+                    }
+                }
+
+                &--dark{
+                    border:solid 3px #222222;
+                    background-color: #222222;
+                    color: white;
+                    transition: 0.3s;
+
+                    &:hover{
+                        background-color: #3e3e3e;
+                        border: solid 3px #3e3e3e;
+                        transition: 0.3s;
+                    }
+                }
+
+                
+            }
+
+
+        }
+    }
+
+    .ctaSectionsRight{
+        flex: 4;
+        font-size: 15px;
+        font-weight: 400;
+    }
+    
+
+}
