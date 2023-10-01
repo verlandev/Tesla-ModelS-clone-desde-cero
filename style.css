@@ -78,6 +78,10 @@ body {
   background-image: url("/images/hero.jpg");
 }
 
+.secondHero {
+  background-image: url("/images/secondHero.jpg");
+}
+
 .heroSection {
   background-size: cover;
   background-position: center;
