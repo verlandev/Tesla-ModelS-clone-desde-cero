@@ -409,24 +409,31 @@ body {
   width: 77%;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   margin: auto;
   align-items: flex-start;
   padding: 50px 0px;
-  gap: 5em;
+  gap: 3em;
 }
 .ctaSections .ctaSectionsLeft {
-  flex: 2;
+  flex: 2.5;
   display: flex;
   flex-direction: column;
   gap: 0.2em;
 }
-.ctaSections .ctaSectionsLeft__h5 {
+.ctaSections .ctaSectionsLeft__h3 {
   font-weight: 400;
 }
-.ctaSections .ctaSectionsLeft__h3 {
+.ctaSections .ctaSectionsLeft__h2 {
   font-weight: 600;
   font-size: 27px;
   padding-bottom: 10px;
+}
+.ctaSections .ctaSectionsLeft__p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #56595c;
+  line-height: 20px;
 }
 .ctaSections .ctaSectionsLeft .ctaSectionsWhiteLeftButtons,
 .ctaSections .ctaSectionsLeft .ctaSectionsBlackLeftButtons {
@@ -496,9 +503,16 @@ body {
   transition: 0.3s;
 }
 .ctaSections .ctaSectionsRight {
-  flex: 4;
-  font-size: 15px;
-  font-weight: 400;
+  flex: 3.5;
+  font-size: 14px;
+  font-weight: 450;
+  line-height: 20px;
+}
+.ctaSections .ctaSectionsWhiteRight {
+  color: #56595c;
+}
+.ctaSections .ctaSectionsBlackRight {
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
