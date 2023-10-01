@@ -74,8 +74,11 @@ body{
     display: none;
 }
 
-.hero{
+.topHero{
     background-image: url('/images/hero.jpg');
+}
+
+.heroSection{
     background-size: cover;
     background-position: center;
     height: 140vh;

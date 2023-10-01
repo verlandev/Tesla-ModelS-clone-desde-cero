@@ -74,64 +74,61 @@ body {
   display: none;
 }
 
-.topHero {
+.hero {
   background-image: url("/images/hero.jpg");
-}
-
-.heroSection {
   background-size: cover;
   background-position: center;
   height: 140vh;
   position: relative;
 }
-.heroSection .header {
+.hero .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 1em;
   padding: 20px 40px 20px 40px;
 }
-.heroSection .header__logo {
+.hero .header__logo {
   width: 130px;
   cursor: pointer;
 }
-.heroSection .header .headerMenu__ul {
+.hero .header .headerMenu__ul {
   display: flex;
   flex-direction: row;
   gap: 2em;
 }
-.heroSection .header .headerMenu__li {
+.hero .header .headerMenu__li {
   list-style: none;
 }
-.heroSection .header .headerMenu__a {
+.hero .header .headerMenu__a {
   text-decoration: none;
   color: #2f2f2f;
   font-weight: 550;
   font-size: 14px;
 }
-.heroSection .header .headerLinks__ul {
+.hero .header .headerLinks__ul {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 1em;
 }
-.heroSection .header .headerLinks__li {
+.hero .header .headerLinks__li {
   list-style: none;
 }
-.heroSection .header .headerLinks__a {
+.hero .header .headerLinks__a {
   text-decoration: none;
 }
-.heroSection .header .headerLinks__img {
+.hero .header .headerLinks__img {
   width: 20px;
 }
-.heroSection .heroText {
+.hero .heroText {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.heroSection .heroText__h2 {
+.hero .heroText__h2 {
   color: #2f2f2f;
   text-align: center;
   margin: 25px auto 10px;
@@ -139,7 +136,7 @@ body {
   font-size: 40px;
   font-weight: 600;
 }
-.heroSection .heroText__a {
+.hero .heroText__a {
   color: #2f2f2f;
   text-decoration: underline;
   text-decoration-thickness: 1px;
@@ -150,14 +147,14 @@ body {
   z-index: 1;
   transition: 0.3s;
 }
-.heroSection .heroText__a:hover {
+.hero .heroText__a:hover {
   color: #000;
   transition: 0.3s;
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
 }
-.heroSection .heroInfo,
-.heroSection .sectionInfo {
+.hero .heroInfo,
+.hero .sectionInfo {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -172,8 +169,8 @@ body {
   color: whitesmoke;
   width: 60%;
 }
-.heroSection .heroInfo .infoContainer,
-.heroSection .sectionInfo .infoContainer {
+.hero .heroInfo .infoContainer,
+.hero .sectionInfo .infoContainer {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -181,24 +178,24 @@ body {
   transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
   transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
 }
-.heroSection .heroInfo .infoContainer__h3,
-.heroSection .sectionInfo .infoContainer__h3 {
+.hero .heroInfo .infoContainer__h3,
+.hero .sectionInfo .infoContainer__h3 {
   font-size: 25px;
   font-weight: 600;
   letter-spacing: 1px;
 }
-.heroSection .heroInfo .infoContainer__p,
-.heroSection .sectionInfo .infoContainer__p {
+.hero .heroInfo .infoContainer__p,
+.hero .sectionInfo .infoContainer__p {
   font-size: 13px;
   font-weight: 600;
 }
-.heroSection .heroInfo .active,
-.heroSection .sectionInfo .active {
+.hero .heroInfo .active,
+.hero .sectionInfo .active {
   opacity: 1; /* Opacidad final es 1, completamente visible */
   transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
   animation: none; /* Desactiva la animación cuando se agrega la clase active */
 }
-.heroSection .buttonsHero {
+.hero .buttonsHero {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -213,7 +210,7 @@ body {
   transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
   transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
 }
-.heroSection .buttonsHero__a {
+.hero .buttonsHero__a {
   padding: 10px;
   text-decoration: none;
   width: 250px;
@@ -222,23 +219,23 @@ body {
   font-size: 14px;
   font-weight: 550;
 }
-.heroSection .buttonsHero__a--left {
+.hero .buttonsHero__a--left {
   color: #2e313a;
   background-color: whitesmoke;
   border: solid 3px whitesmoke;
 }
-.heroSection .buttonsHero__a--right {
+.hero .buttonsHero__a--right {
   background-color: transparent;
   border: solid 3px whitesmoke;
   color: whitesmoke;
   transition: 0.3s;
 }
-.heroSection .buttonsHero__a--right:hover {
+.hero .buttonsHero__a--right:hover {
   background-color: whitesmoke;
   color: #2e313a;
   transition: 0.3s;
 }
-.heroSection .active {
+.hero .active {
   opacity: 1; /* Opacidad final es 1, completamente visible */
   transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
   animation: none; /* Desactiva la animación cuando se agrega la clase active */
@@ -396,4 +393,4 @@ body {
   animation: none; /* Desactiva la animación cuando se agrega la clase active */
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=styles.css.map */
