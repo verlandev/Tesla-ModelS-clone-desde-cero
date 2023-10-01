@@ -356,7 +356,6 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: start;
   justify-content: center;
   gap: 1em;
   opacity: 0; /* Comienza con opacidad cero (invisibles) */
@@ -370,33 +369,58 @@ body {
   width: 350px;
   font-size: 14px;
 }
+.descriptionsSection .caption .captionTextForward {
+  align-items: start;
+}
 .descriptionsSection .caption .active {
   opacity: 1; /* Opacidad final es 1, completamente visible */
   transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
   animation: none; /* Desactiva la animación cuando se agrega la clase active */
 }
-.descriptionsSection .caption:nth-child(even) {
+.descriptionsSection .captionForward:nth-child(even) {
   flex-direction: row-reverse;
 }
-.descriptionsSection .caption:nth-child(odd) .captionText {
+.descriptionsSection .captionForward:nth-child(odd) .captionText {
   display: flex;
   align-items: end;
   opacity: 0; /* Comienza con opacidad cero (invisibles) */
   transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
   transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
 }
-.descriptionsSection .caption:nth-child(odd) .captionText__h5 {
+.descriptionsSection .captionForward:nth-child(odd) .captionText__h5 {
   width: 350px;
-  border: solid 1px black;
 }
-.descriptionsSection .caption:nth-child(odd) .captionText__p {
+.descriptionsSection .captionForward:nth-child(odd) .captionText__p {
   width: 350px;
   font-size: 14px;
 }
-.descriptionsSection .caption:nth-child(odd) .active {
+.descriptionsSection .captionForward:nth-child(odd) .active {
   opacity: 1; /* Opacidad final es 1, completamente visible */
   transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
   animation: none; /* Desactiva la animación cuando se agrega la clase active */
+}
+
+.descriptionsSectionReverse .captionReverse {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 75%;
+  margin: auto;
+}
+.descriptionsSectionReverse .captionReverse .captionTextReverse {
+  align-items: start;
+}
+.descriptionsSectionReverse .captionReverse:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+.descriptionsSectionReverse .captionReverse:nth-child(even) .captionTextReverse__h5 {
+  width: 350px;
+  margin-left: auto;
+}
+.descriptionsSectionReverse .captionReverse:nth-child(even) .captionTextReverse__p {
+  width: 350px;
+  font-size: 14px;
+  margin-left: auto;
 }
 
 .ctaSectionsBlack {
