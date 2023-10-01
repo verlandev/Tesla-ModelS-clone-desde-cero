@@ -514,6 +514,12 @@ body {
   transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
   transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
 }
+.ctaSections .ctaSectionsRightImage {
+  flex: 1;
+}
+.ctaSections .ctaSectionsRightImage__img {
+  width: 500px;
+}
 .ctaSections .active {
   opacity: 1; /* Opacidad final es 1, completamente visible */
   transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */

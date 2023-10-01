@@ -582,8 +582,16 @@ body{
         font-weight: 450;
         line-height: 20px;
         opacity: 0; /* Comienza con opacidad cero (invisibles) */
-            transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
-            transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
+        transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
+        transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
+    }
+
+    .ctaSectionsRightImage{
+        flex: 1;
+
+        &__img{
+            width: 500px;
+        }
     }
 
     .active{
