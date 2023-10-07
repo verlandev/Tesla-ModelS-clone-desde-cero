@@ -203,6 +203,7 @@ body{
             display: flex;
             flex-direction: column;
             gap:1em;
+            z-index: 3;
             opacity: 0; /* Comienza con opacidad cero (invisibles) */
             transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
             transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
@@ -694,6 +695,17 @@ body{
             text-decoration: none;
             color:#56595c;
             font-weight: 600;
+
+        }
+    }
+}
+
+.heroCTA{
+    .videoBackgroundInfo{
+        
+        .videoBackground{
+            width: 70%;
+            
 
         }
     }
