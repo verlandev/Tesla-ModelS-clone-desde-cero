@@ -592,6 +592,13 @@ body {
   justify-content: center;
   gap: 1em;
   text-align: center;
+  opacity: 0;
+  transition: opacity 1.8s ease, transform 1.8s ease;
+  transform: translateY(50px);
+  -webkit-transform: translateY(50px);
+  -moz-transform: translateY(50px);
+  -ms-transform: translateY(50px);
+  -o-transform: translateY(50px);
 }
 .heroVideo .heroVideoLayout .heroVideoInfo .videoInfoContainer__h3 {
   font-size: 22px;
@@ -600,6 +607,11 @@ body {
 .heroVideo .heroVideoLayout .heroVideoInfo .videoInfoContainer__p {
   font-size: 13px;
   font-weight: 500;
+}
+.heroVideo .heroVideoLayout .heroVideoInfo .active {
+  opacity: 1; /* Opacidad final es 1, completamente visible */
+  transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
+  animation: none; /* Desactiva la animación cuando se agrega la clase active */
 }
 .heroVideo .heroVideoCtaSection {
   width: 30%;
@@ -635,6 +647,13 @@ body {
   align-items: center;
   gap: 1em;
   margin-top: 10px;
+  opacity: 0;
+  transition: opacity 3s ease, transform 3s ease;
+  transform: translateY(50px);
+  -webkit-transform: translateY(50px);
+  -moz-transform: translateY(50px);
+  -ms-transform: translateY(50px);
+  -o-transform: translateY(50px);
 }
 .heroVideo .heroVideoCtaSection .heroCtaSection .heroCtaSectionButtons__a {
   text-align: center;
@@ -681,6 +700,11 @@ body {
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
+}
+.heroVideo .heroVideoCtaSection .heroCtaSection .active {
+  opacity: 1;
+  transform: translateY(0);
+  animation: none;
 }
 
 .footer {
