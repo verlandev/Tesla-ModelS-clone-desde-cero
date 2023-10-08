@@ -561,20 +561,20 @@ body {
   color: white;
 }
 
-.heroVideo {
+.hero-informative-section {
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: row;
 }
-.heroVideo .heroVideoLayout {
+.hero-informative-section .hero-informative-asset {
   position: relative;
   width: 70%;
 }
-.heroVideo .heroVideoLayout .heroVideoCTA {
+.hero-informative-section .hero-informative-asset__video {
   width: 100%;
 }
-.heroVideo .heroVideoLayout .heroVideoInfo {
+.hero-informative-section .hero-informative-content {
   position: absolute;
   bottom: 50px;
   right: 0;
@@ -584,7 +584,7 @@ body {
   flex-direction: row;
   gap: 1em;
 }
-.heroVideo .heroVideoLayout .heroVideoInfo .videoInfoContainer {
+.hero-informative-section .hero-informative-content .hero-informative-info {
   width: 32%;
   color: white;
   display: flex;
@@ -593,51 +593,51 @@ body {
   gap: 1em;
   text-align: center;
   opacity: 0;
-  transition: opacity 1.8s ease, transform 1.8s ease;
+  transition: opacity 0.8s ease, transform 0.8s ease;
   transform: translateY(50px);
   -webkit-transform: translateY(50px);
   -moz-transform: translateY(50px);
   -ms-transform: translateY(50px);
   -o-transform: translateY(50px);
 }
-.heroVideo .heroVideoLayout .heroVideoInfo .videoInfoContainer__h3 {
+.hero-informative-section .hero-informative-content .hero-informative-info__h3 {
   font-size: 22px;
   font-weight: 600;
 }
-.heroVideo .heroVideoLayout .heroVideoInfo .videoInfoContainer__p {
+.hero-informative-section .hero-informative-content .hero-informative-info__p {
   font-size: 13px;
   font-weight: 500;
 }
-.heroVideo .heroVideoLayout .heroVideoInfo .active {
+.hero-informative-section .hero-informative-content .active {
   opacity: 1; /* Opacidad final es 1, completamente visible */
   transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
   animation: none; /* Desactiva la animación cuando se agrega la clase active */
 }
-.heroVideo .heroVideoCtaSection {
+.hero-informative-section .hero-informative-cta {
   width: 30%;
   position: relative;
 }
-.heroVideo .heroVideoCtaSection .heroCtaSection {
+.hero-informative-section .hero-informative-cta .hero-informative-text {
   display: flex;
   flex-direction: column;
   padding: 40px;
 }
-.heroVideo .heroVideoCtaSection .heroCtaSection__h3 {
+.hero-informative-section .hero-informative-cta .hero-informative-text__h3 {
   font-size: 18px;
   font-weight: 400;
 }
-.heroVideo .heroVideoCtaSection .heroCtaSection__h2 {
+.hero-informative-section .hero-informative-cta .hero-informative-text__h2 {
   font-weight: 600;
   font-size: 27px;
   padding-bottom: 30px;
 }
-.heroVideo .heroVideoCtaSection .heroCtaSection__p {
+.hero-informative-section .hero-informative-cta .hero-informative-text__p {
   font-size: 14px;
   font-weight: 500;
   color: #56595c;
   line-height: 20px;
 }
-.heroVideo .heroVideoCtaSection .heroCtaSection .heroCtaSectionButtons {
+.hero-informative-section .hero-informative-cta .hero-informative-cta-buttons {
   position: absolute;
   right: 0;
   left: 0;
@@ -648,14 +648,14 @@ body {
   gap: 1em;
   margin-top: 10px;
   opacity: 0;
-  transition: opacity 3s ease, transform 3s ease;
+  transition: opacity 2s ease, transform 2s ease;
   transform: translateY(50px);
   -webkit-transform: translateY(50px);
   -moz-transform: translateY(50px);
   -ms-transform: translateY(50px);
   -o-transform: translateY(50px);
 }
-.heroVideo .heroVideoCtaSection .heroCtaSection .heroCtaSectionButtons__a {
+.hero-informative-section .hero-informative-cta .hero-informative-cta-buttons__a {
   text-align: center;
   font-size: 14px;
   font-weight: 500;
@@ -665,7 +665,7 @@ body {
   width: 75%;
   border-radius: 5px;
 }
-.heroVideo .heroVideoCtaSection .heroCtaSection .heroCtaSectionButtons__a--white {
+.hero-informative-section .hero-informative-cta .hero-informative-cta-buttons__a--white {
   border: solid 3px black;
   transition: 0.3s;
   -webkit-transition: 0.3s;
@@ -673,7 +673,7 @@ body {
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
 }
-.heroVideo .heroVideoCtaSection .heroCtaSection .heroCtaSectionButtons__a--white:hover {
+.hero-informative-section .hero-informative-cta .hero-informative-cta-buttons__a--white:hover {
   background-color: #000;
   color: white;
   transition: 0.3s;
@@ -682,7 +682,7 @@ body {
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
 }
-.heroVideo .heroVideoCtaSection .heroCtaSection .heroCtaSectionButtons__a--grey {
+.hero-informative-section .hero-informative-cta .hero-informative-cta-buttons__a--grey {
   background-color: #f4f4f4;
   border: solid 3px #f4f4f4;
   transition: 0.3s;
@@ -691,7 +691,7 @@ body {
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
 }
-.heroVideo .heroVideoCtaSection .heroCtaSection .heroCtaSectionButtons__a--grey:hover {
+.hero-informative-section .hero-informative-cta .hero-informative-cta-buttons__a--grey:hover {
   background-color: #e8e8e8;
   border: solid 3px #e8e8e8;
   color: black;
@@ -701,7 +701,7 @@ body {
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
 }
-.heroVideo .heroVideoCtaSection .heroCtaSection .active {
+.hero-informative-section .hero-informative-cta .active {
   opacity: 1;
   transform: translateY(0);
   animation: none;
