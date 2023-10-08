@@ -9,6 +9,9 @@ const captionTexts$$ = document.querySelectorAll('.captionText')
 const ctaSectionsLeft$$ = document.querySelectorAll('.ctaSectionsLeft')
 const ctaSectionsRight$$ = document.querySelectorAll('.ctaSectionsRight')
 
+const heroInformativeInfo$$ = document.querySelectorAll('.hero-informative-info')
+const heroInformativeCtaButtons$$ = document.querySelector('.hero-informative-cta-buttons')
+
 // Creamos una función que gestione el banner
 
 const detectingBanner = () => {
@@ -73,6 +76,16 @@ window.addEventListener('scroll', () => {
             detectingScroll([ctaSection], 500)
         })
     }, 100)
+
+    setTimeout(() => {
+        heroInformativeInfo$$.forEach((videoInfo) => {
+            detectingScroll([videoInfo], 500)
+        })
+    }, 100)
+
+    setTimeout(() => {
+        detectingScroll([heroInformativeCtaButtons$$], 450)
+    }, 1200)
 })
 
 window.addEventListener('scroll', function() {
