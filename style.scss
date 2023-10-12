@@ -241,7 +241,7 @@ body{
         margin: auto;
         padding-bottom: 40px;
         opacity: 0; /* Comienza con opacidad cero (invisibles) */
-        transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
+        transition: opacity 1s ease, transform 1s ease; /* Transiciones suaves para opacity y transform */
         transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
 
         &__a{
@@ -437,7 +437,7 @@ body{
             display: flex;
             align-items: end;
             opacity: 0; /* Comienza con opacidad cero (invisibles) */
-            transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
+            transition: opacity 1s ease, transform 1s ease; /* Transiciones suaves para opacity y transform */
             transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
 
             &__h5{
@@ -620,7 +620,7 @@ body{
         font-weight: 450;
         line-height: 20px;
         opacity: 0; /* Comienza con opacidad cero (invisibles) */
-        transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
+        transition: opacity 1s ease, transform 1s ease; /* Transiciones suaves para opacity y transform */
         transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
     }
 
