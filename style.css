@@ -757,19 +757,24 @@
 }
 
 .slider-specifications {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   width: 100%;
   background-color: #000;
+}
+.slider-specifications--center {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 7em;
+  padding-bottom: 40px;
+  padding-top: 40px;
 }
 .slider-specifications .slider-specifications-asset__img {
   width: 600px;
 }
 .slider-specifications .slider-specifications-content {
   color: white;
-  width: 30%;
-  padding-top: 40px;
+  width: 35%;
 }
 .slider-specifications .slider-specifications-content__h3 {
   font-size: 25px;
@@ -783,7 +788,7 @@
   gap: 0.2em;
 }
 .slider-specifications .slider-specifications-content .slider-specifications-content-buttons__button {
-  flex-grow: 1;
+  flex: 1;
   padding: 5px;
   border-radius: 5px;
   border: solid 2px white;
@@ -792,6 +797,40 @@
   font-weight: 500;
   letter-spacing: 1px;
   cursor: pointer;
+}
+.slider-specifications .slider-specifications-content-showcases {
+  margin-top: 30px;
+}
+.slider-specifications .slider-specifications-content-showcases .slider-specifications-content-showcases-sc .slider-specifications-content-showcase-columns {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+.slider-specifications .slider-specifications-content-showcases .slider-specifications-content-showcases-sc .slider-specifications-content-showcase-columns__ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  flex: 1;
+}
+.slider-specifications .slider-specifications-content-showcases .slider-specifications-content-showcases-sc .slider-specifications-content-showcase-columns__li {
+  list-style: none;
+  position: relative;
+  padding-top: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  padding-bottom: 10px;
+}
+.slider-specifications .slider-specifications-content-showcases .slider-specifications-content-showcases-sc .slider-specifications-content-showcase-columns__li strong {
+  font-weight: 500;
+}
+.slider-specifications .slider-specifications-content-showcases .slider-specifications-content-showcases-sc .slider-specifications-content-showcase-columns__li::before {
+  position: absolute;
+  content: "";
+  width: 15%;
+  height: 1px;
+  background-color: #8e8e8e;
+  top: -2px;
 }
 
 .footer {
