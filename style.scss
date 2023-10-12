@@ -14,9 +14,6 @@
 *{
     margin:0;
     padding: 0;
-}
-
-body{
     font-family: 'Montserrat';
 }
 
@@ -876,20 +873,54 @@ body{
     
 }
 
-.hero-slider{
+.slider-specifications{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     width: 100%;
     background-color: #000;
 
 
-    .hero-slider-asset{
+    .slider-specifications-asset{
     
         &__img{
             width: 600px;
         }
     }
+
+    .slider-specifications-content{
+        color: white;
+        width: 30%;
+        padding-top: 40px;
+
+        &__h3{
+            font-size: 25px;
+            font-weight: 400;
+            padding-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .slider-specifications-content-buttons{
+            display: flex;
+            flex-direction: row;
+            gap: 0.2em; 
+            
+            &__button{
+                flex-grow: 1;
+                padding: 5px;
+                border-radius: 5px;
+                border: solid 2px white; 
+                background-color: #000;
+                color: white;
+                font-weight: 500;
+                letter-spacing: 1px;
+                cursor: pointer;
+            }
+        }
+    }
 }
+
+
 
 .footer{
     padding-top: 30px;
