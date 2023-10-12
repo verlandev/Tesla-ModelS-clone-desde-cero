@@ -12,6 +12,11 @@ const ctaSectionsRight$$ = document.querySelectorAll('.ctaSectionsRight')
 const heroInformativeInfo$$ = document.querySelectorAll('.hero-informative-info')
 const heroInformativeCtaButtons$$ = document.querySelectorAll('.hero-informative-cta-buttons')
 
+const containerOne$$ = document.querySelector('.tesla-vision-content-text--container-one')
+const containerTwo$$ = document.querySelector('.tesla-vision-content-text--container-two')
+const containerThree$$ = document.querySelector('.tesla-vision-content-text--container-three')
+
+
 // Creamos una función que gestione el banner
 
 const detectingBanner = () => {
@@ -88,6 +93,18 @@ window.addEventListener('scroll', () => {
             detectingScroll([heroInformativeCtaButton], 500)
         })
     }, 100)
+
+    setTimeout(() => {
+        detectingScroll([containerOne$$], 450)
+    }, 200)
+
+    setTimeout(() => {
+        detectingScroll([containerTwo$$],450)
+    }, 500)
+
+    setTimeout(() => {
+        detectingScroll([containerThree$$], 450)
+    }, 800)
 })
 
 window.addEventListener('scroll', function() {

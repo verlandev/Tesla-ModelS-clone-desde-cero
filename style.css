@@ -286,7 +286,7 @@ body {
   font-weight: 550;
   opacity: 0; /* Comienza con opacidad cero (invisibles) */
   transform: translateY(20px); /* Comienza desplazado hacia abajo 20px */
-  transition: opacity 0.8s ease, transform 0.8s ease; /* Transiciones suaves para opacity y transform */
+  transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
 }
 .separator .active {
   opacity: 1; /* Opacidad final es 1, completamente visible */
@@ -560,6 +560,50 @@ body {
 }
 .ctaSections .ctaSectionsBlackRight {
   color: white;
+}
+
+.tesla-vision {
+  background-image: url("/images/Autopilot-Hero-Vision_Desktop.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 120vh;
+}
+.tesla-vision .tesla-vision-content {
+  display: flex;
+  flex-direction: column;
+  height: 120vh;
+  justify-content: center;
+  padding-left: 70px;
+  gap: 8em;
+}
+.tesla-vision .tesla-vision-content .tesla-vision-content-text {
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.tesla-vision .tesla-vision-content .tesla-vision-content-text__h3 {
+  font-size: 24px;
+  font-weight: 550;
+}
+.tesla-vision .tesla-vision-content .tesla-vision-content-text__p {
+  font-size: 12px;
+  font-weight: 550;
+}
+.tesla-vision .tesla-vision-content .tesla-vision-content-text__img {
+  width: 50px;
+}
+.tesla-vision .tesla-vision-content .tesla-vision-content-text--container-one,
+.tesla-vision .tesla-vision-content .tesla-vision-content-text--container-two,
+.tesla-vision .tesla-vision-content .tesla-vision-content-text--container-three {
+  opacity: 0; /* Comienza con opacidad cero (invisibles) */
+  transition: opacity 1s ease, transform 1s ease; /* Transiciones suaves para opacity y transform */
+  transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
+}
+.tesla-vision .tesla-vision-content .active {
+  opacity: 1; /* Opacidad final es 1, completamente visible */
+  transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
+  animation: none; /* Desactiva la animación cuando se agrega la clase active */
 }
 
 .hero-informative-section {
