@@ -16,6 +16,10 @@ const containerOne$$ = document.querySelector('.tesla-vision-content-text--conta
 const containerTwo$$ = document.querySelector('.tesla-vision-content-text--container-two')
 const containerThree$$ = document.querySelector('.tesla-vision-content-text--container-three')
 
+const buttonShowcase1$$ = document.querySelector('.slider-specifications-content-buttons__button--modelPlaid')
+const buttonShowcase2$$ = document.querySelector('slider-specifications-content-buttons__button--modelS')
+const showcase1$$ = document.querySelector('.slider-specifications-content-showcase1')
+const showcase2$$ = document.querySelector('.slider-specifications-content-showcase2')
 
 // Creamos una función que gestione el banner
 
@@ -26,6 +30,18 @@ const detectingBanner = () => {
         banner$$.classList.remove('inactive')
     } 
 }
+
+// Creamos una función que al pulsar un botón active uno u otro showcase
+
+buttonShowcase1$$.addEventListener('click', () => {
+    showcase1$$.style.display = 'block';
+    showcase2$$.style.display = 'none'
+})
+
+buttonShowcase2$$.addEventListener('click', () => {
+    showcase1$$.style.display = 'none';
+    showcase2$$.style.display = 'block'
+})
 
 
 // Creamos una función que identifique la altura del scroll a cada vez
