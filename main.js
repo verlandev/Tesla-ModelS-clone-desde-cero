@@ -10,7 +10,7 @@ const ctaSectionsLeft$$ = document.querySelectorAll('.ctaSectionsLeft')
 const ctaSectionsRight$$ = document.querySelectorAll('.ctaSectionsRight')
 
 const heroInformativeInfo$$ = document.querySelectorAll('.hero-informative-info')
-const heroInformativeCtaButtons$$ = document.querySelector('.hero-informative-cta-buttons')
+const heroInformativeCtaButtons$$ = document.querySelectorAll('.hero-informative-cta-buttons')
 
 // Creamos una función que gestione el banner
 
@@ -84,8 +84,10 @@ window.addEventListener('scroll', () => {
     }, 100)
 
     setTimeout(() => {
-        detectingScroll([heroInformativeCtaButtons$$], 450)
-    }, 1200)
+        heroInformativeCtaButtons$$.forEach((heroInformativeCtaButton) => {
+            detectingScroll([heroInformativeCtaButton], 500)
+        })
+    }, 100)
 })
 
 window.addEventListener('scroll', function() {
