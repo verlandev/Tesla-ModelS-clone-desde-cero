@@ -876,6 +876,21 @@ body{
     
 }
 
+.hero-slider{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #000;
+
+
+    .hero-slider-asset{
+    
+        &__img{
+            width: 600px;
+        }
+    }
+}
+
 .footer{
     padding-top: 30px;
     margin-bottom: 100px;

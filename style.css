@@ -759,6 +759,16 @@ body {
   animation: none;
 }
 
+.hero-slider {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #000;
+}
+.hero-slider .hero-slider-asset__img {
+  width: 600px;
+}
+
 .footer {
   padding-top: 30px;
   margin-bottom: 100px;
