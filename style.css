@@ -38,7 +38,8 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.2470588235);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   position: fixed;
   z-index: 3;
   width: 100%;
@@ -566,6 +567,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: row;
+  padding-bottom: 5%;
 }
 .hero-informative-section .hero-informative-asset {
   position: relative;
@@ -648,14 +650,13 @@ body {
   position: absolute;
   right: 0;
   left: 0;
-  bottom: 50px;
+  bottom: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1em;
-  margin-top: 10px;
   opacity: 0;
-  transition: opacity 2s ease, transform 2s ease;
+  transition: opacity 1s ease, transform 1s ease;
   transform: translateY(50px);
   -webkit-transform: translateY(50px);
   -moz-transform: translateY(50px);
@@ -758,6 +759,4 @@ body {
   text-decoration: none;
   color: #56595c;
   font-weight: 600;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

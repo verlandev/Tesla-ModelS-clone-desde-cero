@@ -652,6 +652,7 @@ body{
     height: 100vh;
     display: flex;
     flex-direction: row;
+    padding-bottom: 5%;
     
 
     .hero-informative-asset{
@@ -716,6 +717,7 @@ body{
         }
     }
 
+    
     .hero-informative-cta{
         width: 30%;
         position: relative;
@@ -748,14 +750,13 @@ body{
             position: absolute;
             right: 0;
             left: 0;
-            bottom: 50px;
+            bottom: 30px;
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 1em;
-            margin-top: 10px;
             opacity: 0;
-            transition: opacity 2s ease, transform 2s ease;
+            transition: opacity 1s ease, transform 1s ease;
             //transition: opacity 1.8s ease, transform 1.8s ease;
             transform: translateY(50px);
             -webkit-transform: translateY(50px);
@@ -764,8 +765,6 @@ body{
             -o-transform: translateY(50px);
             
             &__a{
-            
-            
                 text-align: center;
                 font-size: 14px;
                 font-weight: 500;
@@ -817,14 +816,14 @@ body{
             }
             
         }
-        
         .active{
             opacity: 1;
             transform: translateY(0);
             animation: none;
         }
+        
     }
-
+    
 }
 
 .footer{
