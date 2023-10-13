@@ -804,7 +804,6 @@
             gap: 1em;
             opacity: 0;
             transition: opacity 1s ease, transform 1s ease;
-            //transition: opacity 1.8s ease, transform 1.8s ease;
             transform: translateY(50px);
             -webkit-transform: translateY(50px);
             -moz-transform: translateY(50px);
@@ -881,15 +880,15 @@
        display: flex;
        flex-direction: row;
        justify-content: start;
-       align-items: center;
        gap:7em;
        padding-bottom: 40px;
-       padding-top: 40px;
-
+       padding-top: 60px;
     }
 
 
     .slider-specifications-asset{    
+        padding-top: 100px;
+
         &__img{
             width: 600px;
         }
@@ -898,11 +897,18 @@
     .slider-specifications-content{
         color: white;
         width: 35%;
+        opacity: 0;
+        transition: opacity 1s ease, transform 1s ease;
+        transform: translateY(50px);
+        -webkit-transform: translateY(50px);
+        -moz-transform: translateY(50px);
+        -ms-transform: translateY(50px);
+        -o-transform: translateY(50px);
 
         &__h3{
-            font-size: 25px;
+            font-size: 27px;
             font-weight: 400;
-            padding-bottom: 15px;
+            padding-bottom: 25px;
             letter-spacing: 1px;
         }
 
@@ -915,13 +921,21 @@
                 flex: 1;
                 padding: 5px;
                 border-radius: 5px;
-                border: solid 2px white; 
                 background-color: #000;
                 color: white;
                 font-weight: 500;
                 letter-spacing: 1px;
                 cursor: pointer;
             }
+
+        }
+        .button-off{
+            border: solid 2px #191919;
+        }
+
+        .button-on{
+            border: solid 2px white; 
+
         }
     }
 
@@ -954,7 +968,7 @@
                 }
 
                 &__li strong{
-                    font-weight: 500;
+                    font-weight: 600;
                 }
 
                 &__li::before{
@@ -967,6 +981,15 @@
                 }
             }
         }
+
+        .slider-specifications-content-showcase2{
+            display: none;
+        }
+    }
+    .active{
+        opacity: 1;
+        transform: translateY(0);
+        animation: none;
     }
 
 }
