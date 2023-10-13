@@ -33,7 +33,7 @@ const detectingBanner = () => {
     } 
 }
 
-// Creamos una función que al pulsar un botón active uno u otro showcase
+// Creamos una función que al pulsar un botón muestre uno u otro showcase
 
 buttonShowcase1$$.addEventListener('click', () => {
     showcase1$$.style.display = 'block';
