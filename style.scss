@@ -338,7 +338,7 @@
 }
 
 
-.insider{
+.hero-insider{
     height: 90vh;
     background-image: url('/images/insiderSection.jpg');
     background-position: center;
@@ -347,28 +347,79 @@
     padding-top: 40vh;
 }
 
-.insider::after{
-        content: '';
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        box-shadow: inset 0px 100px 100px 10px #000;
-        
+.hero-insider::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-shadow: inset 0px 100px 100px 10px #000;  
 }
 
-.videoInsider{
+.tesla-carousel{
     width: 100%;
     background-color: #000;
     padding-top: 30vh;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 
-    .videoInsiderclip{
+    &__video{
         width: 92%;
         margin: auto;
         border-radius: 5px;
+    }
+
+    .tesla-carousel-slider{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 45%;
+        margin: auto;
+        margin-top: 40px;
+
+        .tesla-carousel-slider-buttons{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            gap: 0.5em;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            &__button{
+                height: 12px;
+                width: 12px;
+                border-radius: 50%;
+                outline-offset: 0;
+                background-color: #5c5e62;
+                border: none;
+                cursor: pointer;
+            }
+
+            .button-active{
+                background-color: white;
+            }
+        }
+
+        .tesla-carousel-slider-content{
+
+            .tesla-carousel-slider-content-text{
+                color: white;
+                padding-top: 10px;
+                padding-bottom: 10px;
+
+                &__h3{
+                    font-size: 18px;
+                    padding-bottom: 20px;
+                    font-weight: 550;
+                }
+
+                &__p{
+                    font-size: 15px;
+                }
+            }
+        }
     }
 }
 
@@ -398,7 +449,7 @@
             justify-content: center;
             gap:1em;
             opacity: 0; /* Comienza con opacidad cero (invisibles) */
-            transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
+            transition: opacity 1s ease, transform 1s ease; /* Transiciones suaves para opacity y transform */
             transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
 
 
@@ -931,10 +982,12 @@
         }
         .button-off{
             border: solid 2px #191919;
+            color: #bcbdbe;
         }
 
         .button-on{
-            border: solid 2px white; 
+            border: solid 2px white;
+            color: white 
 
         }
     }
