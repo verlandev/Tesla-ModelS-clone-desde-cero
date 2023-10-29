@@ -23,7 +23,12 @@ const buttonShowcase2$$ = document.querySelector('.slider-specifications-content
 const showcase1$$ = document.querySelector('.slider-specifications-content-showcase1')
 const showcase2$$ = document.querySelector('.slider-specifications-content-showcase2')
 
-// Creamos una función que gestione el banner
+const circles$$ = document.querySelectorAll('.tesla-carousel-slider-buttons__button')
+
+
+/**
+ * Esta función muestra u oculta el banner en función de la posición del scroll.
+ */
 
 const detectingBanner = () => {
     if(scrollY === 0) {
@@ -33,7 +38,10 @@ const detectingBanner = () => {
     } 
 }
 
-// Creamos una función que al pulsar un botón active uno u otro showcase
+/**
+ * Maneja el clic en el botón de showcase 1.
+ * Muestra el primer showcase y oculta el segundo.
+ */
 
 buttonShowcase1$$.addEventListener('click', () => {
     showcase1$$.style.display = 'block';
@@ -41,6 +49,11 @@ buttonShowcase1$$.addEventListener('click', () => {
     buttonShowcase2$$.classList.remove('button-on')
     buttonShowcase1$$.classList.add('button-on')
 })
+
+/**
+ * Maneja el clic en el botón de showcase 2.
+ * Muestra el segundo showcase y oculta el primero.
+ */
 
 buttonShowcase2$$.addEventListener('click', () => {
     showcase1$$.style.display = 'none';
