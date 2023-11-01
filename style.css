@@ -320,7 +320,7 @@
   box-shadow: inset 0px 100px 100px 10px #000;
 }
 
-.tesla-carousel {
+.carousel1 {
   width: 100%;
   background-color: #000;
   padding-top: 30vh;
@@ -328,12 +328,12 @@
   justify-content: center;
   flex-direction: column;
 }
-.tesla-carousel__video {
+.carousel1__video {
   width: 92%;
   margin: auto;
   border-radius: 5px;
 }
-.tesla-carousel .tesla-carousel-slider {
+.carousel1 .carousel1-slider {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -341,7 +341,7 @@
   margin: auto;
   margin-top: 40px;
 }
-.tesla-carousel .tesla-carousel-slider .tesla-carousel-slider-buttons {
+.carousel1 .carousel1-slider .carousel1-slider-buttons {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -349,7 +349,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.tesla-carousel .tesla-carousel-slider .tesla-carousel-slider-buttons__button {
+.carousel1 .carousel1-slider .carousel1-slider-buttons__button {
   height: 12px;
   width: 12px;
   border-radius: 50%;
@@ -358,20 +358,20 @@
   border: none;
   cursor: pointer;
 }
-.tesla-carousel .tesla-carousel-slider .tesla-carousel-slider-buttons .circle-active {
+.carousel1 .carousel1-slider .carousel1-slider-buttons .circle-active {
   background-color: white;
 }
-.tesla-carousel .tesla-carousel-slider .tesla-carousel-slider-content .tesla-carousel-slider-content-text {
+.carousel1 .carousel1-slider .carousel1-slider-content .carousel1-slider-content-text {
   color: white;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.tesla-carousel .tesla-carousel-slider .tesla-carousel-slider-content .tesla-carousel-slider-content-text__h3 {
+.carousel1 .carousel1-slider .carousel1-slider-content .carousel1-slider-content-text__h3 {
   font-size: 18px;
   padding-bottom: 20px;
   font-weight: 550;
 }
-.tesla-carousel .tesla-carousel-slider .tesla-carousel-slider-content .tesla-carousel-slider-content-text__p {
+.carousel1 .carousel1-slider .carousel1-slider-content .carousel1-slider-content-text__p {
   font-size: 15px;
 }
 
