@@ -695,6 +695,28 @@
     }
 }
 
+
+.carousel2{
+    &__description{
+        &__h2{}
+        &__p{}
+    }
+
+    &__img{}
+    &__slider{
+        &__slide{
+            &__h3{}
+            &__p{}
+            &__details{
+                &__detail{
+                    &__detail-h2{}
+                    &__detail-p{}
+                }
+            }
+        }
+    }
+}
+
 .tesla-vision{
     background-image: url('/images/Autopilot-Hero-Vision_Desktop.jpg');
     background-position: center;
