@@ -741,7 +741,20 @@
             flex-direction: column;
             justify-content: space-between; 
             cursor: pointer;
+            position: relative;
+            opacity: 0.6;
+            color: #939393;
         }
+
+        &__slide::before{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 2px;
+            background-color: #939393;
+            top:-2px   
+        }
+
 
         &__h3{
             font-weight: 550;
@@ -753,6 +766,20 @@
             font-size: 14px;
             font-weight: 500;
             color: #3b3d43;
+        }
+
+        .isSlideActive{
+            color: #000;
+            opacity: 1;
+        }
+
+        .isSlideActive::before{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 4px;
+            background-color: #000000;
+            top:-2px   
         }
 
         .slider-details{
