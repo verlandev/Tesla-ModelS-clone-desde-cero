@@ -23,7 +23,10 @@ const buttonShowcase2$$ = document.querySelector('.slider-specifications-content
 const showcase1$$ = document.querySelector('.slider-specifications-content-showcase1')
 const showcase2$$ = document.querySelector('.slider-specifications-content-showcase2')
 
-// Creamos una función que gestione el banner
+
+/**
+ * Esta función muestra u oculta el banner en función de la posición del scroll.
+ */
 
 const detectingBanner = () => {
     if(scrollY === 0) {
@@ -33,25 +36,12 @@ const detectingBanner = () => {
     } 
 }
 
-// Creamos una función que al pulsar un botón muestre uno u otro showcase
-
-buttonShowcase1$$.addEventListener('click', () => {
-    showcase1$$.style.display = 'block';
-    showcase2$$.style.display = 'none'
-    buttonShowcase2$$.classList.remove('button-on')
-    buttonShowcase1$$.classList.add('button-on')
-})
-
-buttonShowcase2$$.addEventListener('click', () => {
-    showcase1$$.style.display = 'none';
-    showcase2$$.style.display = 'block';
-    buttonShowcase2$$.classList.add('button-on')
-    buttonShowcase1$$.classList.remove('button-on')
-    buttonShowcase1$$.classList.add('button-off')
-})
-
-
-// Creamos una función que identifique la altura del scroll a cada vez
+/**
+ * Detecta el desplazamiento de la página y aplica una clase CSS a los elementos según su posición en la ventana.
+ *
+ * @param {Array} elements - Un array de elementos HTML a los que se aplicará la clase 'active' cuando estén en la vista.
+ * @param {number} scrollOffset - La cantidad de desplazamiento (scroll) en píxeles requerida para activar los elementos.
+ */
 
 function detectingScroll(elements, scrollOffset) {
     elements.forEach(function(element){
@@ -65,7 +55,6 @@ function detectingScroll(elements, scrollOffset) {
     })
 }
 
-detectingBanner()
 // Creamos otra función que añade o quita la clase "active" en función del scroll
 // y agregamos un setTimeOut para replicar el efecto de la página y que los elementos
 // aparezcan en distinto orden
@@ -138,3 +127,79 @@ window.addEventListener('scroll', function() {
     var scrollYValue = window.scrollY;
     console.log(scrollYValue); // Esto imprimirá el valor actual de scrollY en la consola.
 });
+
+
+const videos$$ = []
+const circles$$ = []
+const contents$$ = []
+
+for (let i = 1; i <=5; i++){
+    videos$$.push(document.querySelector(`.video${i}`))
+    circles$$.push(document.querySelector(`.circle${i}`))
+    contents$$.push(document.querySelector(`.content${i}`))
+}
+
+
+/**
+ * Gestiona la activación y desactivación de elementos en el carrusel 
+ * al hacer clic en un botón.
+ *
+ * @param {Element} button - El botón en el que se hizo clic.
+ */
+
+const slide = (button) => {
+    // Desactiva todos los elementos a modo de reset
+    circles$$.forEach((circle) => circle.classList.remove('circle-active'))
+    videos$$.forEach((video) => video.classList.add('inactive'))
+    contents$$.forEach((content) => content.classList.add('inactive'))
+
+    const index = circles$$.indexOf(button);
+    if (index >= 0) {
+        // Y activa solo el contenido correspondiente al pulsar uno de los botones
+        circles$$[index].classList.add('circle-active');
+        videos$$[index].classList.remove('inactive');
+        contents$$[index].classList.remove('inactive');
+    }
+}
+
+
+/**
+ * Asigna un evento de clic a cada círculo para controlar la función 'slide'.
+ */
+    
+circles$$.forEach((circle, index) => circle.addEventListener('click', () =>{
+    slide(circles$$[index])
+}))
+
+
+
+/**
+ * Maneja el clic en el botón de showcase 1 en la sección "slider-specifications".
+ * Muestra el primer showcase y oculta el segundo.
+ */
+
+buttonShowcase1$$.addEventListener('click', () => {
+    showcase1$$.style.display = 'block';
+    showcase2$$.style.display = 'none'
+    buttonShowcase2$$.classList.remove('button-on')
+    buttonShowcase1$$.classList.add('button-on')
+})
+
+/**
+ * Maneja el clic en el botón de showcase 2.
+ * Muestra el segundo showcase y oculta el primero.
+ */
+
+buttonShowcase2$$.addEventListener('click', () => {
+    showcase1$$.style.display = 'none';
+    showcase2$$.style.display = 'block';
+    buttonShowcase2$$.classList.add('button-on')
+    buttonShowcase1$$.classList.remove('button-on')
+    buttonShowcase1$$.classList.add('button-off')
+})
+
+
+
+
+
+
