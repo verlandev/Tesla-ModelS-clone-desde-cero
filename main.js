@@ -36,9 +36,6 @@ const detectingBanner = () => {
     } 
 }
 
-detectingBanner()
-
-
 /**
  * Detecta el desplazamiento de la página y aplica una clase CSS a los elementos según su posición en la ventana.
  *
