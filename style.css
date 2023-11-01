@@ -601,6 +601,75 @@
   color: white;
 }
 
+.carousel2 {
+  background-color: #f4f4f4;
+  padding-top: 12%;
+  padding-bottom: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.carousel2__description {
+  width: 75%;
+  padding-bottom: 5%;
+}
+.carousel2__h2 {
+  padding-bottom: 1em;
+  font-weight: 550;
+  font-size: 26px;
+}
+.carousel2__p {
+  width: 85%;
+  font-size: 15px;
+  font-weight: 500;
+  color: #3b3d43;
+}
+.carousel2__img {
+  width: 1200px;
+}
+.carousel2 .slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2em;
+  padding-top: 5%;
+}
+.carousel2 .slider__slide {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.carousel2 .slider__h3 {
+  font-weight: 550;
+  padding-top: 10px;
+}
+.carousel2 .slider__p {
+  padding: 2% 0 5% 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #3b3d43;
+}
+.carousel2 .slider .slider-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 2em;
+}
+.carousel2 .slider .slider-details__detail {
+  display: flex;
+  flex-direction: column;
+}
+.carousel2 .slider .slider-details__h2 {
+  font-weight: 600;
+}
+.carousel2 .slider .slider-details__p {
+  font-size: 12px;
+  font-weight: 500;
+}
+
 .tesla-vision {
   background-image: url("/images/Autopilot-Hero-Vision_Desktop.jpg");
   background-position: center;
