@@ -187,7 +187,7 @@ circles$$.forEach((circle, index) => circle.addEventListener('click', () =>{
 const carouselV2 = () => {
     
     const slides$$ = document.querySelectorAll('.slider__slide')
-    const images$$ = document.querySelectorAll('.carouselV2__img')
+    const images$$ = document.querySelectorAll('.carouselV2__asset')
     
     slides$$.forEach((slide, index) => slide.addEventListener('click', () => {
 

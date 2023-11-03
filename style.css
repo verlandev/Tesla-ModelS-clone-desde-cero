@@ -639,7 +639,7 @@
   transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
   animation: none; /* Desactiva la animación cuando se agrega la clase active */
 }
-.carouselV2__img {
+.carouselV2__asset {
   width: 1200px;
 }
 .carouselV2 .slider {
