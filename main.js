@@ -22,7 +22,7 @@ const buttonShowcase1$$ = document.querySelector('.slider-specifications-content
 const buttonShowcase2$$ = document.querySelector('.slider-specifications-content-buttons__button--modelS')
 const showcase1$$ = document.querySelector('.slider-specifications-content-showcase1')
 const showcase2$$ = document.querySelector('.slider-specifications-content-showcase2')
-const rollout$$ = document.querySelector('.carousel2__p--rollout')
+const rollout$$ = document.querySelector('.carouselV2__p--rollout')
 
 
 /**
@@ -187,7 +187,7 @@ circles$$.forEach((circle, index) => circle.addEventListener('click', () =>{
 const carouselV2 = () => {
     
     const slides$$ = document.querySelectorAll('.slider__slide')
-    const images$$ = document.querySelectorAll('.carousel2__img')
+    const images$$ = document.querySelectorAll('.carouselV2__img')
     
     slides$$.forEach((slide, index) => slide.addEventListener('click', () => {
 

@@ -601,7 +601,7 @@
   color: white;
 }
 
-.carousel2 {
+.carouselV2 {
   background-color: #f4f4f4;
   padding-top: 12%;
   display: flex;
@@ -609,22 +609,22 @@
   justify-content: center;
   align-items: center;
 }
-.carousel2__description {
+.carouselV2__description {
   width: 75%;
   padding-bottom: 5%;
 }
-.carousel2__h2 {
+.carouselV2__h2 {
   padding-bottom: 1em;
   font-weight: 550;
   font-size: 26px;
 }
-.carousel2__p {
+.carouselV2__p {
   width: 85%;
   font-size: 15px;
   font-weight: 500;
   color: #3b3d43;
 }
-.carousel2__p--rollout {
+.carouselV2__p--rollout {
   margin-top: 5%;
   margin-bottom: 5%;
   font-size: 13px;
@@ -634,22 +634,22 @@
   transition: opacity 1s ease, transform 1s ease; /* Transiciones suaves para opacity y transform */
   transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
 }
-.carousel2 .active {
+.carouselV2 .active {
   opacity: 1; /* Opacidad final es 1, completamente visible */
   transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
   animation: none; /* Desactiva la animación cuando se agrega la clase active */
 }
-.carousel2__img {
+.carouselV2__img {
   width: 1200px;
 }
-.carousel2 .slider {
+.carouselV2 .slider {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 2em;
   padding-top: 5%;
 }
-.carousel2 .slider__slide {
+.carouselV2 .slider__slide {
   width: 35%;
   display: flex;
   flex-direction: column;
@@ -659,7 +659,7 @@
   opacity: 0.6;
   color: #939393;
 }
-.carousel2 .slider__slide::before {
+.carouselV2 .slider__slide::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -667,21 +667,21 @@
   background-color: #939393;
   top: -2px;
 }
-.carousel2 .slider__h3 {
+.carouselV2 .slider__h3 {
   font-weight: 550;
   padding-top: 10px;
 }
-.carousel2 .slider__p {
+.carouselV2 .slider__p {
   padding: 2% 0 5% 0;
   font-size: 14px;
   font-weight: 500;
   color: #3b3d43;
 }
-.carousel2 .slider .isSlideActive {
+.carouselV2 .slider .isSlideActive {
   color: #000;
   opacity: 1;
 }
-.carousel2 .slider .isSlideActive::before {
+.carouselV2 .slider .isSlideActive::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -689,20 +689,20 @@
   background-color: #000000;
   top: -2px;
 }
-.carousel2 .slider .slider-details {
+.carouselV2 .slider .slider-details {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   gap: 2em;
 }
-.carousel2 .slider .slider-details__detail {
+.carouselV2 .slider .slider-details__detail {
   display: flex;
   flex-direction: column;
 }
-.carousel2 .slider .slider-details__h2 {
+.carouselV2 .slider .slider-details__h2 {
   font-weight: 600;
 }
-.carousel2 .slider .slider-details__p {
+.carouselV2 .slider .slider-details__p {
   font-size: 12px;
   font-weight: 500;
 }
