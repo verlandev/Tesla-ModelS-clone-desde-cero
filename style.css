@@ -320,7 +320,7 @@
   box-shadow: inset 0px 100px 100px 10px #000;
 }
 
-.tesla-carousel {
+.carousel1 {
   width: 100%;
   background-color: #000;
   padding-top: 30vh;
@@ -328,12 +328,12 @@
   justify-content: center;
   flex-direction: column;
 }
-.tesla-carousel__video {
+.carousel1__video {
   width: 92%;
   margin: auto;
   border-radius: 5px;
 }
-.tesla-carousel .tesla-carousel-slider {
+.carousel1 .carousel1-slider {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -341,7 +341,7 @@
   margin: auto;
   margin-top: 40px;
 }
-.tesla-carousel .tesla-carousel-slider .tesla-carousel-slider-buttons {
+.carousel1 .carousel1-slider .carousel1-slider-buttons {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -349,7 +349,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.tesla-carousel .tesla-carousel-slider .tesla-carousel-slider-buttons__button {
+.carousel1 .carousel1-slider .carousel1-slider-buttons__button {
   height: 12px;
   width: 12px;
   border-radius: 50%;
@@ -358,20 +358,20 @@
   border: none;
   cursor: pointer;
 }
-.tesla-carousel .tesla-carousel-slider .tesla-carousel-slider-buttons .circle-active {
+.carousel1 .carousel1-slider .carousel1-slider-buttons .circle-active {
   background-color: white;
 }
-.tesla-carousel .tesla-carousel-slider .tesla-carousel-slider-content .tesla-carousel-slider-content-text {
+.carousel1 .carousel1-slider .carousel1-slider-content .carousel1-slider-content-text {
   color: white;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.tesla-carousel .tesla-carousel-slider .tesla-carousel-slider-content .tesla-carousel-slider-content-text__h3 {
+.carousel1 .carousel1-slider .carousel1-slider-content .carousel1-slider-content-text__h3 {
   font-size: 18px;
   padding-bottom: 20px;
   font-weight: 550;
 }
-.tesla-carousel .tesla-carousel-slider .tesla-carousel-slider-content .tesla-carousel-slider-content-text__p {
+.carousel1 .carousel1-slider .carousel1-slider-content .carousel1-slider-content-text__p {
   font-size: 15px;
 }
 
@@ -599,6 +599,112 @@
 }
 .ctaSections .ctaSectionsBlackRight {
   color: white;
+}
+
+.carouselV2 {
+  background-color: #f4f4f4;
+  padding-top: 12%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.carouselV2__description {
+  width: 75%;
+  padding-bottom: 5%;
+}
+.carouselV2__h2 {
+  padding-bottom: 1em;
+  font-weight: 550;
+  font-size: 26px;
+}
+.carouselV2__p {
+  width: 85%;
+  font-size: 15px;
+  font-weight: 500;
+  color: #3b3d43;
+}
+.carouselV2__p--rollout {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-size: 13px;
+  font-weight: 550;
+  color: #666769;
+  opacity: 0; /* Comienza con opacidad cero (invisibles) */
+  transition: opacity 1s ease, transform 1s ease; /* Transiciones suaves para opacity y transform */
+  transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
+}
+.carouselV2 .active {
+  opacity: 1; /* Opacidad final es 1, completamente visible */
+  transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
+  animation: none; /* Desactiva la animación cuando se agrega la clase active */
+}
+.carouselV2__asset {
+  width: 1200px;
+}
+.carouselV2 .slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2em;
+  padding-top: 5%;
+}
+.carouselV2 .slider__slide {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  opacity: 0.6;
+  color: #939393;
+}
+.carouselV2 .slider__slide::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #939393;
+  top: -2px;
+}
+.carouselV2 .slider__h3 {
+  font-weight: 550;
+  padding-top: 10px;
+}
+.carouselV2 .slider__p {
+  padding: 2% 0 5% 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #3b3d43;
+}
+.carouselV2 .slider .isSlideActive {
+  color: #000;
+  opacity: 1;
+}
+.carouselV2 .slider .isSlideActive::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: #000000;
+  top: -2px;
+}
+.carouselV2 .slider .slider-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 2em;
+}
+.carouselV2 .slider .slider-details__detail {
+  display: flex;
+  flex-direction: column;
+}
+.carouselV2 .slider .slider-details__h2 {
+  font-weight: 600;
+}
+.carouselV2 .slider .slider-details__p {
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .tesla-vision {

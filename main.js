@@ -22,6 +22,7 @@ const buttonShowcase1$$ = document.querySelector('.slider-specifications-content
 const buttonShowcase2$$ = document.querySelector('.slider-specifications-content-buttons__button--modelS')
 const showcase1$$ = document.querySelector('.slider-specifications-content-showcase1')
 const showcase2$$ = document.querySelector('.slider-specifications-content-showcase2')
+const rollout$$ = document.querySelector('.carouselV2__p--rollout')
 
 
 /**
@@ -121,6 +122,10 @@ window.addEventListener('scroll', () => {
     setTimeout(() => {
         detectingScroll([specificationsShowcasesPanel$$], 450)
     }, 800)
+
+    setTimeout(() => {
+        detectingScroll([rollout$$], 550)
+    })
 })
 
 window.addEventListener('scroll', function() {
@@ -142,12 +147,12 @@ for (let i = 1; i <=5; i++){
 
 /**
  * Gestiona la activación y desactivación de elementos en el carrusel 
- * al hacer clic en un botón.
+ * al hacer clic en uno de los círculos/botón.
  *
- * @param {Element} button - El botón en el que se hizo clic.
+ * @param {Element} button - El botón/circulo en el que se hizo clic.
  */
 
-const slide = (button) => {
+const carouselV1 = (button) => {
     // Desactiva todos los elementos a modo de reset
     circles$$.forEach((circle) => circle.classList.remove('circle-active'))
     videos$$.forEach((video) => video.classList.add('inactive'))
@@ -164,12 +169,41 @@ const slide = (button) => {
 
 
 /**
- * Asigna un evento de clic a cada círculo para controlar la función 'slide'.
+ * Asigna un evento de clic a cada círculo para controlar la función 'carouselV1'.
  */
     
 circles$$.forEach((circle, index) => circle.addEventListener('click', () =>{
-    slide(circles$$[index])
+    carouselV1(circles$$[index])
 }))
+
+
+
+
+/**
+ * Agrega un evento 'click' a cada elemento del carrusel.
+ * Al hacer clic en un elemento del carrusel, se activa ese elemento y se desactivan los demás.
+ */
+
+const carouselV2 = () => {
+    
+    const slides$$ = document.querySelectorAll('.slider__slide')
+    const images$$ = document.querySelectorAll('.carouselV2__asset')
+    
+    slides$$.forEach((slide, index) => slide.addEventListener('click', () => {
+
+        slides$$.forEach((slide) => slide.classList.remove('isSlideActive'))
+        images$$.forEach((image) => image.classList.add('inactive'))
+
+        if (index >= 0) {
+            slides$$[index].classList.add('isSlideActive')
+            images$$[index].classList.remove('inactive')
+        } 
+    }))
+
+    
+}
+
+carouselV2()
 
 
 
