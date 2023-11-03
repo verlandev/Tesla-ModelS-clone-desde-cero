@@ -80,6 +80,8 @@ function detectingScroll(elements, scrollOffset) {
 // y agregamos un setTimeOut para replicar el efecto de la página y que los elementos
 // aparezcan en distinto orden
 
+// !Optimizar esta función de scroll
+
 window.addEventListener("scroll", () => {
   detectingBanner();
 
@@ -198,7 +200,7 @@ circles$$.forEach((circle, index) =>
 
 /**
  * Inicializa un carrusel de tipo específico para gestionar la interacción de los elementos.
- * @param {string} carouselType - El tipo de carrusel ('models' o 'countries') según las clases aplicadas en el proyecto.
+ * @param {string} carouselType 'models' o 'countries' según las clases aplicadas en el proyecto.
  */
 
 const carouselV2 = (carouselType) => {
@@ -209,7 +211,7 @@ const carouselV2 = (carouselType) => {
   // Aplicamos el manejo de slides actualizando las clases
   slides$$.forEach((slide, index) =>
     slide.addEventListener("click", () => {
-      if (carouselType === "models" || carouselType === "countries") {
+      if (carouselType === "models" || carouselType === "countries" || carouselType === 'features') {
         slides$$.forEach((slide) => slide.classList.remove("isSlideActive"));
         images$$.forEach((image) => image.classList.add("inactive"));
 
@@ -224,6 +226,7 @@ const carouselV2 = (carouselType) => {
 
 carouselV2("models");
 carouselV2("countries");
+carouselV2("features");
 
 /**
  * Maneja el clic en el botón de showcase 1 en la sección "slider-specifications".
