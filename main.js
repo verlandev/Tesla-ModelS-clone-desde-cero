@@ -147,9 +147,9 @@ for (let i = 1; i <=5; i++){
 
 /**
  * Gestiona la activación y desactivación de elementos en el carrusel 
- * al hacer clic en un botón.
+ * al hacer clic en uno de los círculos/botón.
  *
- * @param {Element} button - El botón en el que se hizo clic.
+ * @param {Element} button - El botón/circulo en el que se hizo clic.
  */
 
 const carouselV1 = (button) => {
@@ -189,23 +189,18 @@ const carouselV2 = () => {
     const slides$$ = document.querySelectorAll('.slider__slide')
     const images$$ = document.querySelectorAll('.carousel2__img')
     
-    
     slides$$.forEach((slide, index) => slide.addEventListener('click', () => {
-        
+
         slides$$.forEach((slide) => slide.classList.remove('isSlideActive'))
-        images$$.forEach((image) => {
-            image.classList.remove('isImageActive')
-            image.classList.remove('inactive')
-        })
-    
-    
-        if(index >=0) {
+        images$$.forEach((image) => image.classList.add('inactive'))
+
+        if (index >= 0) {
             slides$$[index].classList.add('isSlideActive')
-            images$$[index].classList.add('isImageActive')
-            images$$[index].classList.add('inactive')
-        }
-        
+            images$$[index].classList.remove('inactive')
+        } 
     }))
+
+    
 }
 
 carouselV2()
