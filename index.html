@@ -11,6 +11,7 @@
   <body>
       <div id="root">
         <section class="banner">
+            <!-- !Cambiar los camelCase aquí -->
             <div class="bannerContainer">
                 <h4 class="banner__h4">Model S</h4>
                 <div class="bannerLinks">
@@ -253,7 +254,8 @@
             </div>
         </section>
 
-        <section class="carouselV2">
+        <!-- ! Mejorar las clases aquí -->
+        <section class="carouselV2 carousel-models">
             <div class="carouselV2__description">
                 <h2 class="carouselV2__h2">Tren motriz eléctrico</h2>
                 <p class="carouselV2__p">Las plataformas del Model S aúnan las tecnologías de tren motriz y batería para ofrecer unos niveles de rendimiento, autonomía y eficiencia insuperables. El nuevo módulo rediseñado y la arquitectura térmica permiten una carga más rápida, proporcionándole más potencia y resistencia en todas las condiciones.</p>
@@ -262,14 +264,14 @@
             <img 
                 src="/images/Model-S-Dual-Motor-Powertrain-Carousel-Desktop.jpg" 
                 alt="" 
-                class="carouselV2__asset">
+                class="carouselV2__asset carouselV2__asset--models">
             <img 
                 src="/images/Model-S-Plaid-Tri-Motor-Powertrain-Carousel-Desktop.jpg" 
                 alt="" 
-                class="carouselV2__asset inactive">
+                class="carouselV2__asset carouselV2__asset--models inactive">
 
             <div class="carouselV2__slider slider">
-                <div class="slider__slide isSlideActive">
+                <div class="slider__slide slider__slide--models isSlideActive">
                     <h3 class="slider__h3">Model S</h3>
                     <p class="slider__p">El motor dual con tracción integral ofrece más autonomía que cualquier otro vehículo de nuestra gama actual, con una potencia increíble y el máximo control.</p>
                     <div class="slider__details slider-details">
@@ -284,7 +286,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="slider__slide">
+                <div class="slider__slide slider__slide--models">
                     <h3 class="slider__h3">Model S Plaid</h3>
                     <p class="slider__p">Tome las riendas de más de 1000 caballos de fuerza hasta los 322 km/h con la tracción a las cuatro ruedas de triple motor, que incluye vectorización de par y tres rotores independientes con revestimiento de carbono.</p>
                     <div class="slider__details slider-details">
@@ -302,6 +304,8 @@
             </div> 
             <p class="carouselV2__p--rollout">*sin rollout</p>   
         </section>
+
+        <!-- !Cambiar los camelCase aquí -->
 
         <section class="heroSection thirdHero"></section>
 
@@ -403,6 +407,68 @@
             </div>
         </section>
 
+        <!-- ! Mejorar las clases aquí -->
+
+        <section class="carouselV2 carousel-countries">
+            <div class="carouselV2__description">
+                <h2 class="carouselV2__h2">Libertad para viajar</h2>
+                <p class="carouselV2__p">Introduzca su destino en la pantalla táctil y el planificador de ruta le guiará automáticamente hasta los Supercargadores más convenientes situados por el camino.</p>
+            </div>
+            
+            <img 
+                src="/images/Zurich-Munich.png" 
+                alt="" 
+                class="carouselV2__asset carouselV2__asset--countries">
+            <img 
+                src="/images/Amsterdam-Bruselas.png" 
+                alt="" 
+                class="carouselV2__asset carouselV2__asset--countries inactive">
+            <img 
+                src="/images/Brusela-Paris.png" 
+                alt="" 
+                class="carouselV2__asset carouselV2__asset--countries inactive">
+            <img 
+                src="/images/Oslo-Gotemburgo.png" 
+                alt="" 
+                class="carouselV2__asset carouselV2__asset--countries inactive">
+
+            <div class="carouselV2__slider slider">
+                <div class="slider__slide slider__slide--countries isSlideActive">
+                    <h3 class="slider__h3">De Múnich a Zúrich</h3>
+                    <div class="slider__details slider-details">
+                        <div class="slider-details__detail">
+                            <h2 class="slider-details__h2">311 km</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__slide slider__slide--countries">
+                    <h3 class="slider__h3">De Ámsterdam a Bruselas</h3>
+                    <div class="slider__details slider-details">
+                        <div class="slider-details__detail">
+                            <h2 class="slider-details__h2">203 km</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__slide slider__slide--countries">
+                    <h3 class="slider__h3">De Bruselas a París</h3>
+                    <div class="slider__details slider-details">
+                        <div class="slider-details__detail">
+                            <h2 class="slider-details__h2">320 km</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__slide slider__slide--countries">
+                    <h3 class="slider__h3">De Oslo a Gotemburgo</h3>
+                    <div class="slider__details slider-details">
+                        <div class="slider-details__detail">
+                            <h2 class="slider-details__h2">295 km</h2>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <p class="carouselV2__p--rollout">*sin rollout</p>   
+        </section>
+
         <section class="hero-informative-section">
             <div class="hero-informative-cta">
                 <div class="hero-informative-cta__text hero-informative-text">
@@ -456,6 +522,86 @@
                     El Piloto automático permite que su coche se conduzca, acelere y frene automáticamente dentro de su carril bajo su supervisión activa, asistiendo en las partes más aburridas de la conducción. Con las actualizaciones de software inalámbricas, las últimas mejoras están disponibles al instante.
                 </p>
             </div>
+        </section>
+
+        <!-- ! Mejorar las clases aquí -->
+        <section class="carouselV2 caorusel-features">
+            <div class="carouselV2__description">
+                <h2 class="carouselV2__h2">Características</h2>
+                <p class="carouselV2__p">La capacidad de conducción autónoma total introduce nuevas funciones y mejora la funcionalidad existente para hacer que su coche sea más seguro y versátil con el paso del tiempo, lo que incluye:</p>
+            </div>
+            
+            <video 
+                src="https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto:best/Model_S_Navigate_0-mp4.mp4" 
+                alt=""
+                preload="auto"
+                playsinline
+                autoplay
+                muted
+                data-loaded="true"
+                data-autoplay-mobile="true"
+                data-autoplay-desktop="true"
+                loop="true" 
+                class="carouselV2__asset carouselV2__asset--features">
+            </video>
+            <video 
+                src="https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto/lane_change_0-mp4.mp4" 
+                alt=""
+                preload="auto"
+                playsinline
+                autoplay
+                muted
+                data-loaded="true"
+                data-autoplay-mobile="true"
+                data-autoplay-desktop="true"
+                loop="true" 
+                class="carouselV2__asset carouselV2__asset--features inactive">
+            </video>
+            <video 
+                src="https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto:best/summon_1-mp4.mp4" 
+                alt=""
+                preload="auto"
+                playsinline
+                autoplay
+                muted
+                data-loaded="true"
+                data-autoplay-mobile="true"
+                data-autoplay-desktop="true"
+                loop="true" 
+                class="carouselV2__asset carouselV2__asset--features inactive">
+            </video>
+            <video 
+                src="https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto:best/parking-mp4.mp4" 
+                alt=""
+                preload="auto"
+                playsinline
+                autoplay
+                muted
+                data-loaded="true"
+                data-autoplay-mobile="true"
+                data-autoplay-desktop="true"
+                loop="true" 
+                class="carouselV2__asset carouselV2__asset--features inactive">
+            </video>
+
+            <div class="carouselV2__slider slider">
+                <div class="slider__slide slider__slide--features isSlideActive">
+                    <h3 class="slider__h3 slider__h3--features">Navegar en piloto automático</h3>
+                    <p class="slider__p slider__p--features">Guía activa desde la entrada hasta la salida</p>
+                </div>
+                <div class="slider__slide slider__slide--features">
+                    <h3 class="slider__h3 slider__h3--features ">Cambio de carril automático</h3>
+                    <p class="slider__p slider__p--features">Cambia automáticamente de carril cuando se circula en autopista</p>
+                </div>
+                <div class="slider__slide slider__slide--features">
+                    <h3 class="slider__h3 slider__h3--features">Summon</h3>
+                    <p class="slider__p slider__p--features">Retire automáticamente su coche</p>
+                </div>
+                <div class="slider__slide slider__slide--features">
+                    <h3 class="slider__h3 slider__h3--features">Autopark</h3>
+                    <p class="slider__p slider__p--features">Estacionamiento en línea y en batería con un solo toque</p>
+                </div>
+            </div> 
         </section>
 
         <section class="slider-specifications">
@@ -569,3 +715,9 @@
   </body>
 </html>
 
+
+
+<!-- TODO
+<!-- * Añadir nombres de las clases del carrusel por tipo no solo por funcionalidad | OK -->
+<!-- ! Cambiar las clases de CamelCase para la estructura BEM -->
+<!-- ! Diseño mobile con grid -->
