@@ -692,7 +692,7 @@
 .carousel-features .slider__slide--features {
   width: 15%;
   margin-bottom: 15%;
-  justify-content: space-around;
+  justify-content: flex-start;
   gap: 1em;
 }
 .carouselV2 .slider__slide::before,
@@ -713,6 +713,7 @@
   font-weight: 550;
   padding-top: 10px;
   padding-bottom: 5%;
+  align-self: flex-start;
 }
 .carouselV2 .slider__p,
 .carousel-models .slider__p,
@@ -722,6 +723,7 @@
   font-size: 14px;
   font-weight: 500;
   color: #3b3d43;
+  align-self: start;
 }
 .carouselV2 .slider .isSlideActive,
 .carousel-models .slider .isSlideActive,
