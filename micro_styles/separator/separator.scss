@@ -1,0 +1,35 @@
+.separator{
+    background-color: #000;
+    height: 30vh;
+    position: relative;
+    padding-bottom: 20vh;
+
+
+    &__h2{
+        color: whitesmoke;
+        text-align: center;
+        padding-top: 100px;
+        font-size: 30px;
+        font-weight: 550; 
+        opacity: 0; /* Comienza con opacidad cero (invisibles) */
+        transform: translateY(20px); /* Comienza desplazado hacia abajo 20px */
+        transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
+    }
+    
+    .active{
+        opacity: 1; /* Opacidad final es 1, completamente visible */
+        transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
+        animation: none; /* Desactiva la animación cuando se agrega la clase active */
+    }
+
+}
+
+.separator::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-shadow: inset 0px 100px 100px 10px #000;
+}

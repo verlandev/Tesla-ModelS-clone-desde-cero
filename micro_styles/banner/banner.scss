@@ -1,0 +1,46 @@
+.banner{
+    position: relative;
+
+    .bannerContainer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #0000003f;
+        backdrop-filter: blur(10px);
+        position:fixed;
+        z-index: 3;
+        width: 100%;
+        padding: 2px 0;
+    }
+
+    &__h4{
+        color: whitesmoke;
+        font-size: large;
+        font-weight: 550;
+        margin-left: 45px;
+    }
+
+    .bannerLinks{
+        display: flex;
+        gap: 1.5em;
+        padding: 5px;
+        margin-right: 45px;
+
+        &__a{
+            text-decoration: none;
+            color: whitesmoke;
+            font-weight: 600;
+            font-size: 12px;
+            padding: 7px;
+            width: 160px;
+            text-align: center;
+
+            &--right{
+                background-color: #2f2f2f;
+                border-radius: 3px;
+
+            }
+        }
+    }
+}

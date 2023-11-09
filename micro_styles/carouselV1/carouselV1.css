@@ -1,0 +1,54 @@
+.carousel1 {
+  width: 100%;
+  background-color: #000;
+  padding-top: 30vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.carousel1__video {
+  width: 92%;
+  margin: auto;
+  border-radius: 5px;
+}
+.carousel1 .carousel1-slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 45%;
+  margin: auto;
+  margin-top: 40px;
+}
+.carousel1 .carousel1-slider .carousel1-slider-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.carousel1 .carousel1-slider .carousel1-slider-buttons__button {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  outline-offset: 0;
+  background-color: #5c5e62;
+  border: none;
+  cursor: pointer;
+}
+.carousel1 .carousel1-slider .carousel1-slider-buttons .circle-active {
+  background-color: white;
+}
+.carousel1 .carousel1-slider .carousel1-slider-content .carousel1-slider-content-text {
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.carousel1 .carousel1-slider .carousel1-slider-content .carousel1-slider-content-text__h3 {
+  font-size: 18px;
+  padding-bottom: 20px;
+  font-weight: 550;
+}
+.carousel1 .carousel1-slider .carousel1-slider-content .carousel1-slider-content-text__p {
+  font-size: 15px;
+}/*# sourceMappingURL=carouselV1.css.map */
