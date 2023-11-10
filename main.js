@@ -1,47 +1,27 @@
 const banner$$ = document.querySelector(".banner");
 
 const separatorH2$$ = document.querySelector(".separator__h2");
-const infoContainers$$ = document.querySelectorAll(".infoContainer");
-const buttonsHero$$ = document.querySelector(".buttonsHero");
+const infoContainers$$ = document.querySelectorAll(".hero-section-containers-info");
+const buttonsHero$$ = document.querySelector(".hero-section-buttons");
 
 const captionTexts$$ = document.querySelectorAll(".captionText");
 
 const ctaSectionsLeft$$ = document.querySelectorAll(".ctaSectionsLeft");
 const ctaSectionsRight$$ = document.querySelectorAll(".ctaSectionsRight");
 
-const heroInformativeInfo$$ = document.querySelectorAll(
-  ".hero-informative-info"
-);
-const heroInformativeCtaButtons$$ = document.querySelectorAll(
-  ".hero-informative-cta-buttons"
-);
+const heroInformativeInfo$$ = document.querySelectorAll(".hero-informative__info");
+const heroInformativeCtaButtons$$ = document.querySelectorAll(".hero-informative-cta__buttons");
 
-const containerOne$$ = document.querySelector(
-  ".tesla-vision-content-text--container-one"
-);
-const containerTwo$$ = document.querySelector(
-  ".tesla-vision-content-text--container-two"
-);
-const containerThree$$ = document.querySelector(
-  ".tesla-vision-content-text--container-three"
-);
+const containerOne$$ = document.querySelector(".tesla-vision-content-text--container-one");
+const containerTwo$$ = document.querySelector(".tesla-vision-content-text--container-two");
+const containerThree$$ = document.querySelector(".tesla-vision-content-text--container-three");
 
-const specificationsShowcasesPanel$$ = document.querySelector(
-  ".slider-specifications-content"
-);
+const specificationsShowcasesPanel$$ = document.querySelector(".slider-specifications-content");
 
-const buttonShowcase1$$ = document.querySelector(
-  ".slider-specifications-content-buttons__button--modelPlaid"
-);
-const buttonShowcase2$$ = document.querySelector(
-  ".slider-specifications-content-buttons__button--modelS"
-);
-const showcase1$$ = document.querySelector(
-  ".slider-specifications-content-showcase1"
-);
-const showcase2$$ = document.querySelector(
-  ".slider-specifications-content-showcase2"
-);
+const buttonShowcase1$$ = document.querySelector(".slider-specifications-content-buttons__button--modelPlaid");
+const buttonShowcase2$$ = document.querySelector(".slider-specifications-content-buttons__button--modelS");
+const showcase1$$ = document.querySelector(".slider-specifications-content-showcase1");
+const showcase2$$ = document.querySelector(".slider-specifications-content-showcase2");
 const rollout$$ = document.querySelector(".carouselV2__p--rollout");
 
 /**

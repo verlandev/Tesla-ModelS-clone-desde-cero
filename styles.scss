@@ -9,18 +9,6 @@
 ::-webkit-scrollbar-thumb {background: #fc9a15; border-radius: 5px;}
 
 
-// import micro_styles
-
-@import 'micro_styles/banner/banner.scss';
-@import 'micro_styles/separator/separator.scss';
-@import 'micro_styles/carouselV1/carouselV1.scss';
-@import 'micro_styles/carouselV2/carouselV2.scss';
-@import 'micro_styles/hero-informative-sections/hero-informative-sections.scss';
-@import 'micro_styles/tesla-vision/tesla-vision.scss';
-@import 'micro_styles/slider-specifications/slider-specifications.scss';
-@import 'micro_styles/footer/footer.scss';
-
-
 // General Project Styles
 
 *{
@@ -37,19 +25,19 @@
     display: none;
 }
 
-.topHero{
+.top-hero{
     background-image: url('/images/hero.jpg');
 }
 
-.secondHero{
+.second-hero{
     background-image: url('/images/secondHero.jpg');
 }
 
-.thirdHero{
+.third-hero{
     background: url('/images/Model-S-Exterior-Hero.jpg');
 }
 
-.heroSection{
+.hero-section{
     background-size: cover;
     background-position: center;
     height: 140vh;
@@ -68,7 +56,7 @@
             cursor: pointer;
         }
 
-        .headerMenu{
+        .nav{
             &__ul{
                 display: flex;
                 flex-direction: row;
@@ -87,7 +75,7 @@
             }
         }
 
-        .headerLinks{
+        .header-links{
             &__ul{
                 display: flex;
                 flex-direction: row;
@@ -112,7 +100,7 @@
         }    
     }
 
-    .heroText{
+    .hero-section-text{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -147,7 +135,7 @@
         }
     }
 
-    .heroInfo{
+    .hero-section-containers{
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -162,7 +150,7 @@
         color: whitesmoke;
         width: 60%;
 
-        .infoContainer{
+        .hero-section-containers-info{
             display: flex;
             flex-direction: column;
             gap:1em;
@@ -192,7 +180,7 @@
 
     }
 
-    .buttonsHero{
+    .hero-section-buttons{
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -319,6 +307,7 @@
             &__h5{
                 width: 320px;
             }
+            
             &__p{
                 width: 350px;
                 font-size: 14px;
@@ -559,3 +548,13 @@
 }
 
 
+// import micro_styles
+
+@import 'micro_styles/banner/banner.scss';
+@import 'micro_styles/separator/separator.scss';
+@import 'micro_styles/carouselV1/carouselV1.scss';
+@import 'micro_styles/carouselV2/carouselV2.scss';
+@import 'micro_styles/hero-informative-sections/hero-informative-sections.scss';
+@import 'micro_styles/tesla-vision/tesla-vision.scss';
+@import 'micro_styles/slider-specifications/slider-specifications.scss';
+@import 'micro_styles/footer/footer.scss';

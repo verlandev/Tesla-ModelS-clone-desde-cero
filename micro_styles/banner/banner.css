@@ -1,7 +1,7 @@
 .banner {
   position: relative;
 }
-.banner .bannerContainer {
+.banner__container {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -20,13 +20,13 @@
   font-weight: 550;
   margin-left: 45px;
 }
-.banner .bannerLinks {
+.banner__links {
   display: flex;
   gap: 1.5em;
   padding: 5px;
   margin-right: 45px;
 }
-.banner .bannerLinks__a {
+.banner__link {
   text-decoration: none;
   color: whitesmoke;
   font-weight: 600;
@@ -35,7 +35,7 @@
   width: 160px;
   text-align: center;
 }
-.banner .bannerLinks__a--right {
+.banner__link--right {
   background-color: #2f2f2f;
   border-radius: 3px;
 }/*# sourceMappingURL=banner.css.map */

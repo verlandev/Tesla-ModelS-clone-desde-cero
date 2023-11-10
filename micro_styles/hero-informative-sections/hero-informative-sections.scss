@@ -1,4 +1,4 @@
-.hero-informative-section{
+.hero-informative{
     width: 100%;
     height: 100vh;
     display: flex;
@@ -6,25 +6,25 @@
     padding-bottom: 5%;
     
 
-    .hero-informative-asset{
+    &__asset{
         position: relative;
         width: 70%;
+    }
+    
+    &__video{
+        width: 100%;
+    }
 
-        &__video{
-            width: 100%;
-        }
-
-        &__img{
-            width: 600px;
-            position: absolute;
-            right: 200px;
-            left: 150px;
-            
-        }
+    &__img{
+        width: 600px;
+        position: absolute;
+        right: 200px;
+        left: 150px;
+        
     }
     
     
-    .hero-informative-content{
+    &__container{
         
         position: absolute;
         bottom: 50px;
@@ -34,8 +34,9 @@
         display: flex;
         flex-direction: row;
         gap: 1em;
+    }
 
-        .hero-informative-info{
+    &__info{
         width: 32%;
         color: white;
         display: flex;
@@ -49,23 +50,24 @@
         -webkit-transform: translateY(50px);
         -moz-transform: translateY(50px);
         -ms-transform: translateY(50px);
-        -o-transform: translateY(50px);
-            
-            &__h3{
-                font-size: 22px;
-                font-weight: 600;
-            }
-            &__p{
-                font-size: 13px;
-                font-weight: 500;
-            }
-        }
+        -o-transform: translateY(50px);        
+    }
+    
+    &__h3{
+        font-size: 22px;
+        font-weight: 600;
+    }
 
-        .active{
-            opacity: 1; /* Opacidad final es 1, completamente visible */
-            transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
-            animation: none; /* Desactiva la animación cuando se agrega la clase active */
-        }
+    &__p{
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+
+    .active{
+        opacity: 1; /* Opacidad final es 1, completamente visible */
+        transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
+        animation: none; /* Desactiva la animación cuando se agrega la clase active */
     }
 
     
@@ -73,31 +75,30 @@
         width: 30%;
         position: relative;
         
-        .hero-informative-text{
+        &__text{
             display: flex;
             flex-direction: column;
             padding: 50px 30px 0px 40px;
-
-            &__h3{
-                font-size: 18px;
-                font-weight: 400;
-            }
-            &__h2{
-                font-weight: 600;
-                font-size: 27px;
-                padding-bottom: 30px;
-            }
-            &__p{
-                font-size: 14px;
-                font-weight: 500;
-                color: #56595c;
-                line-height: 20px;
-                width: 100%;
-            }
-        
         }
-
-        .hero-informative-cta-buttons{
+        
+        &__h3{
+            font-size: 18px;
+            font-weight: 400;
+        }
+        &__h2{
+            font-weight: 600;
+            font-size: 27px;
+            padding-bottom: 30px;
+        }
+        &__p{
+            font-size: 14px;
+            font-weight: 500;
+            color: #56595c;
+            line-height: 20px;
+            width: 100%;
+        }
+    
+        &__buttons{
             position: absolute;
             right: 0;
             left: 0;
@@ -113,58 +114,57 @@
             -moz-transform: translateY(50px);
             -ms-transform: translateY(50px);
             -o-transform: translateY(50px);
-            
-            &__a{
-                text-align: center;
-                font-size: 14px;
-                font-weight: 500;
-                text-decoration: none;
-                color: black;
-                padding: 10px;
-                width: 75%;
-                border-radius: 5px;
+        }
 
-                &--white{
-                    border: solid 3px black;
+        &__button{
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            color: black;
+            padding: 10px;
+            width: 75%;
+            border-radius: 5px;
+
+            &--white{
+                border: solid 3px black;
+                transition: 0.3s;
+                -webkit-transition: 0.3s;
+                -moz-transition: 0.3s;
+                -ms-transition: 0.3s;
+                -o-transition: 0.3s;
+
+                &:hover{
+                    background-color: #000;
+                    color: white;
                     transition: 0.3s;
                     -webkit-transition: 0.3s;
                     -moz-transition: 0.3s;
                     -ms-transition: 0.3s;
                     -o-transition: 0.3s;
 
-                    &:hover{
-                        background-color: #000;
-                        color: white;
-                        transition: 0.3s;
-                        -webkit-transition: 0.3s;
-                        -moz-transition: 0.3s;
-                        -ms-transition: 0.3s;
-                        -o-transition: 0.3s;
-
-                    }
-                }
-                &--grey{
-                    background-color: #f4f4f4;
-                    border: solid 3px #f4f4f4;
-                    transition: 0.3s;
-                    -webkit-transition: 0.3s;
-                    -moz-transition: 0.3s;
-                    -ms-transition: 0.3s;
-                    -o-transition: 0.3s;
-
-                    &:hover{
-                        background-color: #e8e8e8;
-                        border: solid 3px #e8e8e8;
-                        color: black;
-                        transition: 0.3s; 
-                        -webkit-transition: 0.3s;
-                        -moz-transition: 0.3s;
-                        -ms-transition: 0.3s;
-                        -o-transition: 0.3s;
-                    }
                 }
             }
-            
+            &--grey{
+                background-color: #f4f4f4;
+                border: solid 3px #f4f4f4;
+                transition: 0.3s;
+                -webkit-transition: 0.3s;
+                -moz-transition: 0.3s;
+                -ms-transition: 0.3s;
+                -o-transition: 0.3s;
+
+                &:hover{
+                    background-color: #e8e8e8;
+                    border: solid 3px #e8e8e8;
+                    color: black;
+                    transition: 0.3s; 
+                    -webkit-transition: 0.3s;
+                    -moz-transition: 0.3s;
+                    -ms-transition: 0.3s;
+                    -o-transition: 0.3s;
+                }
+            }
         }
         .active{
             opacity: 1;
