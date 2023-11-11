@@ -4,7 +4,7 @@ const separatorH2$$ = document.querySelector(".separator__h2");
 const infoContainers$$ = document.querySelectorAll(".hero-section__container");
 const buttonsHero$$ = document.querySelector(".hero-section__buttons");
 
-const captionTexts$$ = document.querySelectorAll(".captionText");
+const captionTexts$$ = document.querySelectorAll(".descriptions-section__text");
 
 const ctaSectionsLeft$$ = document.querySelectorAll(".ctaSectionsLeft");
 const ctaSectionsRight$$ = document.querySelectorAll(".ctaSectionsRight");
