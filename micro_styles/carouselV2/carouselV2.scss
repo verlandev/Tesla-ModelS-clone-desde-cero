@@ -1,4 +1,4 @@
-.carouselV2,
+.carousel2,
 .carousel-models,
 .carousel-countries,
 .carousel-features{
@@ -48,92 +48,91 @@
         width: 1200px;
     }
 
-    .slider{
+    &__slider{
         display: flex;
         flex-direction: row;
         justify-content: center;
         gap: 2em;
-        padding-top: 5%;
+        padding-top: 5%;       
+    }
+
+    &__slide{
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+        cursor: pointer;
+        position: relative;
+        opacity: 0.6;
+        color: #939393;
+
+        &--features{
+            width: 15%;
+            margin-bottom: 15%;
+            justify-content: flex-start;
+            gap: 1em
+        }
+    }
+
+    &__slide::before{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: #939393;
+        top:-2px   
+    }
 
 
-        &__slide{
-            width: 35%;
+    &__h3{
+        font-weight: 550;
+        padding-top: 10px;
+        padding-bottom: 5%;
+        align-self: flex-start;
+
+    }
+
+    &__p{
+        padding: 0 0 5% 0;
+        font-size: 14px;
+        font-weight: 500;
+        color: #3b3d43;
+        align-self: start;
+
+    }
+
+    .isSlideActive{
+        color: #000;
+        opacity: 1;
+    }
+
+    .isSlideActive::before{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 4px;
+        background-color: #000000;
+        top:-2px   
+    }
+
+    .slider-details{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 2em;
+
+
+        &__detail{
             display: flex;
             flex-direction: column;
-            justify-content: space-between; 
-            cursor: pointer;
-            position: relative;
-            opacity: 0.6;
-            color: #939393;
-
-            &--features{
-                width: 15%;
-                margin-bottom: 15%;
-                justify-content: flex-start;
-                gap: 1em
-            }
         }
 
-        &__slide::before{
-            position: absolute;
-            content: "";
-            width: 100%;
-            height: 2px;
-            background-color: #939393;
-            top:-2px   
+        &__h2{
+            font-weight: 600;
         }
-
-
-        &__h3{
-            font-weight: 550;
-            padding-top: 10px;
-            padding-bottom: 5%;
-            align-self: flex-start;
-
-        }
-
         &__p{
-            padding: 0 0 5% 0;
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 500;
-            color: #3b3d43;
-            align-self: start;
-
-        }
-
-        .isSlideActive{
-            color: #000;
-            opacity: 1;
-        }
-
-        .isSlideActive::before{
-            position: absolute;
-            content: "";
-            width: 100%;
-            height: 4px;
-            background-color: #000000;
-            top:-2px   
-        }
-
-        .slider-details{
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            gap: 2em;
-
-
-            &__detail{
-                display: flex;
-                flex-direction: column;
-            }
-
-            &__h2{
-                font-weight: 600;
-            }
-            &__p{
-                font-size: 12px;
-                font-weight: 500;
-            }
         }
     }
 

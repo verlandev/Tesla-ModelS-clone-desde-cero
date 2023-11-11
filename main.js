@@ -185,8 +185,8 @@ circles$$.forEach((circle, index) =>
 
 const carouselV2 = (carouselType) => {
 
-  const slides$$ = document.querySelectorAll(`.slider__slide--${carouselType}`);
-  const images$$ = document.querySelectorAll(`.carouselV2__asset--${carouselType}`);
+  const slides$$ = document.querySelectorAll(`.carousel2__slide--${carouselType}`);
+  const images$$ = document.querySelectorAll(`.carousel2__asset--${carouselType}`);
 
   // Aplicamos el manejo de slides actualizando las clases
   slides$$.forEach((slide, index) =>

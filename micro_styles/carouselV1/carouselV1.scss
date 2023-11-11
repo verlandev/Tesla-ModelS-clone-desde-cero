@@ -1,65 +1,64 @@
 .carousel1{
     width: 100%;
     background-color: #000;
-    padding-top: 30vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
 
     &__video{
+        padding-top: 30vh;
         width: 92%;
         margin: auto;
         border-radius: 5px;
     }
 
-    .carousel1-slider{
+    &__slider{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         width: 45%;
         margin: auto;
-        margin-top: 40px;
+        margin-top: 60px;
+        height: 40vh;
+    }
 
-        .carousel1-slider-buttons{
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            gap: 0.5em;
-            padding-top: 10px;
-            padding-bottom: 10px;
+    &__buttons{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 0.5em;
+        margin-top: 20px;
+        padding-bottom: 10px;
+    }
 
-            &__button{
-                height: 12px;
-                width: 12px;
-                border-radius: 50%;
-                outline-offset: 0;
-                background-color: #5c5e62;
-                border: none;
-                cursor: pointer;
-            }
+    &__button{
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        outline-offset: 0;
+        background-color: #5c5e62;
+        border: none;
+        cursor: pointer;
+    }
 
-            .circle-active{
-                background-color: white;
-            }
-        }
+    .circle-active{
+        background-color: white;
+    }
 
-        .carousel1-slider-content{
 
-            .carousel1-slider-content-text{
-                color: white;
-                padding-top: 10px;
-                padding-bottom: 10px;
+    &__text{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: white;
+    }
 
-                &__h3{
-                    font-size: 18px;
-                    padding-bottom: 20px;
-                    font-weight: 550;
-                }
+    &__h3{
+        font-size: 18px;
+        padding-bottom: 20px;
+        font-weight: 550;
+    }
 
-                &__p{
-                    font-size: 15px;
-                }
-            }
-        }
+    &__p{
+        font-size: 15px;
     }
 }
