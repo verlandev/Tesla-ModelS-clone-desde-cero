@@ -3,7 +3,6 @@
 .carousel-models,
 .carousel-countries,
 .carousel-features {
-  background-color: #f4f4f4;
   padding-top: 12%;
   display: flex;
   flex-direction: column;
@@ -169,4 +168,8 @@
 .carousel-features .slider .slider-details__p {
   font-size: 12px;
   font-weight: 500;
+}
+
+.carousel-models {
+  background-color: #f4f4f4;
 }/*# sourceMappingURL=carouselV2.css.map */

@@ -2,7 +2,6 @@
 .carousel-models,
 .carousel-countries,
 .carousel-features{
-    background-color: #f4f4f4;
     padding-top: 12%;
     display: flex;
     flex-direction: column;
@@ -138,4 +137,8 @@
         }
     }
 
+}
+
+.carousel-models{
+    background-color: #f4f4f4;
 }

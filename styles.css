@@ -89,13 +89,13 @@
 .hero-section .header .header-links__img {
   width: 20px;
 }
-.hero-section .hero-section-text {
+.hero-section__text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.hero-section .hero-section-text__h2 {
+.hero-section__h2 {
   color: #2f2f2f;
   text-align: center;
   margin: 25px auto 10px;
@@ -103,7 +103,7 @@
   font-size: 40px;
   font-weight: 600;
 }
-.hero-section .hero-section-text__a {
+.hero-section__a {
   color: #2f2f2f;
   text-decoration: underline;
   text-decoration-thickness: 1px;
@@ -114,13 +114,13 @@
   z-index: 1;
   transition: 0.3s;
 }
-.hero-section .hero-section-text__a:hover {
+.hero-section__a:hover {
   color: #000;
   transition: 0.3s;
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
 }
-.hero-section .hero-section-containers {
+.hero-section__containers {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -135,7 +135,7 @@
   color: whitesmoke;
   width: 60%;
 }
-.hero-section .hero-section-containers .hero-section-containers-info {
+.hero-section .hero-section__container {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -144,16 +144,28 @@
   transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
   transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
 }
-.hero-section .hero-section-containers .hero-section-containers-info__h3 {
+.hero-section__h3 {
   font-size: 25px;
   font-weight: 600;
   letter-spacing: 1px;
 }
-.hero-section .hero-section-containers .hero-section-containers-info__p {
+.hero-section__p {
   font-size: 13px;
   font-weight: 600;
 }
-.hero-section .hero-section-containers .active {
+.hero-section__p--specification {
+  color: whitesmoke;
+  z-index: 3;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+}
+.hero-section .active {
   opacity: 1; /* Opacidad final es 1, completamente visible */
   transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
   animation: none; /* Desactiva la animación cuando se agrega la clase active */
@@ -202,19 +214,6 @@
   opacity: 1; /* Opacidad final es 1, completamente visible */
   transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
   animation: none; /* Desactiva la animación cuando se agrega la clase active */
-}
-
-.heroSpecification {
-  color: whitesmoke;
-  z-index: 3;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0 auto;
-  font-size: 13px;
-  font-weight: 500;
-  text-align: center;
 }
 
 .header::before {
@@ -605,7 +604,6 @@
 .carousel-models,
 .carousel-countries,
 .carousel-features {
-  background-color: #f4f4f4;
   padding-top: 12%;
   display: flex;
   flex-direction: column;
@@ -771,6 +769,10 @@
 .carousel-features .slider .slider-details__p {
   font-size: 12px;
   font-weight: 500;
+}
+
+.carousel-models {
+  background-color: #f4f4f4;
 }
 
 .hero-informative {
