@@ -6,8 +6,8 @@ const buttonsHero$$ = document.querySelector(".hero-section__buttons");
 
 const captionTexts$$ = document.querySelectorAll(".descriptions-section__text");
 
-const ctaSectionsLeft$$ = document.querySelectorAll(".ctaSectionsLeft");
-const ctaSectionsRight$$ = document.querySelectorAll(".ctaSectionsRight");
+const ctaSectionsLeft$$ = document.querySelectorAll(".cta-sections__left");
+const ctaSectionsRight$$ = document.querySelectorAll(".cta-sections__right");
 
 const heroInformativeInfo$$ = document.querySelectorAll(".hero-informative__info");
 const heroInformativeCtaButtons$$ = document.querySelectorAll(".hero-informative-cta__buttons");

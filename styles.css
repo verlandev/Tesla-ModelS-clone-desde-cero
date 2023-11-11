@@ -298,58 +298,63 @@
   animation: none; /* Desactiva la animación cuando se agrega la clase active */
 }
 
-.ctaSectionsBlack {
+.cta-sections {
+  width: 100%;
+}
+.cta-sections__black {
   background-color: #000;
   color: white;
 }
-
-.ctaSectionsWhite {
+.cta-sections__white {
   background-color: white;
   color: #000;
 }
-
-.ctaSections .ctaSectionsContainer {
-  width: 77%;
+.cta-sections__container {
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin: auto;
   align-items: flex-start;
   padding: 50px 0px;
-  gap: 3em;
+  gap: 5em;
 }
-.ctaSections .ctaSectionsLeft {
-  flex: 2.5;
+.cta-sections__left {
   display: flex;
   flex-direction: column;
   gap: 0.2em;
+  flex: 1;
   opacity: 0; /* Comienza con opacidad cero (invisibles) */
   transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
   transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
 }
-.ctaSections .ctaSectionsLeft__h3 {
+.cta-sections__h3 {
   font-weight: 400;
 }
-.ctaSections .ctaSectionsLeft__h2 {
+.cta-sections__h2 {
   font-weight: 600;
   font-size: 27px;
   padding-bottom: 10px;
 }
-.ctaSections .ctaSectionsLeft__p {
+.cta-sections__p {
   font-size: 14px;
   font-weight: 500;
   color: #56595c;
   line-height: 20px;
 }
-.ctaSections .ctaSectionsLeft .ctaSectionsWhiteLeftButtons,
-.ctaSections .ctaSectionsLeft .ctaSectionsBlackLeftButtons {
+.cta-sections__p--white {
+  color: #56595c;
+}
+.cta-sections__p--black {
+  color: white;
+}
+.cta-sections__buttons {
   display: flex;
   flex-direction: column;
   gap: 1em;
   margin-top: 10px;
 }
-.ctaSections .ctaSectionsLeft .ctaSectionsWhiteLeftButtons__a,
-.ctaSections .ctaSectionsLeft .ctaSectionsBlackLeftButtons__a {
+.cta-sections__button {
   text-align: center;
   font-size: 14px;
   font-weight: 500;
@@ -359,80 +364,64 @@
   width: 180px;
   border-radius: 5px;
 }
-.ctaSections .ctaSectionsLeft .ctaSectionsWhiteLeftButtons__a--white,
-.ctaSections .ctaSectionsLeft .ctaSectionsBlackLeftButtons__a--white {
+.cta-sections__button--white {
   border: solid 3px black;
   transition: 0.3s;
 }
-.ctaSections .ctaSectionsLeft .ctaSectionsWhiteLeftButtons__a--white:hover,
-.ctaSections .ctaSectionsLeft .ctaSectionsBlackLeftButtons__a--white:hover {
+.cta-sections__button--white:hover {
   background-color: #000;
   color: white;
   transition: 0.3s;
 }
-.ctaSections .ctaSectionsLeft .ctaSectionsWhiteLeftButtons__a--grey,
-.ctaSections .ctaSectionsLeft .ctaSectionsBlackLeftButtons__a--grey {
+.cta-sections__button--grey {
   background-color: #f4f4f4;
   border: solid 3px #f4f4f4;
   transition: 0.3s;
 }
-.ctaSections .ctaSectionsLeft .ctaSectionsWhiteLeftButtons__a--grey:hover,
-.ctaSections .ctaSectionsLeft .ctaSectionsBlackLeftButtons__a--grey:hover {
+.cta-sections__button--grey:hover {
   background-color: #e8e8e8;
   border: solid 3px #e8e8e8;
   color: black;
   transition: 0.3s;
 }
-.ctaSections .ctaSectionsLeft .ctaSectionsWhiteLeftButtons__a--black,
-.ctaSections .ctaSectionsLeft .ctaSectionsBlackLeftButtons__a--black {
+.cta-sections__button--black {
   border: solid 3px white;
   transition: 0.3s;
   color: white;
 }
-.ctaSections .ctaSectionsLeft .ctaSectionsWhiteLeftButtons__a--black:hover,
-.ctaSections .ctaSectionsLeft .ctaSectionsBlackLeftButtons__a--black:hover {
+.cta-sections__button--black:hover {
   background-color: white;
   color: black;
   transform: 0.3s;
 }
-.ctaSections .ctaSectionsLeft .ctaSectionsWhiteLeftButtons__a--dark,
-.ctaSections .ctaSectionsLeft .ctaSectionsBlackLeftButtons__a--dark {
+.cta-sections__button--dark {
   border: solid 3px #222222;
   background-color: #222222;
   color: white;
   transition: 0.3s;
 }
-.ctaSections .ctaSectionsLeft .ctaSectionsWhiteLeftButtons__a--dark:hover,
-.ctaSections .ctaSectionsLeft .ctaSectionsBlackLeftButtons__a--dark:hover {
+.cta-sections__button--dark:hover {
   background-color: #3e3e3e;
   border: solid 3px #3e3e3e;
   transition: 0.3s;
 }
-.ctaSections .ctaSectionsRight {
-  flex: 3.5;
+.cta-sections__right {
   font-size: 14px;
   font-weight: 450;
   line-height: 20px;
+  flex: 2;
+  padding-left: 20px;
   opacity: 0; /* Comienza con opacidad cero (invisibles) */
   transition: opacity 1s ease, transform 1s ease; /* Transiciones suaves para opacity y transform */
   transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
 }
-.ctaSections .ctaSectionsRightImage {
-  flex: 1;
-}
-.ctaSections .ctaSectionsRightImage__img {
+.cta-sections__img {
   width: 500px;
 }
-.ctaSections .active {
+.cta-sections .active {
   opacity: 1; /* Opacidad final es 1, completamente visible */
   transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
   animation: none; /* Desactiva la animación cuando se agrega la clase active */
-}
-.ctaSections .ctaSectionsWhiteRight {
-  color: #56595c;
-}
-.ctaSections .ctaSectionsBlackRight {
-  color: white;
 }
 
 .banner {
