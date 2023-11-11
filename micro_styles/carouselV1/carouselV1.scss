@@ -19,7 +19,7 @@
         width: 45%;
         margin: auto;
         margin-top: 60px;
-        height: 40vh;
+        height: 40vh; // Así evitamos que si el contenido es más largo, desplace la siguiente sección
     }
 
     &__buttons{
