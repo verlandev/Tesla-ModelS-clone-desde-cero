@@ -2,7 +2,7 @@ const banner$$ = document.querySelector(".banner");
 
 const separatorH2$$ = document.querySelector(".separator__h2");
 const infoContainers$$ = document.querySelectorAll(".hero-section__container");
-const buttonsHero$$ = document.querySelector(".hero-section-buttons");
+const buttonsHero$$ = document.querySelector(".hero-section__buttons");
 
 const captionTexts$$ = document.querySelectorAll(".captionText");
 

@@ -170,7 +170,7 @@
   transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
   animation: none; /* Desactiva la animación cuando se agrega la clase active */
 }
-.hero-section .hero-section-buttons {
+.hero-section__buttons {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -185,7 +185,7 @@
   transition: opacity 1s ease, transform 1s ease; /* Transiciones suaves para opacity y transform */
   transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
 }
-.hero-section .hero-section-buttons__a {
+.hero-section__button {
   padding: 10px;
   text-decoration: none;
   width: 250px;
@@ -194,18 +194,18 @@
   font-size: 14px;
   font-weight: 550;
 }
-.hero-section .hero-section-buttons__a--left {
+.hero-section__button--left {
   color: #2e313a;
   background-color: whitesmoke;
   border: solid 3px whitesmoke;
 }
-.hero-section .hero-section-buttons__a--right {
+.hero-section__button--right {
   background-color: transparent;
   border: solid 3px whitesmoke;
   color: whitesmoke;
   transition: 0.3s;
 }
-.hero-section .hero-section-buttons__a--right:hover {
+.hero-section__button--right:hover {
   background-color: whitesmoke;
   color: #2e313a;
   transition: 0.3s;

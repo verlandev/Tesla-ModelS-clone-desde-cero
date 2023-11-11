@@ -193,7 +193,7 @@
       animation: none; /* Desactiva la animación cuando se agrega la clase active */
   }
 
-    .hero-section-buttons{
+    &__buttons{
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -206,38 +206,38 @@
         padding-bottom: 40px;
         opacity: 0; /* Comienza con opacidad cero (invisibles) */
         transition: opacity 1s ease, transform 1s ease; /* Transiciones suaves para opacity y transform */
-        transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
+        transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */  
+      }
 
-        &__a{
-            padding: 10px;
-            text-decoration: none;
-            width: 250px;
-            text-align: center;
-            border-radius: 5px;
-            font-size: 14px;
-            font-weight: 550;
+      &__button{
+          padding: 10px;
+          text-decoration: none;
+          width: 250px;
+          text-align: center;
+          border-radius: 5px;
+          font-size: 14px;
+          font-weight: 550;
 
-            &--left{
-                color: #2e313a;
-                background-color: whitesmoke;
-                border:solid 3px whitesmoke;
-            }
+          &--left{
+              color: #2e313a;
+              background-color: whitesmoke;
+              border:solid 3px whitesmoke;
+          }
 
-            &--right{
-                background-color: transparent;
-                border:solid 3px whitesmoke;
-                color:whitesmoke;
-                transition: 0.3s;
-            }
+          &--right{
+              background-color: transparent;
+              border:solid 3px whitesmoke;
+              color:whitesmoke;
+              transition: 0.3s;
+          }
 
-            &--right:hover{
-                background-color: whitesmoke;
-                color: #2e313a;
-                transition: 0.3s;
-            }
-        }
-        
-    }
+          &--right:hover{
+              background-color: whitesmoke;
+              color: #2e313a;
+              transition: 0.3s;
+          }
+      }
+      
     .active{
         opacity: 1; /* Opacidad final es 1, completamente visible */
         transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
