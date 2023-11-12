@@ -1,0 +1,53 @@
+@charset "UTF-8";
+.descriptions-section {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30vh;
+  padding-bottom: 20vh;
+}
+.descriptions-section__container {
+  display: flex;
+  flex-direction: row;
+  width: 75%;
+  margin: auto;
+}
+.descriptions-section__container--first:nth-child(odd) h5 {
+  margin-left: 20%;
+}
+.descriptions-section__container--first:nth-child(odd) p {
+  margin-left: 20%;
+}
+.descriptions-section__container--second:nth-child(even) h5 {
+  margin-left: 20%;
+}
+.descriptions-section__container--second:nth-child(even) p {
+  margin-left: 20%;
+}
+.descriptions-section__img {
+  flex: 1;
+  width: 475px;
+}
+.descriptions-section__text {
+  color: whitesmoke;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+  opacity: 0; /* Comienza con opacidad cero (invisibles) */
+  transition: opacity 1s ease, transform 1s ease; /* Transiciones suaves para opacity y transform */
+  transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
+}
+.descriptions-section__h5 {
+  width: 320px;
+}
+.descriptions-section__p {
+  width: 350px;
+  font-size: 14px;
+}
+.descriptions-section .active {
+  opacity: 1; /* Opacidad final es 1, completamente visible */
+  transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
+  animation: none; /* Desactiva la animación cuando se agrega la clase active */
+}/*# sourceMappingURL=descriptions-section.css.map */

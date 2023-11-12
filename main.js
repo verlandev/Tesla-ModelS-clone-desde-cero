@@ -1,48 +1,29 @@
 const banner$$ = document.querySelector(".banner");
 
 const separatorH2$$ = document.querySelector(".separator__h2");
-const infoContainers$$ = document.querySelectorAll(".infoContainer");
-const buttonsHero$$ = document.querySelector(".buttonsHero");
+const infoContainers$$ = document.querySelectorAll(".hero-section__container");
+const buttonsHero$$ = document.querySelector(".hero-section__buttons");
 
-const captionTexts$$ = document.querySelectorAll(".captionText");
+const captionTexts$$ = document.querySelectorAll(".descriptions-section__text");
 
-const ctaSectionsLeft$$ = document.querySelectorAll(".ctaSectionsLeft");
-const ctaSectionsRight$$ = document.querySelectorAll(".ctaSectionsRight");
+const ctaSectionsLeft$$ = document.querySelectorAll(".cta-sections__left");
+const ctaSectionsRight$$ = document.querySelectorAll(".cta-sections__right");
 
-const heroInformativeInfo$$ = document.querySelectorAll(
-  ".hero-informative-info"
-);
-const heroInformativeCtaButtons$$ = document.querySelectorAll(
-  ".hero-informative-cta-buttons"
-);
+const heroInformativeInfo$$ = document.querySelectorAll(".hero-informative__info");
+const heroInformativeCtaButtons$$ = document.querySelectorAll(".hero-informative-cta__buttons");
 
-const containerOne$$ = document.querySelector(
-  ".tesla-vision-content-text--container-one"
-);
-const containerTwo$$ = document.querySelector(
-  ".tesla-vision-content-text--container-two"
-);
-const containerThree$$ = document.querySelector(
-  ".tesla-vision-content-text--container-three"
-);
+const containerOne$$ = document.querySelector(".tesla-vision-content-text--container-one");
+const containerTwo$$ = document.querySelector(".tesla-vision-content-text--container-two");
+const containerThree$$ = document.querySelector(".tesla-vision-content-text--container-three");
 
-const specificationsShowcasesPanel$$ = document.querySelector(
-  ".slider-specifications-content"
-);
+const specificationsShowcasesPanel$$ = document.querySelector(".slider-specifications-content");
 
-const buttonShowcase1$$ = document.querySelector(
-  ".slider-specifications-content-buttons__button--modelPlaid"
-);
-const buttonShowcase2$$ = document.querySelector(
-  ".slider-specifications-content-buttons__button--modelS"
-);
-const showcase1$$ = document.querySelector(
-  ".slider-specifications-content-showcase1"
-);
-const showcase2$$ = document.querySelector(
-  ".slider-specifications-content-showcase2"
-);
+const buttonShowcase1$$ = document.querySelector(".slider-specifications-content-buttons__button--modelPlaid");
+const buttonShowcase2$$ = document.querySelector(".slider-specifications-content-buttons__button--modelS");
+const showcase1$$ = document.querySelector(".slider-specifications-content-showcase1");
+const showcase2$$ = document.querySelector(".slider-specifications-content-showcase2");
 const rollout$$ = document.querySelector(".carouselV2__p--rollout");
+
 
 /**
  * Esta función muestra u oculta el banner en función de la posición del scroll.
@@ -56,6 +37,7 @@ const detectingBanner = () => {
     banner$$.classList.remove("inactive");
   }
 };
+
 
 /**
  * Detecta el desplazamiento de la página y aplica una clase CSS a los elementos según su posición en la ventana.
@@ -76,85 +58,45 @@ function detectingScroll(elements, scrollOffset) {
   });
 }
 
-// Creamos otra función que añade o quita la clase "active" en función del scroll
-// y agregamos un setTimeOut para replicar el efecto de la página y que los elementos
-// aparezcan en distinto orden
 
-// !Optimizar esta función de scroll
+/**
+ * Maneja el evento de desplazamiento y activa la detección de elementos específicos.
+ * @function
+ * @name handleScroll
+ * @global
+ */
 
-window.addEventListener("scroll", () => {
-  detectingBanner();
+const handleScroll = () => {
 
-  setTimeout(() => {
-    detectingScroll([separatorH2$$], 450);
-  }, 500);
+  detectingBanner()
+  detectingScroll([separatorH2$$], 450);
+  detectingScroll(infoContainers$$, 500);
+  detectingScroll([buttonsHero$$], 500);
+  detectingScroll(captionTexts$$, 400);
+  detectingScroll(ctaSectionsLeft$$, 400);
+  detectingScroll(ctaSectionsRight$$, 400);
+  detectingScroll(heroInformativeInfo$$, 500);
+  detectingScroll(heroInformativeCtaButtons$$, 700);
+  detectingScroll([containerOne$$], 400);
+  detectingScroll([containerTwo$$], 400);
+  detectingScroll([containerThree$$], 400);
+  detectingScroll([specificationsShowcasesPanel$$], 500);
+  detectingScroll([rollout$$], 200);
+}
 
-  setTimeout(() => {
-    infoContainers$$.forEach((container) => {
-      detectingScroll([container], 450);
-    });
-  }, 200);
+window.addEventListener('scroll', handleScroll)
 
-  setTimeout(() => {
-    detectingScroll([buttonsHero$$], 450);
-  }, 700);
-
-  setTimeout(() => {
-    captionTexts$$.forEach((caption) => {
-      detectingScroll([caption], 500);
-    });
-  }, 500);
-
-  setTimeout(() => {
-    ctaSectionsLeft$$.forEach((ctaSection) => {
-      detectingScroll([ctaSection], 500);
-    });
-  }, 300);
-
-  setTimeout(() => {
-    ctaSectionsRight$$.forEach((ctaSection) => {
-      detectingScroll([ctaSection], 500);
-    });
-  }, 100);
-
-  setTimeout(() => {
-    heroInformativeInfo$$.forEach((videoInfo) => {
-      detectingScroll([videoInfo], 500);
-    });
-  }, 100);
-
-  setTimeout(() => {
-    heroInformativeCtaButtons$$.forEach((heroInformativeCtaButton) => {
-      detectingScroll([heroInformativeCtaButton], 500);
-    });
-  }, 100);
-
-  setTimeout(() => {
-    detectingScroll([containerOne$$], 450);
-  }, 200);
-
-  setTimeout(() => {
-    detectingScroll([containerTwo$$], 450);
-  }, 500);
-
-  setTimeout(() => {
-    detectingScroll([containerThree$$], 450);
-  }, 800);
-
-  setTimeout(() => {
-    detectingScroll([specificationsShowcasesPanel$$], 450);
-  }, 800);
-
-  setTimeout(() => {
-    detectingScroll([rollout$$], 550);
-  });
-});
 
 window.addEventListener("scroll", function () {
   var scrollYValue = window.scrollY;
   console.log(scrollYValue); // Esto imprimirá el valor actual de scrollY en la consola.
 });
 
+
+/**
+ * Inicializa los elementos del carrusel: videos, círculos y contenidos.
+ * Los selecciona y almacena en arreglos para su uso posterior.
+ */
 const videos$$ = [];
 const circles$$ = [];
 const contents$$ = [];
@@ -164,9 +106,8 @@ for (let i = 1; i <= 5; i++) {
   circles$$.push(document.querySelector(`.circle${i}`));
   contents$$.push(document.querySelector(`.content${i}`));
 }
-
 /**
- * Gestiona la activación y desactivación de elementos en el carrusel
+ * A continuación gestiona la activación y desactivación de elementos en el carrusel
  * al hacer clic en uno de los círculos/botón.
  *
  * @param {Element} button - El botón/circulo en el que se hizo clic.
@@ -188,7 +129,7 @@ const carouselV1 = (button) => {
 };
 
 /**
- * Asigna un evento de clic a cada círculo para controlar la función 'carouselV1'.
+ * Finalmente, asigna un evento de clic a cada círculo para controlar la función 'carouselV1'.
  */
 
 circles$$.forEach((circle, index) =>
@@ -205,8 +146,8 @@ circles$$.forEach((circle, index) =>
 
 const carouselV2 = (carouselType) => {
 
-  const slides$$ = document.querySelectorAll(`.slider__slide--${carouselType}`);
-  const images$$ = document.querySelectorAll(`.carouselV2__asset--${carouselType}`);
+  const slides$$ = document.querySelectorAll(`.carousel2__slide--${carouselType}`);
+  const images$$ = document.querySelectorAll(`.carousel2__asset--${carouselType}`);
 
   // Aplicamos el manejo de slides actualizando las clases
   slides$$.forEach((slide, index) =>

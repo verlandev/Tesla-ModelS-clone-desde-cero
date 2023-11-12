@@ -1,0 +1,175 @@
+@charset "UTF-8";
+.carousel2,
+.carousel-models,
+.carousel-countries,
+.carousel-features {
+  padding-top: 12%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.carousel2__description,
+.carousel-models__description,
+.carousel-countries__description,
+.carousel-features__description {
+  width: 75%;
+  padding-bottom: 5%;
+}
+.carousel2__h2,
+.carousel-models__h2,
+.carousel-countries__h2,
+.carousel-features__h2 {
+  padding-bottom: 1em;
+  font-weight: 550;
+  font-size: 26px;
+}
+.carousel2__p,
+.carousel-models__p,
+.carousel-countries__p,
+.carousel-features__p {
+  width: 85%;
+  font-size: 15px;
+  font-weight: 500;
+  color: #3b3d43;
+}
+.carousel2__p--rollout,
+.carousel-models__p--rollout,
+.carousel-countries__p--rollout,
+.carousel-features__p--rollout {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-size: 13px;
+  font-weight: 550;
+  color: #666769;
+  opacity: 0; /* Comienza con opacidad cero (invisibles) */
+  transition: opacity 1s ease, transform 1s ease; /* Transiciones suaves para opacity y transform */
+  transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
+}
+.carousel2 .active,
+.carousel-models .active,
+.carousel-countries .active,
+.carousel-features .active {
+  opacity: 1; /* Opacidad final es 1, completamente visible */
+  transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
+  animation: none; /* Desactiva la animación cuando se agrega la clase active */
+}
+.carousel2__asset,
+.carousel-models__asset,
+.carousel-countries__asset,
+.carousel-features__asset {
+  width: 1200px;
+}
+.carousel2__slider,
+.carousel-models__slider,
+.carousel-countries__slider,
+.carousel-features__slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2em;
+  padding-top: 5%;
+}
+.carousel2__slide,
+.carousel-models__slide,
+.carousel-countries__slide,
+.carousel-features__slide {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  opacity: 0.6;
+  color: #939393;
+}
+.carousel2__slide--features,
+.carousel-models__slide--features,
+.carousel-countries__slide--features,
+.carousel-features__slide--features {
+  width: 15%;
+  margin-bottom: 15%;
+  justify-content: flex-start;
+  gap: 1em;
+}
+.carousel2__slide::before,
+.carousel-models__slide::before,
+.carousel-countries__slide::before,
+.carousel-features__slide::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #939393;
+  top: -2px;
+}
+.carousel2__h3,
+.carousel-models__h3,
+.carousel-countries__h3,
+.carousel-features__h3 {
+  font-weight: 550;
+  padding-top: 10px;
+  padding-bottom: 5%;
+  align-self: flex-start;
+}
+.carousel2__p,
+.carousel-models__p,
+.carousel-countries__p,
+.carousel-features__p {
+  padding: 0 0 5% 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #3b3d43;
+  align-self: start;
+}
+.carousel2 .isSlideActive,
+.carousel-models .isSlideActive,
+.carousel-countries .isSlideActive,
+.carousel-features .isSlideActive {
+  color: #000;
+  opacity: 1;
+}
+.carousel2 .isSlideActive::before,
+.carousel-models .isSlideActive::before,
+.carousel-countries .isSlideActive::before,
+.carousel-features .isSlideActive::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: #000000;
+  top: -2px;
+}
+.carousel2 .slider-details,
+.carousel-models .slider-details,
+.carousel-countries .slider-details,
+.carousel-features .slider-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 2em;
+}
+.carousel2 .slider-details__detail,
+.carousel-models .slider-details__detail,
+.carousel-countries .slider-details__detail,
+.carousel-features .slider-details__detail {
+  display: flex;
+  flex-direction: column;
+}
+.carousel2 .slider-details__h2,
+.carousel-models .slider-details__h2,
+.carousel-countries .slider-details__h2,
+.carousel-features .slider-details__h2 {
+  font-weight: 600;
+}
+.carousel2 .slider-details__p,
+.carousel-models .slider-details__p,
+.carousel-countries .slider-details__p,
+.carousel-features .slider-details__p {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.carousel-models {
+  background-color: #f4f4f4;
+}/*# sourceMappingURL=carouselV2.css.map */
