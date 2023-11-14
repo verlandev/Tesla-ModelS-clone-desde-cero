@@ -429,132 +429,6 @@
   animation: none; /* Desactiva la animación cuando se agrega la clase active */
 }
 
-.cta-sections {
-  width: 100%;
-}
-.cta-sections__black {
-  background-color: #000;
-  color: white;
-}
-.cta-sections__white {
-  background-color: white;
-  color: #000;
-}
-.cta-sections__container {
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin: auto;
-  align-items: flex-start;
-  padding: 50px 0px;
-  gap: 5em;
-}
-.cta-sections__left {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2em;
-  flex: 1;
-  opacity: 0; /* Comienza con opacidad cero (invisibles) */
-  transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
-  transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
-}
-.cta-sections__h3 {
-  font-weight: 400;
-}
-.cta-sections__h2 {
-  font-weight: 600;
-  font-size: 27px;
-  padding-bottom: 10px;
-}
-.cta-sections__p {
-  font-size: 14px;
-  font-weight: 500;
-  color: #56595c;
-  line-height: 20px;
-}
-.cta-sections__p--white {
-  color: #56595c;
-}
-.cta-sections__p--black {
-  color: white;
-}
-.cta-sections__buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  margin-top: 10px;
-}
-.cta-sections__button {
-  text-align: center;
-  font-size: 14px;
-  font-weight: 500;
-  text-decoration: none;
-  color: black;
-  padding: 10px;
-  width: 180px;
-  border-radius: 5px;
-}
-.cta-sections__button--white {
-  border: solid 3px black;
-  transition: 0.3s;
-}
-.cta-sections__button--white:hover {
-  background-color: #000;
-  color: white;
-  transition: 0.3s;
-}
-.cta-sections__button--grey {
-  background-color: #f4f4f4;
-  border: solid 3px #f4f4f4;
-  transition: 0.3s;
-}
-.cta-sections__button--grey:hover {
-  background-color: #e8e8e8;
-  border: solid 3px #e8e8e8;
-  color: black;
-  transition: 0.3s;
-}
-.cta-sections__button--black {
-  border: solid 3px white;
-  transition: 0.3s;
-  color: white;
-}
-.cta-sections__button--black:hover {
-  background-color: white;
-  color: black;
-  transform: 0.3s;
-}
-.cta-sections__button--dark {
-  border: solid 3px #222222;
-  background-color: #222222;
-  color: white;
-  transition: 0.3s;
-}
-.cta-sections__button--dark:hover {
-  background-color: #3e3e3e;
-  border: solid 3px #3e3e3e;
-  transition: 0.3s;
-}
-.cta-sections__right {
-  font-size: 14px;
-  font-weight: 450;
-  line-height: 20px;
-  flex: 2;
-  padding-left: 20px;
-  opacity: 0; /* Comienza con opacidad cero (invisibles) */
-  transition: opacity 1s ease, transform 1s ease; /* Transiciones suaves para opacity y transform */
-  transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
-}
-.cta-sections__img {
-  width: 500px;
-}
-.cta-sections .active {
-  opacity: 1; /* Opacidad final es 1, completamente visible */
-  transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
-  animation: none; /* Desactiva la animación cuando se agrega la clase active */
-}
-
 .carousel2,
 .carousel-models,
 .carousel-countries,
@@ -728,6 +602,132 @@
 
 .carousel-models {
   background-color: #f4f4f4;
+}
+
+.cta-sections {
+  width: 100%;
+}
+.cta-sections__black {
+  background-color: #000;
+  color: white;
+}
+.cta-sections__white {
+  background-color: white;
+  color: #000;
+}
+.cta-sections__container {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: auto;
+  align-items: flex-start;
+  padding: 50px 0px;
+  gap: 5em;
+}
+.cta-sections__left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  flex: 1;
+  opacity: 0; /* Comienza con opacidad cero (invisibles) */
+  transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
+  transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
+}
+.cta-sections__h3 {
+  font-weight: 400;
+}
+.cta-sections__h2 {
+  font-weight: 600;
+  font-size: 27px;
+  padding-bottom: 10px;
+}
+.cta-sections__p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #56595c;
+  line-height: 20px;
+}
+.cta-sections__p--white {
+  color: #56595c;
+}
+.cta-sections__p--black {
+  color: white;
+}
+.cta-sections__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 10px;
+}
+.cta-sections__button {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  width: 180px;
+  border-radius: 5px;
+}
+.cta-sections__button--white {
+  border: solid 3px black;
+  transition: 0.3s;
+}
+.cta-sections__button--white:hover {
+  background-color: #000;
+  color: white;
+  transition: 0.3s;
+}
+.cta-sections__button--grey {
+  background-color: #f4f4f4;
+  border: solid 3px #f4f4f4;
+  transition: 0.3s;
+}
+.cta-sections__button--grey:hover {
+  background-color: #e8e8e8;
+  border: solid 3px #e8e8e8;
+  color: black;
+  transition: 0.3s;
+}
+.cta-sections__button--black {
+  border: solid 3px white;
+  transition: 0.3s;
+  color: white;
+}
+.cta-sections__button--black:hover {
+  background-color: white;
+  color: black;
+  transform: 0.3s;
+}
+.cta-sections__button--dark {
+  border: solid 3px #222222;
+  background-color: #222222;
+  color: white;
+  transition: 0.3s;
+}
+.cta-sections__button--dark:hover {
+  background-color: #3e3e3e;
+  border: solid 3px #3e3e3e;
+  transition: 0.3s;
+}
+.cta-sections__right {
+  font-size: 14px;
+  font-weight: 450;
+  line-height: 20px;
+  flex: 2;
+  padding-left: 20px;
+  opacity: 0; /* Comienza con opacidad cero (invisibles) */
+  transition: opacity 1s ease, transform 1s ease; /* Transiciones suaves para opacity y transform */
+  transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
+}
+.cta-sections__img {
+  width: 500px;
+}
+.cta-sections .active {
+  opacity: 1; /* Opacidad final es 1, completamente visible */
+  transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
+  animation: none; /* Desactiva la animación cuando se agrega la clase active */
 }
 
 .hero-informative {
