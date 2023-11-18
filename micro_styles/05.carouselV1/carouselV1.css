@@ -52,4 +52,16 @@
 }
 .carousel1__p {
   font-size: 15px;
+}
+
+@media screen and (min-width: 1440px) {
+  .carousel1__video {
+    padding-top: 20vh;
+    width: 70%;
+    height: 40%;
+  }
+  .carousel1__slider {
+    width: 35%;
+    height: 20vh;
+  }
 }/*# sourceMappingURL=carouselV1.css.map */

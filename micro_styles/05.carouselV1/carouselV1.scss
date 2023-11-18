@@ -62,3 +62,20 @@
         font-size: 15px;
     }
 }
+
+// Desktop design
+
+@media screen and (min-width: 1440px) {
+    .carousel1{       
+        &__video{
+            padding-top: 20vh;
+            width: 70%;
+            height: 40%;
+        }
+
+        &__slider{
+            width: 35%;
+            height: 20vh; // Así evitamos que si el contenido es más largo, desplace la siguiente sección
+        }
+    }
+}
