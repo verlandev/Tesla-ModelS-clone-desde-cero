@@ -21,6 +21,10 @@
   font-family: "Montserrat";
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #root {
   position: relative;
 }

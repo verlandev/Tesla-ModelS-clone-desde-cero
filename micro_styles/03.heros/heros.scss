@@ -183,6 +183,12 @@
 
 @media screen and (min-width: 1440px) {
   .hero-section{
-    border: solid 1px green;
+    height: 100vh;
+
+    &__p {
+      &--specification {
+        bottom: 10px;
+      }
+    }
   }
 }
