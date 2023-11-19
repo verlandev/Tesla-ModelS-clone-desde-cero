@@ -194,17 +194,35 @@
         }
 
         &__p{
-            width: 90%;
+            width: 100%;
             padding-bottom: 5%;
 
-            &--intro{
+            &--intro-models{
                 width: 75%;
                 font-size: 14px;
             }
+
+            &--intro-countries{
+                width: 100%;
+                font-size: 14px;
+            }
+
         }
 
         &__asset{
-            width: 1500px;
+            width: 1100px;
+            transform: scale(1);
+
+            &--models{
+                margin-top: 3%;
+                transform: scale(1.2)
+            }
+
+            &--countries{
+                margin-top: 3%;
+                transform: scale(1.2);
+                margin-bottom: 3%;
+            }
         }
     
         &__slide{

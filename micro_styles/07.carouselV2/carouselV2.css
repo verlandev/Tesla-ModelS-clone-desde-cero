@@ -233,21 +233,44 @@
   .carousel-models__p,
   .carousel-countries__p,
   .carousel-features__p {
-    width: 90%;
+    width: 100%;
     padding-bottom: 5%;
   }
-  .carousel2__p--intro,
-  .carousel-models__p--intro,
-  .carousel-countries__p--intro,
-  .carousel-features__p--intro {
+  .carousel2__p--intro-models,
+  .carousel-models__p--intro-models,
+  .carousel-countries__p--intro-models,
+  .carousel-features__p--intro-models {
     width: 75%;
+    font-size: 14px;
+  }
+  .carousel2__p--intro-countries,
+  .carousel-models__p--intro-countries,
+  .carousel-countries__p--intro-countries,
+  .carousel-features__p--intro-countries {
+    width: 100%;
     font-size: 14px;
   }
   .carousel2__asset,
   .carousel-models__asset,
   .carousel-countries__asset,
   .carousel-features__asset {
-    width: 1500px;
+    width: 1100px;
+    transform: scale(1);
+  }
+  .carousel2__asset--models,
+  .carousel-models__asset--models,
+  .carousel-countries__asset--models,
+  .carousel-features__asset--models {
+    margin-top: 3%;
+    transform: scale(1.2);
+  }
+  .carousel2__asset--countries,
+  .carousel-models__asset--countries,
+  .carousel-countries__asset--countries,
+  .carousel-features__asset--countries {
+    margin-top: 3%;
+    transform: scale(1.2);
+    margin-bottom: 3%;
   }
   .carousel2__slide,
   .carousel-models__slide,

@@ -1,6 +1,7 @@
 .slider-specifications {
   width: 100%;
   background-color: #000;
+  height: 140vh;
 }
 .slider-specifications--center {
   display: flex;
@@ -97,4 +98,18 @@
   opacity: 1;
   transform: translateY(0);
   animation: none;
+}
+
+@media screen and (min-width: 1440px) {
+  .slider-specifications {
+    height: 90vh;
+  }
+  .slider-specifications--center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 7em;
+    padding-bottom: 40px;
+    padding-top: 60px;
+  }
 }/*# sourceMappingURL=slider-specifications.css.map */
