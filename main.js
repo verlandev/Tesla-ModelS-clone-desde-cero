@@ -1,5 +1,8 @@
 const banner$$ = document.querySelector(".banner");
 
+const nav$$ = document.querySelector(".nav")
+const headerLinks$$ = document.querySelector(".header-links")
+
 const separatorH2$$ = document.querySelector(".separator__h2");
 const infoContainers$$ = document.querySelectorAll(".hero-section__container");
 const buttonsHero$$ = document.querySelector(".hero-section__buttons");
@@ -23,6 +26,7 @@ const buttonShowcase2$$ = document.querySelector(".slider-specifications__button
 const showcase1$$ = document.querySelector(".slider-specifications__showcase1");
 const showcase2$$ = document.querySelector(".slider-specifications__showcase2");
 const rollout$$ = document.querySelector(".carouselV2__p--rollout");
+const buttonMenu$$ = document.querySelector(".header__button-menu")
 
 
 /**
@@ -37,6 +41,30 @@ const detectingBanner = () => {
     banner$$.classList.remove("inactive");
   }
 };
+
+
+const menuResponsive = () => {
+  // Versión mobile
+  // Tengo que quitar el botón de menú a partir de que la pantalla sea superior o igual a 700
+  if(window.innerWidth <= 800 ) {
+    buttonMenu$$.classList.remove('inactive')
+    nav$$.classList.add('inactive')
+    headerLinks$$.classList.add('inactive')
+    banner$$.classList.add('active')
+
+  } else {
+    buttonMenu$$.classList.add('inactive')
+    nav$$.classList.remove('inactive')
+    headerLinks$$.classList.remove('inactive')
+  }
+}
+
+window.addEventListener('resize', menuResponsive);
+window.addEventListener('orientationchange', menuResponsive);
+window.onload = () => {
+  menuResponsive(); // Llama a la función después de que todo ha cargado
+};
+
 
 
 /**

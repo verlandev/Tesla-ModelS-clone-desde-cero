@@ -179,4 +179,16 @@
   .hero-section__p--specification {
     bottom: 10px;
   }
+}
+@media screen and (max-width: 787px) {
+  .top-hero {
+    height: 70vh;
+    background-size: cover;
+  }
+  .second-hero {
+    height: 100vh;
+  }
+  .third-hero {
+    height: 100vh;
+  }
 }/*# sourceMappingURL=heros.css.map */

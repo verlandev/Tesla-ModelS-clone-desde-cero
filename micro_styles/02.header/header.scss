@@ -62,3 +62,26 @@
   box-shadow: inset 0px -150px 100px 10px #000;
 }
 
+.inactive{
+  display: none;
+}
+
+
+@media screen and (max-width: 787px){
+  .header{
+
+    &__logo{
+      width: 110px;
+    }
+
+    &__button-menu{
+      background-color: rgba(101, 101, 101, 0.189); /* Color gris con 25% de opacidad */
+      backdrop-filter: blur(2%);
+      border: 1px solid transparent;
+      border-radius: 5px;
+      padding: 10px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+}

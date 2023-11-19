@@ -48,4 +48,24 @@
   top: 0;
   right: 0;
   box-shadow: inset 0px -150px 100px 10px #000;
+}
+
+.inactive {
+  display: none;
+}
+
+@media screen and (max-width: 787px) {
+  .header__logo {
+    width: 110px;
+  }
+  .header__button-menu {
+    background-color: rgba(101, 101, 101, 0.189); /* Color gris con 25% de opacidad */
+    -webkit-backdrop-filter: blur(2%);
+            backdrop-filter: blur(2%);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 500;
+    cursor: pointer;
+  }
 }/*# sourceMappingURL=header.css.map */
