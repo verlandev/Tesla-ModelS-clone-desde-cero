@@ -8,6 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 5%;
 }
 .carousel2__description,
 .carousel-models__description,
@@ -180,6 +181,30 @@
 .carousel-features .slider-details__p {
   font-size: 12px;
   font-weight: 500;
+}
+.carousel2__button,
+.carousel-models__button,
+.carousel-countries__button,
+.carousel-features__button {
+  margin-top: 10%;
+  width: 180px;
+  padding: 10px;
+  border: solid 3px black;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-weight: 550;
+  font-size: 14px;
+  transition: ease 0.3s;
+}
+.carousel2__button:hover,
+.carousel-models__button:hover,
+.carousel-countries__button:hover,
+.carousel-features__button:hover {
+  background-color: #000;
+  color: #fff;
+  transition: ease 0.3s;
 }
 
 .carousel-models {

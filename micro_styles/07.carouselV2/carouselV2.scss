@@ -7,6 +7,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 5%;
 
     &__description{
         width: 75%;
@@ -143,6 +144,26 @@
         &__p{
             font-size: 12px;
             font-weight: 500;
+        }
+    }
+
+    &__button{
+        margin-top: 10%;
+        width: 180px;
+        padding: 10px;
+        border: solid 3px black;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        font-weight: 550;
+        font-size: 14px;
+        transition: ease 0.3s;
+
+        &:hover{
+            background-color: #000;
+            color: #fff;
+            transition: ease 0.3s;
         }
     }
 
