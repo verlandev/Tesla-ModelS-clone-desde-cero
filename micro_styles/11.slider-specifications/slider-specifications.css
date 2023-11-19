@@ -98,4 +98,26 @@
   opacity: 1;
   transform: translateY(0);
   animation: none;
+}
+
+@media screen and (min-width: 1440px) {
+  .slider-specifications {
+    width: 100%;
+    background-color: #000;
+    height: 100vh;
+  }
+  .slider-specifications--center {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 7em;
+    padding-bottom: 40px;
+    padding-top: 7%;
+  }
+  .slider-specifications__asset {
+    padding-top: 2%;
+  }
+  .slider-specifications__img {
+    width: 950px;
+  }
 }/*# sourceMappingURL=slider-specifications.css.map */

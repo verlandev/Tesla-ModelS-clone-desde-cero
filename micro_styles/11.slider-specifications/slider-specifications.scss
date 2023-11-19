@@ -110,7 +110,7 @@
   &__showcase2 {
     display: none;
   }
-  
+
   .active {
     opacity: 1;
     transform: translateY(0);
@@ -122,4 +122,27 @@
 
 // Desktop design
 
-
+@media screen and (min-width: 1440px) {
+    .slider-specifications {
+        width: 100%;
+        background-color: #000;
+        height: 100vh;
+      
+        &--center {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            gap: 7em;
+            padding-bottom: 40px;
+            padding-top: 7%;
+          }
+        
+          &__asset {
+            padding-top: 2%;
+          }
+          
+          &__img {
+            width: 950px;
+          }
+    }      
+}
