@@ -167,14 +167,17 @@
   .hero-informative__asset--clip {
     width: 80%;
   }
+  .hero-informative__asset--image {
+    width: 100%;
+    position: relative;
+  }
   .hero-informative__video {
     width: 100%;
   }
   .hero-informative__img {
-    width: 600px;
+    width: 60%;
     position: absolute;
-    right: 200px;
-    left: 150px;
+    margin: auto;
   }
   .hero-informative__container {
     position: absolute;
@@ -217,13 +220,13 @@
     animation: none; /* Desactiva la animación cuando se agrega la clase active */
   }
   .hero-informative .hero-informative-cta {
-    width: 20%;
+    width: 25%;
     position: relative;
   }
   .hero-informative .hero-informative-cta__text {
     display: flex;
     flex-direction: column;
-    padding: 50px 0 0px 40px;
+    padding: 50px 10px 0px 50px;
   }
   .hero-informative .hero-informative-cta__h3 {
     font-size: 18px;

@@ -186,6 +186,11 @@
       &--clip{
         width: 80%;
       }
+
+      &--image{
+        width: 100%;
+        position: relative;
+      }
     }
 
   
@@ -194,10 +199,9 @@
     }
   
     &__img {
-      width: 600px;
+      width: 60%;
       position: absolute;
-      right: 200px;
-      left: 150px;
+      margin: auto;      
     }
   
     &__container {
@@ -248,13 +252,13 @@
     }
   
     .hero-informative-cta {
-      width: 20%;
+      width: 25%;
       position: relative;
   
       &__text {
         display: flex;
         flex-direction: column;
-        padding: 50px 0 0px 40px;
+        padding: 50px 10px 0px 50px;
       }
   
       &__h3 {
