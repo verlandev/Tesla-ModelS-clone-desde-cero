@@ -147,5 +147,17 @@
 }
 
 @media screen and (min-width: 1440px) {
-  
+  .cta-sections {  
+    &__container {
+      width: 60%;
+      gap: 2em;
+    }
+
+    &__buttons {
+      flex-direction: row;
+    }
+    &__img {
+      width: 900px;
+    }
+  }
 }

@@ -11,6 +11,7 @@
     &__description{
         width: 75%;
         padding-bottom: 5%;
+        margin-left: -5%;
     }
 
     &__h2{
@@ -25,6 +26,14 @@
         font-size: 15px;
         font-weight: 500;
         color: #3b3d43;
+
+        &--intro{
+            font-size: 15px;
+            font-weight: 500;
+            color: #3b3d43;
+            width: 80%;
+            line-height: 20px;
+        }
 
         &--rollout{
             margin-top: 5%;
@@ -46,6 +55,7 @@
 
     &__asset{
         width: 1200px;
+        border-radius: 5px;
     }
 
     &__slider{
@@ -140,4 +150,58 @@
 
 .carousel-models{
     background-color: #f4f4f4;
+}
+
+
+// Desktop design
+
+@media screen and (min-width: 1440px) {
+
+    .carousel2,
+    .carousel-models,
+    .carousel-countries,
+    .carousel-features{
+        padding-top: 7%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__description{
+            width: 55%;
+            padding-bottom: 3%;
+        }
+
+        &__p{
+            width: 90%;
+            padding-bottom: 5%;
+
+            &--intro{
+                width: 75%;
+                font-size: 14px;
+            }
+        }
+
+        &__asset{
+            width: 1500px;
+        }
+    
+        &__slide{
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; 
+            cursor: pointer;
+            position: relative;
+            opacity: 0.6;
+            color: #939393;
+    
+            &--features{
+                width: 15%;
+                margin-bottom: 15%;
+                justify-content: flex-start;
+                gap: 1em
+            }
+        }
+    }
 }

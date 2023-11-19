@@ -54,7 +54,7 @@
 
 @media screen and (min-width: 1440px) {
   .descriptions-section {
-    padding-top: 30vh;
+    padding-top: 10vh;
     padding-bottom: 10vh;
   }
   .descriptions-section__container {

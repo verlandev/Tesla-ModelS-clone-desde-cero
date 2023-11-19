@@ -76,6 +76,7 @@
         &__slider{
             width: 35%;
             height: 20vh; // Así evitamos que si el contenido es más largo, desplace la siguiente sección
+            padding-bottom: 15vh;
         }
     }
 }
