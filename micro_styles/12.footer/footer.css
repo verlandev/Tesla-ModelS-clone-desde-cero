@@ -24,21 +24,21 @@
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
 }
-.footer .footerLinks {
+.footer__links {
   width: 55%;
   margin: auto;
   margin-top: 20px;
 }
-.footer .footerLinks__ul {
+.footer__ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-.footer .footerLinks__li {
+.footer__li {
   list-style: none;
   font-size: 12px;
 }
-.footer .footerLinks__a {
+.footer__a {
   text-decoration: none;
   color: #56595c;
   font-weight: 600;

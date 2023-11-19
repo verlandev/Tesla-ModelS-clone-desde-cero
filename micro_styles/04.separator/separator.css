@@ -29,4 +29,10 @@
   top: 0;
   right: 0;
   box-shadow: inset 0px 100px 100px 10px #000;
+}
+
+@media screen and (min-width: 1440px) {
+  .separator {
+    height: 10vh;
+  }
 }/*# sourceMappingURL=separator.css.map */

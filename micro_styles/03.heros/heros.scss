@@ -1,13 +1,16 @@
 .top-hero {
   background-image: url("/images/hero.jpg");
+  height: 100vh;
 }
 
 .second-hero {
   background-image: url("/images/secondHero.jpg");
+  height: 100vh;
 }
 
 .third-hero {
   background: url("/images/Model-S-Exterior-Hero.jpg");
+  height: 100vh;
 }
 
 .hero-section {
@@ -178,4 +181,29 @@
   top: 0;
   right: 0;
   box-shadow: inset 0px 100px 100px 10px #000;
+}
+
+
+@media screen and (min-width: 1440px) {
+  
+  .top-hero {
+    height: 100vh;
+  }
+  
+  .second-hero {
+    height: 80vh;
+  }
+  
+  .third-hero {
+    height: 80vh;
+  }
+
+  .hero-section{
+
+    &__p {
+      &--specification {
+        bottom: 10px;
+      }
+    }
+  }
 }

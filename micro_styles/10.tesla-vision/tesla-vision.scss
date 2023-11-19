@@ -45,5 +45,21 @@
             animation: none; /* Desactiva la animación cuando se agrega la clase active */
         }
     }
+}
 
+// Desktop design
+
+@media screen and (min-width: 1440px) {
+    .tesla-vision{
+        height: 80vh;
+    
+        .tesla-vision-content{
+            height: 80vh;
+        }
+    }
+    .tesla-vision-content-text{
+        &__p{
+            width: 60%;
+        }
+    }    
 }

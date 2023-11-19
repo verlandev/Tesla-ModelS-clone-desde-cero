@@ -16,12 +16,12 @@ const containerOne$$ = document.querySelector(".tesla-vision-content-text--conta
 const containerTwo$$ = document.querySelector(".tesla-vision-content-text--container-two");
 const containerThree$$ = document.querySelector(".tesla-vision-content-text--container-three");
 
-const specificationsShowcasesPanel$$ = document.querySelector(".slider-specifications-content");
+const specificationsShowcasesPanel$$ = document.querySelector(".slider-specifications__content");
 
-const buttonShowcase1$$ = document.querySelector(".slider-specifications-content-buttons__button--modelPlaid");
-const buttonShowcase2$$ = document.querySelector(".slider-specifications-content-buttons__button--modelS");
-const showcase1$$ = document.querySelector(".slider-specifications-content-showcase1");
-const showcase2$$ = document.querySelector(".slider-specifications-content-showcase2");
+const buttonShowcase1$$ = document.querySelector(".slider-specifications__button--modelPlaid");
+const buttonShowcase2$$ = document.querySelector(".slider-specifications__button--modelS");
+const showcase1$$ = document.querySelector(".slider-specifications__showcase1");
+const showcase2$$ = document.querySelector(".slider-specifications__showcase2");
 const rollout$$ = document.querySelector(".carouselV2__p--rollout");
 
 
@@ -49,7 +49,7 @@ const detectingBanner = () => {
 function detectingScroll(elements, scrollOffset) {
   elements.forEach(function (element) {
     const elementOffset = element.getBoundingClientRect().top + scrollY;
-
+    
     if (scrollY >= elementOffset - scrollOffset) {
       element.classList.add("active");
     } else {
@@ -66,25 +66,66 @@ function detectingScroll(elements, scrollOffset) {
  * @global
  */
 
+
 const handleScroll = () => {
+  const windowWidth = window.innerWidth;
+  const windowHeight = window.innerHeight
+
+  let scrollThreshold
+
+  if(windowWidth >= 1200) {
+    // Pantalla grande
+    scrollThreshold = windowHeight * 0.9
+  } else if(windowWidth >= 768) {
+    // Pantalla mediana
+    scrollThreshold = windowHeight * 0.3
+  } else {
+    // Pantalla pequeña
+    scrollThreshold = windowHeight * 0.2
+  }
 
   detectingBanner()
-  detectingScroll([separatorH2$$], 450);
-  detectingScroll(infoContainers$$, 500);
-  detectingScroll([buttonsHero$$], 500);
-  detectingScroll(captionTexts$$, 400);
-  detectingScroll(ctaSectionsLeft$$, 400);
-  detectingScroll(ctaSectionsRight$$, 400);
-  detectingScroll(heroInformativeInfo$$, 500);
-  detectingScroll(heroInformativeCtaButtons$$, 700);
-  detectingScroll([containerOne$$], 400);
-  detectingScroll([containerTwo$$], 400);
-  detectingScroll([containerThree$$], 400);
-  detectingScroll([specificationsShowcasesPanel$$], 500);
-  detectingScroll([rollout$$], 200);
+  detectingScroll(infoContainers$$, scrollThreshold);
+  detectingScroll([separatorH2$$], scrollThreshold);
+  detectingScroll([buttonsHero$$], scrollThreshold);
+  detectingScroll(captionTexts$$, scrollThreshold);
+  detectingScroll(ctaSectionsLeft$$, scrollThreshold);
+  detectingScroll(ctaSectionsRight$$, scrollThreshold);
+  detectingScroll(heroInformativeInfo$$, scrollThreshold);
+  detectingScroll(heroInformativeCtaButtons$$, scrollThreshold);
+  detectingScroll([containerOne$$], scrollThreshold);
+  detectingScroll([containerTwo$$], scrollThreshold);
+  detectingScroll([containerThree$$], scrollThreshold);
+  detectingScroll([specificationsShowcasesPanel$$], scrollThreshold);
+  detectingScroll([rollout$$], scrollThreshold);
 }
+window.addEventListener('scroll', handleScroll);
 
-window.addEventListener('scroll', handleScroll)
+
+// const handleScroll = () => {
+
+//   detectingBanner()
+
+//   let width = window.innerWidth
+
+//   if (900 <= width <= 2000) {
+//     detectingScroll([separatorH2$$], 700);
+//     detectingScroll(infoContainers$$, 500);
+//     detectingScroll([buttonsHero$$], 500);
+//     detectingScroll(captionTexts$$, 400);
+//     detectingScroll(ctaSectionsLeft$$, 400);
+//     detectingScroll(ctaSectionsRight$$, 400);
+//     detectingScroll(heroInformativeInfo$$, 500);
+//     detectingScroll(heroInformativeCtaButtons$$, 700);
+//     detectingScroll([containerOne$$], 400);
+//     detectingScroll([containerTwo$$], 400);
+//     detectingScroll([containerThree$$], 400);
+//     detectingScroll([specificationsShowcasesPanel$$], 500);
+//     detectingScroll([rollout$$], 200);
+//   }
+
+ 
+// }
 
 
 window.addEventListener("scroll", function () {
@@ -193,3 +234,5 @@ buttonShowcase2$$.addEventListener("click", () => {
   buttonShowcase1$$.classList.remove("button-on");
   buttonShowcase1$$.classList.add("button-off");
 });
+
+console.log(window.innerWidth)

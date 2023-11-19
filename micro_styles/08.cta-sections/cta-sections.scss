@@ -19,6 +19,11 @@
     align-items: flex-start;
     padding: 50px 0px;
     gap: 5em;
+
+    &--car{
+      position: relative;
+      height: 60vh;
+    }
   }
 
   &__left {
@@ -29,6 +34,14 @@
     opacity: 0; /* Comienza con opacidad cero (invisibles) */
     transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
     transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
+
+    &--car{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      top: 20%;
+      width: 40%;
+    }
   }
 
   &__h3 {
@@ -131,10 +144,21 @@
     opacity: 0; /* Comienza con opacidad cero (invisibles) */
     transition: opacity 1s ease, transform 1s ease; /* Transiciones suaves para opacity y transform */
     transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
+    position: relative;
+
+    &--car{
+      width: 400px;
+      position: absolute;
+      right: 10%;
+      top: 10%;
+    }
+
   }
 
   &__img {
-    width: 500px;
+    width: 600px;
+    position: absolute;
+    
   }
 
   .active {
@@ -144,4 +168,63 @@
     ); /* Vuelve a su posición original, sin desplazamiento vertical */
     animation: none; /* Desactiva la animación cuando se agrega la clase active */
   }
+}
+
+@media screen and (min-width: 1440px) {
+  .cta-sections {  
+    &__container {
+      width: 60%;
+      gap: 2em;
+    }
+
+    &__buttons {
+      flex-direction: row;
+    }
+
+    &__left {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2em;
+      flex: 1;
+      opacity: 0; /* Comienza con opacidad cero (invisibles) */
+      transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
+      transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
+  
+      &--car{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        top: 45%;
+        width: 40%;
+      }
+    }
+
+    &__right {
+      font-size: 14px;
+      font-weight: 450;
+      line-height: 20px;
+      flex: 2;
+      padding-left: 20px;
+      opacity: 0; /* Comienza con opacidad cero (invisibles) */
+      transition: opacity 1s ease, transform 1s ease; /* Transiciones suaves para opacity y transform */
+      transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
+      position: relative;
+  
+      &--car{
+        width: 400px;
+        position: absolute;
+        right: 12%;
+        top: 15%;
+      }
+  
+    }
+  
+    &__img {
+      width: 900px;
+      position: absolute;
+      
+    }
+  }
+
+
 }

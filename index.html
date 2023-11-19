@@ -3,7 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" rel="preload" href="styles.css" />
+    <link rel="stylesheet" href="/micro_styles/01.banner/banner.css">
+    <link rel="stylesheet" href="/micro_styles/02.header/header.css">
+    <link rel="stylesheet" href="/micro_styles/03.heros/heros.css">
+    <link rel="stylesheet" href="/micro_styles/04.separator/separator.css">
+    <link rel="stylesheet" href="/micro_styles/05.carouselV1/carouselV1.css">
+    <link rel="stylesheet" href="/micro_styles/06.descriptions-section/descriptions-section.css">
+    <link rel="stylesheet" href="/micro_styles/07.carouselV2/carouselV2.css">
+    <link rel="stylesheet" href="/micro_styles/08.cta-sections/cta-sections.css">
+    <link rel="stylesheet" href="/micro_styles/09.hero-informative-sections/hero-informative-sections.css">
+    <link rel="stylesheet" href="/micro_styles/10.tesla-vision/tesla-vision.css">
+    <link rel="stylesheet" href="/micro_styles/11.slider-specifications/slider-specifications.css">
+    <link rel="stylesheet" href="/micro_styles/12.footer/footer.css">
     <link rel="icon" type="image/x-icon" href="/images/Tesla_Motors.svg.png">
     <script src="main.js" defer></script>
     <title>Model S | Tesla España</title>
@@ -253,11 +265,10 @@
             </div>
         </section>
 
-        <!-- ! Mejorar las clases aquí -->
         <section class="carousel2 carousel-models">
             <div class="carousel2__description">
                 <h2 class="carousel2__h2">Tren motriz eléctrico</h2>
-                <p class="carousel2__p">Las plataformas del Model S aúnan las tecnologías de tren motriz y batería para ofrecer unos niveles de rendimiento, autonomía y eficiencia insuperables. El nuevo módulo rediseñado y la arquitectura térmica permiten una carga más rápida, proporcionándole más potencia y resistencia en todas las condiciones.</p>
+                <p class="carousel2__p--intro-models">Las plataformas del Model S aúnan las tecnologías de tren motriz y batería para ofrecer unos niveles de rendimiento, autonomía y eficiencia insuperables. El nuevo módulo rediseñado y la arquitectura térmica permiten una carga más rápida, proporcionándole más potencia y resistencia en todas las condiciones.</p>
             </div>
             
             <img 
@@ -303,8 +314,6 @@
             </div> 
             <p class="carousel2__p--rollout">*sin rollout</p>   
         </section>
-
-        <!-- !Cambiar los camelCase aquí -->
 
         <section class="hero-section third-hero"></section>
 
@@ -362,7 +371,7 @@
         </section>
 
         <section class="hero-informative">
-            <div class="hero-informative__asset">
+            <div class="hero-informative__asset hero-informative__asset--clip">
                 <video 
                     class="hero-informative__video"
                     src="https://www.tesla.com/sites/default/files/videos/Plaid-Range-Web-Desktop-8mb.mp4"
@@ -409,7 +418,7 @@
         <section class="carousel2 carousel-countries">
             <div class="carousel2__description">
                 <h2 class="carousel2__h2">Libertad para viajar</h2>
-                <p class="carousel2__p">Introduzca su destino en la pantalla táctil y el planificador de ruta le guiará automáticamente hasta los Supercargadores más convenientes situados por el camino.</p>
+                <p class="carousel2__p--intro-countries">Introduzca su destino en la pantalla táctil y el planificador de ruta le guiará automáticamente hasta los Supercargadores más convenientes situados por el camino.</p>
             </div>
             
             <img 
@@ -463,7 +472,7 @@
                     </div>
                 </div>
             </div> 
-            <p class="carousel2__p--rollout">*sin rollout</p>   
+            <a href="#" class="carousel2__button">Saber más</a>
         </section>
 
         <section class="hero-informative">
@@ -478,7 +487,7 @@
                     </div>
                 </div>
             </div>
-            <div class="hero-informative__asset hero-informative-asset">
+            <div class="hero-informative__asset hero-informative__asset--image">
                 <img 
                     class="hero-informative__img"
                     src="/images/heroctaimage.png"
@@ -603,55 +612,55 @@
 
         <section class="slider-specifications">
             <div class="slider-specifications--center">
-                <div class="slider-specifications-asset">
+                <div class="slider-specifications__asset">
                     <img
                         src="/images/Model-S-Specs-Hero-Desktop-LHD_1.jpg"
                         alt=""
-                        class="slider-specifications-asset__img">
+                        class="slider-specifications__img">
                 </div>
-                <div class="slider-specifications-content">
-                    <h3 class="slider-specifications-content__h3"><b>Model S</b> Especificaciones</h3>
-                    <div class="slider-specifications-content-buttons">
-                        <button class="slider-specifications-content-buttons__button slider-specifications-content-buttons__button--modelPlaid button-on">Model S Plaid</button>
-                        <button class="slider-specifications-content-buttons__button slider-specifications-content-buttons__button--modelS button-off">Model S</button>
+                <div class="slider-specifications__content">
+                    <h3 class="slider-specifications__h3"><b>Model S</b> Especificaciones</h3>
+                    <div class="slider-specifications__buttons">
+                        <button class="slider-specifications__button slider-specifications__button--modelPlaid button-on">Model S Plaid</button>
+                        <button class="slider-specifications__button slider-specifications__button--modelS button-off">Model S</button>
                     </div>
-                    <div class="slider-specifications-content-showcases">
-                        <div class="slider-specifications-content-showcases-sc slider-specifications-content-showcase1">
-                            <div class="slider-specifications-content-showcase-columns">
-                                <ul class="slider-specifications-content-showcase-columns__ul">
-                                    <li class="slider-specifications-content-showcase-columns__li"><strong>Autonomía (WLTP)</strong> <br>600km</li>
-                                    <li class="slider-specifications-content-showcase-columns__li"><strong>1/4 de milla</strong> <br>9,23 a 250 km/h <br> de velocidad máxima <br>alcanzada</li>
-                                    <li class="slider-specifications-content-showcase-columns__li"><strong>Coeficiente de arrastre</strong> <br>0,208 Cd</li>
-                                    <li class="slider-specifications-content-showcase-columns__li"><strong>Llantas</strong> <br>19" o 21"</li>
-                                    <li class="slider-specifications-content-showcase-columns__li"><strong>Espacio de carga</strong> <br>793 litros</li>
-                                    <li class="slider-specifications-content-showcase-columns__li"><strong>Peso</strong> <br>2167 kg</li>
-                                    <li class="slider-specifications-content-showcase-columns__li"><strong>Supercarga máx.</strong> <br>250 kW</li>
+                    <div class="slider-specifications__showcases">
+                        <div class="slider-specifications__showcase slider-specifications__showcase1">
+                            <div class="slider-specifications__columns">
+                                <ul class="slider-specifications__column">
+                                    <li class="slider-specifications__item"><strong>Autonomía (WLTP)</strong> <br>600km</li>
+                                    <li class="slider-specifications__item"><strong>1/4 de milla</strong> <br>9,23 a 250 km/h <br> de velocidad máxima <br>alcanzada</li>
+                                    <li class="slider-specifications__item"><strong>Coeficiente de arrastre</strong> <br>0,208 Cd</li>
+                                    <li class="slider-specifications__item"><strong>Llantas</strong> <br>19" o 21"</li>
+                                    <li class="slider-specifications__item"><strong>Espacio de carga</strong> <br>793 litros</li>
+                                    <li class="slider-specifications__item"><strong>Peso</strong> <br>2167 kg</li>
+                                    <li class="slider-specifications__item"><strong>Supercarga máx.</strong> <br>250 kW</li>
                                 </ul>
-                                <ul class="slider-specifications-content-showcase-columns__ul">
-                                    <li class="slider-specifications-content-showcase-columns__li"><strong>*Aceleración</strong><br>2,1 s 0-100 km/h<br>sin rollout</li>
-                                    <li class="slider-specifications-content-showcase-columns__li"><strong>Velocidad máxima</strong><br>322 km/h <i>cuando está equipado con mejoras de hardware de pago</i></li>
-                                    <li class="slider-specifications-content-showcase-columns__li"><strong>Potencia del vehículo</strong><br>1020 CV<br><i>según pruebas de aceleración, simulaciones y límites de batería</i></li>
-                                    <li class="slider-specifications-content-showcase-columns__li"><strong>Potencia del motor (R85)</strong><br>Delantero: 314 kW<br>Trasero: 309 kW x2</li>
-                                    <li class="slider-specifications-content-showcase-columns__li"><strong>Tren motriz</strong><br>Tri Motor</li>
+                                <ul class="slider-specifications__column">
+                                    <li class="slider-specifications__item"><strong>*Aceleración</strong><br>2,1 s 0-100 km/h<br>sin rollout</li>
+                                    <li class="slider-specifications__item"><strong>Velocidad máxima</strong><br>322 km/h <i>cuando está equipado con mejoras de hardware de pago</i></li>
+                                    <li class="slider-specifications__item"><strong>Potencia del vehículo</strong><br>1020 CV<br><i>según pruebas de aceleración, simulaciones y límites de batería</i></li>
+                                    <li class="slider-specifications__item"><strong>Potencia del motor (R85)</strong><br>Delantero: 314 kW<br>Trasero: 309 kW x2</li>
+                                    <li class="slider-specifications__item"><strong>Tren motriz</strong><br>Tri Motor</li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="slider-specifications-content-showcases-sc slider-specifications-content-showcase2">
-                            <div class="slider-specifications-content-showcase-columns">
-                                <ul class="slider-specifications-content-showcase-columns__ul">
-                                    <li class="slider-specifications-content-showcase-columns__li"><strong>Autonomía (WLTP)</strong> <br>634km</li>
-                                    <li class="slider-specifications-content-showcase-columns__li"><strong>Coeficiente de arrastre</strong> <br>0,208 <i>Cd</i></li>
-                                    <li class="slider-specifications-content-showcase-columns__li"><strong>Llantas</strong> <br>19" o 21"</li>
-                                    <li class="slider-specifications-content-showcase-columns__li"><strong>Espacio de carga</strong> <br>793 litros</li>
-                                    <li class="slider-specifications-content-showcase-columns__li"><strong>Peso</strong> <br>2068 kg</li>
-                                    <li class="slider-specifications-content-showcase-columns__li"><strong>Supercarga máx.</strong> <br>250 kW</li>
+                        <div class="slider-specifications__showcase slider-specifications__showcase2">
+                            <div class="slider-specifications__columns">
+                                <ul class="slider-specifications__column">
+                                    <li class="slider-specifications__item"><strong>Autonomía (WLTP)</strong> <br>634km</li>
+                                    <li class="slider-specifications__item"><strong>Coeficiente de arrastre</strong> <br>0,208 <i>Cd</i></li>
+                                    <li class="slider-specifications__item"><strong>Llantas</strong> <br>19" o 21"</li>
+                                    <li class="slider-specifications__item"><strong>Espacio de carga</strong> <br>793 litros</li>
+                                    <li class="slider-specifications__item"><strong>Peso</strong> <br>2068 kg</li>
+                                    <li class="slider-specifications__item"><strong>Supercarga máx.</strong> <br>250 kW</li>
                                 </ul>
-                                <ul class="slider-specifications-content-showcase-columns__ul">
-                                    <li class="slider-specifications-content-showcase-columns__li"><strong>*Aceleración</strong><br>De 0-100 km/h en 3,2<br>segundos</li>
-                                    <li class="slider-specifications-content-showcase-columns__li"><strong>Velocidad máxima</strong><br>250 km/h</li>
-                                    <li class="slider-specifications-content-showcase-columns__li"><strong>Potencia del vehículo</strong><br>670 CV<br><i>según pruebas de aceleración, simulaciones y límites de batería</i></li>
-                                    <li class="slider-specifications-content-showcase-columns__li"><strong>Potencia del motor (R85)</strong><br>Delantero: 252 kW<br>Trasero: 252 kW</li>
-                                    <li class="slider-specifications-content-showcase-columns__li"><strong>Tren motriz</strong><br>Motor dual</li>
+                                <ul class="slider-specifications__column">
+                                    <li class="slider-specifications__item"><strong>*Aceleración</strong><br>De 0-100 km/h en 3,2<br>segundos</li>
+                                    <li class="slider-specifications__item"><strong>Velocidad máxima</strong><br>250 km/h</li>
+                                    <li class="slider-specifications__item"><strong>Potencia del vehículo</strong><br>670 CV<br><i>según pruebas de aceleración, simulaciones y límites de batería</i></li>
+                                    <li class="slider-specifications__item"><strong>Potencia del motor (R85)</strong><br>Delantero: 252 kW<br>Trasero: 252 kW</li>
+                                    <li class="slider-specifications__item"><strong>Tren motriz</strong><br>Motor dual</li>
                                 </ul>
                             </div>
                         </div>
@@ -663,16 +672,16 @@
         
 
         <section class="cta-sections cta-sections--white">
-            <div class="cta-sections__container">
-                <div class="cta-sections__left">
+            <div class="cta-sections__container cta-sections__container--car">
+                <div class="cta-sections__left cta-sections__left--car">
                     <h2 class="cta-sections__h2">Model S</h2>
-                    <p class="cta-sections__p">Diseñe el suyo o pida una tasación de cambio por su behículo actual</p>
+                    <p class="cta-sections__p">Diseñe el suyo o pida una tasación de cambio por su vehículo actual</p>
                     <div class="cta-sections__buttons cta-sections__buttons--white">
                         <a href="#" class="cta-sections__button cta-sections__button--white cta-sections__button--white">Encargar</a>
-                        <a href="#" class="cta-sections__button cta-sections__button--white cta-sections__button--grey">Explorar inventario</a>
+                        <a href="#" class="cta-sections__button cta-sections__button--white cta-sections__button--grey">Obtener presupuesto</a>
                     </div>
                 </div>
-                <div class="cta-sections__right cta-sections__img--white">
+                <div class="cta-sections__right cta-sections__right--car">
                     <img
                         src="/images/tesla-ctaSections.jpg"
                         class="cta-sections__img">
@@ -682,28 +691,28 @@
         </section>
         <section class="footer">
             <p class="footer__p">Ciertas funciones del vehículo que utilizan grandes volúmenes de datos requieren al menos Conectividad estándar, incluidos mapas, navegación y comandos de voz. El acceso a las funciones que utilizan datos móviles y licencias de terceros está sujeto a cambios. <a href="" class="footer__p--linkText">Obtenga más información sobre la Conectividad estándar y sus limitaciones.</a></p>
-            <div class="footerLinks">
-                <ul class="footerLinks__ul">
-                    <li class="footerLinks__li">
-                        <a href="" class="footerLinks__a">Tesla ©</a>
+            <div class="footer__links">
+                <ul class="footer__ul">
+                    <li class="footer__li">
+                        <a href="" class="footer__a">Tesla ©</a>
                     </li>
-                    <li class="footerLinks__li">
-                        <a href="" class="footerLinks__a">2023</a>
+                    <li class="footer__li">
+                        <a href="" class="footer__a">2023</a>
                     </li>
-                    <li class="footerLinks__li">
-                        <a href="" class="footerLinks__a">Privacidad y legal</a>
+                    <li class="footer__li">
+                        <a href="" class="footer__a">Privacidad y legal</a>
                     </li>
-                    <li class="footerLinks__li">
-                        <a href="" class="footerLinks__a">Contacto</a>
+                    <li class="footer__li">
+                        <a href="" class="footer__a">Contacto</a>
                     </li>
-                    <li class="footerLinks__li">
-                        <a href="" class="footerLinks__a">Noticias</a>
+                    <li class="footer__li">
+                        <a href="" class="footer__a">Noticias</a>
                     </li>
-                    <li class="footerLinks__li">
-                        <a href="" class="footerLinks__a">Seguir informado</a>
+                    <li class="footer__li">
+                        <a href="" class="footer__a">Seguir informado</a>
                     </li>
-                    <li class="footerLinks__li">
-                        <a href="" class="footerLinks__a">Localización de tiendas</a>
+                    <li class="footer__li">
+                        <a href="" class="footer__a">Localización de tiendas</a>
                     </li>
                 </ul>
             </div>
@@ -715,6 +724,5 @@
 
 
 <!-- TODO
-<!-- * Añadir nombres de las clases del carrusel por tipo no solo por funcionalidad | OK -->
-<!-- ! Cambiar las clases de CamelCase para la estructura BEM -->
+<!-- * Cambiar las clases de CamelCase para la estructura BEM -->
 <!-- ! Diseño mobile con grid -->

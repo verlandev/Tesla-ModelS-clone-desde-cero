@@ -150,4 +150,126 @@
   opacity: 1;
   transform: translateY(0);
   animation: none;
+}
+
+@media screen and (min-width: 1440px) {
+  .hero-informative {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 5%;
+  }
+  .hero-informative__asset {
+    position: relative;
+    width: 70%;
+  }
+  .hero-informative__asset--clip {
+    width: 80%;
+  }
+  .hero-informative__asset--image {
+    width: 100%;
+    position: relative;
+  }
+  .hero-informative__video {
+    width: 100%;
+  }
+  .hero-informative__img {
+    width: 60%;
+    position: absolute;
+    margin: auto;
+  }
+  .hero-informative__container {
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    width: 70%;
+  }
+  .hero-informative__info {
+    width: 32%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    transform: translateY(50px);
+    -webkit-transform: translateY(50px);
+    -moz-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    -o-transform: translateY(50px);
+  }
+  .hero-informative__h3 {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .hero-informative__p {
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .hero-informative .active {
+    opacity: 1; /* Opacidad final es 1, completamente visible */
+    transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
+    animation: none; /* Desactiva la animación cuando se agrega la clase active */
+  }
+  .hero-informative .hero-informative-cta {
+    width: 25%;
+    position: relative;
+  }
+  .hero-informative .hero-informative-cta__text {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 10px 0px 50px;
+  }
+  .hero-informative .hero-informative-cta__h3 {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .hero-informative .hero-informative-cta__h2 {
+    font-weight: 600;
+    font-size: 27px;
+    padding-bottom: 30px;
+  }
+  .hero-informative .hero-informative-cta__p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #56595c;
+    line-height: 20px;
+    width: 100%;
+  }
+  .hero-informative .hero-informative-cta__buttons {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    left: 0;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+    transform: translateY(50px);
+    -webkit-transform: translateY(50px);
+    -moz-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    -o-transform: translateY(50px);
+  }
+  .hero-informative .hero-informative-cta__button {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    width: 80%;
+    border-radius: 5px;
+  }
 }/*# sourceMappingURL=hero-informative-sections.css.map */

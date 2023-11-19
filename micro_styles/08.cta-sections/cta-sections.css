@@ -20,6 +20,10 @@
   padding: 50px 0px;
   gap: 5em;
 }
+.cta-sections__container--car {
+  position: relative;
+  height: 60vh;
+}
 .cta-sections__left {
   display: flex;
   flex-direction: column;
@@ -28,6 +32,13 @@
   opacity: 0; /* Comienza con opacidad cero (invisibles) */
   transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
   transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
+}
+.cta-sections__left--car {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 20%;
+  width: 40%;
 }
 .cta-sections__h3 {
   font-weight: 400;
@@ -115,12 +126,67 @@
   opacity: 0; /* Comienza con opacidad cero (invisibles) */
   transition: opacity 1s ease, transform 1s ease; /* Transiciones suaves para opacity y transform */
   transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
+  position: relative;
+}
+.cta-sections__right--car {
+  width: 400px;
+  position: absolute;
+  right: 10%;
+  top: 10%;
 }
 .cta-sections__img {
-  width: 500px;
+  width: 600px;
+  position: absolute;
 }
 .cta-sections .active {
   opacity: 1; /* Opacidad final es 1, completamente visible */
   transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
   animation: none; /* Desactiva la animación cuando se agrega la clase active */
+}
+
+@media screen and (min-width: 1440px) {
+  .cta-sections__container {
+    width: 60%;
+    gap: 2em;
+  }
+  .cta-sections__buttons {
+    flex-direction: row;
+  }
+  .cta-sections__left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+    flex: 1;
+    opacity: 0; /* Comienza con opacidad cero (invisibles) */
+    transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
+    transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
+  }
+  .cta-sections__left--car {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 45%;
+    width: 40%;
+  }
+  .cta-sections__right {
+    font-size: 14px;
+    font-weight: 450;
+    line-height: 20px;
+    flex: 2;
+    padding-left: 20px;
+    opacity: 0; /* Comienza con opacidad cero (invisibles) */
+    transition: opacity 1s ease, transform 1s ease; /* Transiciones suaves para opacity y transform */
+    transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
+    position: relative;
+  }
+  .cta-sections__right--car {
+    width: 400px;
+    position: absolute;
+    right: 12%;
+    top: 15%;
+  }
+  .cta-sections__img {
+    width: 900px;
+    position: absolute;
+  }
 }/*# sourceMappingURL=cta-sections.css.map */
