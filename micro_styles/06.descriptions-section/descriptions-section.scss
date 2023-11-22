@@ -121,15 +121,87 @@
   .descriptions-section {
     display: flex;
 
+    &__img {
+      width: 100%;
+    }
+
+    &__text{
+      padding-top: 5%;
+      padding-bottom: 10%;
+    }
+
+
     &__container {
       flex-direction: column;
+      width: 100%;
 
-      &--first{
-        flex-direction: column;
+
+      &--first {
+        width: 100%;
+        &:nth-child(odd) {
+          width: 100%;
+          h5 {
+            margin-left: 0%;
+            width: 90%;
+            padding: 0 20px 0 20px;
+          }
+  
+          p {
+            margin-left: 0%;
+            width: 90%;
+            padding: 0 20px 0 20px
+          }
+        }
+
+        &:nth-child(even){
+          flex-direction: column-reverse;
+
+          h5 {
+            width: 90%;
+            padding: 0 20px 0 20px;
+          }
+  
+          p {
+            width: 90%;
+            padding: 0 20px 0 20px
+          }
+        }
       }
+  
+      &--second {
+        width: 100%;
 
-      &--second{
-        flex-direction: column;
+        &:nth-child(even) {
+          margin-left: 0%;
+
+          h5 {
+            margin-left: 0%;
+            width: 90%;
+            padding: 0 20px 0 20px;
+          }
+    
+          p {
+            margin-left: 0%;
+            padding: 0 20px 0 20px;
+            width: 90%
+          }
+        }
+
+        &:nth-child(odd) {
+          flex-direction: column-reverse;
+          
+          h5 {
+            margin-left: 0%;
+            width: 90%;
+            padding: 0 20px 0 20px;
+          }
+    
+          p {
+            margin-left: 0%;
+            padding: 0 20px 0 20px;
+            width: 90%
+          }
+        }
       }
     }
   }
