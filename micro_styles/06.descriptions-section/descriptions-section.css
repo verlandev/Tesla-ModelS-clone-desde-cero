@@ -79,4 +79,18 @@
     width: 420px;
     font-size: 14px;
   }
+}
+@media screen and (max-width: 787px) {
+  .descriptions-section {
+    display: flex;
+  }
+  .descriptions-section__container {
+    flex-direction: column;
+  }
+  .descriptions-section__container--first {
+    flex-direction: column;
+  }
+  .descriptions-section__container--second {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=descriptions-section.css.map */

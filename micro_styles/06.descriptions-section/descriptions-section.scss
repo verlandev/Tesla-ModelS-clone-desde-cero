@@ -113,3 +113,24 @@
     }
   }
 }
+
+
+// Mobile design
+
+@media screen and (max-width: 787px) {
+  .descriptions-section {
+    display: flex;
+
+    &__container {
+      flex-direction: column;
+
+      &--first{
+        flex-direction: column;
+      }
+
+      &--second{
+        flex-direction: column;
+      }
+    }
+  }
+}
