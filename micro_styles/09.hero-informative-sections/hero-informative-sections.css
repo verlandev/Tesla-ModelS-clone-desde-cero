@@ -272,4 +272,12 @@
     width: 80%;
     border-radius: 5px;
   }
+}
+@media screen and (max-width: 787px) {
+  .hero-informative {
+    flex-direction: column;
+  }
+  .hero-informative__img {
+    display: none;
+  }
 }/*# sourceMappingURL=hero-informative-sections.css.map */

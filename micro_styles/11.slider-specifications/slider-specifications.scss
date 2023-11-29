@@ -146,3 +146,16 @@
           }
     }      
 }
+
+
+@media screen and (max-width: 787px){
+  .slider-specifications{
+    &--center{
+      flex-direction: column;
+    }
+    &__img{
+      width: 350px;
+    }
+  }
+
+}

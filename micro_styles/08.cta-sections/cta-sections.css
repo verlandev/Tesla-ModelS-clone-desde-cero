@@ -189,4 +189,31 @@
     width: 900px;
     position: absolute;
   }
+}
+@media screen and (max-width: 787px) {
+  .cta-sections__container {
+    flex-direction: column;
+    width: 100%;
+  }
+  .cta-sections__right {
+    padding: 0;
+    width: 90%;
+    margin: auto;
+  }
+  .cta-sections__left {
+    padding: 0;
+    width: 90%;
+    margin: auto;
+  }
+  .cta-sections__buttons {
+    margin: auto;
+    width: 100%;
+  }
+  .cta-sections__button {
+    width: 90%;
+    margin: auto;
+  }
+  .cta-sections__img {
+    width: 300px;
+  }
 }/*# sourceMappingURL=cta-sections.css.map */

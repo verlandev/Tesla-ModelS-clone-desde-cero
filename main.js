@@ -109,7 +109,7 @@ const handleScroll = () => {
     scrollThreshold = windowHeight * 0.3
   } else {
     // Pantalla pequeña
-    scrollThreshold = windowHeight * 0.2
+    scrollThreshold = windowHeight * 0.9
   }
 
   detectingBanner()

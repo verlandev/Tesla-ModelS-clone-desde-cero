@@ -66,7 +66,7 @@
   color: whitesmoke;
   width: 60%;
 }
-.hero-section .hero-section__container {
+.hero-section__container {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -186,9 +186,17 @@
     background-size: cover;
   }
   .second-hero {
-    height: 100vh;
+    height: 70vh;
+    background-size: cover;
   }
   .third-hero {
     height: 100vh;
+  }
+  .hero-insider {
+    height: 70vh;
+    background-size: cover;
+  }
+  .hero-section__containers {
+    display: none;
   }
 }/*# sourceMappingURL=heros.css.map */

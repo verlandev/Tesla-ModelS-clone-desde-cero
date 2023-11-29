@@ -55,6 +55,9 @@
 }
 
 @media screen and (max-width: 787px) {
+  .header .nav {
+    display: none;
+  }
   .header__logo {
     width: 110px;
   }

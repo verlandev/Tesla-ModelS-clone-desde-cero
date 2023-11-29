@@ -70,7 +70,7 @@
     width: 60%;
   }
 
-  .hero-section__container {
+  &__container {
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -218,10 +218,23 @@
   }
   
   .second-hero {
-    height: 100vh;
+    height: 70vh;
+    background-size: cover;
   }
   
   .third-hero {
     height: 100vh;
   } 
+  
+  .hero-insider{
+    height: 70vh;
+    background-size:cover;
+  }
+
+  .hero-section{
+    &__containers{
+      display: none;
+    }
+
+  }
 }

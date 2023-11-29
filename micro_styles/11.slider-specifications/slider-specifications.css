@@ -120,4 +120,12 @@
   .slider-specifications__img {
     width: 950px;
   }
+}
+@media screen and (max-width: 787px) {
+  .slider-specifications--center {
+    flex-direction: column;
+  }
+  .slider-specifications__img {
+    width: 350px;
+  }
 }/*# sourceMappingURL=slider-specifications.css.map */

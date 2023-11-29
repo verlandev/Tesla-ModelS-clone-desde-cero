@@ -294,4 +294,12 @@
     justify-content: flex-start;
     gap: 1em;
   }
+}
+@media screen and (max-width: 787px) {
+  .carousel2__asset {
+    width: 350px;
+  }
+  .carousel2__slider {
+    display: none;
+  }
 }/*# sourceMappingURL=carouselV2.css.map */

@@ -311,3 +311,14 @@
     }
   }
 }
+
+
+@media screen and (max-width: 787px){
+  .hero-informative {
+    flex-direction: column;
+    &__img{
+      display: none;
+    }
+
+  }
+}

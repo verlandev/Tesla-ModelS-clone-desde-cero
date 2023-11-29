@@ -244,3 +244,17 @@
         }
     }
 }
+
+
+@media screen and (max-width: 787px) {
+    .carousel2{
+        &__asset{
+            width: 350px;
+        }
+        &__slider{
+            display: none;
+        }
+    }
+
+
+}
