@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .top-hero {
-  background-image: url("/images/hero.jpg");
+  background-image: url("/images/hero1.png");
   height: 100vh;
 }
 
@@ -182,8 +182,10 @@
 }
 @media screen and (max-width: 787px) {
   .top-hero {
-    height: 70vh;
-    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-image: url("/images/Model-S-Main-Hero-Mobile-LHD.jpg");
   }
   .second-hero {
     height: 70vh;
@@ -191,12 +193,39 @@
   }
   .third-hero {
     height: 100vh;
+    background-image: url("/images/Model-S-Exterior-Hero-Mobile-Global.jpg");
   }
   .hero-insider {
     height: 70vh;
+    background-image: url("/images/Model-S-Interior-Hero-Mobile-LHD.jpg");
     background-size: cover;
   }
   .hero-section__containers {
+    width: 95%;
+    bottom: 25%;
+    gap: 2em;
+  }
+  .hero-section__container {
+    gap: 0.3em;
+  }
+  .hero-section__container--mobile {
     display: none;
+  }
+  .hero-section__h3 {
+    font-size: 19px;
+  }
+  .hero-section__p {
+    font-size: 11px;
+  }
+  .hero-section__p--specification {
+    width: 90%;
+  }
+  .hero-section__buttons {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20%;
+  }
+  .hero-section__button {
+    width: 80%;
   }
 }/*# sourceMappingURL=heros.css.map */

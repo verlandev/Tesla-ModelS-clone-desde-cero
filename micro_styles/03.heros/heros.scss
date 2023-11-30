@@ -1,5 +1,5 @@
 .top-hero {
-  background-image: url("/images/hero.jpg");
+  background-image: url("/images/hero1.png");
   height: 100vh;
 }
 
@@ -213,8 +213,11 @@
 @media screen and (max-width: 787px){
   
   .top-hero {
-    height: 70vh;
-    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-image: url("/images/Model-S-Main-Hero-Mobile-LHD.jpg");
+
   }
   
   .second-hero {
@@ -224,17 +227,51 @@
   
   .third-hero {
     height: 100vh;
+    background-image: url("/images/Model-S-Exterior-Hero-Mobile-Global.jpg");
   } 
   
   .hero-insider{
     height: 70vh;
+    background-image: url('/images/Model-S-Interior-Hero-Mobile-LHD.jpg');
     background-size:cover;
   }
 
   .hero-section{
     &__containers{
-      display: none;
+      width: 95%;
+      bottom:25%;
+      gap: 2em;
     }
+
+    &__container{
+      gap: 0.3em;
+
+      &--mobile{
+        display: none;
+      }
+    }
+
+    &__h3{
+      font-size: 19px;
+    }
+
+    &__p {
+      font-size: 11px;
+      &--specification {
+        width: 90%;
+      }
+    }
+
+    &__buttons{
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 20%;
+    }
+
+    &__button{
+      width: 80%;
+    }
+
 
   }
 }
