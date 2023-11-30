@@ -191,6 +191,9 @@
     height: 70vh;
     background-size: cover;
   }
+  .second-hero__containers {
+    top: 70%;
+  }
   .third-hero {
     height: 100vh;
     background-image: url("/images/Model-S-Exterior-Hero-Mobile-Global.jpg");

@@ -223,6 +223,10 @@
   .second-hero {
     height: 70vh;
     background-size: cover;
+
+    &__containers{
+      top: 70%;
+    }
   }
   
   .third-hero {
