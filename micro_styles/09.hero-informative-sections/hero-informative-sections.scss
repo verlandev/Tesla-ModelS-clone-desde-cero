@@ -12,6 +12,10 @@
 
   &__video {
     width: 100%;
+
+    &--mobile{
+      display: none;
+    }
   }
 
   &__img {
@@ -52,11 +56,19 @@
   &__h3 {
     font-size: 22px;
     font-weight: 600;
+
+    &--mobile{
+      display: none;
+    }
   }
 
   &__p {
     font-size: 13px;
     font-weight: 500;
+
+    &--mobile{
+      display: none;
+    }
   }
 
   .active {
@@ -196,6 +208,10 @@
   
     &__video {
       width: 100%;
+
+      &--mobile{
+        display: none;
+      }
     }
   
     &__img {
@@ -236,11 +252,19 @@
     &__h3 {
       font-size: 22px;
       font-weight: 600;
+      
+      &--mobile{
+        display: none;
+      }
     }
   
     &__p {
       font-size: 13px;
       font-weight: 500;
+
+      &--mobile{
+        display: none;
+      }
     }
   
     .active {
@@ -316,9 +340,69 @@
 @media screen and (max-width: 787px){
   .hero-informative {
     flex-direction: column;
+    gap: 8em;
+    overflow: hidden;
+
+    &__asset{
+      width: 100%;
+    }
+
+    &__video{
+      width: 100%;
+
+      &--desktop{
+        display: none;
+      }
+
+      &--mobile{
+        display: block;
+        transform: scale(2);
+        overflow: hidden;
+      }
+    }
+    
     &__img{
       display: none;
     }
 
+    // &__container{
+    //   background-color: red;
+    // }
+
+    // &__info{
+    //   border:solid 2px red
+    // }
+
+    &__h3{
+      font-size: 19px;
+      &--desktop{
+        display: none;
+      }
+    }
+
+    &__p{
+      font-size: 11px;
+      &--desktop{
+        display: none;
+      }
+    }
+
+    .hero-informative-cta{
+      width: 100%;
+      height: 100vh;
+      justify-content: space-around;
+
+      &__text{
+        padding: 0 5% 0 5%;
+      }
+
+      &__buttons{
+        bottom: 50px;
+      }
+
+      &__button{
+        width: 85%;
+      }
+    }
   }
 }

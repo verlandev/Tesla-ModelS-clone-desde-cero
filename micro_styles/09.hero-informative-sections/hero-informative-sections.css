@@ -13,6 +13,9 @@
 .hero-informative__video {
   width: 100%;
 }
+.hero-informative__video--mobile {
+  display: none;
+}
 .hero-informative__img {
   width: 600px;
   position: absolute;
@@ -49,9 +52,15 @@
   font-size: 22px;
   font-weight: 600;
 }
+.hero-informative__h3--mobile {
+  display: none;
+}
 .hero-informative__p {
   font-size: 13px;
   font-weight: 500;
+}
+.hero-informative__p--mobile {
+  display: none;
 }
 .hero-informative .active {
   opacity: 1; /* Opacidad final es 1, completamente visible */
@@ -174,6 +183,9 @@
   .hero-informative__video {
     width: 100%;
   }
+  .hero-informative__video--mobile {
+    display: none;
+  }
   .hero-informative__img {
     width: 60%;
     position: absolute;
@@ -210,9 +222,15 @@
     font-size: 22px;
     font-weight: 600;
   }
+  .hero-informative__h3--mobile {
+    display: none;
+  }
   .hero-informative__p {
     font-size: 13px;
     font-weight: 500;
+  }
+  .hero-informative__p--mobile {
+    display: none;
   }
   .hero-informative .active {
     opacity: 1; /* Opacidad final es 1, completamente visible */
@@ -276,8 +294,50 @@
 @media screen and (max-width: 787px) {
   .hero-informative {
     flex-direction: column;
+    gap: 8em;
+    overflow: hidden;
+  }
+  .hero-informative__asset {
+    width: 100%;
+  }
+  .hero-informative__video {
+    width: 100%;
+  }
+  .hero-informative__video--desktop {
+    display: none;
+  }
+  .hero-informative__video--mobile {
+    display: block;
+    transform: scale(2);
+    overflow: hidden;
   }
   .hero-informative__img {
     display: none;
+  }
+  .hero-informative__h3 {
+    font-size: 19px;
+  }
+  .hero-informative__h3--desktop {
+    display: none;
+  }
+  .hero-informative__p {
+    font-size: 11px;
+  }
+  .hero-informative__p--desktop {
+    display: none;
+  }
+  .hero-informative .hero-informative-cta {
+    width: 100%;
+    height: 100vh;
+    justify-content: space-around;
+  }
+  .hero-informative .hero-informative-cta__text {
+    padding: 0 5% 0 5%;
+  }
+  .hero-informative .hero-informative-cta__buttons {
+    bottom: 50px;
+  }
+  .hero-informative .hero-informative-cta__button {
+    width: 85%;
   }
 }/*# sourceMappingURL=hero-informative-sections.css.map */

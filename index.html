@@ -374,7 +374,7 @@
         <section class="hero-informative">
             <div class="hero-informative__asset hero-informative__asset--clip">
                 <video 
-                    class="hero-informative__video"
+                    class="hero-informative__video hero-informative__video--desktop"
                     src="https://www.tesla.com/sites/default/files/videos/Plaid-Range-Web-Desktop-8mb.mp4"
                     preload="auto"
                     playsinline
@@ -382,24 +382,39 @@
                     muted
                     data-loaded="true"
                     data-autoplay-mobile="true"
-                    data-autoplay-desktop="'true"
+                    data-autoplay-desktop="true"
+                    loop="true"  >
+                </video>
+                <video
+                    class="hero-informative__video hero-informative__video--mobile" 
+                    src="https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto:best/MS-Range-Hero-Mobile.mp4"
+                    preload="auto"
+                    playsinline
+                    autoplay
+                    muted
+                    data-loaded="true"
+                    data-autoplay-mobile="true"
+                    data-autoplay-desktop="true"
                     loop="true"  >
                 </video>
                 <div class="hero-informative__container">
                     <div class="hero-informative__info">
-                        <h3 class="hero-informative__h3">634 km</h3>
-                        <p class="hero-informative__p">Vaya a cualquier parte con hasta 634 km de autonomía estimada en una sola carga
-                        </p>
+                        <h3 class="hero-informative__h3 hero-informative__h3--desktop">634 km</h3>
+                        <p class="hero-informative__p hero-informative__p--desktop">Vaya a cualquier parte con hasta 634 km de autonomía estimada en una sola carga</p>
+                        <h3 class="hero-informative__h3 hero-informative__h3--mobile">634 km</h3>
+                        <p class="hero-informative__p hero-informative__p--mobile">Autonomía<br>(WLTP)</p>
                     </div>
                     <div class="hero-informative__info">
-                        <h3 class="hero-informative__h3">15 min</h3>
-                        <p class="hero-informative__p">Recargue hasta 322 km en 15 minutos en estaciones con Supercargadores
-                        </p>
+                        <h3 class="hero-informative__h3 hero-informative__h3--desktop">15 min</h3>
+                        <p class="hero-informative__p hero-informative__p--desktop">Recargue hasta 322 km en 15 minutos en estaciones con Supercargadores</p>
+                        <h3 class="hero-informative__h3 hero-informative__h3--mobile">15 min</h3>
+                        <p class="hero-informative__p hero-informative__p--mobile">Recargue hasta 322 km</p>
                     </div>
                     <div class="hero-informative__info">
-                        <h3 class="hero-informative__h3">50 000+</h3>
-                        <p class="hero-informative__p">Supercargadores ubicados en las rutas más populares
-                        </p>
+                        <h3 class="hero-informative__h3 hero-informative__h3--desktop">50 000+</h3>
+                        <p class="hero-informative__p hero-informative__p--desktop">Supercargadores ubicados en las rutas más populares</p>
+                        <h3 class="hero-informative__h3 hero-informative__h3--mobile">50 000+</h3>
+                        <p class="hero-informative__p hero-informative__p--mobile">Supercargadores por todo el mundo</p>
                     </div>
                 </div>
             </div>
