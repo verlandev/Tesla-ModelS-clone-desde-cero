@@ -42,4 +42,15 @@
   text-decoration: none;
   color: #56595c;
   font-weight: 600;
+}
+
+@media screen and (max-width: 787px) {
+  .footer__p {
+    width: 85%;
+    font-size: 12px;
+  }
+  .footer__ul {
+    flex-direction: column;
+    align-items: center;
+  }
 }/*# sourceMappingURL=footer.css.map */
