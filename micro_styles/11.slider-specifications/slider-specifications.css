@@ -122,10 +122,22 @@
   }
 }
 @media screen and (max-width: 787px) {
+  .slider-specifications {
+    height: 160vh;
+  }
   .slider-specifications--center {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .slider-specifications__img {
-    width: 350px;
+    width: 300px;
+    transform: scale(2);
+  }
+  .slider-specifications__content {
+    width: 90%;
+  }
+  .slider-specifications__h3 {
+    font-size: 24px;
   }
 }/*# sourceMappingURL=slider-specifications.css.map */

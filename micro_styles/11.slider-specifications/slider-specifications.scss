@@ -150,11 +150,25 @@
 
 @media screen and (max-width: 787px){
   .slider-specifications{
+    height: 160vh;
+
     &--center{
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
+    
     &__img{
-      width: 350px;
+      width: 300px;
+      transform: scale(2);
+    }
+
+    &__content{
+      width: 90%;
+    }
+
+    &__h3{
+      font-size: 24px;
     }
   }
 
