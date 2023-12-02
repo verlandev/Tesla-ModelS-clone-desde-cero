@@ -27,6 +27,7 @@ html {
 
 #root {
   position: relative;
+  overflow: hidden;
 }
 
 .inactive {

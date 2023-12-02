@@ -4,46 +4,69 @@
     background-size: cover;
     height: 120vh;
 
-    .tesla-vision-content{
+    &__content{
         display: flex;
         flex-direction: column;
         height: 120vh;
         justify-content: center;
         padding-left: 70px;
         gap: 8em;
+    }
 
-        .tesla-vision-content-text{
-            width: 22%;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5em;
+    &__text{
+        width: 22%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
 
-            &__h3{
-                font-size: 24px;
-                font-weight: 550;
-            }
-            &__p{
-                font-size: 12px;
-                font-weight: 550;
-            }
-            &__img{
-                width: 50px;
-            }
-        }
-
-        .tesla-vision-content-text--container-one,
-        .tesla-vision-content-text--container-two,
-        .tesla-vision-content-text--container-three{
+        &--container-one,
+        &--container-two,
+        &--container-three{
             opacity: 0; /* Comienza con opacidad cero (invisibles) */
             transition: opacity 1s ease, transform 1s ease; /* Transiciones suaves para opacity y transform */
             transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */ 
         }
 
-        .active{
-            opacity: 1; /* Opacidad final es 1, completamente visible */
-            transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
-            animation: none; /* Desactiva la animación cuando se agrega la clase active */
+    }
+
+    &__h3{
+
+        &--desktop{
+            font-size: 24px;
+            font-weight: 550;
         }
+
+        &--mobile{
+            display: none;
+        }
+    }
+
+    &__p{
+
+        &--desktop{
+            font-size: 12px;
+            font-weight: 550;
+        }
+        
+        &--mobile{
+            display: none;
+        }
+    }
+    &__img{
+        &--desktop{
+            width: 50px;
+        }
+
+        &--mobile{
+            display: none;
+        }
+    }
+
+
+    .active{
+        opacity: 1; /* Opacidad final es 1, completamente visible */
+        transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
+        animation: none; /* Desactiva la animación cuando se agrega la clase active */
     }
 }
 
@@ -53,13 +76,97 @@
     .tesla-vision{
         height: 80vh;
     
-        .tesla-vision-content{
+
+        &__content{
             height: 80vh;
         }
-    }
-    .tesla-vision-content-text{
+
+        &__h3{
+            &--mobile{
+                display: none;
+            }
+        }
+
         &__p{
             width: 60%;
+            
+            &--mobile{
+                display: none;
+            }
         }
-    }    
+
+        &__img{
+
+            &--mobile{
+                display: none;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 787px){
+    .tesla-vision{
+        background-image: url('/images/Autopilot-Hero-Vision_Mobile.jpg');
+        height: 70vh;
+        position: relative;
+
+        &__content{
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1em;
+            height: 20vh;
+            position: absolute;
+            padding-left: 0;
+            bottom: 0;
+            left: 5%;
+            width: 90%;
+            
+
+        }
+
+        &__text{
+            text-align: center;
+            width: 100%;
+            
+        }
+
+        &__h3{
+            &--desktop{
+                display: none;
+            }
+
+            &--mobile{
+                display: block;
+                font-size: 20px;
+                font-weight: 550;
+            }
+        }
+
+        &__p{
+            &--desktop{
+                display: none;
+            }
+
+            &--mobile{
+                display: block;
+                font-weight: 400;
+                font-size: 13px;
+                
+            }
+        }
+
+        &__img{
+            &--desktop{
+                display: none;
+            }
+
+            &--mobile{
+                display: block;
+                width: 30px;
+                margin: auto;
+            }
+        }
+    }
 }

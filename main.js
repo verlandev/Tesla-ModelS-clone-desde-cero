@@ -15,9 +15,9 @@ const ctaSectionsRight$$ = document.querySelectorAll(".cta-sections__right");
 const heroInformativeInfo$$ = document.querySelectorAll(".hero-informative__info");
 const heroInformativeCtaButtons$$ = document.querySelectorAll(".hero-informative-cta__buttons");
 
-const containerOne$$ = document.querySelector(".tesla-vision-content-text--container-one");
-const containerTwo$$ = document.querySelector(".tesla-vision-content-text--container-two");
-const containerThree$$ = document.querySelector(".tesla-vision-content-text--container-three");
+const containerOne$$ = document.querySelector(".tesla-vision__text--container-one");
+const containerTwo$$ = document.querySelector(".tesla-vision__text--container-two");
+const containerThree$$ = document.querySelector(".tesla-vision__text--container-three");
 
 const specificationsShowcasesPanel$$ = document.querySelector(".slider-specifications__content");
 
