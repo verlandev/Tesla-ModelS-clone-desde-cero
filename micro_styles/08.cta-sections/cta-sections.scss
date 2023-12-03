@@ -20,9 +20,9 @@
     padding: 50px 0px;
     gap: 5em;
 
-    &--car{
-      position: relative;
-      height: 60vh;
+    &--with-tesla{
+      width: 100%;
+      padding-left: 10%;
     }
   }
 
@@ -35,12 +35,9 @@
     transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
     transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
 
-    &--car{
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      top: 20%;
-      width: 40%;
+    &--with-tesla{
+      align-self: center;
+      width: 100%;
     }
   }
 
@@ -150,13 +147,6 @@
     transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
     position: relative;
 
-    &--car{
-      width: 400px;
-      position: absolute;
-      right: 10%;
-      top: 10%;
-    }
-
     &--mobile{
       display: none;
     }
@@ -164,9 +154,7 @@
   }
 
   &__img {
-    width: 600px;
-    position: absolute;
-    
+    width: 600px;    
   }
 
   .active {
@@ -202,12 +190,8 @@
       transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
       transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
   
-      &--car{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        top: 45%;
-        width: 40%;
+      &--with-tesla{
+        
       }
     }
 
@@ -222,11 +206,8 @@
       transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
       position: relative;
   
-      &--car{
-        width: 400px;
-        position: absolute;
-        right: 12%;
-        top: 15%;
+      &--with-tesla{
+        
       }
 
       &--mobile{
@@ -239,7 +220,7 @@
   
     &__img {
       width: 900px;
-      position: absolute;
+      
       
     }
   }
@@ -252,12 +233,24 @@
     &__container{
       flex-direction: column;
       width: 100%;
+      padding: 50px 0;
+
+      &--with-tesla{
+        padding-top: 50%;
+        
+      }
     }
 
     &__titles{
       padding: 0;
       width: 90%;
       margin: auto;
+
+      &--with-tesla{
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
     }
 
 
@@ -273,19 +266,37 @@
       &--desktop{
         display: none;
       }
-    } 
+
+      &--with-tesla{
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+    
+    &__p{
+      &--with-tesla{
+        text-align: center;
+        width: 95%;
+      }
+    }
 
     
     &__buttons{
       &--mobile{
         display: flex;
         margin: auto;
+        width: 90%;
+      }
+
+      &--with-tesla{
         width: 95%;
       }
 
       &--desktop{
         display: none;
       }
+
+
     }
 
     &__button{
@@ -296,7 +307,17 @@
 
     &__img{
       width: 300px;
+      margin-left: 8%;
+      
+      
+      
+      
+      
+
+
     }
+
+
 
   }
 }

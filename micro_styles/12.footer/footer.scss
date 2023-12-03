@@ -8,7 +8,7 @@
     font-size: 13px;
     padding-bottom: 50px;
 
-    &--linkText {
+    &--link-text {
       color: #2f2f2f;
       text-decoration: underline;
       text-decoration-thickness: 1px;
@@ -18,7 +18,7 @@
       transition: 0.3s;
     }
 
-    &--linkText:hover {
+    &--link-text:hover {
       color: #000;
       transition: 0.3s;
       text-decoration-thickness: 2px;

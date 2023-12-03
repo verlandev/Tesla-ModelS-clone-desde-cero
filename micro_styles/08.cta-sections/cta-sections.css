@@ -20,9 +20,9 @@
   padding: 50px 0px;
   gap: 5em;
 }
-.cta-sections__container--car {
-  position: relative;
-  height: 60vh;
+.cta-sections__container--with-tesla {
+  width: 100%;
+  padding-left: 10%;
 }
 .cta-sections__titles {
   display: flex;
@@ -33,12 +33,9 @@
   transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
   transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
 }
-.cta-sections__titles--car {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  top: 20%;
-  width: 40%;
+.cta-sections__titles--with-tesla {
+  align-self: center;
+  width: 100%;
 }
 .cta-sections__h3 {
   font-weight: 400;
@@ -131,18 +128,11 @@
   transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
   position: relative;
 }
-.cta-sections__description--car {
-  width: 400px;
-  position: absolute;
-  right: 10%;
-  top: 10%;
-}
 .cta-sections__description--mobile {
   display: none;
 }
 .cta-sections__img {
   width: 600px;
-  position: absolute;
 }
 .cta-sections .active {
   opacity: 1; /* Opacidad final es 1, completamente visible */
@@ -170,13 +160,6 @@
     transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
     transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
   }
-  .cta-sections__titles--car {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    top: 45%;
-    width: 40%;
-  }
   .cta-sections__description {
     font-size: 14px;
     font-weight: 450;
@@ -188,29 +171,31 @@
     transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
     position: relative;
   }
-  .cta-sections__description--car {
-    width: 400px;
-    position: absolute;
-    right: 12%;
-    top: 15%;
-  }
   .cta-sections__description--mobile {
     display: none;
   }
   .cta-sections__img {
     width: 900px;
-    position: absolute;
   }
 }
 @media screen and (max-width: 787px) {
   .cta-sections__container {
     flex-direction: column;
     width: 100%;
+    padding: 50px 0;
+  }
+  .cta-sections__container--with-tesla {
+    padding-top: 50%;
   }
   .cta-sections__titles {
     padding: 0;
     width: 90%;
     margin: auto;
+  }
+  .cta-sections__titles--with-tesla {
+    width: 100%;
+    display: flex;
+    align-items: center;
   }
   .cta-sections__description--mobile {
     display: block;
@@ -221,9 +206,20 @@
   .cta-sections__description--desktop {
     display: none;
   }
+  .cta-sections__description--with-tesla {
+    width: 100%;
+    padding-left: 0;
+  }
+  .cta-sections__p--with-tesla {
+    text-align: center;
+    width: 95%;
+  }
   .cta-sections__buttons--mobile {
     display: flex;
     margin: auto;
+    width: 90%;
+  }
+  .cta-sections__buttons--with-tesla {
     width: 95%;
   }
   .cta-sections__buttons--desktop {
@@ -235,5 +231,6 @@
   }
   .cta-sections__img {
     width: 300px;
+    margin-left: 8%;
   }
 }/*# sourceMappingURL=cta-sections.css.map */
