@@ -26,7 +26,7 @@
     }
   }
 
-  &__left {
+  &__titles {
     display: flex;
     flex-direction: column;
     gap: 0.2em;
@@ -73,6 +73,10 @@
     flex-direction: column;
     gap: 1em;
     margin-top: 10px;
+
+    &--mobile{
+      display: none;
+    }
   }
 
   &__button {
@@ -135,7 +139,7 @@
     }
   }
 
-  &__right {
+  &__description {
     font-size: 14px;
     font-weight: 450;
     line-height: 20px;
@@ -151,6 +155,10 @@
       position: absolute;
       right: 10%;
       top: 10%;
+    }
+
+    &--mobile{
+      display: none;
     }
 
   }
@@ -179,9 +187,13 @@
 
     &__buttons {
       flex-direction: row;
+
+      &--mobile{
+        display: none;
+      }
     }
 
-    &__left {
+    &__titles {
       display: flex;
       flex-direction: column;
       gap: 0.2em;
@@ -199,7 +211,7 @@
       }
     }
 
-    &__right {
+    &__description {
       font-size: 14px;
       font-weight: 450;
       line-height: 20px;
@@ -216,6 +228,12 @@
         right: 12%;
         top: 15%;
       }
+
+      &--mobile{
+        display: none;
+      }
+
+
   
     }
   
@@ -236,21 +254,38 @@
       width: 100%;
     }
 
-    &__right{
-      padding: 0;
-      width: 90%;
-      margin: auto;
-    } 
-
-    &__left{
+    &__titles{
       padding: 0;
       width: 90%;
       margin: auto;
     }
+
+
+    &__description{
+
+      &--mobile{
+        display: block;
+        padding: 0;
+        width: 100%;
+        margin: auto;
+      }
+
+      &--desktop{
+        display: none;
+      }
+    } 
+
     
     &__buttons{
-      margin: auto;
-      width: 100%;
+      &--mobile{
+        display: flex;
+        margin: auto;
+        width: 95%;
+      }
+
+      &--desktop{
+        display: none;
+      }
     }
 
     &__button{
@@ -262,5 +297,6 @@
     &__img{
       width: 300px;
     }
+
   }
 }

@@ -176,6 +176,9 @@
   .third-hero {
     height: 80vh;
   }
+  .hero-insider {
+    background-image: url("/images/Model-S-Interior-Hero-Desktop-LHD.jpg");
+  }
   .hero-section__p--specification {
     bottom: 10px;
   }

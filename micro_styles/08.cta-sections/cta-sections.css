@@ -24,7 +24,7 @@
   position: relative;
   height: 60vh;
 }
-.cta-sections__left {
+.cta-sections__titles {
   display: flex;
   flex-direction: column;
   gap: 0.2em;
@@ -33,7 +33,7 @@
   transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
   transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
 }
-.cta-sections__left--car {
+.cta-sections__titles--car {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -65,6 +65,9 @@
   flex-direction: column;
   gap: 1em;
   margin-top: 10px;
+}
+.cta-sections__buttons--mobile {
+  display: none;
 }
 .cta-sections__button {
   text-align: center;
@@ -117,7 +120,7 @@
   border: solid 3px #3e3e3e;
   transition: 0.3s;
 }
-.cta-sections__right {
+.cta-sections__description {
   font-size: 14px;
   font-weight: 450;
   line-height: 20px;
@@ -128,11 +131,14 @@
   transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
   position: relative;
 }
-.cta-sections__right--car {
+.cta-sections__description--car {
   width: 400px;
   position: absolute;
   right: 10%;
   top: 10%;
+}
+.cta-sections__description--mobile {
+  display: none;
 }
 .cta-sections__img {
   width: 600px;
@@ -152,7 +158,10 @@
   .cta-sections__buttons {
     flex-direction: row;
   }
-  .cta-sections__left {
+  .cta-sections__buttons--mobile {
+    display: none;
+  }
+  .cta-sections__titles {
     display: flex;
     flex-direction: column;
     gap: 0.2em;
@@ -161,14 +170,14 @@
     transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
     transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
   }
-  .cta-sections__left--car {
+  .cta-sections__titles--car {
     position: absolute;
     bottom: 0;
     left: 0;
     top: 45%;
     width: 40%;
   }
-  .cta-sections__right {
+  .cta-sections__description {
     font-size: 14px;
     font-weight: 450;
     line-height: 20px;
@@ -179,11 +188,14 @@
     transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
     position: relative;
   }
-  .cta-sections__right--car {
+  .cta-sections__description--car {
     width: 400px;
     position: absolute;
     right: 12%;
     top: 15%;
+  }
+  .cta-sections__description--mobile {
+    display: none;
   }
   .cta-sections__img {
     width: 900px;
@@ -195,19 +207,27 @@
     flex-direction: column;
     width: 100%;
   }
-  .cta-sections__right {
+  .cta-sections__titles {
     padding: 0;
     width: 90%;
     margin: auto;
   }
-  .cta-sections__left {
+  .cta-sections__description--mobile {
+    display: block;
     padding: 0;
-    width: 90%;
-    margin: auto;
-  }
-  .cta-sections__buttons {
-    margin: auto;
     width: 100%;
+    margin: auto;
+  }
+  .cta-sections__description--desktop {
+    display: none;
+  }
+  .cta-sections__buttons--mobile {
+    display: flex;
+    margin: auto;
+    width: 95%;
+  }
+  .cta-sections__buttons--desktop {
+    display: none;
   }
   .cta-sections__button {
     width: 90%;

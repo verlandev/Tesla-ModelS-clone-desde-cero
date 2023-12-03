@@ -60,8 +60,9 @@
   .tesla-vision__h3--mobile {
     display: none;
   }
-  .tesla-vision__p {
+  .tesla-vision__p--desktop {
     width: 60%;
+    font-size: 13px;
   }
   .tesla-vision__p--mobile {
     display: none;

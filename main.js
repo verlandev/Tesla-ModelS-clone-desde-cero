@@ -9,8 +9,8 @@ const buttonsHero$$ = document.querySelector(".hero-section__buttons");
 
 const captionTexts$$ = document.querySelectorAll(".descriptions-section__text");
 
-const ctaSectionsLeft$$ = document.querySelectorAll(".cta-sections__left");
-const ctaSectionsRight$$ = document.querySelectorAll(".cta-sections__right");
+const ctaSectionsTitles$$ = document.querySelectorAll(".cta-sections__titles");
+const ctaSectionsDescription$$ = document.querySelectorAll(".cta-sections__description");
 
 const heroInformativeInfo$$ = document.querySelectorAll(".hero-informative__info");
 const heroInformativeCtaButtons$$ = document.querySelectorAll(".hero-informative-cta__buttons");
@@ -117,8 +117,8 @@ const handleScroll = () => {
   detectingScroll([separatorH2$$], scrollThreshold);
   detectingScroll([buttonsHero$$], scrollThreshold);
   detectingScroll(captionTexts$$, scrollThreshold);
-  detectingScroll(ctaSectionsLeft$$, scrollThreshold);
-  detectingScroll(ctaSectionsRight$$, scrollThreshold);
+  detectingScroll(ctaSectionsTitles$$, scrollThreshold);
+  detectingScroll(ctaSectionsDescription$$, scrollThreshold);
   detectingScroll(heroInformativeInfo$$, scrollThreshold);
   detectingScroll(heroInformativeCtaButtons$$, scrollThreshold);
   detectingScroll([containerOne$$], scrollThreshold);

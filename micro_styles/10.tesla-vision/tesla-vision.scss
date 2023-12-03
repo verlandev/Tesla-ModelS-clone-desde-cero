@@ -88,7 +88,11 @@
         }
 
         &__p{
-            width: 60%;
+
+            &--desktop{
+                width: 60%;
+                font-size: 13px;
+            }
             
             &--mobile{
                 display: none;
