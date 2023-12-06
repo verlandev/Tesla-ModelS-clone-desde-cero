@@ -130,32 +130,6 @@ const handleScroll = () => {
 window.addEventListener('scroll', handleScroll);
 
 
-// const handleScroll = () => {
-
-//   detectingBanner()
-
-//   let width = window.innerWidth
-
-//   if (900 <= width <= 2000) {
-//     detectingScroll([separatorH2$$], 700);
-//     detectingScroll(infoContainers$$, 500);
-//     detectingScroll([buttonsHero$$], 500);
-//     detectingScroll(captionTexts$$, 400);
-//     detectingScroll(ctaSectionsLeft$$, 400);
-//     detectingScroll(ctaSectionsRight$$, 400);
-//     detectingScroll(heroInformativeInfo$$, 500);
-//     detectingScroll(heroInformativeCtaButtons$$, 700);
-//     detectingScroll([containerOne$$], 400);
-//     detectingScroll([containerTwo$$], 400);
-//     detectingScroll([containerThree$$], 400);
-//     detectingScroll([specificationsShowcasesPanel$$], 500);
-//     detectingScroll([rollout$$], 200);
-//   }
-
- 
-// }
-
-
 window.addEventListener("scroll", function () {
   var scrollYValue = window.scrollY;
   console.log(scrollYValue); // Esto imprimirá el valor actual de scrollY en la consola.
@@ -163,9 +137,10 @@ window.addEventListener("scroll", function () {
 
 
 /**
- * Inicializa los elementos del carrusel: videos, círculos y contenidos.
- * Los selecciona y almacena en arreglos para su uso posterior.
+ * Se inicializan los elementos del carrusel: vídeos, botones circulares y contenidos.
+ * Se seleccionan y almacenan en arreglos para su posterior uso
  */
+
 const videos$$ = [];
 const circles$$ = [];
 const contents$$ = [];
@@ -175,37 +150,84 @@ for (let i = 1; i <= 5; i++) {
   circles$$.push(document.querySelector(`.circle${i}`));
   contents$$.push(document.querySelector(`.content${i}`));
 }
+
+
 /**
- * A continuación gestiona la activación y desactivación de elementos en el carrusel
- * al hacer clic en uno de los círculos/botón.
- *
- * @param {Element} button - El botón/circulo en el que se hizo clic.
+ * Función para gestionar la visualización del carrusel al hacer clic en un círculo.
+ * Se desactivan los elementos a modo de reset y se activa solo el contenido correspondiente al índice actual.
+ * 
+ * @param {number} index - El índice del círculo seleccionado
  */
 
-const carouselV1 = (button) => {
-  // Desactiva todos los elementos a modo de reset
-  circles$$.forEach((circle) => circle.classList.remove("circle-active"));
-  videos$$.forEach((video) => video.classList.add("inactive"));
-  contents$$.forEach((content) => content.classList.add("inactive"));
-
-  const index = circles$$.indexOf(button);
-  if (index >= 0) {
-    // Y activa solo el contenido correspondiente al pulsar uno de los botones
-    circles$$[index].classList.add("circle-active");
-    videos$$[index].classList.remove("inactive");
-    contents$$[index].classList.remove("inactive");
+const carouselV1 = async (index) => {
+  try {
+    // Desactiva todos los elementos a modo de reset
+    circles$$.forEach((circle) => circle.classList.remove("circle-active"));
+    videos$$.forEach((video) => video.classList.add("inactive"));
+    contents$$.forEach((content) => content.classList.add("inactive"));
+  
+    if (index >= 0) {
+      // Y activa solo el contenido correspondiente al pulsar uno de los botones
+      circles$$[index].classList.add("circle-active");
+      videos$$[index].classList.remove("inactive");
+      contents$$[index].classList.remove("inactive");
+    }
+    
+  } catch (error) {
+    console.log("Error en la función de carouselV1", error)
   }
 };
 
 /**
- * Finalmente, asigna un evento de clic a cada círculo para controlar la función 'carouselV1'.
+ * Conseguimos que el carrusel vaya en autoplay con 5 segundos para cada diapositiva.
+ * Establecemos el índice actual, el tiempo de intervalo y un identificador para controlar la transición automática del carrusel
+ */
+
+let currentIndex = 0;
+const intervalTime = 5000;
+let intervalId;
+
+const nextSlide = () => {
+  try {
+    currentIndex = (currentIndex + 1) % circles$$.length;
+    carouselV1(currentIndex)
+    
+  } catch (error) {
+    console.log("Error en la función de nextSlide", error)
+  }
+}
+
+/**
+ * Iniciamos el intervalo automático del carrusel una vez se carga la página.
+ * Nos aseguramos de mostrar la primera diapositiva al cargar la página
+ */
+
+const startInterval = () => {
+  try {
+    intervalId = setInterval(nextSlide, intervalTime)
+  } catch (error) {
+    console.log("error en la función startInterval", error)    
+  }
+}
+
+carouselV1(currentIndex)
+startInterval()
+
+/**
+ * Asigna un evento clic a cada botón circular para controlar la función "carouselV1"
  */
 
 circles$$.forEach((circle, index) =>
   circle.addEventListener("click", () => {
-    carouselV1(circles$$[index]);
+    try {
+      currentIndex = index;
+      carouselV1(currentIndex);
+    } catch (error) {
+      console.log("Error en la función de clic", error)
+    }
   })
 );
+
 
 
 /**
@@ -263,4 +285,4 @@ buttonShowcase2$$.addEventListener("click", () => {
   buttonShowcase1$$.classList.add("button-off");
 });
 
-console.log(window.innerWidth)
+//console.log(window.innerWidth)
