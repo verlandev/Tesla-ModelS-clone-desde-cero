@@ -45,7 +45,6 @@ const detectingBanner = () => {
 
 const menuResponsive = () => {
   // Versión mobile
-  // Tengo que quitar el botón de menú a partir de que la pantalla sea superior o igual a 700
   if(window.innerWidth <= 800 ) {
     buttonMenu$$.classList.remove('inactive')
     nav$$.classList.add('inactive')
