@@ -25,7 +25,7 @@ const buttonShowcase1$$ = document.querySelector(".slider-specifications__button
 const buttonShowcase2$$ = document.querySelector(".slider-specifications__button--modelS");
 const showcase1$$ = document.querySelector(".slider-specifications__showcase1");
 const showcase2$$ = document.querySelector(".slider-specifications__showcase2");
-const rollout$$ = document.querySelector(".carouselV2__p--rollout");
+const rollout$$ = document.querySelector(".carousel-v2__p--rollout");
 const buttonMenu$$ = document.querySelector(".header__button-menu")
 
 
@@ -129,10 +129,10 @@ const handleScroll = () => {
 window.addEventListener('scroll', handleScroll);
 
 
-window.addEventListener("scroll", function () {
-  var scrollYValue = window.scrollY;
-  console.log(scrollYValue); // Esto imprimirá el valor actual de scrollY en la consola.
-});
+// window.addEventListener("scroll", function () {
+//   var scrollYValue = window.scrollY;
+//   console.log(scrollYValue); // Esto imprimirá el valor actual de scrollY en la consola.
+// });
 
 
 /**
@@ -189,8 +189,7 @@ let intervalId;
 const nextSlide = () => {
   try {
     currentIndex = (currentIndex + 1) % circles$$.length;
-    carouselV1(currentIndex)
-    
+    carouselV1(currentIndex)    
   } catch (error) {
     console.log("Error en la función de nextSlide", error)
   }
@@ -234,30 +233,50 @@ circles$$.forEach((circle, index) =>
  * @param {string} carouselType 'models' o 'countries' según las clases aplicadas en el proyecto.
  */
 
-const carouselV2 = (carouselType) => {
-
-  const slides$$ = document.querySelectorAll(`.carousel2__slide--${carouselType}`);
-  const images$$ = document.querySelectorAll(`.carousel2__asset--${carouselType}`);
+const carouselVersion2 = (carouselType) => {
+  const container$$ = document.querySelector(`.carousel-v2__slider--${carouselType}`) 
+  const slides$$ = document.querySelectorAll(`.carousel-v2__slide--${carouselType}`);
+  const images$$ = document.querySelectorAll(`.carousel-v2__asset--${carouselType}`);
+  
 
   // Aplicamos el manejo de slides actualizando las clases
   slides$$.forEach((slide, index) =>
     slide.addEventListener("click", () => {
       if (carouselType === "models" || carouselType === "countries" || carouselType === 'features') {
-        slides$$.forEach((slide) => slide.classList.remove("isSlideActive"));
+        slides$$.forEach((slide) => slide.classList.remove("slide-active"));
         images$$.forEach((image) => image.classList.add("inactive"));
 
         if (index >= 0) {
-          slides$$[index].classList.add("isSlideActive");
-          images$$[index].classList.remove("inactive");
+          slides$$[index].classList.add("slide-active");
+          images$$[index].classList.remove("inactive");          
+        }
+
+        if (window.innerWidth <= 768) {
+          if(carouselType === 'models') {
+            let position = index
+            let operation = position * -40
+            container$$.style.transform = `translateX(${operation}%)`
+            container$$.style.transition = "0.5s ease"
+          } else if (carouselType === 'countries' || carouselType === 'features') {
+            const slideWidth = slides$$[0].offsetWidth
+            console.log(slideWidth)
+            let position = index
+            let operation = position * (-slideWidth)
+            container$$.style.transform = `translateX(${operation}px)`
+            container$$.style.transition = "0.5s ease"
+          }       
+         
         }
       }
+
     })
-  );
+    );
 };
 
-carouselV2("models");
-carouselV2("countries");
-carouselV2("features");
+
+carouselVersion2("models");
+carouselVersion2("countries");
+carouselVersion2("features");
 
 /**
  * Maneja el clic en el botón de showcase 1 en la sección "slider-specifications".
