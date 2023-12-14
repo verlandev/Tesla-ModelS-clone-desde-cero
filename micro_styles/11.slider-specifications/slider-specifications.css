@@ -123,21 +123,27 @@
 }
 @media screen and (max-width: 787px) {
   .slider-specifications {
-    height: 165vh;
+    height: 155vh;
   }
   .slider-specifications--center {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+  .slider-specifications__asset {
+    padding-top: 0;
+  }
   .slider-specifications__img {
     width: 300px;
     transform: scale(2);
+    -webkit-width: 250px; /* Prefijo de WebKit */
+    -webkit-transform: scale(1.8); /* Prefijo de WebKit */
   }
   .slider-specifications__content {
     width: 90%;
   }
   .slider-specifications__h3 {
     font-size: 24px;
+    -webkit-font-size: 24px;
   }
 }/*# sourceMappingURL=slider-specifications.css.map */

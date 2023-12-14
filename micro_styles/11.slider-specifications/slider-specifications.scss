@@ -150,17 +150,23 @@
 
 @media screen and (max-width: 787px){
   .slider-specifications{
-    height: 165vh;
+    height: 155vh;
 
     &--center{
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
+
+    &__asset{
+      padding-top: 0;
+    }
     
     &__img{
       width: 300px;
       transform: scale(2);
+      -webkit-width: 250px; /* Prefijo de WebKit */
+      -webkit-transform: scale(1.8); /* Prefijo de WebKit */
     }
 
     &__content{
@@ -169,6 +175,7 @@
 
     &__h3{
       font-size: 24px;
+      -webkit-font-size: 24px
     }
   }
 

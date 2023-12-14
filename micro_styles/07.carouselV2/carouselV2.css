@@ -412,7 +412,7 @@
   .carousel-features__slide--features,
   .carousel-countries__slide--features {
     width: 70%;
-    border: solid 0.2px black;
+    border: solid 0.2px rgb(165, 165, 165);
   }
   .carousel-v2__slide--features::before,
   .carousel-models__slide--features::before,

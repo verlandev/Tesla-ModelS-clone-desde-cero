@@ -251,6 +251,7 @@ const carouselVersion2 = (carouselType) => {
           images$$[index].classList.remove("inactive");          
         }
 
+        // Creamos el efecto del slide para móvil
         if (window.innerWidth <= 768) {
           if(carouselType === 'models') {
             let position = index
