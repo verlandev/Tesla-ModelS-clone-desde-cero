@@ -249,8 +249,9 @@
   .hero-section{
     &__containers{
       width: 95%;
-      bottom:25%;
+      bottom: 25vh;
       gap: 2em;
+      padding-bottom: 0;
     }
 
     &__container{
@@ -281,7 +282,21 @@
     &__button{
       width: 80%;
     }
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  .second-hero{
+    height: 60vh;
+    background-size: 100vh;
+    background-repeat: no-repeat;
+  }
 
 
+  .hero-section{
+    //height: 100vh;
+    &__containers{
+      bottom: 31vh;
+    }
   }
 }

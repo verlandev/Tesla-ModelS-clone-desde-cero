@@ -178,5 +178,10 @@
       -webkit-font-size: 24px
     }
   }
+}
 
+@supports (-webkit-touch-callout: none) {
+  .slider-specifications{
+    height: 180vh;
+  }
 }

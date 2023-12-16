@@ -363,9 +363,17 @@
     margin-bottom: 40%;
   }
   .hero-informative .hero-informative-cta__buttons {
-    bottom: 10px;
+    bottom: 5px;
   }
   .hero-informative .hero-informative-cta__button {
     width: 85%;
+  }
+}
+@supports (-webkit-touch-callout: none) {
+  .hero-informative--autonomy {
+    height: 110vh;
+  }
+  .hero-informative--security {
+    height: 150vh;
   }
 }/*# sourceMappingURL=hero-informative-sections.css.map */

@@ -210,8 +210,9 @@
   }
   .hero-section__containers {
     width: 95%;
-    bottom: 25%;
+    bottom: 25vh;
     gap: 2em;
+    padding-bottom: 0;
   }
   .hero-section__container {
     gap: 0.3em;
@@ -235,5 +236,15 @@
   }
   .hero-section__button {
     width: 80%;
+  }
+}
+@supports (-webkit-touch-callout: none) {
+  .second-hero {
+    height: 60vh;
+    background-size: 100vh;
+    background-repeat: no-repeat;
+  }
+  .hero-section__containers {
+    bottom: 31vh;
   }
 }/*# sourceMappingURL=heros.css.map */

@@ -435,12 +435,24 @@
       }
 
       &__buttons{
-        bottom: 10px;
+        bottom: 5px;
       }
 
       &__button{
         width: 85%;
       }
+    }
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  .hero-informative{
+    &--autonomy{
+      height: 110vh
+    }
+
+    &--security{
+      height: 150vh
     }
   }
 }
