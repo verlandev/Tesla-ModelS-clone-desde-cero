@@ -8,7 +8,7 @@
   &__logo {
     display: flex;
     align-items: center;
-    z-index: 9999;
+    z-index: 2;
 
     &--svg{
       color: #000;
@@ -35,6 +35,15 @@
       font-weight: 550;
       font-size: 14px;
     }
+
+    &__span{
+      display: none;
+
+      &--arrow{
+        display: none
+      }
+    }
+
   }
 
   .header-links {
@@ -70,6 +79,7 @@
   box-shadow: inset 0px -150px 100px 10px #000;
 }
 
+
 .inactive{
   display: none;
 }
@@ -81,6 +91,16 @@
     justify-content: space-between;
     gap: 0em;
     padding: 20px;
+    visibility: visible;
+    transition: opacity 0.5s, visibility 0.5s;
+    transition: all 0.5s ease;
+    
+
+    // En versión mobile cuando se hace click en el botón menú
+    &--nav-open{
+      padding: 0;
+          
+    }
 
     &__logo{
       width: 130px;
@@ -92,9 +112,78 @@
     }
 
     .nav{
-      display: none;
-    }
+      // Quitamos los botones de navegación para que se vea solo el botón de menú
+      opacity: 0;
+      
+      
+      // Cuando hacemos click en el botón de "menú", el menú se ve así
+      &--nav-open{
+        padding: 0;
+        background-color: white;
+        display: block;
+        opacity: 1;
+        visibility: visible;      
+        height:100vh;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        z-index: 9;
+        transition: all 0.5s ease;
+      }
 
+      &__ul{
+        &--nav-open{
+          display: flex;
+          flex-direction: column;
+          gap: 3em;
+          width: 90%;
+          margin-left: 20px;
+          margin-top: 25%;
+        }
+      }
+
+      &__li{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+
+      &__a{
+        font-size: 18px;
+      }
+
+      &__span{
+        display: block;
+
+        &--arrow{
+          display: block;
+          width: 22px;
+          filter: invert(50%);
+        }
+      }
+
+      // El botón de cerrar no existe cuando se carga la página
+      &__close-button{
+        display: none;
+
+        // Aparece el botón de cierre cuando el menú está abierto
+        &--nav-open{
+          z-index: 9;
+          width: 30px;
+          height: 50px;
+          position: absolute;
+          top: 10px;
+          right: 5%;
+          font-size: 25px;
+          font-weight: 500;
+          background-color: transparent;
+          border: none;
+          text-decoration: none;
+          color: #545454;
+        }
+      }
+    }
 
     &__button-menu{
       background-color: rgba(101, 101, 101, 0.189); /* Color gris con 25% de opacidad */
@@ -104,6 +193,24 @@
       padding: 10px;
       font-weight: 500;
       cursor: pointer;
+      z-index: 2;
+      text-decoration: none;
+      color: #000;
+    }
+  }
+
+  .hidden{
+    display: none;
+  }
+}
+
+
+@supports (-webkit-touch-callout: none) {
+  .nav{
+    &__ul{
+      &--nav-open{
+        margin-top: 25%;
+      }
     }
   }
 }

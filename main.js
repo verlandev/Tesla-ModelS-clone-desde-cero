@@ -1,6 +1,12 @@
 const banner$$ = document.querySelector(".banner");
 
+const logo$$ = document.querySelector(".header__logo")
 const nav$$ = document.querySelector(".nav")
+const navUl$$ = document.querySelector('.nav__ul')
+const buttonMenu$$ = document.querySelector(".header__button-menu")
+const header$$ = document.querySelector(".header")
+//const closeButton$$ = document.querySelector(".nav__close-button")
+
 const headerLinks$$ = document.querySelector(".header-links")
 
 const separatorH2$$ = document.querySelector(".separator__h2");
@@ -26,7 +32,6 @@ const buttonShowcase2$$ = document.querySelector(".slider-specifications__button
 const showcase1$$ = document.querySelector(".slider-specifications__showcase1");
 const showcase2$$ = document.querySelector(".slider-specifications__showcase2");
 const rollout$$ = document.querySelector(".carousel-v2__p--rollout");
-const buttonMenu$$ = document.querySelector(".header__button-menu")
 
 
 /**
@@ -43,26 +48,61 @@ const detectingBanner = () => {
 };
 
 
-const menuResponsive = () => {
+const renderMenuResponsive = () => {
   // Versión mobile
   if(window.innerWidth <= 800 ) {
     buttonMenu$$.classList.remove('inactive')
     nav$$.classList.add('inactive')
     headerLinks$$.classList.add('inactive')
     banner$$.classList.add('active')
-
+    
   } else {
     buttonMenu$$.classList.add('inactive')
+    closeButton$$.classList.add('inactive')
     nav$$.classList.remove('inactive')
     headerLinks$$.classList.remove('inactive')
   }
 }
 
-window.addEventListener('resize', menuResponsive);
-window.addEventListener('orientationchange', menuResponsive);
-window.onload = () => {
-  menuResponsive(); // Llama a la función después de que todo ha cargado
-};
+window.addEventListener('resize', renderMenuResponsive);
+window.addEventListener('orientationchange', renderMenuResponsive);
+document.addEventListener('DOMContentLoaded', () => {
+  renderMenuResponsive()
+})
+
+
+const closeButton$$ = document.createElement('button')
+  closeButton$$.classList.add('nav__close-button--nav-open', 'hidden')
+  closeButton$$.textContent = 'x'
+  nav$$.appendChild(closeButton$$)
+
+const openMenu = () => {
+  buttonMenu$$.classList.add("hidden")
+  logo$$.classList.add("hidden")
+  nav$$.classList.add('nav--nav-open')
+  navUl$$.classList.add('nav__ul--nav-open')
+  header$$.classList.add('header--nav-open')
+  closeButton$$.classList.remove('hidden')
+  buttonsHero$$.classList.add("hidden")
+  document.body.classList.add('no-scroll') // Impedimos que se pueda hacer scroll en el documento cuando el menú está abierto
+}
+
+
+const closeMenu = () => {
+  buttonMenu$$.classList.remove('hidden')
+  logo$$.classList.remove('hidden')
+  nav$$.classList.remove('nav--nav-open')
+  navUl$$.classList.remove('nav__ul--nav-open')
+  header$$.classList.remove('header--nav-open')
+  closeButton$$.classList.add('hidden')
+  document.body.classList.remove('no-scroll') // Restablecemos el scroll en la página
+}
+
+buttonMenu$$.addEventListener('click', openMenu)
+closeButton$$.addEventListener('click', closeMenu)
+
+
+
 
 
 

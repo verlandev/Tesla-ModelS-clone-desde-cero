@@ -32,4 +32,9 @@ html {
 
 .inactive {
   display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
 }/*# sourceMappingURL=styles.css.map */
