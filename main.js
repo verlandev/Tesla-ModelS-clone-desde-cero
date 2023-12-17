@@ -5,7 +5,6 @@ const nav$$ = document.querySelector(".nav")
 const navUl$$ = document.querySelector('.nav__ul')
 const buttonMenu$$ = document.querySelector(".header__button-menu")
 const header$$ = document.querySelector(".header")
-//const closeButton$$ = document.querySelector(".nav__close-button")
 
 const headerLinks$$ = document.querySelector(".header-links")
 
@@ -68,6 +67,9 @@ window.addEventListener('resize', renderMenuResponsive);
 window.addEventListener('orientationchange', renderMenuResponsive);
 document.addEventListener('DOMContentLoaded', () => {
   renderMenuResponsive()
+  handleScroll()
+  detectingScroll(infoContainers$$, scrollThreshold);
+
 })
 
 
