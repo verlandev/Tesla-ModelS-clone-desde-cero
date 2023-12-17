@@ -22,6 +22,9 @@
 .header .nav__li {
   list-style: none;
 }
+.header .nav__li--mobile {
+  display: none;
+}
 .header .nav__a {
   text-decoration: none;
   color: #2f2f2f;
@@ -88,6 +91,9 @@
   .header .nav {
     opacity: 0;
   }
+  .header .nav--svg-mobile {
+    width: 20px;
+  }
   .header .nav--nav-open {
     padding: 0;
     background-color: white;
@@ -114,8 +120,23 @@
     justify-content: space-between;
     align-items: center;
   }
+  .header .nav__li--mobile {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   .header .nav__a {
     font-size: 18px;
+  }
+  .header .nav__a--svg-mobile {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    text-decoration: none;
+    font-size: 18px;
+    color: #000;
+    font-weight: 600;
   }
   .header .nav__span {
     display: block;

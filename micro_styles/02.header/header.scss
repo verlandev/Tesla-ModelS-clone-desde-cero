@@ -27,6 +27,10 @@
 
     &__li {
       list-style: none;
+
+      &--mobile{
+        display: none;
+      }
     }
 
     &__a {
@@ -114,6 +118,11 @@
     .nav{
       // Quitamos los botones de navegación para que se vea solo el botón de menú
       opacity: 0;
+
+      // Modificamos el tamaño de los svg en sí "Español" y "Cuenta"
+      &--svg-mobile{
+        width: 20px;
+      }
       
       
       // Cuando hacemos click en el botón de "menú", el menú se ve así
@@ -146,16 +155,37 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        // Forzamos e incluimos los items de header-links
+        &--mobile{
+          list-style: none;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
       }
 
 
       &__a{
         font-size: 18px;
+
+
+        // Estilos para "Español" y "Cuenta" con sus respectivos svg
+        &--svg-mobile{
+          display: flex;
+          align-items: center;
+          gap: 0.5em;
+          text-decoration: none;
+          font-size: 18px;
+          color: #000;
+          font-weight: 600;
+        }
       }
 
       &__span{
         display: block;
-
+        
+        // Estilos del svg de flecha para indicar el submenu
         &--arrow{
           display: block;
           width: 22px;

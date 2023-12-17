@@ -371,7 +371,7 @@
 }
 @supports (-webkit-touch-callout: none) {
   .hero-informative--autonomy {
-    height: 110vh;
+    height: 100vh;
   }
   .hero-informative--security {
     height: 150vh;
