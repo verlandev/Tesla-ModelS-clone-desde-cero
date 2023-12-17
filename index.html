@@ -22,14 +22,29 @@
   </head>
   <body>
       <div id="root">
-        <section class="banner inactive">
-            <div class="banner__container">
-                <h4 class="banner__h4">Model S</h4>
-                <div class="banner__links">
-                    <a href="" class="banner__link banner__link--left">Encargue su modelo S</a>
-                    <a href="" class="banner__link banner__link--right">Prueba de conducción</a>
+        <section class="banner-desktop inactive">
+            <div class="banner-desktop__container">
+                <h4 class="banner-desktop__h4">Model S</h4>
+                <div class="banner-desktop__links">
+                    <a href="" class="banner-desktop__link banner-desktop__link--buy">Encargue su modelo S</a>
+                    <a href="" class="banner-desktop__link banner-desktop__link--test">Prueba de conducción</a>
                 </div>
             </div>
+        </section>
+        <section class="banner-mobile inactive">
+            <div class="banner-mobile__container">
+                <a href="#" class="banner-mobile__button banner-mobile__button--prueba-conduccion">Prueba de conducción</a>
+                <button class="banner-mobile__button banner-mobile__button--show-up" tabindex="-1" type="button">
+                    <img class="banner-mobile__button--svg-up" src="/images/arrow-next-small-svgrepo-com.svg" alt="svg-arrowUp">
+                </button>
+            </div>
+                <div class="banner-mobile__links banner-mobile__links--inactive">
+                    <a href="" class="banner-mobile__link banner-mobile__link--buy">Encargue su modelo S</a>
+                    <a href="" class="banner-mobile__link banner-mobile__link--test">Prueba de conducción</a>
+                    <button class="banner-mobile__button banner-mobile__button--show-down" tabindex="-1" type="button">
+                        <img class="banner-mobile__button--svg-down" src="/images/arrow-next-small-svgrepo-com.svg" alt="svg-arrowUp">
+                    </button>
+                </div>
         </section>
         <section class="hero-section top-hero">
             <header class="header">

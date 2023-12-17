@@ -197,7 +197,7 @@
       &__close-button{
         display: none;
 
-        // Aparece el botón de cierre cuando el menú está abierto
+        // Aparece el botón de cierre cuando hemos hecho click en el botón "menú" y queda abierto
         &--nav-open{
           z-index: 9;
           width: 30px;

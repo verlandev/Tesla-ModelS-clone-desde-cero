@@ -1,4 +1,9 @@
-const banner$$ = document.querySelector(".banner");
+const bannerDesktop$$ = document.querySelector(".banner-desktop");
+const bannerMobile$$ = document.querySelector(".banner-mobile")
+const bannerMobileContainer$$ = document.querySelector(".banner-mobile__container")
+const bannerMobileShowUp$$ = document.querySelector(".banner-mobile__button--show-up")
+const bannerMobileShowDown$$ = document.querySelector(".banner-mobile__button--show-down")
+const bannerMobileShowLinks$$ = document.querySelector(".banner-mobile__links")
 
 const logo$$ = document.querySelector(".header__logo")
 const nav$$ = document.querySelector(".nav")
@@ -39,12 +44,25 @@ const rollout$$ = document.querySelector(".carousel-v2__p--rollout");
 
 const detectingBanner = () => {
   if (scrollY === 0) {
-    banner$$.classList.add("inactive");
+    bannerDesktop$$.classList.add("inactive");
+    bannerMobile$$.classList.add("inactive")
   }
   if (scrollY >= 100) {
-    banner$$.classList.remove("inactive");
+    bannerDesktop$$.classList.remove("inactive");
+    bannerMobile$$.classList.remove("inactive")
   }
 };
+
+
+const toggleBanner = () => {
+  bannerMobileShowLinks$$.classList.toggle("banner-mobile__links--inactive")
+  bannerMobileContainer$$.classList.toggle("inactive")
+}
+
+bannerMobileShowUp$$.addEventListener('click', toggleBanner);
+bannerMobileShowDown$$.addEventListener('click', toggleBanner)
+
+
 
 
 const renderMenuResponsive = () => {
@@ -53,7 +71,7 @@ const renderMenuResponsive = () => {
     buttonMenu$$.classList.remove('inactive')
     nav$$.classList.add('inactive')
     headerLinks$$.classList.add('inactive')
-    banner$$.classList.add('active')
+    bannerMobile$$.classList.add('inactive')
     
   } else {
     buttonMenu$$.classList.add('inactive')
@@ -68,7 +86,7 @@ window.addEventListener('orientationchange', renderMenuResponsive);
 document.addEventListener('DOMContentLoaded', () => {
   renderMenuResponsive()
   handleScroll()
-  detectingScroll(infoContainers$$, scrollThreshold);
+  detectingScroll(infoContainers$$);
 
 })
 

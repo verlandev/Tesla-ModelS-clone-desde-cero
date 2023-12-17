@@ -1,4 +1,9 @@
-.banner{
+// Desactivamos el banner de la versión mobile
+.banner-mobile{
+    display: none;
+}
+
+.banner-desktop{
     position: relative;
 
     &__container{
@@ -37,7 +42,7 @@
         width: 160px;
         text-align: center;
     
-        &--right{
+        &--test{
             background-color: #2f2f2f;
             border-radius: 3px;
     
@@ -46,7 +51,103 @@
 }
 
 @media screen and (max-width: 787px){
-    .banner{
+    
+    // Desactivamos el banner de la versión escritorio
+    .banner-desktop{
         display: none;
     }
+
+    .banner-mobile{
+        display: block;
+        position: relative;
+
+
+        &__container{
+            display: flex;
+            flex-direction: row;
+            position: fixed;
+            bottom: 5%;
+            right: 5%;
+            gap: 0.5em;
+            z-index: 9;
+        }
+
+        &__button{
+            background-color: #393c41;
+            border-radius: 5px;
+            
+            
+            &--prueba-conduccion{
+                width: 180px;
+                padding: 10px;
+                border: solid 1px #393c41;
+                text-decoration: none;
+                color: white;
+                text-align: center;
+                font-weight: 500;
+                align-self: center;
+                font-size: 13px;
+            }
+
+            &--show-up{
+                width: 50px;
+                border: 0;
+            }
+
+            &--show-down{
+                border: 0;
+                position: absolute;
+                margin-left: 80%;
+                margin-top: 5%;
+                background: none;
+            }
+            
+            &--svg-up{
+                width: 20px;
+                filter: invert(100%);
+                transform: rotate(-90deg);
+            }
+
+            &--svg-down{
+                width: 30px;
+                filter: invert(100%);
+                transform: rotate(90deg);
+                //position: absolute;
+                right: 10%;
+                bottom: 10%;
+            }
+        }
+        
+        &__links{
+            width: 100%;
+            height: 20vh; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #0000003f;
+            backdrop-filter: blur(10px);
+            position: fixed;
+            z-index: 9;
+            gap: 1em; 
+            bottom: 0;
+            transition: all 0.5s ease;      
+        }
+
+        &__links--inactive{
+            height: 0;
+            overflow: hidden;
+            transition: all 0.5s ease; 
+        }
+
+        &__link{
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+    }
+
+    
 }
