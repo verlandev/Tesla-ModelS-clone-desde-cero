@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Estilos específicos para la versión Escritorio */
 .tesla-vision {
   background-image: url("/images/Autopilot-Hero-Vision_Desktop.jpg");
   background-position: center;
@@ -50,6 +51,7 @@
   animation: none; /* Desactiva la animación cuando se agrega la clase active */
 }
 
+/* Estilos específicos para la versión Escritorio de tamaño superior */
 @media screen and (min-width: 1440px) {
   .tesla-vision {
     height: 80vh;
@@ -71,6 +73,7 @@
     display: none;
   }
 }
+/* Estilos específicos para la versión mobile */
 @media screen and (max-width: 787px) {
   .tesla-vision {
     background-image: url("/images/Autopilot-Hero-Vision_Mobile.jpg");

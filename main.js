@@ -1,3 +1,6 @@
+/**
+ * Creamos el listado de elementos para el manejo del DOM
+ */
 const bannerDesktop$$ = document.querySelector(".banner-desktop");
 const bannerMobile$$ = document.querySelector(".banner-mobile")
 const bannerMobileContainer$$ = document.querySelector(".banner-mobile__container")
@@ -31,8 +34,8 @@ const containerThree$$ = document.querySelector(".tesla-vision__text--container-
 
 const specificationsShowcasesPanel$$ = document.querySelector(".slider-specifications__content");
 
-const buttonShowcase1$$ = document.querySelector(".slider-specifications__button--modelPlaid");
-const buttonShowcase2$$ = document.querySelector(".slider-specifications__button--modelS");
+const buttonShowcase1$$ = document.querySelector(".slider-specifications__button--model-plaid");
+const buttonShowcase2$$ = document.querySelector(".slider-specifications__button--model-s");
 const showcase1$$ = document.querySelector(".slider-specifications__showcase1");
 const showcase2$$ = document.querySelector(".slider-specifications__showcase2");
 const rollout$$ = document.querySelector(".carousel-v2__p--rollout");
@@ -53,6 +56,9 @@ const detectingBanner = () => {
   }
 };
 
+/**
+ * Función que alterna las clases del elemento del banner en función de si se abre o cierra
+ */
 
 const toggleBanner = () => {
   bannerMobileShowLinks$$.classList.toggle("banner-mobile__links--inactive")
@@ -64,9 +70,15 @@ bannerMobileShowDown$$.addEventListener('click', toggleBanner)
 
 
 
+/**
+ * Ajusta la visibilidad de los elementos del menú en función del ancho de la ventana. Cuando la ventana 
+ * tiene un ancho de 800px o menos (versión móvil),muestra el botón del menú y oculta 
+ * otros elementos de navegación.
+ * En ventanas más grandes, muestra la navegación completa y oculta el botón del menú.
+ */
 
 const renderMenuResponsive = () => {
-  // Versión mobile
+  /* Versión mobile */
   if(window.innerWidth <= 800 ) {
     buttonMenu$$.classList.remove('inactive')
     nav$$.classList.add('inactive')
@@ -81,48 +93,51 @@ const renderMenuResponsive = () => {
   }
 }
 
+// Agrega listeners para ajustar el menú en caso de cambio de tamaño o orientación de la ventana
+
 window.addEventListener('resize', renderMenuResponsive);
 window.addEventListener('orientationchange', renderMenuResponsive);
 document.addEventListener('DOMContentLoaded', () => {
   renderMenuResponsive()
   handleScroll()
-  detectingScroll(infoContainers$$);
-
 })
 
 
+/**
+ * Función que cierra el menú de navegación.
+ * Muestra nuevamente el botón del menú y el logotipo, y oculta el menú de navegación.
+ * Reactiva el desplazamiento del cuerpo de la página para permitir nuevamente el scroll.
+ */
+
 const closeButton$$ = document.createElement('button')
-  closeButton$$.classList.add('nav__close-button--nav-open', 'hidden')
+  closeButton$$.classList.add('nav__close-button--nav-open', 'inactive')
   closeButton$$.textContent = 'x'
   nav$$.appendChild(closeButton$$)
 
 const openMenu = () => {
-  buttonMenu$$.classList.add("hidden")
-  logo$$.classList.add("hidden")
+  buttonMenu$$.classList.add("inactive")
+  logo$$.classList.add("inactive")
   nav$$.classList.add('nav--nav-open')
   navUl$$.classList.add('nav__ul--nav-open')
   header$$.classList.add('header--nav-open')
-  closeButton$$.classList.remove('hidden')
-  buttonsHero$$.classList.add("hidden")
+  closeButton$$.classList.remove('inactive')
+  buttonsHero$$.classList.add("inactive")
   document.body.classList.add('no-scroll') // Impedimos que se pueda hacer scroll en el documento cuando el menú está abierto
 }
 
 
 const closeMenu = () => {
-  buttonMenu$$.classList.remove('hidden')
-  logo$$.classList.remove('hidden')
+  buttonMenu$$.classList.remove('inactive')
+  logo$$.classList.remove('inactive')
   nav$$.classList.remove('nav--nav-open')
   navUl$$.classList.remove('nav__ul--nav-open')
   header$$.classList.remove('header--nav-open')
-  closeButton$$.classList.add('hidden')
+  closeButton$$.classList.add('inactive')
   document.body.classList.remove('no-scroll') // Restablecemos el scroll en la página
 }
 
 buttonMenu$$.addEventListener('click', openMenu)
 closeButton$$.addEventListener('click', closeMenu)
-
-
-
 
 
 
@@ -165,7 +180,7 @@ const handleScroll = () => {
     scrollThreshold = windowHeight * 0.9
   } else if(windowWidth >= 768) {
     // Pantalla mediana
-    scrollThreshold = windowHeight * 0.3
+    scrollThreshold = windowHeight * 0.9
   } else {
     // Pantalla pequeña
     scrollThreshold = windowHeight * 0.9
@@ -187,12 +202,6 @@ const handleScroll = () => {
   detectingScroll([rollout$$], scrollThreshold);
 }
 window.addEventListener('scroll', handleScroll);
-
-
-// window.addEventListener("scroll", function () {
-//   var scrollYValue = window.scrollY;
-//   console.log(scrollYValue); // Esto imprimirá el valor actual de scrollY en la consola.
-// });
 
 
 /**
@@ -239,7 +248,8 @@ const carouselV1 = async (index) => {
 
 /**
  * Conseguimos que el carrusel vaya en autoplay con 5 segundos para cada diapositiva.
- * Establecemos el índice actual, el tiempo de intervalo y un identificador para controlar la transición automática del carrusel
+ * Establecemos el índice actual, el tiempo de intervalo y un identificador para 
+ * controlar la transición automática del carrusel
  */
 
 let currentIndex = 0;
@@ -254,6 +264,7 @@ const nextSlide = () => {
     console.log("Error en la función de nextSlide", error)
   }
 }
+
 
 /**
  * Iniciamos el intervalo automático del carrusel una vez se carga la página.
@@ -270,6 +281,7 @@ const startInterval = () => {
 
 carouselV1(currentIndex)
 startInterval()
+
 
 /**
  * Asigna un evento clic a cada botón circular para controlar la función "carouselV1"
@@ -363,5 +375,3 @@ buttonShowcase2$$.addEventListener("click", () => {
   buttonShowcase1$$.classList.remove("button-on");
   buttonShowcase1$$.classList.add("button-off");
 });
-
-//console.log(window.innerWidth)

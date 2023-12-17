@@ -1,3 +1,4 @@
+/* Estilos específicos para la versión Escritorio */
 .cta-sections {
   width: 100%;
   &__black {
@@ -20,7 +21,7 @@
     padding: 50px 0px;
     gap: 5em;
 
-    &--with-tesla{
+    &--with-tesla {
       width: 100%;
       padding-left: 10%;
     }
@@ -35,7 +36,7 @@
     transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
     transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
 
-    &--with-tesla{
+    &--with-tesla {
       align-self: center;
       width: 100%;
     }
@@ -71,7 +72,7 @@
     gap: 1em;
     margin-top: 10px;
 
-    &--mobile{
+    &--mobile {
       display: none;
     }
   }
@@ -147,14 +148,13 @@
     transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
     position: relative;
 
-    &--mobile{
+    &--mobile {
       display: none;
     }
-
   }
 
   &__img {
-    width: 600px;    
+    width: 600px;
   }
 
   .active {
@@ -166,8 +166,9 @@
   }
 }
 
+/* Estilos específicos para la versión Escritorio de tamaño superior */
 @media screen and (min-width: 1440px) {
-  .cta-sections {  
+  .cta-sections {
     &__container {
       width: 60%;
       gap: 2em;
@@ -176,7 +177,7 @@
     &__buttons {
       flex-direction: row;
 
-      &--mobile{
+      &--mobile {
         display: none;
       }
     }
@@ -189,10 +190,6 @@
       opacity: 0; /* Comienza con opacidad cero (invisibles) */
       transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
       transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
-  
-      &--with-tesla{
-        
-      }
     }
 
     &__description {
@@ -205,119 +202,92 @@
       transition: opacity 1s ease, transform 1s ease; /* Transiciones suaves para opacity y transform */
       transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
       position: relative;
-  
-      &--with-tesla{
-        
-      }
 
-      &--mobile{
+      &--mobile {
         display: none;
       }
-
-
-  
     }
-  
+
     &__img {
       width: 900px;
-      
-      
     }
   }
-
-
 }
 
-@media screen and (max-width: 787px){
-  .cta-sections{
-    &__container{
+/* Estilos específicos para la versión mobile */
+@media screen and (max-width: 787px) {
+  .cta-sections {
+    &__container {
       flex-direction: column;
       width: 100%;
       padding: 50px 0;
 
-      &--with-tesla{
+      &--with-tesla {
         padding-top: 50%;
-        
       }
     }
 
-    &__titles{
+    &__titles {
       padding: 0;
       width: 90%;
       margin: auto;
 
-      &--with-tesla{
+      &--with-tesla {
         width: 100%;
         display: flex;
         align-items: center;
       }
     }
 
-
-    &__description{
-
-      &--mobile{
+    &__description {
+      &--mobile {
         display: block;
         padding: 0;
         width: 100%;
         margin: auto;
       }
 
-      &--desktop{
+      &--desktop {
         display: none;
       }
 
-      &--with-tesla{
+      &--with-tesla {
         width: 100%;
         padding-left: 0;
       }
     }
-    
-    &__p{
-      &--with-tesla{
+
+    &__p {
+      &--with-tesla {
         text-align: center;
         width: 95%;
       }
     }
 
-    
-    &__buttons{
-      &--mobile{
+    &__buttons {
+      &--mobile {
         display: flex;
         margin: auto;
         width: 90%;
       }
 
-      &--with-tesla{
+      &--with-tesla {
         width: 95%;
       }
 
-      &--desktop{
+      &--desktop {
         display: none;
       }
-
-
     }
 
-    &__button{
+    &__button {
       width: 90%;
       margin: auto;
-      
     }
 
-    &__img{
+    &__img {
       width: 300px;
       margin-left: 8%;
-      
-      
-      
-      
-      
-
-
     }
-
-
-
   }
 }

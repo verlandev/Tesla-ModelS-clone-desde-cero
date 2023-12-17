@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Estilos específicos para la versión Escritorio */
 .descriptions-section {
   background-color: #000;
   display: flex;
@@ -52,6 +53,7 @@
   animation: none; /* Desactiva la animación cuando se agrega la clase active */
 }
 
+/* Estilos específicos para la versión Escritorio de tamaño superior */
 @media screen and (min-width: 1440px) {
   .descriptions-section {
     padding-top: 10vh;
@@ -80,6 +82,7 @@
     font-size: 14px;
   }
 }
+/* Estilos específicos para la versión mobile */
 @media screen and (max-width: 787px) {
   .descriptions-section {
     display: flex;

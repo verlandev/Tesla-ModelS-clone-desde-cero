@@ -1,384 +1,373 @@
+/* Estilos específicos para la versión Escritorio */
 .carousel-v2,
 .carousel-models,
 .carousel-countries,
-.carousel-features{
-    padding-top: 12%;
+.carousel-features {
+  padding-top: 12%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5%;
+
+  &__description {
+    width: 75%;
+    padding-bottom: 5%;
+    margin-left: -5%;
+  }
+
+  &__h2 {
+    padding-bottom: 1em;
+    font-weight: 550;
+    font-size: 26px;
+  }
+
+  &__p {
+    width: 85%;
+    font-size: 15px;
+    font-weight: 500;
+    color: #3b3d43;
+
+    &--intro-models {
+      font-size: 15px;
+      font-weight: 500;
+      color: #3b3d43;
+      width: 80%;
+      line-height: 20px;
+    }
+
+    &--rollout {
+      margin-top: 5%;
+      margin-bottom: 5%;
+      font-size: 13px;
+      font-weight: 550;
+      color: #666769;
+      opacity: 0; /* Comienza con opacidad cero (invisibles) */
+      transition: opacity 1s ease, transform 1s ease; /* Transiciones suaves para opacity y transform */
+      transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
+    }
+  }
+  .active {
+    opacity: 1; /* Opacidad final es 1, completamente visible */
+    transform: translateY(
+      0
+    ); /* Vuelve a su posición original, sin desplazamiento vertical */
+    animation: none; /* Desactiva la animación cuando se agrega la clase active */
+  }
+
+  &__asset {
+    width: 1200px;
+    border-radius: 5px;
+  }
+
+  &__slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2em;
+    padding-top: 5%;
+  }
+
+  &__slide {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    cursor: pointer;
+    position: relative;
+    opacity: 0.6;
+    color: #939393;
+
+    &--features {
+      width: 15%;
+      margin-bottom: 15%;
+      justify-content: flex-start;
+      gap: 1em;
+    }
+  }
+
+  &__slide::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #939393;
+    top: -2px;
+  }
+
+  &__h3 {
+    font-weight: 550;
+    padding-top: 10px;
+    padding-bottom: 5%;
+    align-self: flex-start;
+  }
+
+  &__p {
+    padding: 0 0 5% 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #3b3d43;
+    align-self: start;
+  }
+
+  .slide-active {
+    color: #000;
+    opacity: 1;
+  }
+
+  .slide-active::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: #000000;
+    top: -2px;
+  }
+
+  .slider-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2em;
+
+    &__detail {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__h2 {
+      font-weight: 600;
+    }
+    &__p {
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
+
+  &__button {
+    margin-top: 10%;
+    width: 180px;
+    padding: 10px;
+    border: solid 3px black;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: 550;
+    font-size: 14px;
+    transition: ease 0.3s;
+
+    &:hover {
+      background-color: #000;
+      color: #fff;
+      transition: ease 0.3s;
+    }
+  }
+}
+
+.carousel-models {
+  background-color: #f4f4f4;
+}
+
+/* Estilos específicos para la versión Escritorio de tamaño superior */
+@media screen and (min-width: 1440px) {
+  .carousel-v2,
+  .carousel-models,
+  .carousel-countries,
+  .carousel-features {
+    padding-top: 7%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 5%;
 
-    &__description{
+    &__description {
+      width: 55%;
+      padding-bottom: 3%;
+    }
+
+    &__p {
+      width: 100%;
+      padding-bottom: 5%;
+
+      &--intro-models {
         width: 75%;
-        padding-bottom: 5%;
-        margin-left: -5%;
+        font-size: 14px;
+      }
+
+      &--intro-countries {
+        width: 100%;
+        font-size: 14px;
+      }
     }
 
-    &__h2{
-        padding-bottom: 1em;
-        font-weight: 550;
-        font-size: 26px;
+    &__asset {
+      width: 1100px;
+      transform: scale(1);
 
+      &--models {
+        margin-top: 3%;
+        transform: scale(1.2);
+      }
+
+      &--countries {
+        margin-top: 3%;
+        transform: scale(1.2);
+        margin-bottom: 3%;
+      }
     }
 
-    &__p{
-        width: 85%;
+    &__slide {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      position: relative;
+      opacity: 0.6;
+      color: #939393;
+
+      &--features {
+        width: 15%;
+        margin-bottom: 15%;
+        justify-content: flex-start;
+        gap: 1em;
+      }
+    }
+  }
+}
+
+/* Estilos específicos para la versión mobile */
+@media screen and (max-width: 787px) {
+  .carousel-v2,
+  .carousel-models,
+  .carousel-features,
+  .carousel-countries {
+    overflow: hidden;
+
+    &__description {
+      width: 90%;
+      margin: auto;
+    }
+
+    &__h2 {
+      font-size: 20px;
+    }
+
+    &__h3 {
+      font-size: 13px;
+    }
+
+    &__p {
+      font-size: 13px;
+      width: 90%;
+      align-self: baseline;
+
+      &--intro-models {
         font-size: 15px;
         font-weight: 500;
-        color: #3b3d43;
-
-        &--intro-models{
-            font-size: 15px;
-            font-weight: 500;
-            color: #3b3d43;
-            width: 80%;
-            line-height: 20px;
-        }
-
-        &--rollout{
-            margin-top: 5%;
-            margin-bottom: 5%;
-            font-size: 13px;
-            font-weight: 550;
-            color:#666769;
-            opacity: 0; /* Comienza con opacidad cero (invisibles) */
-            transition: opacity 1s ease, transform 1s ease; /* Transiciones suaves para opacity y transform */
-            transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
-        }
-
-    }
-    .active{
-        opacity: 1; /* Opacidad final es 1, completamente visible */
-        transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
-        animation: none; /* Desactiva la animación cuando se agrega la clase active */
+      }
     }
 
-    &__asset{
-        width: 1200px;
-        border-radius: 5px;
+    &__asset {
+      width: 70%;
+      max-width: 350px;
+      margin-top: 20%;
+      margin-bottom: 20%;
+      transform: scale(1.8);
     }
 
-    &__slider{
+    &__slider {
+      &--models {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 2em;
-        padding-top: 5%;       
-    }
+        width: 130%;
+        transform: translateX(0%);
+        margin-right: -50%;
+        gap: 0em;
+      }
 
-    &__slide{
-        width: 35%;
+      &--countries {
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start; 
-        cursor: pointer;
-        position: relative;
-        opacity: 0.6;
-        color: #939393;
+        width: 320%;
+        transform: translateX(0%);
+        margin-left: 230%;
+        gap: 1em;
+      }
 
-        &--features{
-            width: 15%;
-            margin-bottom: 15%;
-            justify-content: flex-start;
-            gap: 1em
-        }
+      &--features {
+        display: flex;
+        width: 320%;
+        transform: translateX(0%);
+        margin-left: 230%;
+        gap: 1em;
+      }
     }
 
-    &__slide::before{
-        position: absolute;
-        content: "";
+    &__slide {
+      padding-bottom: 20px;
+
+      &--models {
+        width: 120%;
+
+        &::before {
+          width: 90%;
+        }
+      }
+
+      &--countries {
+        width: 70%;
+        border: solid 0.2px black;
+
+        &::before {
+          width: 70%;
+        }
+      }
+
+      &--features {
+        width: 70%;
+        border: solid 0.2px rgb(165, 165, 165);
+
+        &::before {
+          width: 70%;
+        }
+      }
+    }
+
+    .slider-details {
+      width: 90%;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 1em;
+    }
+
+    .slide-active {
+      &--models {
+        width: 120%;
+
+        &::before {
+          width: 90%;
+        }
+      }
+
+      &--countries {
         width: 100%;
-        height: 2px;
-        background-color: #939393;
-        top:-2px   
-    }
 
+        &::before {
+          width: 100%;
+        }
+      }
 
-    &__h3{
-        font-weight: 550;
-        padding-top: 10px;
-        padding-bottom: 5%;
-        align-self: flex-start;
-
-    }
-
-    &__p{
-        padding: 0 0 5% 0;
-        font-size: 14px;
-        font-weight: 500;
-        color: #3b3d43;
-        align-self: start;
-
-    }
-
-    .slide-active{
-        color: #000;
-        opacity: 1;
-    }
-
-    .slide-active::before{
-        position: absolute;
-        content: "";
+      &--features {
         width: 100%;
-        height: 4px;
-        background-color: #000000;
-        top:-2px   
+
+        &::before {
+          width: 100%;
+        }
+      }
     }
 
-    .slider-details{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        gap: 2em;
-
-
-        &__detail{
-            display: flex;
-            flex-direction: column;
-        }
-
-        &__h2{
-            font-weight: 600;
-        }
-        &__p{
-            font-size: 12px;
-            font-weight: 500;
-        }
+    &__button {
+      width: 85%;
     }
-
-    &__button{
-        margin-top: 10%;
-        width: 180px;
-        padding: 10px;
-        border: solid 3px black;
-        border-radius: 5px;
-        text-align: center;
-        text-decoration: none;
-        color: black;
-        font-weight: 550;
-        font-size: 14px;
-        transition: ease 0.3s;
-
-        &:hover{
-            background-color: #000;
-            color: #fff;
-            transition: ease 0.3s;
-        }
-    }
-
-}
-
-.carousel-models{
-    background-color: #f4f4f4;
-}
-
-
-// Desktop design
-
-@media screen and (min-width: 1440px) {
-    .carousel-v2,
-    .carousel-models,
-    .carousel-countries,
-    .carousel-features{
-        padding-top: 7%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        &__description{
-            width: 55%;
-            padding-bottom: 3%;
-        }
-
-        &__p{
-            width: 100%;
-            padding-bottom: 5%;
-
-            &--intro-models{
-                width: 75%;
-                font-size: 14px;
-            }
-
-            &--intro-countries{
-                width: 100%;
-                font-size: 14px;
-            }
-
-        }
-
-        &__asset{
-            width: 1100px;
-            transform: scale(1);
-
-            &--models{
-                margin-top: 3%;
-                transform: scale(1.2)
-            }
-
-            &--countries{
-                margin-top: 3%;
-                transform: scale(1.2);
-                margin-bottom: 3%;
-            }
-        }
-    
-        &__slide{
-            width: 30%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between; 
-            cursor: pointer;
-            position: relative;
-            opacity: 0.6;
-            color: #939393;
-    
-            &--features{
-                width: 15%;
-                margin-bottom: 15%;
-                justify-content: flex-start;
-                gap: 1em
-            }
-        }
-    }
-}
-
-
-@media screen and (max-width: 787px) {
-    .carousel-v2,
-    .carousel-models,
-    .carousel-features,
-    .carousel-countries{
-        overflow: hidden;    
-
-        &__description{
-            width: 90%;
-            margin: auto;
-        }
-
-        &__h2{
-            font-size: 20px;
-        }
-
-        &__h3{
-            font-size: 13px;
-        }
-
-        &__p{
-            font-size: 13px;
-            width: 90%;
-            align-self: baseline;
-
-            &--intro-models{
-                font-size: 15px;
-                font-weight: 500; 
-            }
-            
-        }
-
-        &__asset{
-            width: 70%;
-            max-width: 350px;
-            margin-top: 20%;
-            margin-bottom: 20%;
-            transform: scale(1.8);
-        }
-        
-        &__slider{
-
-            &--models{
-                display: flex;
-                width: 130%;
-                transform: translateX(0%);
-                margin-right: -50%;
-                gap: 0em;
-            }
-
-            &--countries{
-                display: flex;
-                width: 320%;
-                transform: translateX(0%);
-                margin-left: 230%;
-                gap: 1em;
-            }
-
-            &--features{
-                display: flex;
-                width: 320%;
-                transform: translateX(0%);
-                margin-left: 230%;
-                gap: 1em;
-            }
-        }
-
-        &__slide{
-            padding-bottom: 20px;
-
-            &--models{
-                width: 120%;
-                
-                &::before{
-                    width: 90%;
-                }
-            }
-            
-            &--countries{
-                width: 70%;
-                border: solid 0.2px black;
-
-                &::before{
-                    width: 70%;
-                }
-            }
-
-            &--features{
-                width: 70%;
-                border: solid 0.2px rgb(165, 165, 165);
-
-                &::before{
-                    width: 70%;
-                }
-            }
-        }
-
-        .slider-details{
-            width: 90%;
-            flex-direction: column;
-            justify-content: flex-start;
-            gap: 1em;
-        }
-
-        .slide-active{
-            &--models{
-                width: 120%;
-
-                &::before{
-                    width: 90%;
-                }
-            }
-
-            &--countries{
-                width: 100%;
-                
-                
-                &::before{
-                    width: 100%;
-                }
-            }
-
-            &--features{
-                width: 100%;
-                
-                
-                &::before{
-                    width: 100%;
-                }
-            }
-        }
-
-        &__button{
-            width: 85%;
-        }
-    }
+  }
 }

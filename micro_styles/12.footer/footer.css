@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/* Estilos específicos para la versión Escritorio */
 .footer {
   padding-top: 30px;
   margin-bottom: 100px;
@@ -44,6 +46,7 @@
   font-weight: 600;
 }
 
+/* Estilos específicos para la versión mobile */
 @media screen and (max-width: 787px) {
   .footer__p {
     width: 85%;

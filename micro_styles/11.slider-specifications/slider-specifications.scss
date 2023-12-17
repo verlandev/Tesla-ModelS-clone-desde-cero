@@ -1,3 +1,4 @@
+/* Estilos específicos para la versión escritorio */
 .slider-specifications {
   width: 100%;
   background-color: #000;
@@ -15,7 +16,7 @@
   &__asset {
     padding-top: 100px;
   }
-  
+
   &__img {
     width: 600px;
   }
@@ -70,7 +71,6 @@
     margin-top: 30px;
   }
 
-
   &__columns {
     display: flex;
     flex-direction: row;
@@ -118,70 +118,67 @@
   }
 }
 
-
-
-// Desktop design
-
+/* Estilos específicos para la versión Escritorio de tamaño superior */
 @media screen and (min-width: 1440px) {
-    .slider-specifications {
-        width: 100%;
-        background-color: #000;
-        height: 100vh;
-      
-        &--center {
-            display: flex;
-            flex-direction: row;
-            justify-content: start;
-            gap: 7em;
-            padding-bottom: 40px;
-            padding-top: 7%;
-          }
-        
-          &__asset {
-            padding-top: 2%;
-          }
-          
-          &__img {
-            width: 950px;
-          }
-    }      
+  .slider-specifications {
+    width: 100%;
+    background-color: #000;
+    height: 100vh;
+
+    &--center {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      gap: 7em;
+      padding-bottom: 40px;
+      padding-top: 7%;
+    }
+
+    &__asset {
+      padding-top: 2%;
+    }
+
+    &__img {
+      width: 950px;
+    }
+  }
 }
 
-
-@media screen and (max-width: 787px){
-  .slider-specifications{
+/* Estilos específicos para la versión mobile */
+@media screen and (max-width: 787px) {
+  .slider-specifications {
     height: 155vh;
 
-    &--center{
+    &--center {
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
 
-    &__asset{
+    &__asset {
       padding-top: 0;
     }
-    
-    &__img{
+
+    &__img {
       width: 300px;
       transform: scale(2);
-      -webkit-width: 250px; /* Prefijo de WebKit */
-      -webkit-transform: scale(1.8); /* Prefijo de WebKit */
+      -webkit-transform: scale(1.8);
     }
 
-    &__content{
+    &__content {
       width: 90%;
     }
 
-    &__h3{
+    &__h3 {
       font-size: 24px;
-      -webkit-font-size: 24px
+      -webkit-font-size: 24px;
     }
   }
 }
 
+/* Ajustamos par la navegación con webkit */
 @supports (-webkit-touch-callout: none) {
-  .slider-specifications{
+  .slider-specifications {
     height: 180vh;
   }
 }

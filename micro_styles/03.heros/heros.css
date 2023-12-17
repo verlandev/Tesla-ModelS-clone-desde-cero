@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Estilos específicos para la versión escritorio */
 .top-hero {
   background-image: url("/images/hero1.png");
   height: 100vh;
@@ -166,6 +167,7 @@
   box-shadow: inset 0px 100px 100px 10px #000;
 }
 
+/* Estilos específicos para la versión escritorio de tamaño superior */
 @media screen and (min-width: 1440px) {
   .top-hero {
     height: 100vh;
@@ -183,6 +185,7 @@
     bottom: 10px;
   }
 }
+/* Estilos específicos para la versión mobile */
 @media screen and (max-width: 787px) {
   .top-hero {
     height: 100vh;
@@ -238,6 +241,7 @@
     width: 80%;
   }
 }
+/* Ajustamos par la navegación con webkit */
 @supports (-webkit-touch-callout: none) {
   .second-hero {
     height: 60vh;

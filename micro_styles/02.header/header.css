@@ -1,9 +1,12 @@
+@charset "UTF-8";
+/* Estilos específicos para la versión escritorio */
 .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 0em;
   padding: 20px 40px 20px 40px;
+  /* Manejamos el logo con svg y el path */
 }
 .header__logo {
   display: flex;
@@ -21,6 +24,7 @@
 }
 .header .nav__li {
   list-style: none;
+  /* Desactivamos los links de la versión mobile para la versión escritorio */
 }
 .header .nav__li--mobile {
   display: none;
@@ -33,6 +37,7 @@
 }
 .header .nav__span {
   display: none;
+  /* Desactivamos los svg de flecha de los links de la versión mobile */
 }
 .header .nav__span--arrow {
   display: none;
@@ -54,6 +59,7 @@
   width: 20px;
 }
 
+/* Creamos el efecto sombreado del header que cubre toda la visión de la pantalla */
 .header::before {
   content: "";
   width: 100%;
@@ -68,12 +74,14 @@
   display: none;
 }
 
+/* Estilos específicos para móviles */
 @media screen and (max-width: 787px) {
   .header {
     flex-direction: row;
     justify-content: space-between;
     gap: 0em;
     padding: 20px;
+    /* Ajustamos el efecto de transición de fade-out cuando cerramos el menú responsive */
     visibility: visible;
     transition: opacity 0.5s, visibility 0.5s;
     transition: all 0.5s ease;
@@ -89,7 +97,11 @@
     width: 342px;
   }
   .header .nav {
+    /* Quitamos los botones de navegación para que se vea solo el botón de menú */
     opacity: 0;
+    /* Modificamos el tamaño de los svg en sí "Español" y "Cuenta" */
+    /* Cuando hacemos click en el botón de "menú", el menú se ve así */
+    /* El botón de cerrar no existe cuando se carga la página */
   }
   .header .nav--svg-mobile {
     width: 20px;
@@ -119,6 +131,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* Forzamos e incluimos los items de header-links por desajuste */
   }
   .header .nav__li--mobile {
     list-style: none;
@@ -128,6 +141,7 @@
   }
   .header .nav__a {
     font-size: 18px;
+    /* Estilos para los links "Español" y "Cuenta" con sus respectivos svg */
   }
   .header .nav__a--svg-mobile {
     display: flex;
@@ -140,6 +154,7 @@
   }
   .header .nav__span {
     display: block;
+    /* Estilos del svg de flecha para indicar el submenu */
   }
   .header .nav__span--arrow {
     display: block;
@@ -148,6 +163,7 @@
   }
   .header .nav__close-button {
     display: none;
+    /* Aparece el botón de cierre cuando hemos abierto el menú responsive */
   }
   .header .nav__close-button--nav-open {
     z-index: 9;
@@ -180,8 +196,9 @@
     display: none;
   }
 }
+/* Ajustamos par la navegación con webkit */
 @supports (-webkit-touch-callout: none) {
   .nav__ul--nav-open {
-    margin-top: 25%;
+    margin-top: 25%; /* Mayor espaciado */
   }
 }/*# sourceMappingURL=header.css.map */

@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/* Estilos específicos para la versión escritorio */
 .banner-mobile {
   display: none;
 }
@@ -44,6 +46,7 @@
   border-radius: 3px;
 }
 
+/* Estilos específicos para móviles */
 @media screen and (max-width: 787px) {
   .banner-desktop {
     display: none;
@@ -51,6 +54,9 @@
   .banner-mobile {
     display: block;
     position: relative;
+    /* Añadimos estilos a los dos botones que se van a situar abajo a la derecha de la página de forma fija */
+    /* En el momento en el que se activa el banner se muestran los links */
+    /* Dejamos los links inactivos y agregamos la propiedad de "height" para que funcione la transición correctamente */
   }
   .banner-mobile__container {
     display: flex;
@@ -64,6 +70,8 @@
   .banner-mobile__button {
     background-color: #393c41;
     border-radius: 5px;
+    /* Cuando el menú está cerrado la flecha apunta hacia arriba */
+    /* Cuando el menú está abierto la flecha apunta hacia abajo */
   }
   .banner-mobile__button--prueba-conduccion {
     width: 180px;

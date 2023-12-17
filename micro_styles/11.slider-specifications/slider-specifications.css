@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/* Estilos específicos para la versión escritorio */
 .slider-specifications {
   width: 100%;
   background-color: #000;
@@ -100,6 +102,7 @@
   animation: none;
 }
 
+/* Estilos específicos para la versión Escritorio de tamaño superior */
 @media screen and (min-width: 1440px) {
   .slider-specifications {
     width: 100%;
@@ -121,6 +124,7 @@
     width: 950px;
   }
 }
+/* Estilos específicos para la versión mobile */
 @media screen and (max-width: 787px) {
   .slider-specifications {
     height: 155vh;
@@ -136,8 +140,7 @@
   .slider-specifications__img {
     width: 300px;
     transform: scale(2);
-    -webkit-width: 250px; /* Prefijo de WebKit */
-    -webkit-transform: scale(1.8); /* Prefijo de WebKit */
+    -webkit-transform: scale(1.8);
   }
   .slider-specifications__content {
     width: 90%;
@@ -147,6 +150,7 @@
     -webkit-font-size: 24px;
   }
 }
+/* Ajustamos par la navegación con webkit */
 @supports (-webkit-touch-callout: none) {
   .slider-specifications {
     height: 180vh;
