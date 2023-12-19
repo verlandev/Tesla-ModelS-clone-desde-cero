@@ -1,5 +1,6 @@
 @charset "UTF-8";
-.carousel2,
+/* Estilos específicos para la versión Escritorio */
+.carousel-v2,
 .carousel-models,
 .carousel-countries,
 .carousel-features {
@@ -10,7 +11,7 @@
   align-items: center;
   padding-bottom: 5%;
 }
-.carousel2__description,
+.carousel-v2__description,
 .carousel-models__description,
 .carousel-countries__description,
 .carousel-features__description {
@@ -18,7 +19,7 @@
   padding-bottom: 5%;
   margin-left: -5%;
 }
-.carousel2__h2,
+.carousel-v2__h2,
 .carousel-models__h2,
 .carousel-countries__h2,
 .carousel-features__h2 {
@@ -26,7 +27,7 @@
   font-weight: 550;
   font-size: 26px;
 }
-.carousel2__p,
+.carousel-v2__p,
 .carousel-models__p,
 .carousel-countries__p,
 .carousel-features__p {
@@ -35,17 +36,17 @@
   font-weight: 500;
   color: #3b3d43;
 }
-.carousel2__p--intro,
-.carousel-models__p--intro,
-.carousel-countries__p--intro,
-.carousel-features__p--intro {
+.carousel-v2__p--intro-models,
+.carousel-models__p--intro-models,
+.carousel-countries__p--intro-models,
+.carousel-features__p--intro-models {
   font-size: 15px;
   font-weight: 500;
   color: #3b3d43;
   width: 80%;
   line-height: 20px;
 }
-.carousel2__p--rollout,
+.carousel-v2__p--rollout,
 .carousel-models__p--rollout,
 .carousel-countries__p--rollout,
 .carousel-features__p--rollout {
@@ -58,7 +59,7 @@
   transition: opacity 1s ease, transform 1s ease; /* Transiciones suaves para opacity y transform */
   transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
 }
-.carousel2 .active,
+.carousel-v2 .active,
 .carousel-models .active,
 .carousel-countries .active,
 .carousel-features .active {
@@ -66,14 +67,14 @@
   transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
   animation: none; /* Desactiva la animación cuando se agrega la clase active */
 }
-.carousel2__asset,
+.carousel-v2__asset,
 .carousel-models__asset,
 .carousel-countries__asset,
 .carousel-features__asset {
   width: 1200px;
   border-radius: 5px;
 }
-.carousel2__slider,
+.carousel-v2__slider,
 .carousel-models__slider,
 .carousel-countries__slider,
 .carousel-features__slider {
@@ -83,20 +84,20 @@
   gap: 2em;
   padding-top: 5%;
 }
-.carousel2__slide,
+.carousel-v2__slide,
 .carousel-models__slide,
 .carousel-countries__slide,
 .carousel-features__slide {
   width: 35%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   cursor: pointer;
   position: relative;
   opacity: 0.6;
   color: #939393;
 }
-.carousel2__slide--features,
+.carousel-v2__slide--features,
 .carousel-models__slide--features,
 .carousel-countries__slide--features,
 .carousel-features__slide--features {
@@ -105,7 +106,7 @@
   justify-content: flex-start;
   gap: 1em;
 }
-.carousel2__slide::before,
+.carousel-v2__slide::before,
 .carousel-models__slide::before,
 .carousel-countries__slide::before,
 .carousel-features__slide::before {
@@ -116,7 +117,7 @@
   background-color: #939393;
   top: -2px;
 }
-.carousel2__h3,
+.carousel-v2__h3,
 .carousel-models__h3,
 .carousel-countries__h3,
 .carousel-features__h3 {
@@ -125,7 +126,7 @@
   padding-bottom: 5%;
   align-self: flex-start;
 }
-.carousel2__p,
+.carousel-v2__p,
 .carousel-models__p,
 .carousel-countries__p,
 .carousel-features__p {
@@ -135,17 +136,17 @@
   color: #3b3d43;
   align-self: start;
 }
-.carousel2 .isSlideActive,
-.carousel-models .isSlideActive,
-.carousel-countries .isSlideActive,
-.carousel-features .isSlideActive {
+.carousel-v2 .slide-active,
+.carousel-models .slide-active,
+.carousel-countries .slide-active,
+.carousel-features .slide-active {
   color: #000;
   opacity: 1;
 }
-.carousel2 .isSlideActive::before,
-.carousel-models .isSlideActive::before,
-.carousel-countries .isSlideActive::before,
-.carousel-features .isSlideActive::before {
+.carousel-v2 .slide-active::before,
+.carousel-models .slide-active::before,
+.carousel-countries .slide-active::before,
+.carousel-features .slide-active::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -153,7 +154,7 @@
   background-color: #000000;
   top: -2px;
 }
-.carousel2 .slider-details,
+.carousel-v2 .slider-details,
 .carousel-models .slider-details,
 .carousel-countries .slider-details,
 .carousel-features .slider-details {
@@ -162,27 +163,27 @@
   justify-content: flex-start;
   gap: 2em;
 }
-.carousel2 .slider-details__detail,
+.carousel-v2 .slider-details__detail,
 .carousel-models .slider-details__detail,
 .carousel-countries .slider-details__detail,
 .carousel-features .slider-details__detail {
   display: flex;
   flex-direction: column;
 }
-.carousel2 .slider-details__h2,
+.carousel-v2 .slider-details__h2,
 .carousel-models .slider-details__h2,
 .carousel-countries .slider-details__h2,
 .carousel-features .slider-details__h2 {
   font-weight: 600;
 }
-.carousel2 .slider-details__p,
+.carousel-v2 .slider-details__p,
 .carousel-models .slider-details__p,
 .carousel-countries .slider-details__p,
 .carousel-features .slider-details__p {
   font-size: 12px;
   font-weight: 500;
 }
-.carousel2__button,
+.carousel-v2__button,
 .carousel-models__button,
 .carousel-countries__button,
 .carousel-features__button {
@@ -198,7 +199,7 @@
   font-size: 14px;
   transition: ease 0.3s;
 }
-.carousel2__button:hover,
+.carousel-v2__button:hover,
 .carousel-models__button:hover,
 .carousel-countries__button:hover,
 .carousel-features__button:hover {
@@ -211,8 +212,9 @@
   background-color: #f4f4f4;
 }
 
+/* Estilos específicos para la versión Escritorio de tamaño superior */
 @media screen and (min-width: 1440px) {
-  .carousel2,
+  .carousel-v2,
   .carousel-models,
   .carousel-countries,
   .carousel-features {
@@ -222,49 +224,49 @@
     justify-content: center;
     align-items: center;
   }
-  .carousel2__description,
+  .carousel-v2__description,
   .carousel-models__description,
   .carousel-countries__description,
   .carousel-features__description {
     width: 55%;
     padding-bottom: 3%;
   }
-  .carousel2__p,
+  .carousel-v2__p,
   .carousel-models__p,
   .carousel-countries__p,
   .carousel-features__p {
     width: 100%;
     padding-bottom: 5%;
   }
-  .carousel2__p--intro-models,
+  .carousel-v2__p--intro-models,
   .carousel-models__p--intro-models,
   .carousel-countries__p--intro-models,
   .carousel-features__p--intro-models {
     width: 75%;
     font-size: 14px;
   }
-  .carousel2__p--intro-countries,
+  .carousel-v2__p--intro-countries,
   .carousel-models__p--intro-countries,
   .carousel-countries__p--intro-countries,
   .carousel-features__p--intro-countries {
     width: 100%;
     font-size: 14px;
   }
-  .carousel2__asset,
+  .carousel-v2__asset,
   .carousel-models__asset,
   .carousel-countries__asset,
   .carousel-features__asset {
     width: 1100px;
     transform: scale(1);
   }
-  .carousel2__asset--models,
+  .carousel-v2__asset--models,
   .carousel-models__asset--models,
   .carousel-countries__asset--models,
   .carousel-features__asset--models {
     margin-top: 3%;
     transform: scale(1.2);
   }
-  .carousel2__asset--countries,
+  .carousel-v2__asset--countries,
   .carousel-models__asset--countries,
   .carousel-countries__asset--countries,
   .carousel-features__asset--countries {
@@ -272,7 +274,7 @@
     transform: scale(1.2);
     margin-bottom: 3%;
   }
-  .carousel2__slide,
+  .carousel-v2__slide,
   .carousel-models__slide,
   .carousel-countries__slide,
   .carousel-features__slide {
@@ -285,7 +287,7 @@
     opacity: 0.6;
     color: #939393;
   }
-  .carousel2__slide--features,
+  .carousel-v2__slide--features,
   .carousel-models__slide--features,
   .carousel-countries__slide--features,
   .carousel-features__slide--features {
@@ -293,5 +295,183 @@
     margin-bottom: 15%;
     justify-content: flex-start;
     gap: 1em;
+  }
+}
+/* Estilos específicos para la versión mobile */
+@media screen and (max-width: 787px) {
+  .carousel-v2,
+  .carousel-models,
+  .carousel-features,
+  .carousel-countries {
+    overflow: hidden;
+  }
+  .carousel-v2__description,
+  .carousel-models__description,
+  .carousel-features__description,
+  .carousel-countries__description {
+    width: 90%;
+    margin: auto;
+  }
+  .carousel-v2__h2,
+  .carousel-models__h2,
+  .carousel-features__h2,
+  .carousel-countries__h2 {
+    font-size: 20px;
+  }
+  .carousel-v2__h3,
+  .carousel-models__h3,
+  .carousel-features__h3,
+  .carousel-countries__h3 {
+    font-size: 13px;
+  }
+  .carousel-v2__p,
+  .carousel-models__p,
+  .carousel-features__p,
+  .carousel-countries__p {
+    font-size: 13px;
+    width: 90%;
+    align-self: baseline;
+  }
+  .carousel-v2__p--intro-models,
+  .carousel-models__p--intro-models,
+  .carousel-features__p--intro-models,
+  .carousel-countries__p--intro-models {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .carousel-v2__asset,
+  .carousel-models__asset,
+  .carousel-features__asset,
+  .carousel-countries__asset {
+    width: 70%;
+    max-width: 350px;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    transform: scale(1.8);
+  }
+  .carousel-v2__slider--models,
+  .carousel-models__slider--models,
+  .carousel-features__slider--models,
+  .carousel-countries__slider--models {
+    display: flex;
+    width: 130%;
+    transform: translateX(0%);
+    margin-right: -50%;
+    gap: 0em;
+  }
+  .carousel-v2__slider--countries,
+  .carousel-models__slider--countries,
+  .carousel-features__slider--countries,
+  .carousel-countries__slider--countries {
+    display: flex;
+    width: 320%;
+    transform: translateX(0%);
+    margin-left: 230%;
+    gap: 1em;
+  }
+  .carousel-v2__slider--features,
+  .carousel-models__slider--features,
+  .carousel-features__slider--features,
+  .carousel-countries__slider--features {
+    display: flex;
+    width: 320%;
+    transform: translateX(0%);
+    margin-left: 230%;
+    gap: 1em;
+  }
+  .carousel-v2__slide,
+  .carousel-models__slide,
+  .carousel-features__slide,
+  .carousel-countries__slide {
+    padding-bottom: 20px;
+  }
+  .carousel-v2__slide--models,
+  .carousel-models__slide--models,
+  .carousel-features__slide--models,
+  .carousel-countries__slide--models {
+    width: 120%;
+  }
+  .carousel-v2__slide--models::before,
+  .carousel-models__slide--models::before,
+  .carousel-features__slide--models::before,
+  .carousel-countries__slide--models::before {
+    width: 90%;
+  }
+  .carousel-v2__slide--countries,
+  .carousel-models__slide--countries,
+  .carousel-features__slide--countries,
+  .carousel-countries__slide--countries {
+    width: 70%;
+    border: solid 0.2px black;
+  }
+  .carousel-v2__slide--countries::before,
+  .carousel-models__slide--countries::before,
+  .carousel-features__slide--countries::before,
+  .carousel-countries__slide--countries::before {
+    width: 70%;
+  }
+  .carousel-v2__slide--features,
+  .carousel-models__slide--features,
+  .carousel-features__slide--features,
+  .carousel-countries__slide--features {
+    width: 70%;
+    border: solid 0.2px rgb(165, 165, 165);
+  }
+  .carousel-v2__slide--features::before,
+  .carousel-models__slide--features::before,
+  .carousel-features__slide--features::before,
+  .carousel-countries__slide--features::before {
+    width: 70%;
+  }
+  .carousel-v2 .slider-details,
+  .carousel-models .slider-details,
+  .carousel-features .slider-details,
+  .carousel-countries .slider-details {
+    width: 90%;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1em;
+  }
+  .carousel-v2 .slide-active--models,
+  .carousel-models .slide-active--models,
+  .carousel-features .slide-active--models,
+  .carousel-countries .slide-active--models {
+    width: 120%;
+  }
+  .carousel-v2 .slide-active--models::before,
+  .carousel-models .slide-active--models::before,
+  .carousel-features .slide-active--models::before,
+  .carousel-countries .slide-active--models::before {
+    width: 90%;
+  }
+  .carousel-v2 .slide-active--countries,
+  .carousel-models .slide-active--countries,
+  .carousel-features .slide-active--countries,
+  .carousel-countries .slide-active--countries {
+    width: 100%;
+  }
+  .carousel-v2 .slide-active--countries::before,
+  .carousel-models .slide-active--countries::before,
+  .carousel-features .slide-active--countries::before,
+  .carousel-countries .slide-active--countries::before {
+    width: 100%;
+  }
+  .carousel-v2 .slide-active--features,
+  .carousel-models .slide-active--features,
+  .carousel-features .slide-active--features,
+  .carousel-countries .slide-active--features {
+    width: 100%;
+  }
+  .carousel-v2 .slide-active--features::before,
+  .carousel-models .slide-active--features::before,
+  .carousel-features .slide-active--features::before,
+  .carousel-countries .slide-active--features::before {
+    width: 100%;
+  }
+  .carousel-v2__button,
+  .carousel-models__button,
+  .carousel-features__button,
+  .carousel-countries__button {
+    width: 85%;
   }
 }/*# sourceMappingURL=carouselV2.css.map */

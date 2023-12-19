@@ -1,5 +1,7 @@
+/* Estilos específicos para la versión escritorio */
+
 .top-hero {
-  background-image: url("/images/hero.jpg");
+  background-image: url("/images/hero1.png");
   height: 100vh;
 }
 
@@ -70,7 +72,7 @@
     width: 60%;
   }
 
-  .hero-section__container {
+  &__container {
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -159,7 +161,9 @@
 
   .active {
     opacity: 1; /* Opacidad final es 1, completamente visible */
-    transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
+    transform: translateY(
+      0
+    ); /* Vuelve a su posición original, sin desplazamiento vertical */
     animation: none; /* Desactiva la animación cuando se agrega la clase active */
   }
 }
@@ -183,27 +187,115 @@
   box-shadow: inset 0px 100px 100px 10px #000;
 }
 
-
+/* Estilos específicos para la versión escritorio de tamaño superior */
 @media screen and (min-width: 1440px) {
-  
   .top-hero {
     height: 100vh;
   }
-  
+
   .second-hero {
     height: 80vh;
   }
-  
+
   .third-hero {
     height: 80vh;
   }
 
-  .hero-section{
+  .hero-insider {
+    background-image: url("/images/Model-S-Interior-Hero-Desktop-LHD.jpg");
+  }
 
+  .hero-section {
     &__p {
       &--specification {
         bottom: 10px;
       }
+    }
+  }
+}
+
+/* Estilos específicos para la versión mobile */
+@media screen and (max-width: 787px) {
+  .top-hero {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-image: url("/images/Model-S-Main-Hero-Mobile-LHD.jpg");
+  }
+
+  .second-hero {
+    height: 70vh;
+    background-size: cover;
+
+    &__containers {
+      top: 70%;
+    }
+  }
+
+  .third-hero {
+    height: 30vh;
+    background-image: url("/images/Model-S-Exterior-Hero-Mobile-Global.jpg");
+    background-color: #000;
+    padding-top: 45%;
+  }
+
+  .hero-insider {
+    height: 70vh;
+    background-image: url("/images/Model-S-Interior-Hero-Mobile-LHD.jpg");
+    background-size: cover;
+  }
+
+  .hero-section {
+    &__containers {
+      width: 95%;
+      bottom: 30vh;
+      gap: 2em;
+      padding-bottom: 0;
+    }
+
+    &__container {
+      gap: 0.3em;
+
+      &--mobile {
+        display: none;
+      }
+    }
+
+    &__h3 {
+      font-size: 19px;
+    }
+
+    &__p {
+      font-size: 11px;
+      &--specification {
+        width: 90%;
+      }
+    }
+
+    &__buttons {
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 20%;
+    }
+
+    &__button {
+      width: 80%;
+    }
+  }
+}
+
+/* Ajustamos par la navegación con webkit */
+@supports (-webkit-touch-callout: none) {
+  .second-hero {
+    height: 60vh;
+    background-size: 100vh;
+    background-repeat: no-repeat;
+  }
+
+  .hero-section {
+    //height: 100vh;
+    &__containers {
+      bottom: 31vh;
     }
   }
 }

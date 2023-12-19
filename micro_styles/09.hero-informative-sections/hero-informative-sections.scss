@@ -1,3 +1,4 @@
+/* Estilos específicos para la versión Escritorio */
 .hero-informative {
   width: 100%;
   height: 100vh;
@@ -12,13 +13,23 @@
 
   &__video {
     width: 100%;
+
+    &--mobile {
+      display: none;
+    }
   }
 
   &__img {
-    width: 600px;
-    position: absolute;
-    right: 200px;
-    left: 150px;
+    &--desktop {
+      width: 600px;
+      position: absolute;
+      right: 200px;
+      left: 150px;
+    }
+
+    &--mobile {
+      display: none;
+    }
   }
 
   &__container {
@@ -52,11 +63,19 @@
   &__h3 {
     font-size: 22px;
     font-weight: 600;
+
+    &--mobile {
+      display: none;
+    }
   }
 
   &__p {
     font-size: 13px;
     font-weight: 500;
+
+    &--mobile {
+      display: none;
+    }
   }
 
   .active {
@@ -169,8 +188,7 @@
   }
 }
 
-// Design desktop
-
+/* Estilos específicos para la versión escritorio de tamaño superior */
 @media screen and (min-width: 1440px) {
   .hero-informative {
     width: 100%;
@@ -178,32 +196,41 @@
     display: flex;
     flex-direction: row;
     padding-bottom: 5%;
-  
+
     &__asset {
       position: relative;
       width: 70%;
 
-      &--clip{
+      &--clip {
         width: 80%;
       }
 
-      &--image{
+      &--image {
         width: 100%;
         position: relative;
       }
     }
 
-  
     &__video {
       width: 100%;
+
+      &--mobile {
+        display: none;
+      }
     }
-  
+
     &__img {
-      width: 60%;
-      position: absolute;
-      margin: auto;      
+      &--desktop {
+        width: 60%;
+        position: absolute;
+        margin: auto;
+      }
+
+      &--mobile {
+        display: none;
+      }
     }
-  
+
     &__container {
       position: absolute;
       bottom: 50px;
@@ -232,17 +259,25 @@
       -ms-transform: translateY(50px);
       -o-transform: translateY(50px);
     }
-  
+
     &__h3 {
       font-size: 22px;
       font-weight: 600;
+
+      &--mobile {
+        display: none;
+      }
     }
-  
+
     &__p {
       font-size: 13px;
       font-weight: 500;
+
+      &--mobile {
+        display: none;
+      }
     }
-  
+
     .active {
       opacity: 1; /* Opacidad final es 1, completamente visible */
       transform: translateY(
@@ -250,17 +285,17 @@
       ); /* Vuelve a su posición original, sin desplazamiento vertical */
       animation: none; /* Desactiva la animación cuando se agrega la clase active */
     }
-  
+
     .hero-informative-cta {
       width: 25%;
       position: relative;
-  
+
       &__text {
         display: flex;
         flex-direction: column;
         padding: 50px 10px 0px 50px;
       }
-  
+
       &__h3 {
         font-size: 18px;
         font-weight: 400;
@@ -277,7 +312,7 @@
         line-height: 20px;
         width: 100%;
       }
-  
+
       &__buttons {
         position: absolute;
         width: 100%;
@@ -296,7 +331,7 @@
         -ms-transform: translateY(50px);
         -o-transform: translateY(50px);
       }
-  
+
       &__button {
         text-align: center;
         font-size: 14px;
@@ -306,8 +341,114 @@
         padding: 10px;
         width: 80%;
         border-radius: 5px;
-  
       }
+    }
+  }
+}
+
+/* Estilos específicos para la versión mobile */
+@media screen and (max-width: 787px) {
+  .hero-informative {
+    flex-direction: column;
+    gap: 8em;
+    overflow: hidden;
+
+    &--autonomy {
+      height: 90vh;
+    }
+
+    &--security {
+      height: 120vh;
+    }
+
+    &__asset {
+      width: 100%;
+
+      &--image-desktop {
+        display: none;
+      }
+
+      &--image-mobile {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 15%;
+        margin-bottom: 15%;
+      }
+    }
+
+    &__video {
+      width: 100%;
+
+      &--desktop {
+        display: none;
+      }
+
+      &--mobile {
+        display: block;
+        transform: scale(2);
+        overflow: hidden;
+      }
+    }
+
+    &__img {
+      &--desktop {
+        display: none;
+      }
+
+      &--mobile {
+        display: block;
+        width: 300px;
+      }
+    }
+
+    &__h3 {
+      font-size: 19px;
+      &--desktop {
+        display: none;
+      }
+    }
+
+    &__p {
+      font-size: 11px;
+
+      &--desktop {
+        display: none;
+      }
+    }
+
+    .hero-informative-cta {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      &__text {
+        padding: 0% 5% 0% 5%;
+      }
+
+      &__p {
+        margin-bottom: 40%;
+      }
+
+      &__buttons {
+        bottom: 5px;
+      }
+
+      &__button {
+        width: 85%;
+      }
+    }
+  }
+}
+
+/* Ajustamos par la navegación con webkit */
+@supports (-webkit-touch-callout: none) {
+  .hero-informative {
+    &--autonomy {
+      height: 100vh;
+    }
+
+    &--security {
+      height: 150vh;
     }
   }
 }

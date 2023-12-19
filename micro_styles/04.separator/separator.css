@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Estilos específicos para la versión Escritorio */
 .separator {
   background-color: #000;
   height: 30vh;
@@ -31,7 +32,14 @@
   box-shadow: inset 0px 100px 100px 10px #000;
 }
 
+/* Estilos específicos para la versión Escritorio de tamaño superior */
 @media screen and (min-width: 1440px) {
+  .separator {
+    height: 10vh;
+  }
+}
+/* Estilos específicos para la versión mobile */
+@media screen and (max-width: 787px) {
   .separator {
     height: 10vh;
   }

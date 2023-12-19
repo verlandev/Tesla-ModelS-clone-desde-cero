@@ -1,6 +1,7 @@
 @charset "UTF-8";
+/* Estilos específicos para la versión escritorio */
 .top-hero {
-  background-image: url("/images/hero.jpg");
+  background-image: url("/images/hero1.png");
   height: 100vh;
 }
 
@@ -66,7 +67,7 @@
   color: whitesmoke;
   width: 60%;
 }
-.hero-section .hero-section__container {
+.hero-section__container {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -166,6 +167,7 @@
   box-shadow: inset 0px 100px 100px 10px #000;
 }
 
+/* Estilos específicos para la versión escritorio de tamaño superior */
 @media screen and (min-width: 1440px) {
   .top-hero {
     height: 100vh;
@@ -176,7 +178,77 @@
   .third-hero {
     height: 80vh;
   }
+  .hero-insider {
+    background-image: url("/images/Model-S-Interior-Hero-Desktop-LHD.jpg");
+  }
   .hero-section__p--specification {
     bottom: 10px;
+  }
+}
+/* Estilos específicos para la versión mobile */
+@media screen and (max-width: 787px) {
+  .top-hero {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-image: url("/images/Model-S-Main-Hero-Mobile-LHD.jpg");
+  }
+  .second-hero {
+    height: 70vh;
+    background-size: cover;
+  }
+  .second-hero__containers {
+    top: 70%;
+  }
+  .third-hero {
+    height: 30vh;
+    background-image: url("/images/Model-S-Exterior-Hero-Mobile-Global.jpg");
+    background-color: #000;
+    padding-top: 45%;
+  }
+  .hero-insider {
+    height: 70vh;
+    background-image: url("/images/Model-S-Interior-Hero-Mobile-LHD.jpg");
+    background-size: cover;
+  }
+  .hero-section__containers {
+    width: 95%;
+    bottom: 30vh;
+    gap: 2em;
+    padding-bottom: 0;
+  }
+  .hero-section__container {
+    gap: 0.3em;
+  }
+  .hero-section__container--mobile {
+    display: none;
+  }
+  .hero-section__h3 {
+    font-size: 19px;
+  }
+  .hero-section__p {
+    font-size: 11px;
+  }
+  .hero-section__p--specification {
+    width: 90%;
+  }
+  .hero-section__buttons {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20%;
+  }
+  .hero-section__button {
+    width: 80%;
+  }
+}
+/* Ajustamos par la navegación con webkit */
+@supports (-webkit-touch-callout: none) {
+  .second-hero {
+    height: 60vh;
+    background-size: 100vh;
+    background-repeat: no-repeat;
+  }
+  .hero-section__containers {
+    bottom: 31vh;
   }
 }/*# sourceMappingURL=heros.css.map */

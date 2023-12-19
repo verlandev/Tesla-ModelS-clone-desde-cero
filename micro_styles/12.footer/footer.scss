@@ -1,3 +1,4 @@
+/* Estilos específicos para la versión Escritorio */
 .footer {
   padding-top: 30px;
   margin-bottom: 100px;
@@ -8,7 +9,7 @@
     font-size: 13px;
     padding-bottom: 50px;
 
-    &--linkText {
+    &--link-text {
       color: #2f2f2f;
       text-decoration: underline;
       text-decoration-thickness: 1px;
@@ -18,7 +19,7 @@
       transition: 0.3s;
     }
 
-    &--linkText:hover {
+    &--link-text:hover {
       color: #000;
       transition: 0.3s;
       text-decoration-thickness: 2px;
@@ -45,5 +46,20 @@
     text-decoration: none;
     color: #56595c;
     font-weight: 600;
+  }
+}
+
+/* Estilos específicos para la versión mobile */
+@media screen and (max-width: 787px) {
+  .footer {
+    &__p {
+      width: 85%;
+      font-size: 12px;
+    }
+
+    &__ul {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }

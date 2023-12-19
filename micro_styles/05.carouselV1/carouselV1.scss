@@ -1,82 +1,116 @@
-.carousel1{
-    width: 100%;
-    background-color: #000;
+/* Estilos específicos para la versión Escritorio */
+.carousel1 {
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  &__video {
+    padding-top: 30vh;
+    width: 92%;
+    margin: auto;
+    border-radius: 5px;
+  }
+
+  &__slider {
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: flex-start;
+    width: 45%;
+    margin: auto;
+    margin-top: 60px;
+    height: 40vh; // Así evitamos que si el contenido es más largo, desplace la siguiente sección
+  }
 
-    &__video{
-        padding-top: 30vh;
-        width: 92%;
-        margin: auto;
-        border-radius: 5px;
-    }
+  &__buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    margin-top: 20px;
+    padding-bottom: 10px;
+  }
 
-    &__slider{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        width: 45%;
-        margin: auto;
-        margin-top: 60px;
-        height: 40vh; // Así evitamos que si el contenido es más largo, desplace la siguiente sección
-    }
+  &__button {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    outline-offset: 0;
+    background-color: #5c5e62;
+    border: none;
+    cursor: pointer;
+  }
 
-    &__buttons{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        gap: 0.5em;
-        margin-top: 20px;
-        padding-bottom: 10px;
-    }
+  .circle-active {
+    background-color: white;
+  }
 
-    &__button{
-        height: 12px;
-        width: 12px;
-        border-radius: 50%;
-        outline-offset: 0;
-        background-color: #5c5e62;
-        border: none;
-        cursor: pointer;
-    }
+  &__text {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+  }
 
-    .circle-active{
-        background-color: white;
-    }
+  &__h3 {
+    font-size: 18px;
+    padding-bottom: 20px;
+    font-weight: 550;
+  }
 
-
-    &__text{
-        padding-top: 10px;
-        padding-bottom: 10px;
-        color: white;
-    }
-
-    &__h3{
-        font-size: 18px;
-        padding-bottom: 20px;
-        font-weight: 550;
-    }
-
-    &__p{
-        font-size: 15px;
-    }
+  &__p {
+    font-size: 15px;
+  }
 }
 
-// Desktop design
-
+/* Estilos específicos para la versión Escritorio de tamaño superior */
 @media screen and (min-width: 1440px) {
-    .carousel1{       
-        &__video{
-            padding-top: 20vh;
-            width: 70%;
-            height: 40%;
-        }
-
-        &__slider{
-            width: 35%;
-            height: 20vh; // Así evitamos que si el contenido es más largo, desplace la siguiente sección
-            padding-bottom: 15vh;
-        }
+  .carousel1 {
+    &__video {
+      padding-top: 20vh;
+      width: 70%;
+      height: 40%;
     }
+
+    &__slider {
+      width: 35%;
+      height: 20vh; // Así evitamos que si el contenido es más largo, desplace la siguiente sección
+      padding-bottom: 15vh;
+    }
+  }
+}
+
+/* Estilos específicos para la versión mobile */
+@media screen and (max-width: 787px) {
+  .carousel1 {
+    &__video {
+      padding-top: 20vh;
+      width: 100%;
+      height: 40%;
+    }
+
+    &__slider {
+      width: 90%;
+      height: 20vh; // Así evitamos que si el contenido es más largo, desplace la siguiente sección
+      padding-bottom: 15vh;
+    }
+
+    &__buttons {
+      margin-top: 0;
+      padding-bottom: 5px;
+      width: 95%;
+    }
+
+    &__text {
+      width: 95%;
+    }
+
+    &__h3 {
+      font-size: 14px;
+    }
+
+    &__p {
+      font-size: 14px;
+    }
+  }
 }

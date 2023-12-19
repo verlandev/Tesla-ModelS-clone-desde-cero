@@ -27,8 +27,14 @@ html {
 
 #root {
   position: relative;
+  overflow: hidden;
 }
 
 .inactive {
   display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
 }/*# sourceMappingURL=styles.css.map */

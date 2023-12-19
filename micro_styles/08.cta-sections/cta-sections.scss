@@ -1,3 +1,4 @@
+/* Estilos específicos para la versión Escritorio */
 .cta-sections {
   width: 100%;
   &__black {
@@ -20,13 +21,13 @@
     padding: 50px 0px;
     gap: 5em;
 
-    &--car{
-      position: relative;
-      height: 60vh;
+    &--with-tesla {
+      width: 100%;
+      padding-left: 10%;
     }
   }
 
-  &__left {
+  &__titles {
     display: flex;
     flex-direction: column;
     gap: 0.2em;
@@ -35,12 +36,9 @@
     transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
     transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
 
-    &--car{
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      top: 20%;
-      width: 40%;
+    &--with-tesla {
+      align-self: center;
+      width: 100%;
     }
   }
 
@@ -73,6 +71,10 @@
     flex-direction: column;
     gap: 1em;
     margin-top: 10px;
+
+    &--mobile {
+      display: none;
+    }
   }
 
   &__button {
@@ -135,7 +137,7 @@
     }
   }
 
-  &__right {
+  &__description {
     font-size: 14px;
     font-weight: 450;
     line-height: 20px;
@@ -146,19 +148,13 @@
     transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
     position: relative;
 
-    &--car{
-      width: 400px;
-      position: absolute;
-      right: 10%;
-      top: 10%;
+    &--mobile {
+      display: none;
     }
-
   }
 
   &__img {
     width: 600px;
-    position: absolute;
-    
   }
 
   .active {
@@ -170,8 +166,9 @@
   }
 }
 
+/* Estilos específicos para la versión Escritorio de tamaño superior */
 @media screen and (min-width: 1440px) {
-  .cta-sections {  
+  .cta-sections {
     &__container {
       width: 60%;
       gap: 2em;
@@ -179,9 +176,13 @@
 
     &__buttons {
       flex-direction: row;
+
+      &--mobile {
+        display: none;
+      }
     }
 
-    &__left {
+    &__titles {
       display: flex;
       flex-direction: column;
       gap: 0.2em;
@@ -189,17 +190,9 @@
       opacity: 0; /* Comienza con opacidad cero (invisibles) */
       transition: opacity 1.8s ease, transform 1.8s ease; /* Transiciones suaves para opacity y transform */
       transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
-  
-      &--car{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        top: 45%;
-        width: 40%;
-      }
     }
 
-    &__right {
+    &__description {
       font-size: 14px;
       font-weight: 450;
       line-height: 20px;
@@ -209,22 +202,92 @@
       transition: opacity 1s ease, transform 1s ease; /* Transiciones suaves para opacity y transform */
       transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
       position: relative;
-  
-      &--car{
-        width: 400px;
-        position: absolute;
-        right: 12%;
-        top: 15%;
+
+      &--mobile {
+        display: none;
       }
-  
     }
-  
+
     &__img {
       width: 900px;
-      position: absolute;
-      
     }
   }
+}
 
+/* Estilos específicos para la versión mobile */
+@media screen and (max-width: 787px) {
+  .cta-sections {
+    &__container {
+      flex-direction: column;
+      width: 100%;
+      padding: 50px 0;
 
+      &--with-tesla {
+        padding-top: 50%;
+      }
+    }
+
+    &__titles {
+      padding: 0;
+      width: 90%;
+      margin: auto;
+
+      &--with-tesla {
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &__description {
+      &--mobile {
+        display: block;
+        padding: 0;
+        width: 100%;
+        margin: auto;
+      }
+
+      &--desktop {
+        display: none;
+      }
+
+      &--with-tesla {
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+
+    &__p {
+      &--with-tesla {
+        text-align: center;
+        width: 95%;
+      }
+    }
+
+    &__buttons {
+      &--mobile {
+        display: flex;
+        margin: auto;
+        width: 90%;
+      }
+
+      &--with-tesla {
+        width: 95%;
+      }
+
+      &--desktop {
+        display: none;
+      }
+    }
+
+    &__button {
+      width: 90%;
+      margin: auto;
+    }
+
+    &__img {
+      width: 300px;
+      margin-left: 8%;
+    }
+  }
 }

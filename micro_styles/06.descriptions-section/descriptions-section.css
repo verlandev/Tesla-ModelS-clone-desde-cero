@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Estilos específicos para la versión Escritorio */
 .descriptions-section {
   background-color: #000;
   display: flex;
@@ -52,6 +53,7 @@
   animation: none; /* Desactiva la animación cuando se agrega la clase active */
 }
 
+/* Estilos específicos para la versión Escritorio de tamaño superior */
 @media screen and (min-width: 1440px) {
   .descriptions-section {
     padding-top: 10vh;
@@ -78,5 +80,79 @@
   .descriptions-section__p {
     width: 420px;
     font-size: 14px;
+  }
+}
+/* Estilos específicos para la versión mobile */
+@media screen and (max-width: 787px) {
+  .descriptions-section {
+    display: flex;
+    padding-top: 0;
+  }
+  .descriptions-section__img {
+    width: 100%;
+  }
+  .descriptions-section__text {
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+  .descriptions-section__container {
+    flex-direction: column;
+    width: 100%;
+  }
+  .descriptions-section__container--first {
+    width: 100%;
+  }
+  .descriptions-section__container--first:nth-child(odd) {
+    width: 100%;
+  }
+  .descriptions-section__container--first:nth-child(odd) h5 {
+    margin-left: 0%;
+    width: 90%;
+    padding: 0 20px 0 20px;
+  }
+  .descriptions-section__container--first:nth-child(odd) p {
+    margin-left: 0%;
+    width: 90%;
+    padding: 0 20px 0 20px;
+  }
+  .descriptions-section__container--first:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+  .descriptions-section__container--first:nth-child(even) h5 {
+    width: 90%;
+    padding: 0 20px 0 20px;
+  }
+  .descriptions-section__container--first:nth-child(even) p {
+    width: 90%;
+    padding: 0 20px 0 20px;
+  }
+  .descriptions-section__container--second {
+    width: 100%;
+  }
+  .descriptions-section__container--second:nth-child(even) {
+    margin-left: 0%;
+  }
+  .descriptions-section__container--second:nth-child(even) h5 {
+    margin-left: 0%;
+    width: 90%;
+    padding: 0 20px 0 20px;
+  }
+  .descriptions-section__container--second:nth-child(even) p {
+    margin-left: 0%;
+    padding: 0 20px 0 20px;
+    width: 90%;
+  }
+  .descriptions-section__container--second:nth-child(odd) {
+    flex-direction: column-reverse;
+  }
+  .descriptions-section__container--second:nth-child(odd) h5 {
+    margin-left: 0%;
+    width: 90%;
+    padding: 0 20px 0 20px;
+  }
+  .descriptions-section__container--second:nth-child(odd) p {
+    margin-left: 0%;
+    padding: 0 20px 0 20px;
+    width: 90%;
   }
 }/*# sourceMappingURL=descriptions-section.css.map */

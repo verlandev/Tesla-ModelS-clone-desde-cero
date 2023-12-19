@@ -1,11 +1,12 @@
 @charset "UTF-8";
+/* Estilos específicos para la versión Escritorio */
 .tesla-vision {
   background-image: url("/images/Autopilot-Hero-Vision_Desktop.jpg");
   background-position: center;
   background-size: cover;
   height: 120vh;
 }
-.tesla-vision .tesla-vision-content {
+.tesla-vision__content {
   display: flex;
   flex-direction: column;
   height: 120vh;
@@ -13,44 +14,110 @@
   padding-left: 70px;
   gap: 8em;
 }
-.tesla-vision .tesla-vision-content .tesla-vision-content-text {
+.tesla-vision__text {
   width: 22%;
   display: flex;
   flex-direction: column;
   gap: 0.5em;
 }
-.tesla-vision .tesla-vision-content .tesla-vision-content-text__h3 {
-  font-size: 24px;
-  font-weight: 550;
-}
-.tesla-vision .tesla-vision-content .tesla-vision-content-text__p {
-  font-size: 12px;
-  font-weight: 550;
-}
-.tesla-vision .tesla-vision-content .tesla-vision-content-text__img {
-  width: 50px;
-}
-.tesla-vision .tesla-vision-content .tesla-vision-content-text--container-one,
-.tesla-vision .tesla-vision-content .tesla-vision-content-text--container-two,
-.tesla-vision .tesla-vision-content .tesla-vision-content-text--container-three {
+.tesla-vision__text--container-one, .tesla-vision__text--container-two, .tesla-vision__text--container-three {
   opacity: 0; /* Comienza con opacidad cero (invisibles) */
   transition: opacity 1s ease, transform 1s ease; /* Transiciones suaves para opacity y transform */
   transform: translateY(50px); /* Comienza desplazado hacia abajo 20px */
 }
-.tesla-vision .tesla-vision-content .active {
+.tesla-vision__h3--desktop {
+  font-size: 24px;
+  font-weight: 550;
+}
+.tesla-vision__h3--mobile {
+  display: none;
+}
+.tesla-vision__p--desktop {
+  font-size: 12px;
+  font-weight: 550;
+}
+.tesla-vision__p--mobile {
+  display: none;
+}
+.tesla-vision__img--desktop {
+  width: 50px;
+}
+.tesla-vision__img--mobile {
+  display: none;
+}
+.tesla-vision .active {
   opacity: 1; /* Opacidad final es 1, completamente visible */
   transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
   animation: none; /* Desactiva la animación cuando se agrega la clase active */
 }
 
+/* Estilos específicos para la versión Escritorio de tamaño superior */
 @media screen and (min-width: 1440px) {
   .tesla-vision {
     height: 80vh;
   }
-  .tesla-vision .tesla-vision-content {
+  .tesla-vision__content {
     height: 80vh;
   }
-  .tesla-vision-content-text__p {
+  .tesla-vision__h3--mobile {
+    display: none;
+  }
+  .tesla-vision__p--desktop {
     width: 60%;
+    font-size: 13px;
+  }
+  .tesla-vision__p--mobile {
+    display: none;
+  }
+  .tesla-vision__img--mobile {
+    display: none;
+  }
+}
+/* Estilos específicos para la versión mobile */
+@media screen and (max-width: 787px) {
+  .tesla-vision {
+    background-image: url("/images/Autopilot-Hero-Vision_Mobile.jpg");
+    height: 70vh;
+    position: relative;
+  }
+  .tesla-vision__content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1em;
+    height: 20vh;
+    position: absolute;
+    padding-left: 0;
+    bottom: 0;
+    left: 5%;
+    width: 90%;
+  }
+  .tesla-vision__text {
+    text-align: center;
+    width: 100%;
+  }
+  .tesla-vision__h3--desktop {
+    display: none;
+  }
+  .tesla-vision__h3--mobile {
+    display: block;
+    font-size: 20px;
+    font-weight: 550;
+  }
+  .tesla-vision__p--desktop {
+    display: none;
+  }
+  .tesla-vision__p--mobile {
+    display: block;
+    font-weight: 400;
+    font-size: 13px;
+  }
+  .tesla-vision__img--desktop {
+    display: none;
+  }
+  .tesla-vision__img--mobile {
+    display: block;
+    width: 30px;
+    margin: auto;
   }
 }/*# sourceMappingURL=tesla-vision.css.map */

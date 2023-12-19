@@ -22,25 +22,56 @@
   </head>
   <body>
       <div id="root">
-        <section class="banner">
-            <div class="banner__container">
-                <h4 class="banner__h4">Model S</h4>
-                <div class="banner__links">
-                    <a href="" class="banner__link banner__link--left">Encargue su modelo S</a>
-                    <a href="" class="banner__link banner__link--right">Prueba de conducción</a>
+        <section class="banner-desktop inactive">
+            <div class="banner-desktop__container">
+                <h4 class="banner-desktop__h4">Model S</h4>
+                <div class="banner-desktop__links">
+                    <a href="" class="banner-desktop__link banner-desktop__link--buy">Encargue su modelo S</a>
+                    <a href="" class="banner-desktop__link banner-desktop__link--test">Prueba de conducción</a>
                 </div>
             </div>
         </section>
+        <section class="banner-mobile inactive">
+            <div class="banner-mobile__container">
+                <a href="#" class="banner-mobile__button banner-mobile__button--prueba-conduccion">Prueba de conducción</a>
+                <button class="banner-mobile__button banner-mobile__button--show-up" tabindex="-1" type="button">
+                    <img class="banner-mobile__button--svg-up" src="/images/arrow-next-small-svgrepo-com.svg" alt="svg-arrowUp">
+                </button>
+            </div>
+                <div class="banner-mobile__links banner-mobile__links--inactive">
+                    <a href="" class="banner-mobile__link banner-mobile__link--buy">Encargue su modelo S</a>
+                    <a href="" class="banner-mobile__link banner-mobile__link--test">Prueba de conducción</a>
+                    <button class="banner-mobile__button banner-mobile__button--show-down" tabindex="-1" type="button">
+                        <img class="banner-mobile__button--svg-down" src="/images/arrow-next-small-svgrepo-com.svg" alt="svg-arrowUp">
+                    </button>
+                </div>
+        </section>
         <section class="hero-section top-hero">
             <header class="header">
-                <img class="header__logo" src="/images/logo-tesla.png" alt="">
+                <a href="#" class="header__logo">
+                    <svg 
+                        class="header__logo--svg" 
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 342 35"
+                        >
+                        <path
+                            class="header__logo--path" 
+                            d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z"
+                            fill="currentColor"
+                        ></path>
+                    </svg>
+                </a>
+                <button class="header__button-menu">Menú</button>
                 <nav class="header-nav nav">
                     <ul class="nav__ul">
-                        <li class="nav__li"><a href="#" class="nav__a">Vehículos</a></li>
-                        <li class="nav__li"><a href="#" class="nav__a">Energía</a></li>
-                        <li class="nav__li"><a href="#" class="nav__a">Carga</a></li>
-                        <li class="nav__li"><a href="#" class="nav__a">Descubrir</a></li>
-                        <li class="nav__li"><a href="#" class="nav__a">Tienda</a></li>
+                        <li class="nav__li"><a href="#" class="nav__a">Vehículos</a><span class="nav__span"><img src="/images/arrow-next-small-svgrepo-com.svg" alt="svg-arrow" class="nav__span--arrow"></span></li>
+                        <li class="nav__li"><a href="#" class="nav__a">Energía</a><span class="nav__span"><img src="/images/arrow-next-small-svgrepo-com.svg" alt="svg-arrow" class="nav__span--arrow"></span></li>
+                        <li class="nav__li"><a href="#" class="nav__a">Carga</a><span class="nav__span"><img src="/images/arrow-next-small-svgrepo-com.svg" alt="svg-arrow" class="nav__span--arrow"></span></li>
+                        <li class="nav__li"><a href="#" class="nav__a">Descubrir</a><span class="nav__span"><img src="/images/arrow-next-small-svgrepo-com.svg" alt="svg-arrow" class="nav__span--arrow"></span></li>
+                        <li class="nav__li"><a href="#" class="nav__a">Tienda</a><span class="nav__span"><img src="/images/arrow-next-small-svgrepo-com.svg" alt="svg-arrow" class="nav__span--arrow"></span></li>
+                        <li class="nav__li--mobile"><a href="#" class="nav__a">Soporte</a></li>
+                        <li class="nav__li--mobile"><a href="#" class="nav__a--svg-mobile"><span class="nav--span-mobile"><img class="nav--svg-mobile" src="/images/globo.png" alt="idioma"></span>Español</a><span class="nav__span"><img src="/images/arrow-next-small-svgrepo-com.svg" alt="svg-arrow" class="nav__span--arrow"></span></li>
+                        <li class="nav__li--mobile"><a href="#" class="nav__a--svg-mobile"><span class="nav--span-mobile"><img class="nav--svg-mobile" src="/images/usuario.png" alt="perfil"></span>Cuenta</a></li>
                     </ul>
                 </nav>
                 <div class="header-links">
@@ -80,7 +111,7 @@
                     <h3 class="hero-section__h3">322 km/h</h3>
                     <p class="hero-section__p">Velocidad máxima*</p>
                 </div>
-                <div class="hero-section__container">
+                <div class="hero-section__container hero-section__container--mobile">
                     <h3 class="hero-section__h3">1020 CV</h3>
                     <p class="hero-section__p">Potencia del vehículo</p>
                 </div>
@@ -233,7 +264,7 @@
         </section>
 
         <section class="hero-section second-hero">
-            <div class="hero-section__containers">
+            <div class="hero-section__containers second-hero__containers">
                 <div class="hero-section__container">
                     <h3 class="hero-section__h3">1020 CV</h3>
                     <p class="hero-section__p">Potencia del vehículo</p>
@@ -251,40 +282,47 @@
 
         <section class="cta-sections cta-sections--white">
             <div class="cta-sections__container ">
-                <div class="cta-sections__left">
+                <div class="cta-sections__titles">
                     <h3 class="cta-sections__h3">Plaid</h3>
                     <h2 class="cta-sections__h2">Más allá de Ludicrous</h2>
-                    <div class="cta-sections__buttons cta-sections__buttons--white">
+                    <p class="cta-sections__description cta-sections__description--mobile cta-sections__description--white">
+                        El Model S Plaid tiene la aceleración más rápida de todos los vehículos en producción. La arquitectura de batería actualizada para todos los modelos del Model S permite realizar recorridos consecutivos sin que el rendimiento se vea afectado.
+                    </p>
+                    <div class="cta-sections__buttons cta-sections__buttons--desktop cta-sections__buttons--white">
                         <a href="#" class="cta-sections__button cta-sections__button--white cta-sections__button--white">Encargar</a>
                         <a href="#" class="cta-sections__button cta-sections__button--white cta-sections__button--grey">Explorar inventario</a>
                     </div>
                 </div>
-                <p class="cta-sections__right cta-sections__right--white">
+                <p class="cta-sections__description cta-sections__description--desktop cta-sections__description--white">
                     El Model S Plaid tiene la aceleración más rápida de todos los vehículos en producción. La arquitectura de batería actualizada para todos los modelos del Model S permite realizar recorridos consecutivos sin que el rendimiento se vea afectado.
                 </p>
+                <div class="cta-sections__buttons cta-sections__buttons--mobile cta-sections__buttons--white">
+                    <a href="#" class="cta-sections__button cta-sections__button--white cta-sections__button--white">Encargar</a>
+                    <a href="#" class="cta-sections__button cta-sections__button--white cta-sections__button--grey">Explorar inventario</a>
+                </div>
             </div>
         </section>
 
-        <section class="carousel2 carousel-models">
-            <div class="carousel2__description">
-                <h2 class="carousel2__h2">Tren motriz eléctrico</h2>
-                <p class="carousel2__p--intro-models">Las plataformas del Model S aúnan las tecnologías de tren motriz y batería para ofrecer unos niveles de rendimiento, autonomía y eficiencia insuperables. El nuevo módulo rediseñado y la arquitectura térmica permiten una carga más rápida, proporcionándole más potencia y resistencia en todas las condiciones.</p>
+        <section class="carousel-v2 carousel-models">
+            <div class="carousel-v2__description">
+                <h2 class="carousel-v2__h2">Tren motriz eléctrico</h2>
+                <p class="carousel-v2__p--intro-models">Las plataformas del Model S aúnan las tecnologías de tren motriz y batería para ofrecer unos niveles de rendimiento, autonomía y eficiencia insuperables. El nuevo módulo rediseñado y la arquitectura térmica permiten una carga más rápida, proporcionándole más potencia y resistencia en todas las condiciones.</p>
             </div>
             
             <img 
                 src="/images/Model-S-Dual-Motor-Powertrain-Carousel-Desktop.jpg" 
                 alt="" 
-                class="carousel2__asset carousel2__asset--models">
+                class="carousel-v2__asset carousel-v2__asset--models">
             <img 
                 src="/images/Model-S-Plaid-Tri-Motor-Powertrain-Carousel-Desktop.jpg" 
                 alt="" 
-                class="carousel2__asset carousel2__asset--models inactive">
+                class="carousel-v2__asset carousel-v2__asset--models inactive">
 
-            <div class="carousel2__slider">
-                <div class="carousel2__slide carousel2__slide--models isSlideActive">
-                    <h3 class="carousel2__h3">Model S</h3>
-                    <p class="carousel2__p">El motor dual con tracción integral ofrece más autonomía que cualquier otro vehículo de nuestra gama actual, con una potencia increíble y el máximo control.</p>
-                    <div class="carousel2__details slider-details">
+            <div class="carousel-v2__slider carousel-v2__slider--models">
+                <div class="carousel-v2__slide carousel-v2__slide--models slide-active slide-active--models">
+                    <h3 class="carousel-v2__h3">Model S</h3>
+                    <p class="carousel-v2__p">El motor dual con tracción integral ofrece más autonomía que cualquier otro vehículo de nuestra gama actual, con una potencia increíble y el máximo control.</p>
+                    <div class="carousel-v2__details slider-details">
                         <div class="slider-details__detail">
                             <h2 class="slider-details__h2">3,2s</h2>
                             <p class="slider-details__p">0-100 km/h</p>
@@ -296,10 +334,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel2__slide carousel2__slide--models">
-                    <h3 class="carousel2__h3">Model S Plaid</h3>
-                    <p class="carousel2__p">Tome las riendas de más de 1000 caballos de fuerza hasta los 322 km/h con la tracción a las cuatro ruedas de triple motor, que incluye vectorización de par y tres rotores independientes con revestimiento de carbono.</p>
-                    <div class="carousel2__details slider-details">
+                <div class="carousel-v2__slide carousel-v2__slide--models">
+                    <h3 class="carousel-v2__h3">Model S Plaid</h3>
+                    <p class="carousel-v2__p">Tome las riendas de más de 1000 caballos de fuerza hasta los 322 km/h con la tracción a las cuatro ruedas de triple motor, que incluye vectorización de par y tres rotores independientes con revestimiento de carbono.</p>
+                    <div class="carousel-v2__details slider-details">
                         <div class="slider-details__detail">
                             <h2 class="slider-details__h2">2,1s*</h2>
                             <p class="slider-details__p">0-100 km/h</p>
@@ -312,7 +350,7 @@
                     </div>
                 </div>
             </div> 
-            <p class="carousel2__p--rollout">*sin rollout</p>   
+            <p class="carousel-v2__p--rollout">*sin rollout</p>   
         </section>
 
         <section class="hero-section third-hero"></section>
@@ -320,17 +358,24 @@
 
         <section class="cta-sections cta-sections__black">
             <div class="cta-sections__container">
-                <div class="cta-sections__left">
+                <div class="cta-sections__titles">
                     <h3 class="cta-sections__h3">Exterior</h3>
                     <h2 class="cta-sections__h2">Diseñado para la eficiencia</h2>
-                    <div class="cta-sections__buttons cta-sections__buttons--black">
+                    <p class="cta-sections__description cta-sections__description--mobile cta-sections__description--black">
+                        Con un coeficiente aerodinámico de solo 0.208 Cd, el más bajo del planeta, el Model S está diseñado para ofrecer velocidad, resistencia y autonomía. La aerodinámica mejorada y un chasis más ancho ofrecen un rendimiento más sensible para que pueda tomar las curvas más rápido y con más confianza.                
+                    </p>
+                    <div class="cta-sections__buttons cta-sections__buttons--desktop cta-sections__buttons--black">
                         <a href="#" class="cta-sections__button cta-sections__button--black">Encargar</a>
                         <a href="#" class="cta-sections__button cta-sections__button--dark">Explorar inventario</a>
                     </div>
                 </div>
-                <p class="cta-sections__right cta-sections__right--black">
+                <p class="cta-sections__description cta-sections__description--desktop cta-sections__description--black">
                     Con un coeficiente aerodinámico de solo 0.208 Cd, el más bajo del planeta, el Model S está diseñado para ofrecer velocidad, resistencia y autonomía. La aerodinámica mejorada y un chasis más ancho ofrecen un rendimiento más sensible para que pueda tomar las curvas más rápido y con más confianza.                
                 </p>
+                <div class="cta-sections__buttons cta-sections__buttons--mobile cta-sections__buttons--black">
+                    <a href="#" class="cta-sections__button cta-sections__button--black">Encargar</a>
+                    <a href="#" class="cta-sections__button cta-sections__button--dark">Explorar inventario</a>
+                </div>
             </div>
         </section>
 
@@ -370,10 +415,10 @@
             </div>
         </section>
 
-        <section class="hero-informative">
+        <section class="hero-informative hero-informative--autonomy">
             <div class="hero-informative__asset hero-informative__asset--clip">
                 <video 
-                    class="hero-informative__video"
+                    class="hero-informative__video hero-informative__video--desktop"
                     src="https://www.tesla.com/sites/default/files/videos/Plaid-Range-Web-Desktop-8mb.mp4"
                     preload="auto"
                     playsinline
@@ -381,24 +426,39 @@
                     muted
                     data-loaded="true"
                     data-autoplay-mobile="true"
-                    data-autoplay-desktop="'true"
+                    data-autoplay-desktop="true"
+                    loop="true"  >
+                </video>
+                <video
+                    class="hero-informative__video hero-informative__video--mobile" 
+                    src="https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto:best/MS-Range-Hero-Mobile.mp4"
+                    preload="auto"
+                    playsinline
+                    autoplay
+                    muted
+                    data-loaded="true"
+                    data-autoplay-mobile="true"
+                    data-autoplay-desktop="true"
                     loop="true"  >
                 </video>
                 <div class="hero-informative__container">
                     <div class="hero-informative__info">
-                        <h3 class="hero-informative__h3">634 km</h3>
-                        <p class="hero-informative__p">Vaya a cualquier parte con hasta 634 km de autonomía estimada en una sola carga
-                        </p>
+                        <h3 class="hero-informative__h3 hero-informative__h3--desktop">634 km</h3>
+                        <p class="hero-informative__p hero-informative__p--desktop">Vaya a cualquier parte con hasta 634 km de autonomía estimada en una sola carga</p>
+                        <h3 class="hero-informative__h3 hero-informative__h3--mobile">634 km</h3>
+                        <p class="hero-informative__p hero-informative__p--mobile">Autonomía<br>(WLTP)</p>
                     </div>
                     <div class="hero-informative__info">
-                        <h3 class="hero-informative__h3">15 min</h3>
-                        <p class="hero-informative__p">Recargue hasta 322 km en 15 minutos en estaciones con Supercargadores
-                        </p>
+                        <h3 class="hero-informative__h3 hero-informative__h3--desktop">15 min</h3>
+                        <p class="hero-informative__p hero-informative__p--desktop">Recargue hasta 322 km en 15 minutos en estaciones con Supercargadores</p>
+                        <h3 class="hero-informative__h3 hero-informative__h3--mobile">15 min</h3>
+                        <p class="hero-informative__p hero-informative__p--mobile">Recargue hasta 322 km</p>
                     </div>
                     <div class="hero-informative__info">
-                        <h3 class="hero-informative__h3">50 000+</h3>
-                        <p class="hero-informative__p">Supercargadores ubicados en las rutas más populares
-                        </p>
+                        <h3 class="hero-informative__h3 hero-informative__h3--desktop">50 000+</h3>
+                        <p class="hero-informative__p hero-informative__p--desktop">Supercargadores ubicados en las rutas más populares</p>
+                        <h3 class="hero-informative__h3 hero-informative__h3--mobile">50 000+</h3>
+                        <p class="hero-informative__p hero-informative__p--mobile">Supercargadores por todo el mundo</p>
                     </div>
                 </div>
             </div>
@@ -415,68 +475,75 @@
             </div>
         </section>
 
-        <section class="carousel2 carousel-countries">
-            <div class="carousel2__description">
-                <h2 class="carousel2__h2">Libertad para viajar</h2>
-                <p class="carousel2__p--intro-countries">Introduzca su destino en la pantalla táctil y el planificador de ruta le guiará automáticamente hasta los Supercargadores más convenientes situados por el camino.</p>
+        <section class="carousel-v2 carousel-countries">
+            <div class="carousel-v2__description">
+                <h2 class="carousel-v2__h2">Libertad para viajar</h2>
+                <p class="carousel-v2__p--intro-countries">Introduzca su destino en la pantalla táctil y el planificador de ruta le guiará automáticamente hasta los Supercargadores más convenientes situados por el camino.</p>
             </div>
             
             <img 
                 src="/images/Zurich-Munich.png" 
                 alt="" 
-                class="carousel2__asset carousel2__asset--countries">
+                class="carousel-v2__asset carousel-v2__asset--countries">
             <img 
                 src="/images/Amsterdam-Bruselas.png" 
                 alt="" 
-                class="carousel2__asset carousel2__asset--countries inactive">
+                class="carousel-v2__asset carousel-v2__asset--countries inactive">
             <img 
                 src="/images/Brusela-Paris.png" 
                 alt="" 
-                class="carousel2__asset carousel2__asset--countries inactive">
+                class="carousel-v2__asset carousel-v2__asset--countries inactive">
             <img 
                 src="/images/Oslo-Gotemburgo.png" 
                 alt="" 
-                class="carousel2__asset carousel2__asset--countries inactive">
+                class="carousel-v2__asset carousel-v2__asset--countries inactive">
 
-            <div class="carousel2__slider">
-                <div class="carousel2__slide carousel2__slide--countries isSlideActive">
-                    <h3 class="carousel2__h3">De Múnich a Zúrich</h3>
-                    <div class="carousel2__details slider-details">
+            <div class="carousel-v2__slider carousel-v2__slider--countries">
+                <div class="carousel-v2__slide carousel-v2__slide--countries slide-active">
+                    <h3 class="carousel-v2__h3">De Munich a Zurich</h3>
+                    <div class="carousel-v2__details slider-details">
                         <div class="slider-details__detail">
                             <h2 class="slider-details__h2">311 km</h2>
                         </div>
                     </div>
                 </div>
-                <div class="carousel2__slide carousel2__slide--countries">
-                    <h3 class="carousel2__h3">De Ámsterdam a Bruselas</h3>
-                    <div class="carousel2__details slider-details">
+                <div class="carousel-v2__slide carousel-v2__slide--countries">
+                    <h3 class="carousel-v2__h3">De Ámsterdam a Bruselas</h3>
+                    <div class="carousel-v2__details slider-details">
                         <div class="slider-details__detail">
                             <h2 class="slider-details__h2">203 km</h2>
                         </div>
                     </div>
                 </div>
-                <div class="carousel2__slide carousel2__slide--countries">
-                    <h3 class="carousel2__h3">De Bruselas a París</h3>
-                    <div class="carousel2__details slider-details">
+                <div class="carousel-v2__slide carousel-v2__slide--countries">
+                    <h3 class="carousel-v2__h3">De Bruselas a París</h3>
+                    <div class="carousel-v2__details slider-details">
                         <div class="slider-details__detail">
                             <h2 class="slider-details__h2">320 km</h2>
                         </div>
                     </div>
                 </div>
-                <div class="carousel2__slide carousel2__slide--countries">
-                    <h3 class="carousel2__h3">De Oslo a Gotemburgo</h3>
-                    <div class="carousel2__details slider-details">
+                <div class="carousel-v2__slide carousel-v2__slide--countries">
+                    <h3 class="carousel-v2__h3">De Oslo a Gotemburgo</h3>
+                    <div class="carousel-v2__details slider-details">
                         <div class="slider-details__detail">
                             <h2 class="slider-details__h2">295 km</h2>
                         </div>
                     </div>
                 </div>
             </div> 
-            <a href="#" class="carousel2__button">Saber más</a>
+            <a href="#" class="carousel-v2__button">Saber más</a>
         </section>
 
-        <section class="hero-informative">
+        <section class="hero-informative hero-informative--security">
             <div class="hero-informative__cta hero-informative-cta">
+                <div class="hero-informative__asset hero-informative__asset--image-mobile">
+                    <img 
+                        class="hero-informative__img--mobile"
+                        src="/images/heroctaimagemobile.png"
+                        >
+                    </img>
+                </div>
                 <div class="hero-informative-cta__text">
                     <h3 class="hero-informative-cta__h3">Seguridad</h3>
                     <h2 class="hero-informative-cta__h2">Alta protección contra impactos</h2>
@@ -487,9 +554,9 @@
                     </div>
                 </div>
             </div>
-            <div class="hero-informative__asset hero-informative__asset--image">
+            <div class="hero-informative__asset hero-informative__asset--image-desktop">
                 <img 
-                    class="hero-informative__img"
+                    class="hero-informative__img--desktop"
                     src="/images/heroctaimage.png"
                     >
                 </img>
@@ -498,43 +565,55 @@
         </section>
 
         <section class="tesla-vision">
-            <div class="tesla-vision-content">
-                <div class="tesla-vision-content-text tesla-vision-content-text--container-one">
-                    <h3 class="tesla-vision-content-text__h3">360º</h3>
-                    <p class="tesla-vision-content-text__p">Las cámaras trasera, frontal y laterales ofrecen la máxima visibilidad</p>
+            <div class="tesla-vision__content">
+                <div class="tesla-vision__text tesla-vision__text--container-one">
+                    <h3 class="tesla-vision__h3 tesla-vision__h3--desktop">360º</h3>
+                    <p class="tesla-vision__p tesla-vision__p--desktop">Las cámaras trasera, frontal y laterales ofrecen la máxima visibilidad</p>
+                    <h3 class="tesla-vision__h3 tesla-vision__h3--mobile">360º</h3>
+                    <p class="tesla-vision__p tesla-vision__p--mobile">Grados<br>de visibilidad</p>
                 </div>
-                <div class="tesla-vision-content-text tesla-vision-content-text--container-two">
-                    <h3 class="tesla-vision-content-text__h3">250 m</h3>
-                    <p class="tesla-vision-content-text__p">Potente procesamiento visual de 250 metros de alcance</p>
+                <div class="tesla-vision__text tesla-vision__text--container-two">
+                    <h3 class="tesla-vision__h3 tesla-vision__h3--desktop">250 m</h3>
+                    <p class="tesla-vision__p tesla-vision__p--desktop">Potente procesamiento visual de 250 metros de alcance</p>
+                    <h3 class="tesla-vision__h3 tesla-vision__h3--mobile">250 m</h3>
+                    <p class="tesla-vision__p tesla-vision__p--mobile">De potente procesamiento visual</p>
                 </div>
-                <div class="tesla-vision-content-text tesla-vision-content-text--container-three">
-                    <img class="tesla-vision-content-text__img" src="/images/vision.svg"></img>
-                    <p class="tesla-vision-content-text__p">El sistema Tesla Vision detecta coches cercanos, evita posibles colisiones y le ayuda a estacionar</p>
+                <div class="tesla-vision__text tesla-vision__text--container-three">
+                    <img class="tesla-vision__img tesla-vision__img--desktop" src="/images/vision.svg"></img>
+                    <p class="tesla-vision__p tesla-vision__p--desktop">El sistema Tesla Vision detecta coches cercanos, evita posibles colisiones y le ayuda a estacionar</p>
+                    <img class="tesla-vision__img tesla-vision__img--mobile" src="/images/vision.svg"></img>
+                    <p class="tesla-vision__p tesla-vision__p--mobile">Tesla<br>Vision</p>
                 </div>
             </div>
         </section>
 
         <section class="cta-sections cta-sections--white">
             <div class="cta-sections__container ">
-                <div class="cta-sections__left">
+                <div class="cta-sections__titles">
                     <h3 class="cta-sections__h3">El piloto automático</h3>
                     <h2 class="cta-sections__h2">El futuro de la conducción</h2>
-                    <div class="cta-sections__buttons cta-sections__buttons--white">
+                    <p class="cta-sections__description cta-sections__description--mobile cta-sections__description--white">
+                        El Piloto automático permite que su coche se conduzca, acelere y frene automáticamente dentro de su carril bajo su supervisión activa, asistiendo en las partes más aburridas de la conducción. Con las actualizaciones de software inalámbricas, las últimas mejoras están disponibles al instante.
+                    </p>
+                    <div class="cta-sections__buttons cta-sections__buttons--desktop cta-sections__buttons--white">
                         <a href="#" class="cta-sections__button cta-sections__button--white cta-sections__button--white">Encargar</a>
                         <a href="#" class="cta-sections__button cta-sections__button--white cta-sections__button--grey">Explorar inventario</a>
                     </div>
                 </div>
-                <p class="cta-sections__p cta-sections__p--white">
+                <p class="cta-sections__description cta-sections__description--desktop cta-sections__description--white">
                     El Piloto automático permite que su coche se conduzca, acelere y frene automáticamente dentro de su carril bajo su supervisión activa, asistiendo en las partes más aburridas de la conducción. Con las actualizaciones de software inalámbricas, las últimas mejoras están disponibles al instante.
                 </p>
+                <div class="cta-sections__buttons cta-sections__buttons--mobile cta-sections__buttons--white">
+                    <a href="#" class="cta-sections__button cta-sections__button--white cta-sections__button--white">Encargar</a>
+                    <a href="#" class="cta-sections__button cta-sections__button--white cta-sections__button--grey">Explorar inventario</a>
+                </div>
             </div>
         </section>
 
-        <!-- ! Mejorar las clases aquí -->
-        <section class="carousel2 carousel-features">
-            <div class="carousel2__description">
-                <h2 class="carousel2__h2">Características</h2>
-                <p class="carousel2__p">La capacidad de conducción autónoma total introduce nuevas funciones y mejora la funcionalidad existente para hacer que su coche sea más seguro y versátil con el paso del tiempo, lo que incluye:</p>
+        <section class="carousel-v2 carousel-features">
+            <div class="carousel-v2__description">
+                <h2 class="carousel-v2__h2">Características</h2>
+                <p class="carousel-v2__p">La capacidad de conducción autónoma total introduce nuevas funciones y mejora la funcionalidad existente para hacer que su coche sea más seguro y versátil con el paso del tiempo, lo que incluye:</p>
             </div>
             
             <video 
@@ -548,7 +627,7 @@
                 data-autoplay-mobile="true"
                 data-autoplay-desktop="true"
                 loop="true" 
-                class="carousel2__asset carousel2__asset--features">
+                class="carousel-v2__asset carousel-v2__asset--features">
             </video>
             <video 
                 src="https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto/lane_change_0-mp4.mp4" 
@@ -561,7 +640,7 @@
                 data-autoplay-mobile="true"
                 data-autoplay-desktop="true"
                 loop="true" 
-                class="carousel2__asset carousel2__asset--features inactive">
+                class="carousel-v2__asset carousel-v2__asset--features inactive">
             </video>
             <video 
                 src="https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto:best/summon_1-mp4.mp4" 
@@ -574,7 +653,7 @@
                 data-autoplay-mobile="true"
                 data-autoplay-desktop="true"
                 loop="true" 
-                class="carousel2__asset carousel2__asset--features inactive">
+                class="carousel-v2__asset carousel-v2__asset--features inactive">
             </video>
             <video 
                 src="https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto:best/parking-mp4.mp4" 
@@ -587,25 +666,25 @@
                 data-autoplay-mobile="true"
                 data-autoplay-desktop="true"
                 loop="true" 
-                class="carousel2__asset carousel2__asset--features inactive">
+                class="carousel-v2__asset carousel-v2__asset--features inactive">
             </video>
 
-            <div class="carousel2__slider">
-                <div class="carousel2__slide carousel2__slide--features isSlideActive">
-                    <h3 class="carousel2__h3 carousel2__h3--features">Navegar en piloto automático</h3>
-                    <p class="carousel2__p carousel2__p--features">Guía activa desde la entrada hasta la salida</p>
+            <div class="carousel-v2__slider carousel-v2__slider--features">
+                <div class="carousel-v2__slide carousel-v2__slide--features slide-active">
+                    <h3 class="carousel-v2__h3 carousel-v2__h3--features">Navegar en piloto automático</h3>
+                    <p class="carousel-v2__p carousel-v2__p--features">Guía activa desde la entrada hasta la salida</p>
                 </div>
-                <div class="carousel2__slide carousel2__slide--features">
-                    <h3 class="carousel2__h3 carousel2__h3--features ">Cambio de carril automático</h3>
-                    <p class="carousel2__p carousel2__p--features">Cambia automáticamente de carril cuando se circula en autopista</p>
+                <div class="carousel-v2__slide carousel-v2__slide--features">
+                    <h3 class="carousel-v2__h3 carousel-v2__h3--features ">Cambio de carril automático</h3>
+                    <p class="carousel-v2__p carousel-v2__p--features">Cambia automáticamente de carril cuando se circula en autopista</p>
                 </div>
-                <div class="carousel2__slide carousel2__slide--features">
-                    <h3 class="carousel2__h3 carousel2__h3--features">Summon</h3>
-                    <p class="carousel2__p carousel2__p--features">Retire automáticamente su coche</p>
+                <div class="carousel-v2__slide carousel-v2__slide--features">
+                    <h3 class="carousel-v2__h3 carousel-v2__h3--features">Summon</h3>
+                    <p class="carousel-v2__p carousel-v2__p--features">Retire automáticamente su coche</p>
                 </div>
-                <div class="carousel2__slide carousel2__slide--features">
-                    <h3 class="carousel2__h3 carousel2__h3--features">Autopark</h3>
-                    <p class="carousel2__p carousel2__p--features">Estacionamiento en línea y en batería con un solo toque</p>
+                <div class="carousel-v2__slide carousel-v2__slide--features">
+                    <h3 class="carousel-v2__h3 carousel-v2__h3--features">Autopark</h3>
+                    <p class="carousel-v2__p carousel-v2__p--features">Estacionamiento en línea y en batería con un solo toque</p>
                 </div>
             </div> 
         </section>
@@ -621,8 +700,8 @@
                 <div class="slider-specifications__content">
                     <h3 class="slider-specifications__h3"><b>Model S</b> Especificaciones</h3>
                     <div class="slider-specifications__buttons">
-                        <button class="slider-specifications__button slider-specifications__button--modelPlaid button-on">Model S Plaid</button>
-                        <button class="slider-specifications__button slider-specifications__button--modelS button-off">Model S</button>
+                        <button class="slider-specifications__button slider-specifications__button--model-plaid button-on">Model S Plaid</button>
+                        <button class="slider-specifications__button slider-specifications__button--model-s button-off">Model S</button>
                     </div>
                     <div class="slider-specifications__showcases">
                         <div class="slider-specifications__showcase slider-specifications__showcase1">
@@ -672,25 +751,25 @@
         
 
         <section class="cta-sections cta-sections--white">
-            <div class="cta-sections__container cta-sections__container--car">
-                <div class="cta-sections__left cta-sections__left--car">
-                    <h2 class="cta-sections__h2">Model S</h2>
-                    <p class="cta-sections__p">Diseñe el suyo o pida una tasación de cambio por su vehículo actual</p>
-                    <div class="cta-sections__buttons cta-sections__buttons--white">
+            <div class="cta-sections__container cta-sections__container--with-tesla">
+                <div class="cta-sections__titles cta-sections__titles--with-tesla">
+                    <h2 class="cta-sections__h2 cta-sections__h2--with-tesla">Model S</h2>
+                    <p class="cta-sections__p cta-sections__p--with-tesla">Diseñe el suyo o pida una tasación de cambio por su vehículo actual</p>
+                    <div class="cta-sections__buttons cta-sections__buttons--with-tesla cta-sections__buttons--white">
                         <a href="#" class="cta-sections__button cta-sections__button--white cta-sections__button--white">Encargar</a>
                         <a href="#" class="cta-sections__button cta-sections__button--white cta-sections__button--grey">Obtener presupuesto</a>
                     </div>
                 </div>
-                <div class="cta-sections__right cta-sections__right--car">
+                <div class="cta-sections__description cta-sections__description--with-tesla">
                     <img
                         src="/images/tesla-ctaSections.jpg"
-                        class="cta-sections__img">
+                        class="cta-sections__img cta-sections__img--mobile">
                     </img>
                 </div>
             </div>
         </section>
         <section class="footer">
-            <p class="footer__p">Ciertas funciones del vehículo que utilizan grandes volúmenes de datos requieren al menos Conectividad estándar, incluidos mapas, navegación y comandos de voz. El acceso a las funciones que utilizan datos móviles y licencias de terceros está sujeto a cambios. <a href="" class="footer__p--linkText">Obtenga más información sobre la Conectividad estándar y sus limitaciones.</a></p>
+            <p class="footer__p">Ciertas funciones del vehículo que utilizan grandes volúmenes de datos requieren al menos Conectividad estándar, incluidos mapas, navegación y comandos de voz. El acceso a las funciones que utilizan datos móviles y licencias de terceros está sujeto a cambios. <a href="" class="footer__p--link-text">Obtenga más información sobre la Conectividad estándar y sus limitaciones.</a></p>
             <div class="footer__links">
                 <ul class="footer__ul">
                     <li class="footer__li">
@@ -720,9 +799,3 @@
     </div>
   </body>
 </html>
-
-
-
-<!-- TODO
-<!-- * Cambiar las clases de CamelCase para la estructura BEM -->
-<!-- ! Diseño mobile con grid -->

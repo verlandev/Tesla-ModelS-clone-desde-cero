@@ -1,4 +1,20 @@
-const banner$$ = document.querySelector(".banner");
+/**
+ * Creamos el listado de elementos para el manejo del DOM
+ */
+const bannerDesktop$$ = document.querySelector(".banner-desktop");
+const bannerMobile$$ = document.querySelector(".banner-mobile")
+const bannerMobileContainer$$ = document.querySelector(".banner-mobile__container")
+const bannerMobileShowUp$$ = document.querySelector(".banner-mobile__button--show-up")
+const bannerMobileShowDown$$ = document.querySelector(".banner-mobile__button--show-down")
+const bannerMobileShowLinks$$ = document.querySelector(".banner-mobile__links")
+
+const logo$$ = document.querySelector(".header__logo")
+const nav$$ = document.querySelector(".nav")
+const navUl$$ = document.querySelector('.nav__ul')
+const buttonMenu$$ = document.querySelector(".header__button-menu")
+const header$$ = document.querySelector(".header")
+
+const headerLinks$$ = document.querySelector(".header-links")
 
 const separatorH2$$ = document.querySelector(".separator__h2");
 const infoContainers$$ = document.querySelectorAll(".hero-section__container");
@@ -6,23 +22,23 @@ const buttonsHero$$ = document.querySelector(".hero-section__buttons");
 
 const captionTexts$$ = document.querySelectorAll(".descriptions-section__text");
 
-const ctaSectionsLeft$$ = document.querySelectorAll(".cta-sections__left");
-const ctaSectionsRight$$ = document.querySelectorAll(".cta-sections__right");
+const ctaSectionsTitles$$ = document.querySelectorAll(".cta-sections__titles");
+const ctaSectionsDescription$$ = document.querySelectorAll(".cta-sections__description");
 
 const heroInformativeInfo$$ = document.querySelectorAll(".hero-informative__info");
 const heroInformativeCtaButtons$$ = document.querySelectorAll(".hero-informative-cta__buttons");
 
-const containerOne$$ = document.querySelector(".tesla-vision-content-text--container-one");
-const containerTwo$$ = document.querySelector(".tesla-vision-content-text--container-two");
-const containerThree$$ = document.querySelector(".tesla-vision-content-text--container-three");
+const containerOne$$ = document.querySelector(".tesla-vision__text--container-one");
+const containerTwo$$ = document.querySelector(".tesla-vision__text--container-two");
+const containerThree$$ = document.querySelector(".tesla-vision__text--container-three");
 
 const specificationsShowcasesPanel$$ = document.querySelector(".slider-specifications__content");
 
-const buttonShowcase1$$ = document.querySelector(".slider-specifications__button--modelPlaid");
-const buttonShowcase2$$ = document.querySelector(".slider-specifications__button--modelS");
+const buttonShowcase1$$ = document.querySelector(".slider-specifications__button--model-plaid");
+const buttonShowcase2$$ = document.querySelector(".slider-specifications__button--model-s");
 const showcase1$$ = document.querySelector(".slider-specifications__showcase1");
 const showcase2$$ = document.querySelector(".slider-specifications__showcase2");
-const rollout$$ = document.querySelector(".carouselV2__p--rollout");
+const rollout$$ = document.querySelector(".carousel-v2__p--rollout");
 
 
 /**
@@ -31,12 +47,98 @@ const rollout$$ = document.querySelector(".carouselV2__p--rollout");
 
 const detectingBanner = () => {
   if (scrollY === 0) {
-    banner$$.classList.add("inactive");
+    bannerDesktop$$.classList.add("inactive");
+    bannerMobile$$.classList.add("inactive")
   }
   if (scrollY >= 100) {
-    banner$$.classList.remove("inactive");
+    bannerDesktop$$.classList.remove("inactive");
+    bannerMobile$$.classList.remove("inactive")
   }
 };
+
+/**
+ * Función que alterna las clases del elemento del banner en función de si se abre o cierra
+ */
+
+const toggleBanner = () => {
+  bannerMobileShowLinks$$.classList.toggle("banner-mobile__links--inactive")
+  bannerMobileContainer$$.classList.toggle("inactive")
+}
+
+bannerMobileShowUp$$.addEventListener('click', toggleBanner);
+bannerMobileShowDown$$.addEventListener('click', toggleBanner)
+
+
+
+/**
+ * Ajusta la visibilidad de los elementos del menú en función del ancho de la ventana. Cuando la ventana 
+ * tiene un ancho de 800px o menos (versión móvil),muestra el botón del menú y oculta 
+ * otros elementos de navegación.
+ * En ventanas más grandes, muestra la navegación completa y oculta el botón del menú.
+ */
+
+const renderMenuResponsive = () => {
+  /* Versión mobile */
+  if(window.innerWidth <= 800 ) {
+    buttonMenu$$.classList.remove('inactive')
+    nav$$.classList.add('inactive')
+    headerLinks$$.classList.add('inactive')
+    bannerMobile$$.classList.add('inactive')
+    
+  } else {
+    buttonMenu$$.classList.add('inactive')
+    closeButton$$.classList.add('inactive')
+    nav$$.classList.remove('inactive')
+    headerLinks$$.classList.remove('inactive')
+  }
+}
+
+// Agrega listeners para ajustar el menú en caso de cambio de tamaño o orientación de la ventana
+
+window.addEventListener('resize', renderMenuResponsive);
+window.addEventListener('orientationchange', renderMenuResponsive);
+document.addEventListener('DOMContentLoaded', () => {
+  renderMenuResponsive()
+  handleScroll()
+})
+
+
+/**
+ * Función que cierra el menú de navegación.
+ * Muestra nuevamente el botón del menú y el logotipo, y oculta el menú de navegación.
+ * Reactiva el desplazamiento del cuerpo de la página para permitir nuevamente el scroll.
+ */
+
+const closeButton$$ = document.createElement('button')
+  closeButton$$.classList.add('nav__close-button--nav-open', 'inactive')
+  closeButton$$.textContent = 'x'
+  nav$$.appendChild(closeButton$$)
+
+const openMenu = () => {
+  buttonMenu$$.classList.add("inactive")
+  logo$$.classList.add("inactive")
+  nav$$.classList.add('nav--nav-open')
+  navUl$$.classList.add('nav__ul--nav-open')
+  header$$.classList.add('header--nav-open')
+  closeButton$$.classList.remove('inactive')
+  buttonsHero$$.classList.add("inactive")
+  document.body.classList.add('no-scroll') // Impedimos que se pueda hacer scroll en el documento cuando el menú está abierto
+}
+
+
+const closeMenu = () => {
+  buttonMenu$$.classList.remove('inactive')
+  logo$$.classList.remove('inactive')
+  nav$$.classList.remove('nav--nav-open')
+  navUl$$.classList.remove('nav__ul--nav-open')
+  header$$.classList.remove('header--nav-open')
+  closeButton$$.classList.add('inactive')
+  document.body.classList.remove('no-scroll') // Restablecemos el scroll en la página
+}
+
+buttonMenu$$.addEventListener('click', openMenu)
+closeButton$$.addEventListener('click', closeMenu)
+
 
 
 /**
@@ -78,10 +180,10 @@ const handleScroll = () => {
     scrollThreshold = windowHeight * 0.9
   } else if(windowWidth >= 768) {
     // Pantalla mediana
-    scrollThreshold = windowHeight * 0.3
+    scrollThreshold = windowHeight * 0.9
   } else {
     // Pantalla pequeña
-    scrollThreshold = windowHeight * 0.2
+    scrollThreshold = windowHeight * 0.9
   }
 
   detectingBanner()
@@ -89,8 +191,8 @@ const handleScroll = () => {
   detectingScroll([separatorH2$$], scrollThreshold);
   detectingScroll([buttonsHero$$], scrollThreshold);
   detectingScroll(captionTexts$$, scrollThreshold);
-  detectingScroll(ctaSectionsLeft$$, scrollThreshold);
-  detectingScroll(ctaSectionsRight$$, scrollThreshold);
+  detectingScroll(ctaSectionsTitles$$, scrollThreshold);
+  detectingScroll(ctaSectionsDescription$$, scrollThreshold);
   detectingScroll(heroInformativeInfo$$, scrollThreshold);
   detectingScroll(heroInformativeCtaButtons$$, scrollThreshold);
   detectingScroll([containerOne$$], scrollThreshold);
@@ -102,42 +204,11 @@ const handleScroll = () => {
 window.addEventListener('scroll', handleScroll);
 
 
-// const handleScroll = () => {
-
-//   detectingBanner()
-
-//   let width = window.innerWidth
-
-//   if (900 <= width <= 2000) {
-//     detectingScroll([separatorH2$$], 700);
-//     detectingScroll(infoContainers$$, 500);
-//     detectingScroll([buttonsHero$$], 500);
-//     detectingScroll(captionTexts$$, 400);
-//     detectingScroll(ctaSectionsLeft$$, 400);
-//     detectingScroll(ctaSectionsRight$$, 400);
-//     detectingScroll(heroInformativeInfo$$, 500);
-//     detectingScroll(heroInformativeCtaButtons$$, 700);
-//     detectingScroll([containerOne$$], 400);
-//     detectingScroll([containerTwo$$], 400);
-//     detectingScroll([containerThree$$], 400);
-//     detectingScroll([specificationsShowcasesPanel$$], 500);
-//     detectingScroll([rollout$$], 200);
-//   }
-
- 
-// }
-
-
-window.addEventListener("scroll", function () {
-  var scrollYValue = window.scrollY;
-  console.log(scrollYValue); // Esto imprimirá el valor actual de scrollY en la consola.
-});
-
-
 /**
- * Inicializa los elementos del carrusel: videos, círculos y contenidos.
- * Los selecciona y almacena en arreglos para su uso posterior.
+ * Se inicializan los elementos del carrusel: vídeos, botones circulares y contenidos.
+ * Se seleccionan y almacenan en arreglos para su posterior uso
  */
+
 const videos$$ = [];
 const circles$$ = [];
 const contents$$ = [];
@@ -147,37 +218,86 @@ for (let i = 1; i <= 5; i++) {
   circles$$.push(document.querySelector(`.circle${i}`));
   contents$$.push(document.querySelector(`.content${i}`));
 }
+
+
 /**
- * A continuación gestiona la activación y desactivación de elementos en el carrusel
- * al hacer clic en uno de los círculos/botón.
- *
- * @param {Element} button - El botón/circulo en el que se hizo clic.
+ * Función para gestionar la visualización del carrusel al hacer clic en un círculo.
+ * Se desactivan los elementos a modo de reset y se activa solo el contenido correspondiente al índice actual.
+ * 
+ * @param {number} index - El índice del círculo seleccionado
  */
 
-const carouselV1 = (button) => {
-  // Desactiva todos los elementos a modo de reset
-  circles$$.forEach((circle) => circle.classList.remove("circle-active"));
-  videos$$.forEach((video) => video.classList.add("inactive"));
-  contents$$.forEach((content) => content.classList.add("inactive"));
-
-  const index = circles$$.indexOf(button);
-  if (index >= 0) {
-    // Y activa solo el contenido correspondiente al pulsar uno de los botones
-    circles$$[index].classList.add("circle-active");
-    videos$$[index].classList.remove("inactive");
-    contents$$[index].classList.remove("inactive");
+const carouselV1 = async (index) => {
+  try {
+    // Desactiva todos los elementos a modo de reset
+    circles$$.forEach((circle) => circle.classList.remove("circle-active"));
+    videos$$.forEach((video) => video.classList.add("inactive"));
+    contents$$.forEach((content) => content.classList.add("inactive"));
+  
+    if (index >= 0) {
+      // Y activa solo el contenido correspondiente al pulsar uno de los botones
+      circles$$[index].classList.add("circle-active");
+      videos$$[index].classList.remove("inactive");
+      contents$$[index].classList.remove("inactive");
+    }
+    
+  } catch (error) {
+    console.log("Error en la función de carouselV1", error)
   }
 };
 
 /**
- * Finalmente, asigna un evento de clic a cada círculo para controlar la función 'carouselV1'.
+ * Conseguimos que el carrusel vaya en autoplay con 5 segundos para cada diapositiva.
+ * Establecemos el índice actual, el tiempo de intervalo y un identificador para 
+ * controlar la transición automática del carrusel
+ */
+
+let currentIndex = 0;
+const intervalTime = 5000;
+let intervalId;
+
+const nextSlide = () => {
+  try {
+    currentIndex = (currentIndex + 1) % circles$$.length;
+    carouselV1(currentIndex)    
+  } catch (error) {
+    console.log("Error en la función de nextSlide", error)
+  }
+}
+
+
+/**
+ * Iniciamos el intervalo automático del carrusel una vez se carga la página.
+ * Nos aseguramos de mostrar la primera diapositiva al cargar la página
+ */
+
+const startInterval = () => {
+  try {
+    intervalId = setInterval(nextSlide, intervalTime)
+  } catch (error) {
+    console.log("error en la función startInterval", error)    
+  }
+}
+
+carouselV1(currentIndex)
+startInterval()
+
+
+/**
+ * Asigna un evento clic a cada botón circular para controlar la función "carouselV1"
  */
 
 circles$$.forEach((circle, index) =>
   circle.addEventListener("click", () => {
-    carouselV1(circles$$[index]);
+    try {
+      currentIndex = index;
+      carouselV1(currentIndex);
+    } catch (error) {
+      console.log("Error en la función de clic", error)
+    }
   })
 );
+
 
 
 /**
@@ -185,30 +305,51 @@ circles$$.forEach((circle, index) =>
  * @param {string} carouselType 'models' o 'countries' según las clases aplicadas en el proyecto.
  */
 
-const carouselV2 = (carouselType) => {
-
-  const slides$$ = document.querySelectorAll(`.carousel2__slide--${carouselType}`);
-  const images$$ = document.querySelectorAll(`.carousel2__asset--${carouselType}`);
+const carouselVersion2 = (carouselType) => {
+  const container$$ = document.querySelector(`.carousel-v2__slider--${carouselType}`) 
+  const slides$$ = document.querySelectorAll(`.carousel-v2__slide--${carouselType}`);
+  const images$$ = document.querySelectorAll(`.carousel-v2__asset--${carouselType}`);
+  
 
   // Aplicamos el manejo de slides actualizando las clases
   slides$$.forEach((slide, index) =>
     slide.addEventListener("click", () => {
       if (carouselType === "models" || carouselType === "countries" || carouselType === 'features') {
-        slides$$.forEach((slide) => slide.classList.remove("isSlideActive"));
+        slides$$.forEach((slide) => slide.classList.remove("slide-active"));
         images$$.forEach((image) => image.classList.add("inactive"));
 
         if (index >= 0) {
-          slides$$[index].classList.add("isSlideActive");
-          images$$[index].classList.remove("inactive");
+          slides$$[index].classList.add("slide-active");
+          images$$[index].classList.remove("inactive");          
+        }
+
+        // Creamos el efecto del slide para móvil
+        if (window.innerWidth <= 768) {
+          if(carouselType === 'models') {
+            let position = index
+            let operation = position * -40
+            container$$.style.transform = `translateX(${operation}%)`
+            container$$.style.transition = "0.5s ease"
+          } else if (carouselType === 'countries' || carouselType === 'features') {
+            const slideWidth = slides$$[0].offsetWidth
+            console.log(slideWidth)
+            let position = index
+            let operation = position * (-slideWidth)
+            container$$.style.transform = `translateX(${operation}px)`
+            container$$.style.transition = "0.5s ease"
+          }       
+         
         }
       }
+
     })
-  );
+    );
 };
 
-carouselV2("models");
-carouselV2("countries");
-carouselV2("features");
+
+carouselVersion2("models");
+carouselVersion2("countries");
+carouselVersion2("features");
 
 /**
  * Maneja el clic en el botón de showcase 1 en la sección "slider-specifications".
@@ -234,5 +375,3 @@ buttonShowcase2$$.addEventListener("click", () => {
   buttonShowcase1$$.classList.remove("button-on");
   buttonShowcase1$$.classList.add("button-off");
 });
-
-console.log(window.innerWidth)

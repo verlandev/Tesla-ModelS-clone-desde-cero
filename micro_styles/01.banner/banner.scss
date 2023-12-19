@@ -1,46 +1,152 @@
-.banner{
+/* Estilos específicos para la versión escritorio */
+
+.banner-mobile {
+  display: none; // !IMPORTANT: Desactivamos el banner de la versión mobile
+}
+
+.banner-desktop {
+  position: relative;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0000003f;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    padding: 2px 0;
+  }
+
+  &__h4 {
+    color: whitesmoke;
+    font-size: large;
+    font-weight: 550;
+    margin-left: 45px;
+  }
+
+  &__links {
+    display: flex;
+    gap: 1.5em;
+    padding: 5px;
+    margin-right: 45px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 7px;
+    width: 160px;
+    text-align: center;
+
+    &--test {
+      background-color: #2f2f2f;
+      border-radius: 3px;
+    }
+  }
+}
+
+/* Estilos específicos para móviles */
+@media screen and (max-width: 787px) {
+  .banner-desktop {
+    display: none; // !IMPORTANT: Desactivamos el banner de la versión escritorio
+  }
+
+  .banner-mobile {
+    display: block; // devolvemos la visibilidad
     position: relative;
 
-    &__container{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        background-color: #0000003f;
-        backdrop-filter: blur(10px);
-        position:fixed;
-        z-index: 3;
-        width: 100%;
-        padding: 2px 0;
+    /* Añadimos estilos a los dos botones que se van a situar abajo a la derecha de la página de forma fija */
+    &__container {
+      display: flex;
+      flex-direction: row;
+      position: fixed;
+      bottom: 5%;
+      right: 5%;
+      gap: 0.5em;
+      z-index: 9;
     }
 
-    &__h4{
-        color: whitesmoke;
-        font-size: large;
-        font-weight: 550;
-        margin-left: 45px;
-    }
+    &__button {
+      background-color: #393c41;
+      border-radius: 5px;
 
-    &__links{
-        display: flex;
-        gap: 1.5em;
-        padding: 5px;
-        margin-right: 45px;
-    }
-
-    &__link{
+      &--prueba-conduccion {
+        width: 180px;
+        padding: 10px;
+        border: solid 1px #393c41;
         text-decoration: none;
-        color: whitesmoke;
-        font-weight: 600;
-        font-size: 12px;
-        padding: 7px;
-        width: 160px;
+        color: white;
         text-align: center;
-    
-        &--right{
-            background-color: #2f2f2f;
-            border-radius: 3px;
-    
-        }
+        font-weight: 500;
+        align-self: center;
+        font-size: 13px;
+      }
+
+      &--show-up {
+        width: 50px;
+        border: 0;
+      }
+
+      &--show-down {
+        border: 0;
+        position: absolute;
+        margin-left: 80%;
+        margin-top: 5%;
+        background: none;
+      }
+
+      /* Cuando el menú está cerrado la flecha apunta hacia arriba */
+      &--svg-up {
+        width: 20px;
+        filter: invert(100%);
+        transform: rotate(-90deg);
+      }
+
+      /* Cuando el menú está abierto la flecha apunta hacia abajo */
+      &--svg-down {
+        width: 30px;
+        filter: invert(100%);
+        transform: rotate(90deg);
+        //position: absolute;
+        right: 10%;
+        bottom: 10%;
+      }
     }
+
+    /* En el momento en el que se activa el banner se muestran los links */
+    &__links {
+      width: 100%;
+      height: 20vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #0000003f;
+      backdrop-filter: blur(10px);
+      position: fixed;
+      z-index: 9;
+      gap: 1em;
+      bottom: 0;
+      transition: all 0.5s ease;
+    }
+
+    /* Dejamos los links inactivos y agregamos la propiedad de "height" para que funcione la transición correctamente */
+    &__links--inactive {
+      height: 0;
+      overflow: hidden;
+      transition: all 0.5s ease;
+    }
+
+    &__link {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 14px;
+    }
+  }
 }

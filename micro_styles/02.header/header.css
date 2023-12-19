@@ -1,13 +1,21 @@
+@charset "UTF-8";
+/* Estilos específicos para la versión escritorio */
 .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 1em;
+  gap: 0em;
   padding: 20px 40px 20px 40px;
+  /* Manejamos el logo con svg y el path */
 }
 .header__logo {
-  width: 130px;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+.header__logo--svg {
+  color: #000;
+  width: 120px;
 }
 .header .nav__ul {
   display: flex;
@@ -16,12 +24,23 @@
 }
 .header .nav__li {
   list-style: none;
+  /* Desactivamos los links de la versión mobile para la versión escritorio */
+}
+.header .nav__li--mobile {
+  display: none;
 }
 .header .nav__a {
   text-decoration: none;
   color: #2f2f2f;
   font-weight: 550;
   font-size: 14px;
+}
+.header .nav__span {
+  display: none;
+  /* Desactivamos los svg de flecha de los links de la versión mobile */
+}
+.header .nav__span--arrow {
+  display: none;
 }
 .header .header-links__ul {
   display: flex;
@@ -40,6 +59,7 @@
   width: 20px;
 }
 
+/* Creamos el efecto sombreado del header que cubre toda la visión de la pantalla */
 .header::before {
   content: "";
   width: 100%;
@@ -48,4 +68,137 @@
   top: 0;
   right: 0;
   box-shadow: inset 0px -150px 100px 10px #000;
+}
+
+.inactive {
+  display: none;
+}
+
+/* Estilos específicos para móviles */
+@media screen and (max-width: 787px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0em;
+    padding: 20px;
+    /* Ajustamos el efecto de transición de fade-out cuando cerramos el menú responsive */
+    visibility: visible;
+    transition: opacity 0.5s, visibility 0.5s;
+    transition: all 0.5s ease;
+  }
+  .header--nav-open {
+    padding: 0;
+  }
+  .header__logo {
+    width: 130px;
+  }
+  .header__logo--svg {
+    color: #000;
+    width: 342px;
+  }
+  .header .nav {
+    /* Quitamos los botones de navegación para que se vea solo el botón de menú */
+    opacity: 0;
+    /* Modificamos el tamaño de los svg en sí "Español" y "Cuenta" */
+    /* Cuando hacemos click en el botón de "menú", el menú se ve así */
+    /* El botón de cerrar no existe cuando se carga la página */
+  }
+  .header .nav--svg-mobile {
+    width: 20px;
+  }
+  .header .nav--nav-open {
+    padding: 0;
+    background-color: white;
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 9;
+    transition: all 0.5s ease;
+  }
+  .header .nav__ul--nav-open {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    width: 90%;
+    margin-left: 20px;
+    margin-top: 25%;
+  }
+  .header .nav__li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Forzamos e incluimos los items de header-links por desajuste */
+  }
+  .header .nav__li--mobile {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header .nav__a {
+    font-size: 18px;
+    /* Estilos para los links "Español" y "Cuenta" con sus respectivos svg */
+  }
+  .header .nav__a--svg-mobile {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    text-decoration: none;
+    font-size: 18px;
+    color: #000;
+    font-weight: 600;
+  }
+  .header .nav__span {
+    display: block;
+    /* Estilos del svg de flecha para indicar el submenu */
+  }
+  .header .nav__span--arrow {
+    display: block;
+    width: 22px;
+    filter: invert(50%);
+  }
+  .header .nav__close-button {
+    display: none;
+    /* Aparece el botón de cierre cuando hemos abierto el menú responsive */
+  }
+  .header .nav__close-button--nav-open {
+    z-index: 9;
+    width: 30px;
+    height: 50px;
+    position: absolute;
+    top: 10px;
+    right: 5%;
+    font-size: 25px;
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    color: #545454;
+  }
+  .header__button-menu {
+    background-color: rgba(101, 101, 101, 0.189); /* Color gris con 25% de opacidad */
+    -webkit-backdrop-filter: blur(2%);
+            backdrop-filter: blur(2%);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    z-index: 2;
+    text-decoration: none;
+    color: #000;
+  }
+  .hidden {
+    display: none;
+  }
+}
+/* Ajustamos par la navegación con webkit */
+@supports (-webkit-touch-callout: none) {
+  .nav__ul--nav-open {
+    margin-top: 25%; /* Mayor espaciado */
+  }
 }/*# sourceMappingURL=header.css.map */

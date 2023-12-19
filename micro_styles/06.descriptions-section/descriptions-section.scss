@@ -1,3 +1,4 @@
+/* Estilos específicos para la versión Escritorio */
 .descriptions-section {
   background-color: #000;
   display: flex;
@@ -64,18 +65,19 @@
 
   .active {
     opacity: 1; /* Opacidad final es 1, completamente visible */
-    transform: translateY(0); /* Vuelve a su posición original, sin desplazamiento vertical */
+    transform: translateY(
+      0
+    ); /* Vuelve a su posición original, sin desplazamiento vertical */
     animation: none; /* Desactiva la animación cuando se agrega la clase active */
   }
 }
 
-// Desktop design
-
+/* Estilos específicos para la versión Escritorio de tamaño superior */
 @media screen and (min-width: 1440px) {
   .descriptions-section {
     padding-top: 10vh;
     padding-bottom: 10vh;
-  
+
     &__container {
       width: 55%;
 
@@ -84,19 +86,19 @@
           h5 {
             margin-left: 20%;
           }
-  
+
           p {
             margin-left: 20%;
           }
         }
       }
-  
+
       &--second {
         &:nth-child(even) {
           h5 {
             margin-left: 20%;
           }
-  
+
           p {
             margin-left: 20%;
           }
@@ -106,10 +108,100 @@
     &__h5 {
       width: 420px;
     }
-  
+
     &__p {
       width: 420px;
       font-size: 14px;
+    }
+  }
+}
+
+/* Estilos específicos para la versión mobile */
+@media screen and (max-width: 787px) {
+  .descriptions-section {
+    display: flex;
+    padding-top: 0;
+
+    &__img {
+      width: 100%;
+    }
+
+    &__text {
+      padding-top: 10%;
+      padding-bottom: 10%;
+    }
+
+    &__container {
+      flex-direction: column;
+      width: 100%;
+
+      &--first {
+        width: 100%;
+        &:nth-child(odd) {
+          width: 100%;
+          h5 {
+            margin-left: 0%;
+            width: 90%;
+            padding: 0 20px 0 20px;
+          }
+
+          p {
+            margin-left: 0%;
+            width: 90%;
+            padding: 0 20px 0 20px;
+          }
+        }
+
+        &:nth-child(even) {
+          flex-direction: column-reverse;
+
+          h5 {
+            width: 90%;
+            padding: 0 20px 0 20px;
+          }
+
+          p {
+            width: 90%;
+            padding: 0 20px 0 20px;
+          }
+        }
+      }
+
+      &--second {
+        width: 100%;
+
+        &:nth-child(even) {
+          margin-left: 0%;
+
+          h5 {
+            margin-left: 0%;
+            width: 90%;
+            padding: 0 20px 0 20px;
+          }
+
+          p {
+            margin-left: 0%;
+            padding: 0 20px 0 20px;
+            width: 90%;
+          }
+        }
+
+        &:nth-child(odd) {
+          flex-direction: column-reverse;
+
+          h5 {
+            margin-left: 0%;
+            width: 90%;
+            padding: 0 20px 0 20px;
+          }
+
+          p {
+            margin-left: 0%;
+            padding: 0 20px 0 20px;
+            width: 90%;
+          }
+        }
+      }
     }
   }
 }
