@@ -10,11 +10,13 @@ Este es un proyecto de exploración personal para asentar las bases en maquetaci
 > Accede al proyecto haciendo clic aquí: https://tesla-model-s-clone-desde-cero.vercel.app/
 
 > [!IMPORTANT]
+> <em>
 > - Este proyecto se ha hecho con fines de entretenimiento y aprendizaje.
 > 
 > - El diseño de la web original puede variar.
 >
 > - Solo es una maqueta, ningún enlace lleva a ninguna parte.
+> </em>
 
 ## Tecnologías usadas
 
@@ -35,7 +37,7 @@ Este es un proyecto de exploración personal para asentar las bases en maquetaci
 - **Lo regular**: las partes más delicadas como el menú, banner y algunas secciones con una disposición diferentes de la versión escritorio han necesitado de una adaptación menos elegante.
 
 > [!NOTE]
-> Para asegurar una estructura HTML eficaz se ha priorizado la versión de escritorio y finalmente se ha pasado a la adaptación mobile.
+> <em>Para asegurar una estructura HTML eficaz se ha priorizado la versión de escritorio y finalmente se ha pasado a la adaptación mobile.</em>
 
 
 ### 🎨 BEM y aprovechamiento de SASS
@@ -44,7 +46,7 @@ Este es un proyecto de exploración personal para asentar las bases en maquetaci
 - **Lo regular**: necesidad de volver atrás y repasar las clases cuando el proyecto ya estaba muy adelantado.
 
 > [!NOTE]
-> Si das con los nombres adecuados (cortos y descriptivos) para bloques y modificadores, aún mejor.
+> <em>Si das con los nombres adecuados (cortos y descriptivos) para bloques y modificadores, aún mejor.</em>
 
 
 ### 👩‍💻 Javascript
@@ -59,7 +61,7 @@ Este es un proyecto de exploración personal para asentar las bases en maquetaci
 - **Lo regular**: replanteamiento de las subidas y el trabajo versionado una vez se ha empezado el proyecto, creando un poco de caos en el histórico.
 
 > [!NOTE]
-> Trabajar por versiones hace que el avance del proyecto y ejecutar los cambios se vuelva más sencillo y organizado.
+> <em>Trabajar por versiones hace que el avance del proyecto y ejecutar los cambios se vuelva más sencillo y organizado.</em>
 
 
 ### 📂 Módulos CSS
@@ -68,7 +70,7 @@ Este es un proyecto de exploración personal para asentar las bases en maquetaci
 - **Lo regular**: una mejora que he implementado una vez había iniciado el proyecto
 
 > [!NOTE]
-> No se ha empleado la lógico de componente reutilizable, pero hubiese estado bien pensar en ello.
+> <em>No se ha empleado la lógico de componente reutilizable, pero hubiese estado bien pensar en ello.</em>
 
 
 ## Contribuciones
