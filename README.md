@@ -21,6 +21,7 @@ Este es un proyecto de exploración personal para asentar las bases en maquetaci
 ## Tecnologías usadas
 
 ![HTML](https://img.shields.io/static/v1?label=&message=Html&color=orange&logo=html5&logoColor=white&style=for-the-badge)
+![CSS](https://img.shields.io/static/v1?label=&message=CSS&color=563d7c&logo=css3&logoColor=white&style=for-the-badge)
 ![SASS](https://img.shields.io/static/v1?label=&message=SASS&color=CC6699&logo=sass&logoColor=white&style=for-the-badge)
 ![JavaScript](https://img.shields.io/static/v1?label=&message=JavaScript&color=e8d44d&logo=javascript&logoColor=white&style=for-the-badge)
 ![GIT](https://img.shields.io/static/v1?label=&message=GIT&color=e84e31&logo=git&logoColor=white&style=for-the-badge)
