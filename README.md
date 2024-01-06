@@ -13,6 +13,8 @@ Este es un proyecto de exploración personal para asentar las bases en maquetaci
 > <em>
 > - Este proyecto se ha hecho con fines de entretenimiento y aprendizaje.
 > 
+> - Este copycat sigue el modelo de la página tal y como estaba en octubre 2023.
+>   
 > - El diseño de la web original puede variar.
 >
 > - Solo es una maqueta, ningún enlace lleva a ninguna parte.
