@@ -73,7 +73,7 @@ Este es un proyecto de exploración personal para asentar las bases en maquetaci
 - **Lo regular**: una mejora que he implementado una vez había iniciado el proyecto
 
 > [!NOTE]
-> <em>No se ha empleado la lógico de componente reutilizable, pero hubiese estado bien pensar en ello.</em>
+> <em>No se ha empleado la lógica de componente reutilizable, pero hubiese estado bien pensar en ello.</em>
 
 
 ## Contribuciones
