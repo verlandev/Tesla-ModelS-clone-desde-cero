@@ -83,7 +83,7 @@ Este es un proyecto de exploración personal para asentar las bases en maquetaci
 Siéntete libre de abrir un issue o enviar un pull request si hay algo que creas que se puede mejorar en el proyecto o encuentras algún problema. ¡Muchas gracias!
 
 
-## 🙋‍♀️ Beatriz Verlán Developer
+## 🙋‍♀️ Beatriz Verlan Developer
 
 ¡Gracias por llegar hasta aquí!
 
